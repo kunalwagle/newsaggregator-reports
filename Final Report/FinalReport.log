@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  24 MAY 2017 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  24 MAY 2017 10:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -998,21 +998,22 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/Imperial_College_London_crest.png>]
-No file FinalReport.toc.
+s/Imperial_College_London_crest.png>] [1] [2] (./FinalReport.toc)
 \tf@toc=\write6
 \openout6 = `FinalReport.toc'.
 
-[1]
-No file FinalReport.lof.
+ [3
+
+]
+(./FinalReport.lof)
 \tf@lof=\write7
 \openout7 = `FinalReport.lof'.
 
-No file FinalReport.lot.
+ (./FinalReport.lot)
 \tf@lot=\write8
 \openout8 = `FinalReport.lot'.
 
-[2] (./FinalReport.aux)
+ [4] (./FinalReport.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1021,8 +1022,8 @@ Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12894 strings out of 493014
- 206104 string characters out of 6133350
+ 12900 strings out of 493014
+ 206200 string characters out of 6133350
  648243 words of memory out of 5000000
  16250 multiletter control sequences out of 15000+600000
  10418 words of font info for 37 fonts, out of 8000000 for 9000
@@ -1032,10 +1033,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalReport.pdf (3 pages, 700928 bytes).
+Output written on FinalReport.pdf (5 pages, 703462 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
