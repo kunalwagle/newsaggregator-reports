@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  24 MAY 2017 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  24 MAY 2017 09:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -998,38 +998,44 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/Imperial_College_London_crest.png>] (./FinalReport.aux)
+s/Imperial_College_London_crest.png>]
+No file FinalReport.toc.
+\tf@toc=\write6
+\openout6 = `FinalReport.toc'.
+
+[1]
+No file FinalReport.lof.
+\tf@lof=\write7
+\openout7 = `FinalReport.lof'.
+
+No file FinalReport.lot.
+\tf@lot=\write8
+\openout8 = `FinalReport.lot'.
+
+[2] (./FinalReport.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                FinalReport
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 \openout1 = `FinalReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12889 strings out of 493014
- 206057 string characters out of 6133350
- 648223 words of memory out of 5000000
- 16248 multiletter control sequences out of 15000+600000
- 9812 words of font info for 35 fonts, out of 8000000 for 9000
+ 12894 strings out of 493014
+ 206104 string characters out of 6133350
+ 648243 words of memory out of 5000000
+ 16250 multiletter control sequences out of 15000+600000
+ 10418 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,5n,43p,821b,1409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,43p,821b,1410s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalReport.pdf (1 page, 698178 bytes).
+Output written on FinalReport.pdf (3 pages, 700928 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
