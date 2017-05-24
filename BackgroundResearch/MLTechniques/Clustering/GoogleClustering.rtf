@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;}
+{\*\expandedcolortbl;\csgray\c100000;\cssrgb\c20000\c20000\c20000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+Having worked at Google News, I know how Google News clustering works. But I'll refrain from the specifics, and highlight the broad approaches used to cluster news. Before getting into clustering, its important to ensure you have the right dataset to work with, and have the right terms.\
+\
+1) What pages are articles?\
+\
+Not every page on the web is an article. You'd like to start with a good set of pages that look like articles. Now figure how one can distinguish an article page from a non-article page, from a page thats trying to sell products, from a listing of other articles, and so forth.\
+\
+2) How do we get the text inside the article?\
+\
+Articles have text embedded inside along with a lot of unwanted boilerplate, ads, copyright messages etc. How can you segment the article to just get the article text and throw away the rest? This is an information extraction problem. Most sites use HTML DOM/SAX parsing along with a lot of other heuristics.\
+\
+3) How do we get definitive terms inside the article?\
+\
+Articles are a lot of text, that include all kinds of conjunctions, connectives, pronouns, nouns, numbers, etc. What is most important to an article? Techniques like TF-IDF exist to get to a good distance. Some types of features are more important than others - especially when the objective is to group related articles together. When you are considering news, you are more interested in putting articles from an incident (or event) together. For example, you want articles from an armed robbery in Albania to come together, rather than all articles on robberies from around the world. It so happens that "named entities" (proper nouns) are best suited to characterize an incident. So you'd give them more weightage. Sometimes considering phrases (like New York) may help improve the quality of clustering.\
+\
+4) How do you know two documents are similar?\
+\
+Till now, you've brought an article to its vector form. A vector of keywords and weights - that depict importance to the article. Given that you have two such vectors, how we do figure the similarity between them? Measures like cosine similarity exist here. There are several similarity measures, and each one has pros and cons. For example, cosine similarity also gives importance to terms found in one article, and not found in the other. So if one document is a superset of another, the cosine similarity may still be low. If you dont want this property - you may look at other distance measures.\
+\
+5) How do you group a set of related documents together?\
+\
+Document clustering is an extremely well researched topic. To start with, you'll get algorithms off the books - like hierarchical agglomerative clustering, k-means clustering, and top down clustering. k-means clustering may not be best suited when you dont know how many clusters you have to group articles into. So, you'd have to inspect HAC and the top down methods. The biggest hurdles to conquer in a production clustering system are:\
+\
+a) Distributed clustering: Clustering is inherently a "compare this document with every other document" method. Distributed clustering often does not yield the result quality you'd expect. So you are confined to doing everything in one machine. Other obvious partitioning methods can be employed. Languages is one of them. Classification is another (pool articles on science into one place). But one often finds that getting classification right is harder than getting clustering right.\
+\
+b) Scalability: All documents (millions of articles are crawled everyday) will not fit into one machine. Can you pick a representative sample first, and compute clusters and then assign the rest into these clusters?\
+\
+c) Incremental: Articles keep coming all the time. But assigning a new article into existing clusters can cause a "topic drift", and eventually new articles may differ from what the original cluster stood for substantially. You need a balance between batch clustering and incremental clustering. You'd consider doing batch clustering in a past time window, and then do incremental clustering for freshly crawled articles.\
+\
+In a production system like Google News, a mix of several state of the art algorithms will be tried out, along with a lot of heuristics to make the whole problem tractable. Remember that no one wants to read their news late! The clustering must be as fast as possible. People will also notice errors easily and complain. So the bar for error is low.\
+\
+Google News has worked on this problem for several years, and many smart engineers have contributed to it. Thats why this is still the only system that can do something like this at scale. Others will have a lot of catching up to do.}

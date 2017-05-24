@@ -1,0 +1,190 @@
+\begin{theindex}
+{\large\sffamily\bfseries A}\nopagebreak
+
+  \item Apple \dotfill 21
+    \subitem Design award \dotfill 21
+    \subitem News \dotfill 19
+  \item Architecture \dotfill 44
+  \item Associated Press \dotfill 36
+  \item Attention span \dotfill 5
+  \item Automatic Labelling of Topic Models \dotfill 22
+
+  \indexspace
+{\large\sffamily\bfseries B}\nopagebreak
+
+  \item Back End \dotfill 51
+  \item BBC \dotfill 9, 33, 36
+
+  \indexspace
+{\large\sffamily\bfseries C}\nopagebreak
+
+  \item Centroid Clustering \dotfill 24
+  \item Clustering \dotfill 18, 24, 25, 27, 38, 39, 51
+    \subitem Centroid \dotfill 24
+    \subitem Density \dotfill 25
+    \subitem Hierarchical \dotfill 25
+    \subitem k-means \dotfill 25
+  \item Concept
+    \subitem Multimodal Summarisation \dotfill 30
+  \item Connectivity \dotfill 25
+  \item Cook, Tim \dotfill 43
+
+  \indexspace
+{\large\sffamily\bfseries D}\nopagebreak
+
+  \item Daily Mirror, The \dotfill 36
+  \item Density Clustering \dotfill 25
+  \item Dependency Tree \dotfill 28
+  \item Dice's coefficient \dotfill 24
+  \item Digital News Report \dotfill 6, 7, 9, 10, 32
+  \item Domain Ontology \dotfill 30
+  \item Duplicate \dotfill 5
+  \item Duplication \dotfill 6
+
+  \indexspace
+{\large\sffamily\bfseries E}\nopagebreak
+
+  \item Evaluation \dotfill 13
+
+  \indexspace
+{\large\sffamily\bfseries F}\nopagebreak
+
+  \item Financial Times, The \dotfill 34, 36
+  \item Flipboard \dotfill 5, 18
+  \item Fox News \dotfill 6
+  \item Front End \dotfill 44
+
+  \indexspace
+{\large\sffamily\bfseries G}\nopagebreak
+
+  \item Gibbs Sampling \dotfill 22
+  \item Google \dotfill 9, 23
+    \subitem Forms \dotfill 10
+    \subitem News \dotfill 5, 17, 18
+    \subitem Search Engine \dotfill 9
+  \item Guardian, The \dotfill 6, 33, 35, 36
+
+  \indexspace
+{\large\sffamily\bfseries H}\nopagebreak
+
+  \item Hierarchical Clustering \dotfill 25
+    \subitem Agglomerative \dotfill 25
+    \subitem Divisive \dotfill 25
+  \item Huffington Post \dotfill 33
+
+  \indexspace
+{\large\sffamily\bfseries I}\nopagebreak
+
+  \item Independent, The \dotfill 33, 36
+
+  \indexspace
+{\large\sffamily\bfseries L}\nopagebreak
+
+  \item Latent Dirichlet Allocation \dotfill 22
+  \item Latent Semantic Analysis \dotfill 22
+  \item Latent Semantic Indexing \dotfill 20
+  \item LDA \dotfill 22
+  \item LexRank \dotfill 27
+  \item LSI \dotfill 22
+
+  \indexspace
+{\large\sffamily\bfseries M}\nopagebreak
+
+  \item Machine Learning \dotfill 20
+  \item Mail Online \dotfill 33, 36
+
+  \indexspace
+{\large\sffamily\bfseries N}\nopagebreak
+
+  \item New York Times \dotfill 9, 35, 36
+  \item News
+    \subitem Outlets \dotfill 32
+  \item News 
+    \subitem  Personalised \dotfill 8
+  \item News Aggregator \dotfill 6, 13, 14
+    \subitem Reasons for use \dotfill 7
+  \item News API \dotfill 35
+  \item News Digests \dotfill 15, 39
+  \item Not Quite the Average: An Empirical Study of Web Use \dotfill 9
+
+  \indexspace
+{\large\sffamily\bfseries O}\nopagebreak
+
+  \item Ofcom \dotfill 9
+
+  \indexspace
+{\large\sffamily\bfseries P}\nopagebreak
+
+  \item PageRank \dotfill 27
+
+  \indexspace
+{\large\sffamily\bfseries R}\nopagebreak
+
+  \item React \dotfill 53
+  \item Redux \dotfill 53
+  \item Related Article Conceptual Overlap \dotfill 23, 24
+  \item Reuters Institute for the Study of Journalism \dotfill 6--9, 32
+  \item Rich Semantic Graph \dotfill 31
+
+  \indexspace
+{\large\sffamily\bfseries S}\nopagebreak
+
+  \item San Francisco \dotfill 5
+  \item Sky News \dotfill 33
+  \item Social Media \dotfill 7
+  \item Source \dotfill 5, 6
+  \item Statistic Brain Research Institute \dotfill 5, 9
+  \item Summarisation \dotfill 9, 27, 38, 42, 52
+    \subitem Abstractive \dotfill 27, 28, 30, 39, 42
+    \subitem Extractive \dotfill 27, 31, 39, 42
+    \subitem Information Item \dotfill 30
+    \subitem Multimodal Semantic \dotfill 30
+    \subitem Ontology based \dotfill 30
+    \subitem Rule based \dotfill 29
+    \subitem Semantic Graph \dotfill 31
+    \subitem Tree based \dotfill 28
+  \item Summarised \dotfill 13
+  \item Survey \dotfill 52
+
+  \indexspace
+{\large\sffamily\bfseries T}\nopagebreak
+
+  \item Telegraph, The \dotfill 33, 36
+  \item Term Frequency-Inverse Document Frequency \dotfill 25, 26
+    \subitem Inverse Document Frequency \dotfill 26
+    \subitem Term Frequency \dotfill 26
+  \item TextRank \dotfill 27
+  \item TF-IDF \dotfill 25, 27
+  \item Topic Labelling \dotfill 22, 27, 38, 39, 51
+  \item Topic Modelling \dotfill 20, 27, 38, 39
+    \subitem Latent Dirichlet Allocation \dotfill 22
+    \subitem Latent Semantic Indexing \dotfill 20
+
+  \indexspace
+{\large\sffamily\bfseries U}\nopagebreak
+
+  \item Uber \dotfill 5
+  \item United Kingdom \dotfill 7--9, 32
+  \item University of Canberra \dotfill 9
+  \item University of Oxford \dotfill 7
+  \item User
+    \subitem Survey \dotfill 9, 42
+  \item Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness \dotfill 
+		24
+
+  \indexspace
+{\large\sffamily\bfseries W}\nopagebreak
+
+  \item Webhose \dotfill 35
+  \item Wikimedia \dotfill 36
+  \item Wikipedia \dotfill 22--24, 36
+  \item wikipedia \dotfill 46
+  \item Wireframe \dotfill 44
+
+  \indexspace
+{\large\sffamily\bfseries Y}\nopagebreak
+
+  \item Yahoo News Digest \dotfill 19
+  \item YouGov \dotfill 9
+
+\end{theindex}
