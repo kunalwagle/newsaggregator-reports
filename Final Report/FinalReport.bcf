@@ -2096,5 +2096,98 @@
     <bcf:datasource type="file" datatype="bibtex">sample.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">reutersInstitute</bcf:citekey>
+    <bcf:citekey order="2">oxford</bcf:citekey>
+    <bcf:citekey order="3">digitalNewsReport</bcf:citekey>
+    <bcf:citekey order="4">reutersInstitute</bcf:citekey>
+    <bcf:citekey order="5">bbc</bcf:citekey>
+    <bcf:citekey order="6">canberra</bcf:citekey>
+    <bcf:citekey order="7">ofcom</bcf:citekey>
+    <bcf:citekey order="8">yougov</bcf:citekey>
+    <bcf:citekey order="9">newYorkTimes</bcf:citekey>
+    <bcf:citekey order="10">digitalNewsReport</bcf:citekey>
+    <bcf:citekey order="11">statisticBrain</bcf:citekey>
+    <bcf:citekey order="12">attentionSpan</bcf:citekey>
+    <bcf:citekey order="13">empiricalStudyofWebUse</bcf:citekey>
+    <bcf:citekey order="14">digitalNewsReport</bcf:citekey>
+    <bcf:citekey order="15">googleForms</bcf:citekey>
+    <bcf:citekey order="16">googleNews</bcf:citekey>
+    <bcf:citekey order="17">googleNews</bcf:citekey>
+    <bcf:citekey order="18">googleNews</bcf:citekey>
+    <bcf:citekey order="19">google</bcf:citekey>
+    <bcf:citekey order="20">googleClustering</bcf:citekey>
+    <bcf:citekey order="21">flipboard</bcf:citekey>
+    <bcf:citekey order="22">yahooNewsDigest</bcf:citekey>
+    <bcf:citekey order="23">yahooNewsDigest</bcf:citekey>
+    <bcf:citekey order="24">yahooNewsDigest</bcf:citekey>
+    <bcf:citekey order="25">summly</bcf:citekey>
+    <bcf:citekey order="26">wikipedia</bcf:citekey>
+    <bcf:citekey order="27">appleNews</bcf:citekey>
+    <bcf:citekey order="28">appleNews</bcf:citekey>
+    <bcf:citekey order="29">appleNews</bcf:citekey>
+    <bcf:citekey order="30">apple</bcf:citekey>
+    <bcf:citekey order="31">appleDesignAward</bcf:citekey>
+    <bcf:citekey order="32">lsa</bcf:citekey>
+    <bcf:citekey order="33">differenceBetweenLSIAndLDA</bcf:citekey>
+    <bcf:citekey order="34">ldaExplanation</bcf:citekey>
+    <bcf:citekey order="35">topicLabelling</bcf:citekey>
+    <bcf:citekey order="36">wikipedia</bcf:citekey>
+    <bcf:citekey order="37">google</bcf:citekey>
+    <bcf:citekey order="38">racoCalculation</bcf:citekey>
+    <bcf:citekey order="39">racoCalculation</bcf:citekey>
+    <bcf:citekey order="40">googleNews</bcf:citekey>
+    <bcf:citekey order="41">googleClustering</bcf:citekey>
+    <bcf:citekey order="42">clusteringWikipedia</bcf:citekey>
+    <bcf:citekey order="43">clusteringWikipedia</bcf:citekey>
+    <bcf:citekey order="44">hierarchicalClustering</bcf:citekey>
+    <bcf:citekey order="45">tfidf</bcf:citekey>
+    <bcf:citekey order="46">extractiveTechniques</bcf:citekey>
+    <bcf:citekey order="47">lexRank</bcf:citekey>
+    <bcf:citekey order="48">abstractiveTechniques</bcf:citekey>
+    <bcf:citekey order="49">abstractiveTechniquesOriginal</bcf:citekey>
+    <bcf:citekey order="50">ruleBasedSummarisation</bcf:citekey>
+    <bcf:citekey order="51">informationBasedSummarisation</bcf:citekey>
+    <bcf:citekey order="52">abstractiveTechniques</bcf:citekey>
+    <bcf:citekey order="52">abstractiveTechniquesOriginal</bcf:citekey>
+    <bcf:citekey order="53">abstractiveTechniques</bcf:citekey>
+    <bcf:citekey order="53">abstractiveTechniquesOriginal</bcf:citekey>
+    <bcf:citekey order="54">wikipedia</bcf:citekey>
+    <bcf:citekey order="55">digitalNewsReport</bcf:citekey>
+    <bcf:citekey order="56">reutersInstitute</bcf:citekey>
+    <bcf:citekey order="57">guardian</bcf:citekey>
+    <bcf:citekey order="58">newYorkTimes</bcf:citekey>
+    <bcf:citekey order="59">webhose</bcf:citekey>
+    <bcf:citekey order="60">newsApi</bcf:citekey>
+    <bcf:citekey order="61">wikipedia</bcf:citekey>
   </bcf:section>
+  <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
+  <bcf:sorting>
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
+      <bcf:sortitem order="2">0000</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sorting>
+  </bcf:sortlist>
 </bcf:controlfile>
