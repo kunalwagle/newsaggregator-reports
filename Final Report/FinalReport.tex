@@ -13,6 +13,7 @@ urldate=long
 \newcommand{\tabitem}{\makebox[1em][r]{\textbullet~}}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[toc,page]{appendix}
 \graphicspath{{images/}}
 \usepackage{setspace}
 \usepackage{parskip}
@@ -757,6 +758,28 @@ The steps are outlined in the flowchart provided in figure \ref{semanticGraphSum
 
 Semantic Graph summarisation has had success with producing an abstractive summary that has fewer redundant sentences, and is also good at producing grammatically correct sentences. However, it's only designed for use with a single document as input. As a result it might not be suitable as a method for summarising the multiple documents needed for the aggregator, unless it's combined with another method.
 
+\subsection{Natural Language Processing Libraries} 
+
+A lot of the summarisation techniques specified earlier, especially for abstractive summarisation, would require a full analysis of the semantics of a body of text. As a result, it's clear that a Natural Language Processing library will be needed for this task.
+
+\subsubsection{Aspects of Natural Language Processing} 
+
+\label{nlptypes}
+
+There are several different tasks that a Natural Language Processor. A few key ones that are most likely to be required for the project are explained briefly below: \\
+
+\begin{itemize}
+	\item \textbf{Tokenisation} is the splitting of words in a given document. \\
+	\item \textbf{Sentence Segmentation} is the splitting of sentences in a given document. \\
+	\item \textbf{Part-of-Speech (POS) tagging} takes a list of tokens and analyses them, returning tags for each. A tag represents the grammatical function of the token in the sentence (for example if it is a noun, verb or adjective). \\
+	\item \textbf{Named entity extraction} identifies the proper nouns within a document, such as people, dates or locations, as well as other categories of noun. \\
+	\item \textbf{Chunking} takes a list of tags from a POS tagger and groups sets of tokens by their function in a sentence. Examples can include noun phrases and verb phrases. \\
+	\item \textbf{Parsing} takes a sentence and develops a tree showing the functions of each section of the sentence. \\
+	\item \textbf{Coreference Resolution} identifies noun phrases within a document that are the same. This can commonly be used for replacing pronouns with the original noun phrase. 
+\end{itemize}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -914,9 +937,13 @@ The benefit of this framework is that it allows for very clean code in the user 
 
 \subsubsection{Back End}
 
+\label{languagechoice}
+
 The back end will be constructed using Java. The reasoning behind this is that I have experience from my Industrial Placement using Java as the basis of a server and a back end.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 
 \section{Libraries and APIs}
 
@@ -1068,11 +1095,122 @@ Wikimedia\index{Wikimedia} (the parent company for Wikipedia\cite{wikipedia}) pr
 
 The search query can be altered to provide different information, such as the URL for the lead image, which can be used to show previews of various items to users. The Wikipedia API can also be used in the topic labelling aspect of the Machine Learning techniques (see Section \ref{TopicLabelingTechniques}).
 
+\subsection{Libraries}
+
+\subsubsection{Mallet}
+
+\subsubsection{Natural Language Processing}
+
+There are several Natural Language Processing libraries available. The following are designed for use in Java: \\
+
+\textbf{Apache OpenNLP} \\
+
+OpenNLP is an open source library developed by Apache. The aim of the project is to support the basic aspects of natural language processing.
+
+OpenNLP supports all of the basic tasks that were specified in section \ref{nlptypes} with varying degrees of success, plus "document categorisation".
+
+Document Categorisation, as the name suggests, takes a document and categorises it. This could potentially be used in the topic modelling phase, but has the disadvantage that it doesn't come with a model for training, and the user of the library has to create their own. This is a contrast to the Mallet library, which can create a model when the user passes in the raw data.
+
+When it comes to the other key tasks of Natural Language Processing, OpenNLP provides flexibility on models. They provide a default model in a variety of languages, including English. 
+
+However, there is at least one different model file for each task, so space constraints need to be considered. For using the name finder 
+
+\textbf{Stanford CoreNLP}
+
+\textbf{Wordnet}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Implementation}
+
+\subsection{Database}
+
+\subsection{Server Tasks}
+
+\subsection{Restlet}
+
+\subsection{Key Classes}
+
+% Mention classes such as the LabelHolder and ClusterHolder here?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Optimisation}
+
+\subsection{Topic Modelling}
+
+\subsection{Topic Labelling}
+
+\subsection{Clustering}
+
+\subsection{Memory Optimisations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Evaluation}
+
+\subsection{Machine Learning and Summarisation}
+
+\subsection{Summary Analysis}
+
+\subsection{User Interface Evaluation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Future Work}
+
+\subsection{Foreign Languages}
+
+\subsection{Further Optimisations}
+
+\subsection{Other Apps}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
 \printbibliography[heading=bibintoc]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Source Code}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{API}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{User Guide}
+
+\end{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newpage
 \printindex
 
