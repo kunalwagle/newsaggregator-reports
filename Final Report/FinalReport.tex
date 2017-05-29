@@ -1099,6 +1099,23 @@ The search query can be altered to provide different information, such as the UR
 
 \subsubsection{Mallet}
 
+Mallet (Machine Learning for Language Toolkit) is a java library that provides an interface for various natural language-based machine learning tasks. These tasks include:
+
+\begin{itemize}
+	\item Document Classification
+	\item Sequence Tagging
+	\item Clustering
+	\item Topic Modeling
+	\item Information Extraction \\
+\end{itemize}
+
+\textbf{Mallet in Topic Modeling}
+
+Mallet is particularly useful for Topic Modeling. Mallet uses a corpus in the form of a list of strings in order to train a set of topics. The library trains the topics using Gibbs Sampling and Latent Dirichlet Allocation.
+
+Mallet also provides an inferencer that allows a user to submit a new document and receive a list of probabilities. Each of these probabilities shows the likelihood that the corresponding topic is an accurate classification of the document we are testing. Thus the user can then infer the actual topics that the document is about by simply taking the topics with the highest probabilities. 
+ 
+
 \subsubsection{Natural Language Processing}
 
 There are several Natural Language Processing libraries available. The following are designed for use in Java: \\
@@ -1129,7 +1146,7 @@ For using the name finder, there are different model files, depending on what ty
 
 \emph{Space Constraint Table}
 
-Below is a table of each model and their respective sizes. As Apache's recommended method to bring the files in to the program is through the Java class FileInputStream their sizes can be important, as they make use of the Java heap.
+Table \ref{opennlpspace} shows each model and their respective sizes. As Apache's recommended method to bring the files in to the program is through the Java class FileInputStream their sizes can be important, as they make use of the Java heap.
 
 \begin{table}[H]
 	\centering
