@@ -972,6 +972,72 @@ The benefit of this framework is that it allows for very clean code in the user 
 
 The back end will be constructed using Java. The reasoning behind this is that I have experience from my Industrial Placement using Java as the basis of a server and a back end.
 
+\subsection{Infrastructure}
+
+\subsubsection{Hardware}
+
+One of the first key decisions I made about the infrastructure surrounded the hardware that the server would be deployed on.
+
+\textbf{Amazon Web Services}
+
+Amazon Web Services (AWS) is a set of cloud computing platforms provided by Amazon. A key benefit to it is that it has a free tier, which allows for a subset of their services to be used without charge.
+
+Some of the key platforms offered by AWS include: \\
+
+\begin{itemize}
+	\item \textbf{EC2} allows a user to create a single virtual machine for free on which to run software. This would be with a limit of 750 hours of use per month. In my case this would be used for running the back end of the News Aggregator. \\
+	\item \textbf{S3} is a storage system provided by Amazon that allows a user 5GB of space for free. \\
+\end{itemize} 
+
+\textbf{Digital Ocean}
+
+Digital Ocean is an infrastructure provider that provides "cloud computing for developers". Digital Ocean offers "droplets" that can act as virtual machines, on which I would deploy my backend. There are no free tiers, but the student pack provided by GitHub would cover the first two months of charges. 
+
+In addition to this, one of the advantages of Digital Ocean is that if resizing of the virtual machine is necessary, it can be done in a matter of minutes, thus making the final solution very highly scalable.
+
+In contrast though, unlike Amazon, Digital Ocean don't provide alternative microservices such as S3. Having said that, it could be argued that the droplet itself would offer that with its storage capabilities. In fact, the cheapest droplet offered by Digital Ocean (priced at \$5 a month), entails a virtual machine with a 20GB SSD disk, which is four times the amount provided by the free tier in AWS.
+
+\subsubsection{Database}
+
+\textbf{MongoDB}
+
+The first database solution that I researched was MongoDB, as I have had prior experience with it. 
+
+MongoDB is a document database that is designed to be both flexible and highly scalable. Documents are written in a format that is highly similar to JSON. This format is what results in a Mongo database being flexible, as the schema of documents in the collection can be changed quickly. 
+
+MongoDB allows for the connection of items between tables through linking. Auto-generated "ObjectId"s (that are generated based on the timestamp) allow for easy referencing of an item in another.
+
+A MongoDB database would have to remain in a virtual machine on either Amazon or Digital Ocean, and will therefore have to count against the storage provided by that virtual machine. \\
+
+\textbf{DynamoDB}
+
+DynamoDB is a No-SQL database provided by Amazon Web Services as a separate micro-service to EC2 and S3. 
+
+The structure of a document in DynamoDB is more rigid than in MongoDB. It is primarily designed as a key-value system, with a primary key. Searching in the database is driven by this primary key, or by "secondary indexes". These secondary indexes need to be declared when the table is first created. Therefore this means that if there needs to be a schema change, the table needs to be recreated.
+
+A DynamoDB database doesn't need to be stored in the virtual machine, but there are trade offs. Whilst Amazon Web Services provide 25GB of storage for the database as part of the free tier, there are throttles on the throughput of the database. As part of the free tier, a user is allowed to allocate 25 "units" of throughput to both reading and writing from a database, where one unit corresponds to transfer of 1KB per second. Beyond these 25 units, Amazon would start charging.
+
+\subsubsection{Infrastructure Decisions}
+
+\textbf{Comparison table}
+
+Table \ref{infrastructuretable} shows the key points of comparison between the four main options for hardware and database combinations.
+
+\begin{sidewaystable}
+    \begin{tabular}{p{2.5cm}|p{8.75cm}|p{8.75cm}}
+    \textbf{Infrastructure} & \textbf{Advantages} & \textbf{Disadvantages} \\ \hline
+    AWS and MongoDB & \tabitem AWS provide free services & \tabitem Mongo would need to be hosted on the EC2 instance, or on S3, which would limit the free storage to 5GB. \\ & \tabitem Mongo provides a flexible schema, meaning that the table structure can be changed further down the line.  \\ \hline
+    AWS and DynamoDB & \tabitem DynamoDB would provide 25GB of storage on its own, meaning that . & \tabitem Topics are much broader than Google News, thus meaning that users can't necessarily search for topics specific-enough for them.\\ & \tabitem Available as a mobile application & \tabitem Flipboard requires registration before being able to read articles \\ \hline
+    Digital Ocean and DynamoDB & \tabitem Yahoo News Digest won the 2014 Apple\index{Apple} Design award\cite{appleDesignAward}\index{Apple!Design award}. & \tabitem There are only ten articles available per digest, and no capability for searching by topic. \\ & \tabitem The articles also provide key infographics, quotes, and other information potentially relevant to the article. & \tabitem Digests are only produced in the morning and the evening, so the news articles presented could be out of date. \\ \hline
+    Digital Ocean and MongoDB & \tabitem Allows selection based off both topics and the news sources themselves. & \tabitem Navigation on the application is not simple. If a user has accessed many articles from push notifications, then the user could have to press the back button several times to get back to the home screen.\\ & \tabitem The home screen for the app allows users to see a lot of headlines at a glance. & \tabitem The topics that a user can subscribe to can be quite limited, and aren't reactive to current affairs - for example, if a natural disaster occurs, you couldn't then subscribe to that natural disaster as a topic. \\
+  \end{tabular}
+  \caption[Advantages and Disadvantages of different Infrastructure combinations]{Comparing the advantages and disadvantages of potential combinations of hardware and database options.}
+  \label{infrastructuretable}
+\end{sidewaystable}
+
+
+\textbf{Decision Process}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -1208,7 +1274,7 @@ As a result, CoreNLP could have a major benefit for abstractive summarisation, t
 
 \emph{Extracting elements from a document}
 
-The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given document. \\
+The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given annotated document. \\
 
 \begin{lstlisting}[style=MyJava, firstnumber=1]
 
@@ -1251,12 +1317,6 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 
 \section{Implementation}
 
-\subsection{Digital Ocean vs Amazon Web Services}
-
-\subsection{Database}
-
-% Dynamo DB
-
 \subsection{Machine Learning}
 
 \subsection{Summarisation}
@@ -1294,6 +1354,8 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 \section{Evaluation}
 
 \subsection{Machine Learning and Summarisation}
+
+%Summary Evaluation Resource
 
 \subsection{Summary Analysis}
 

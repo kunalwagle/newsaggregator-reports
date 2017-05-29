@@ -82,76 +82,80 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.4.2}Back End}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Libraries and APIs}{50}
+\contentsline {subsection}{\numberline {4.5}Infrastructure}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Potentially Useful APIs}{50}
+\contentsline {subsubsection}{\numberline {4.5.1}Hardware}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}News Outlets}{50}
+\contentsline {subsubsection}{\numberline {4.5.2}Database}{50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.2}Wikipedia}{54}
+\contentsline {subsubsection}{\numberline {4.5.3}Infrastructure Decisions}{51}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Libraries}{55}
+\contentsline {section}{\numberline {5}Libraries and APIs}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1}Mallet}{55}
+\contentsline {subsection}{\numberline {5.1}Potentially Useful APIs}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Natural Language Processing}{55}
+\contentsline {subsubsection}{\numberline {5.1.1}News Outlets}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Implementation}{59}
+\contentsline {subsubsection}{\numberline {5.1.2}Wikipedia}{57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Digital Ocean vs Amazon Web Services}{59}
+\contentsline {subsection}{\numberline {5.2}Libraries}{58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Database}{59}
+\contentsline {subsubsection}{\numberline {5.2.1}Mallet}{58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Machine Learning}{59}
+\contentsline {subsubsection}{\numberline {5.2.2}Natural Language Processing}{58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Summarisation}{59}
+\contentsline {section}{\numberline {6}Implementation}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Restlet}{59}
+\contentsline {subsection}{\numberline {6.1}Machine Learning}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Server Tasks}{59}
+\contentsline {subsection}{\numberline {6.2}Summarisation}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Front End}{59}
+\contentsline {subsection}{\numberline {6.3}Restlet}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8}Key Classes}{59}
+\contentsline {subsection}{\numberline {6.4}Server Tasks}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Optimisation}{60}
+\contentsline {subsection}{\numberline {6.5}Front End}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{60}
+\contentsline {subsection}{\numberline {6.6}Key Classes}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{60}
+\contentsline {section}{\numberline {7}Optimisation}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Topic Labelling}{60}
+\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.3}Clustering}{60}
+\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{60}
+\contentsline {subsubsection}{\numberline {7.1.2}Topic Labelling}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Evaluation}{61}
+\contentsline {subsubsection}{\numberline {7.1.3}Clustering}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Machine Learning and Summarisation}{61}
+\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Summary Analysis}{61}
+\contentsline {section}{\numberline {8}Evaluation}{64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}User Interface Evaluation}{61}
+\contentsline {subsection}{\numberline {8.1}Machine Learning and Summarisation}{64}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusion}{62}
+\contentsline {subsection}{\numberline {8.2}Summary Analysis}{64}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Future Work}{63}
+\contentsline {subsection}{\numberline {8.3}User Interface Evaluation}{64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Foreign Languages}{63}
+\contentsline {section}{\numberline {9}Conclusion}{65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Further Optimisations}{63}
+\contentsline {section}{\numberline {10}Future Work}{66}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Other Apps}{63}
+\contentsline {subsection}{\numberline {10.1}Foreign Languages}{66}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{64}
+\contentsline {subsection}{\numberline {10.2}Further Optimisations}{66}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{67}
+\contentsline {subsection}{\numberline {10.3}Other Apps}{66}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Source Code}{67}
+\contentsline {section}{References}{67}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}API}{68}
+\contentsline {section}{Appendices}{70}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}User Guide}{69}
+\contentsline {section}{\numberline {A}Source Code}{70}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Index}{70}
+\contentsline {section}{\numberline {B}API}{71}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}User Guide}{72}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Index}{73}
