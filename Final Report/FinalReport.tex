@@ -1111,9 +1111,46 @@ OpenNLP supports all of the basic tasks that were specified in section \ref{nlpt
 
 Document Categorisation, as the name suggests, takes a document and categorises it. This could potentially be used in the topic modelling phase, but has the disadvantage that it doesn't come with a model for training, and the user of the library has to create their own. This is a contrast to the Mallet library, which can create a model when the user passes in the raw data.
 
-When it comes to the other key tasks of Natural Language Processing, OpenNLP provides flexibility on models. They provide a default model in a variety of languages, including English. 
+When it comes to the other key tasks of Natural Language Processing, OpenNLP provides flexibility on models. They provide a default model in a variety of languages, including English. However, there is at least one different model file for each task, so space constraints need to be considered. \\
 
-However, there is at least one different model file for each task, so space constraints need to be considered. For using the name finder 
+\emph{Name Finder}
+
+For using the name finder, there are different model files, depending on what types of proper nouns a user is looking for. These are: 
+
+\begin{itemize}
+	\item Date
+	\item Location
+	\item Money
+	\item Organisation
+	\item Percentage
+	\item Person
+	\item Time \\
+\end{itemize} 
+
+\emph{Space Constraint Table}
+
+Below is a table of each model and their respective sizes. As Apache's recommended method to bring the files in to the program is through the Java class FileInputStream their sizes can be important, as they make use of the Java heap.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|r}
+		\textbf{Model Name} & \textbf{Task} & \textbf{Size (MB)} \\ \hline
+		en-chunker & Chunking & 2.6 \\ \hline
+		en-ner-date & Name Finder: Dates & 5.0 \\ \hline
+		en-ner-location & Name Finder: Locations & 5.1 \\ \hline
+		en-ner-money & Name Finder: Money & 4.8 \\ \hline
+		en-ner-organization & Name Finder: Organisations & 5.3 \\ \hline
+		en-ner-percentage & Name Finder: Percentages & 4.7 \\ \hline
+		en-ner-person & Name Finder: People & 5.2 \\ \hline
+		en-ner-time & Name Finder: Time & 4.7 \\ \hline
+		en-pos-maxent & POS Tagging & 5.7 \\ \hline
+		en-sent & Sentence Detection & 0.01 \\ \hline
+		en-token & Tokenisation & 0.44 \\ \hline
+		\textbf{Total if all used} & & \textbf{43.55} \\ \hline
+	\end{tabular}
+	\caption[Space used for OpenNLP models]{A table showing the space required for the various models provided for use with OpenNLP}
+	\label{opennlpspace}
+\end{table}
 
 \textbf{Stanford CoreNLP}
 
@@ -1141,11 +1178,13 @@ However, there is at least one different model file for each task, so space cons
 
 \section{Optimisation}
 
-\subsection{Topic Modelling}
+\subsection{Speed Optimisations}
 
-\subsection{Topic Labelling}
+\subsubsection{Topic Modelling}
 
-\subsection{Clustering}
+\subsubsection{Topic Labelling}
+
+\subsubsection{Clustering}
 
 \subsection{Memory Optimisations}
 
