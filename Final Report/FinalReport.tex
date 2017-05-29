@@ -78,7 +78,7 @@ urldate=long
       {]}{{{\color{delim}{]}}}}{1}
 }
 
-\lstset{language=Java,
+\lstdefinestyle{MyJava}{language=Java,
     basicstyle=\normalfont\ttfamily,
     numbers=left,
     numberstyle=\scriptsize,
@@ -1210,8 +1210,8 @@ As a result, CoreNLP could have a major benefit for abstractive summarisation, t
 
 The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given document. \\
 
-\begin{lstlisting}[language=Java, firstnumber=1]
-{
+\begin{lstlisting}[style=MyJava, firstnumber=1]
+
 // these are all the sentences in this document
 // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
 List<CoreMap> sentences = document.get(SentencesAnnotation.class);
@@ -1241,9 +1241,9 @@ Map<Integer, CorefChain> graph =
  
 \end{lstlisting}
 
-\textbf{\\ Wordnet}
+\textbf{\\ WordNet}
 
-
+WordNet is a large scale database developed by Princeton that offers a lexical database of the English language. It can primarily be used as a thesaurus, and could therefore be useful in the natural language generation of abstractive summarisation, as well as in finding similarities between sentences.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1251,9 +1251,15 @@ Map<Integer, CorefChain> graph =
 
 \section{Implementation}
 
+\subsection{Digital Ocean vs Amazon Web Services}
+
 \subsection{Database}
 
 % Dynamo DB
+
+\subsection{Machine Learning}
+
+\subsection{Summarisation}
 
 \subsection{Restlet}
 
