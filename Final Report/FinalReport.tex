@@ -39,6 +39,16 @@ urldate=long
 \definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
 \lstdefinelanguage{json}{
     basicstyle=\normalfont\ttfamily,
     numbers=left,
@@ -65,7 +75,28 @@ urldate=long
       {\{}{{{\color{delim}{\{}}}}{1}
       {\}}{{{\color{delim}{\}}}}}{1}
       {[}{{{\color{delim}{[}}}}{1}
-      {]}{{{\color{delim}{]}}}}{1},
+      {]}{{{\color{delim}{]}}}}{1}
+}
+
+\lstset{language=Java,
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+    frame=lines,
+    backgroundcolor=\color{background},
+  showspaces=false,
+  showtabs=false,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
 
 \usepackage{etoolbox}
@@ -1171,7 +1202,48 @@ Table \ref{opennlpspace} shows each model and their respective sizes. As Apache'
 
 \textbf{Stanford CoreNLP}
 
-\textbf{Wordnet}
+The Stanford CoreNLP is a toolkit provided for Java by the Stanford Natural Language Processing Group. Like Apache OpenNLP, CoreNLP also offers the same functionalities that were discussed in section \ref{nlptypes}. However, Stanford go above and beyond this list in what they can provide. Their coreference and name recognition solutions are "competition winning", whilst they also provide functionality for semantic analysis of text.
+
+As a result, CoreNLP could have a major benefit for abstractive summarisation, through its coreference resolution. \\
+
+\emph{Extracting elements from a document}
+
+The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given document. \\
+
+\begin{lstlisting}[language=Java, firstnumber=1]
+{
+// these are all the sentences in this document
+// a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
+List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+
+for(CoreMap sentence: sentences) {
+  // traversing the words in the current sentence
+  // a CoreLabel is a CoreMap with additional token-specific methods
+  for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
+    // this is the text of the token
+    String word = token.get(TextAnnotation.class);
+    // this is the POS tag of the token
+    String pos = token.get(PartOfSpeechAnnotation.class);
+    // this is the NER label of the token
+    String ne = token.get(NamedEntityTagAnnotation.class);
+  }
+
+  // this is the parse tree of the current sentence
+  Tree tree = sentence.get(TreeAnnotation.class);
+}
+
+// This is the coreference link graph
+// Each chain stores a set of mentions that link to each other,
+// along with a method for getting the most representative mention
+// Both sentence and token offsets start at 1!
+Map<Integer, CorefChain> graph = 
+  document.get(CorefChainAnnotation.class); 
+ 
+\end{lstlisting}
+
+\textbf{\\ Wordnet}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1181,9 +1253,13 @@ Table \ref{opennlpspace} shows each model and their respective sizes. As Apache'
 
 \subsection{Database}
 
-\subsection{Server Tasks}
+% Dynamo DB
 
 \subsection{Restlet}
+
+\subsection{Server Tasks}
+
+\subsection{Front End}
 
 \subsection{Key Classes}
 
