@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  29 MAY 2017 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  30 MAY 2017 16:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1838,28 +1838,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
  []
 
 [50]
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
 
-LaTeX Warning: Reference `infrastructuretable' on page 51 undefined on input li
-ne 1024.
-
-
-Overfull \hbox (11.58952pt too wide) in paragraph at lines 1028--1028
-[]\T1/cmr/bx/n/12 Infrastructure| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
-[]\T1/cmr/m/n/12 AWS and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
-\T1/cmr/m/n/12 and Dy-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1032
-\T1/cmr/m/n/12 and Mon-
  []
 
 
@@ -1867,87 +1847,87 @@ Overfull \hbox (15.22943pt too wide) in paragraph at lines 1027--1034
 [][] 
  []
 
-[51] [52]
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 1077.
+[51] [52] [53]
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 1088.
 
- (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
-)
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
-
- []
-
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1128--1129
+) [54]
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
 
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
 
  []
 
-[56] [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
+[57] [58]
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
-
- []
-
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
 
  []
 
 [59]
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+
+ []
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1284--1285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1289
 
  []
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [60]
-[61] [62] [63] [64] [65] [66]
+) [61]
+[62] [63] [64] [65] [66] [67]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
-Overfull \hbox (9.20987pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (9.20987pt too wide) in paragraph at lines 1397--1397
 []\T1/cmr/m/n/12 Pierre-Etienne Gen-est and Guy La-palme. `  Fully Ab-strac-tiv
 e Ap-proach to Guided
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
-Overfull \hbox (9.86668pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (9.86668pt too wide) in paragraph at lines 1397--1397
 []\T1/cmr/m/it/12 Hierarchical Clus-ter-ing\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url
 \T1/cmr/m/n/12 : $\T1/zi4/m/n/12 https : / / en . wikipedia . org / wiki / Hier
 archical _
@@ -1955,55 +1935,55 @@ archical _
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
-[67]
+[68]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
-Overfull \hbox (28.99365pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (28.99365pt too wide) in paragraph at lines 1397--1397
 []\T1/cmr/m/it/12 Reuters In-sti-tute for the Study of Jour-nal-ism\T1/cmr/m/n/
 12 . www.reutersinstitute.politics.ox.ac.uk. 
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
-[68]
+[69]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1386.
+(biblatex)                Using fallback driver on input line 1397.
 
-[69] [70] [71] [72]
+[70] [71] [72] [73]
 runsystem(makeindex -s mystyle.ist FinalReport.idx)...executed safely (allowed)
 .
 
- (./FinalReport.ind [73
+ (./FinalReport.ind [74
 
-]) [74] (./FinalReport.aux)
+]) [75] (./FinalReport.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2017,7 +1997,7 @@ Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 Here is how much of TeX's memory you used:
  14741 strings out of 493014
  235877 string characters out of 6133350
- 728300 words of memory out of 5000000
+ 728315 words of memory out of 5000000
  17989 multiletter control sequences out of 15000+600000
  23717 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2052,10 +2032,10 @@ onts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/cm-super/sfxc1440.pfb>
-Output written on FinalReport.pdf (75 pages, 8077327 bytes).
+Output written on FinalReport.pdf (76 pages, 8079480 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
+ 437 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

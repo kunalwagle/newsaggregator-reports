@@ -1021,15 +1021,15 @@ A DynamoDB database doesn't need to be stored in the virtual machine, but there 
 
 \textbf{Comparison table}
 
-Table \ref{infrastructuretable} shows the key points of comparison between the four main options for hardware and database combinations.
+Table \ref{infrastructuretable} shows the key points of comparison between the four main options for hardware and database combinations. \\
 
 \begin{sidewaystable}
-    \begin{tabular}{p{2.5cm}|p{8.75cm}|p{8.75cm}}
+    \begin{tabular}{p{4.5cm}|p{7.75cm}|p{7.75cm}}
     \textbf{Infrastructure} & \textbf{Advantages} & \textbf{Disadvantages} \\ \hline
     AWS and MongoDB & \tabitem AWS provide free services & \tabitem Mongo would need to be hosted on the EC2 instance, or on S3, which would limit the free storage to 5GB. \\ & \tabitem Mongo provides a flexible schema, meaning that the table structure can be changed further down the line.  \\ \hline
-    AWS and DynamoDB & \tabitem DynamoDB would provide 25GB of storage on its own, meaning that . & \tabitem Topics are much broader than Google News, thus meaning that users can't necessarily search for topics specific-enough for them.\\ & \tabitem Available as a mobile application & \tabitem Flipboard requires registration before being able to read articles \\ \hline
-    Digital Ocean and DynamoDB & \tabitem Yahoo News Digest won the 2014 Apple\index{Apple} Design award\cite{appleDesignAward}\index{Apple!Design award}. & \tabitem There are only ten articles available per digest, and no capability for searching by topic. \\ & \tabitem The articles also provide key infographics, quotes, and other information potentially relevant to the article. & \tabitem Digests are only produced in the morning and the evening, so the news articles presented could be out of date. \\ \hline
-    Digital Ocean and MongoDB & \tabitem Allows selection based off both topics and the news sources themselves. & \tabitem Navigation on the application is not simple. If a user has accessed many articles from push notifications, then the user could have to press the back button several times to get back to the home screen.\\ & \tabitem The home screen for the app allows users to see a lot of headlines at a glance. & \tabitem The topics that a user can subscribe to can be quite limited, and aren't reactive to current affairs - for example, if a natural disaster occurs, you couldn't then subscribe to that natural disaster as a topic. \\
+    AWS and DynamoDB & \tabitem DynamoDB would provide 25GB of storage on its own, meaning that I wouldn't have to use the S3 storage. & \tabitem DynamoDB's key-value schema is quite rigid, meaning that there isn't much flexibility on the model.\\ & & \tabitem The throttling of reads and writes by DynamoDB could severely impact the performance of key back end tasks.\\ \hline
+    Digital Ocean and DynamoDB & \tabitem Digital Ocean offers the ability to resize the server as needs be within a matter of minutes. & \tabitem As before, there are some key issues regarding the speed of DynamoDB whilst on the free tier. \\ & &\tabitem This solution would involve maintenance of a database solution provided by one company, and a server on another, which is potentially quite wasteful.  \\ \hline
+    Digital Ocean and MongoDB & \tabitem MongoDB database can be stored comfortably on the Digital Ocean droplet & \tabitem Whilst covered by vouchers for the first two months of use at least, the Digital Ocean instance would require expenditure if used for longer than that period, versus AWS EC2 which would be free for at least twelve months.\\ & \tabitem The flexibility of the MongoDB model would mean that fields can be removed and added easily from the schema, allowing for further changes down the line. \\
   \end{tabular}
   \caption[Advantages and Disadvantages of different Infrastructure combinations]{Comparing the advantages and disadvantages of potential combinations of hardware and database options.}
   \label{infrastructuretable}
@@ -1037,6 +1037,17 @@ Table \ref{infrastructuretable} shows the key points of comparison between the f
 
 
 \textbf{Decision Process}
+
+I tried all possible combinations listed in table \ref{infrastructuretable} before finally arriving at the decision of using Digital Ocean and MongoDB.
+
+I initially started with the configuration with AWS and MongoDB. However, it became clear quite quickly that there was a distinct possibility that the memory provided by AWS would not be sufficient to hold a large number of articles (about six weeks or greater) in the database. There certainly would not be scope for adding extra outlets near the end of the project.
+
+In an attempt to counter this, and trying to avoid solutions that would require the spending of money, I then switched the database option to DynamoDB. This worked well for a time, but as the database grew, it became clearer that the throttling of the read and write operations to my database was going to cause major issues down the line for my background jobs on the server, as well as for simple API methods. In order to counteract this, I resolved that I would use vouchers for AWS from the GitHub student pack in order to fund some extra read-write operations per second.
+
+Having resolved to do this, I then decided to make use of Digital Ocean. This was because I wanted to experiment to see the effects of having an instance with extra RAM would do for the running of my program, and knew that the vouchers on the GitHub student pack would easily cover a Digital Ocean droplet until the end of the project. What I found was that my background jobs (such as pulling in articles, labelling, clustering and summarisation) were being performed faster in general, and so I decided to permanently move to Digital Ocean.
+
+In the end, a final nail in the coffin for my use of Amazon Web Services came when I wanted to change the way my articles table worked in the database. I had wanted the ability to search by date published (as I was considering at the time removing articles published before a certain date), but found that I would have to recreate my entire table in order to add this functionality to my table. As a result, and combined with the fact I now had a much larger amount of storage space on my new Digital Ocean droplet, I took the decision to make a new MongoDB database, knowing that it was still early enough in the development process that losing all my previous database work would not affect the finished product, or the development timeline.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1055,7 +1066,7 @@ Statistics below are taken from the \emph{Digital News Report 2016}\cite{digital
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|c|r}
-		\textbf{Outlet} & \textbf{Viewership} & \textbf{Political Stance} \\ \hline
+		\textbf{Outlet} & \textbf{Viewership} &\textbf{Political Stance} \\ \hline
 		BBC\index{BBC} & 51\% & Neutral \\ \hline
 		Mail Online\index{Mail Online} & 17\% & Right \\ \hline
 		Huffington Post\index{Huffington Post} & 14\% & Left \\ \hline
@@ -1316,6 +1327,8 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 \newpage
 
 \section{Implementation}
+
+
 
 \subsection{Machine Learning}
 
