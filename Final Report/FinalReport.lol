@@ -16,3 +16,5 @@
 \contentsline {lstlisting}{\numberline {8}A sample response to an API call to Wikipedia's API}{65}
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {9}Analysing an annotated document using Stanford's CoreNLP}{68}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {10}Finding similarities between two ArticleVectors}{75}

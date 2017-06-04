@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  4 JUN 2017 02:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  4 JUN 2017 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1892,32 +1892,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
+
+ []
+
 [66]
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1350
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1365
 
  []
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
 
  []
 
@@ -1925,17 +1925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [68]
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1450
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
 
  []
 
@@ -1949,18 +1939,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1451--1452
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
+
+ []
+
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1485
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1486
+Underfull \hbox (badness 10000) in paragraph at lines 1477--1478
 
  []
 
@@ -1969,23 +1959,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1486--1487
 
  []
 
-[71]
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
+
+Underfull \hbox (badness 10000) in paragraph at lines 1487--1488
 
  []
 
-[72]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1489
+
+ []
+
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 1515--1516
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1518--1519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1519--1520
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1518
 
  []
 
@@ -2005,7 +1995,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1522--1523
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1527--1528
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1525
 
  []
 
@@ -2015,12 +2010,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1529--1530
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1532--1533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1534
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1532
 
  []
 
@@ -2029,17 +2019,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1536--1537
+
+ []
+
 [73]
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1538--1539
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1539--1540
 
  []
@@ -2050,27 +2040,179 @@ Underfull \hbox (badness 10000) in paragraph at lines 1540--1541
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1542
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1542--1543
 
  []
 
-[74] [75] [76] [77] [78]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1545
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1551--1552
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1555
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1556
+
+ []
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1562
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1562--1563
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1565--1566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1569
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1573
+
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 1613--1614
+
+ []
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1617--1618
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1619--1620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1621--1622
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1623
+
+ []
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 1637--1638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1645--1646
+
+ []
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1686
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1686--1687
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1688--1689
+
+ []
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 1709--1710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1710--1711
+
+ []
+
+[80] <images/SummaryEvaluationResource.png, id=362, 1445.4pt x 805.0075pt>
+File: images/SummaryEvaluationResource.png Graphic file (type png)
+
+<use images/SummaryEvaluationResource.png>
+Package pdftex.def Info: images/SummaryEvaluationResource.png used on input lin
+e 1739.
+(pdftex.def)             Requested size: 433.62335pt x 241.50412pt.
+
+Overfull \hbox (6.19182pt too wide) in paragraph at lines 1739--1740
+ [][] 
+ []
+
+[81] [82 <./images/SummaryEvaluationResource.png>] [83] [84] [85] [86]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
-Overfull \hbox (9.20987pt too wide) in paragraph at lines 1619--1619
+Overfull \hbox (9.20987pt too wide) in paragraph at lines 1814--1814
 []\T1/cmr/m/n/12 Pierre-Etienne Gen-est and Guy La-palme. `  Fully Ab-strac-tiv
 e Ap-proach to Guided
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
-Overfull \hbox (9.86668pt too wide) in paragraph at lines 1619--1619
+Overfull \hbox (9.86668pt too wide) in paragraph at lines 1814--1814
 []\T1/cmr/m/it/12 Hierarchical Clus-ter-ing\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url
 \T1/cmr/m/n/12 : $\T1/zi4/m/n/12 https : / / en . wikipedia . org / wiki / Hier
 archical _
@@ -2078,55 +2220,55 @@ archical _
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
-[79]
+[87]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
-Overfull \hbox (28.99365pt too wide) in paragraph at lines 1619--1619
+Overfull \hbox (28.99365pt too wide) in paragraph at lines 1814--1814
 []\T1/cmr/m/it/12 Reuters In-sti-tute for the Study of Jour-nal-ism\T1/cmr/m/n/
 12 . www.reutersinstitute.politics.ox.ac.uk. 
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
-[80]
+[88]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1619.
+(biblatex)                Using fallback driver on input line 1814.
 
-[81] [82] [83] [84]
+[89] [90] [91] [92]
 runsystem(makeindex -s mystyle.ist FinalReport.idx)...executed safely (allowed)
 .
 
- (./FinalReport.ind [85
+ (./FinalReport.ind [93
 
-]) [86] (./FinalReport.aux)
+]) [94] (./FinalReport.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2138,10 +2280,10 @@ Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14756 strings out of 493014
- 236170 string characters out of 6133350
- 864412 words of memory out of 5000000
- 18000 multiletter control sequences out of 15000+600000
+ 14788 strings out of 493014
+ 236846 string characters out of 6133350
+ 863483 words of memory out of 5000000
+ 18031 multiletter control sequences out of 15000+600000
  23717 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,13n,97p,1036b,1881s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2175,10 +2317,10 @@ onts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/cm-super/sfxc1440.pfb>
-Output written on FinalReport.pdf (87 pages, 8114137 bytes).
+Output written on FinalReport.pdf (95 pages, 8452331 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
+ 501 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

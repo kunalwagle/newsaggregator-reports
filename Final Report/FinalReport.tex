@@ -1336,6 +1336,8 @@ Mallet also provides an inferencer that allows a user to submit a new document a
 
 \subsubsection{Natural Language Processing}
 
+\label{nlp}
+
 There are several Natural Language Processing libraries available. The following are designed for use in Java: \\
 
 \textbf{Apache OpenNLP} \\
@@ -1530,7 +1532,7 @@ A full analysis of the speed of the new topic labelling algorithm, and its role 
 
 \begin{enumerate}
 	\item \textbf{Isolate the nouns from the Wikipedia articles of every label}\\
-	\item \textbf{Use nouns from step one as a corpus in a TF-IDF model} \\
+	\item \textbf{Use nouns from step one as a corpus in a Term Frequency-Inverse Document Frequency (TF-IDF) model} \\
 	\item \textbf{Isolate the nouns from the original article} \\
 	\item \textbf{For each label:}
 		\begin{itemize}
@@ -1544,11 +1546,206 @@ A full analysis of the speed of the new topic labelling algorithm, and its role 
 
 \subsubsection{Clustering}
 
+For the project, I developed my own clustering algorithm, based on the metric of Term Frequency-Inverse Document Frequency. 
+
+The intention of the make up of my clustering algorithm is that the following two items must be true for a pair of articles to be clustered together: \\
+
+\begin{itemize}
+	\item \textbf{Noun similarity}: The content of the articles themselves needs to be similar. To do this I'll again look for similarity between "significant words" (nouns) in the articles. \\
+	\item \textbf{Timestamp similarity}: When a piece of news is published, if other outlets are going to cover it, they will publish as soon as possible. Therefore, the difference between timestamps should be used as a factor in deciding if articles are genuinely about the same topic or not, or just about similar topics. \\
+\end{itemize}
+
+\textbf{Initialisation}
+
+\begin{enumerate}
+	\item \textbf{Create a TF-IDF corpus} from the content of every article to be clustered. \\
+	\item For every article \textbf{perform TF-IDF on each noun}. \\
+	\item For every article \textbf{generate a "timestamp" score}. The timestamp is represented by the number of milliseconds since midnight on January 1, 1970. This is the result of the Java Date class' getTime() method.\\
+	\item \textbf{Create clusters}, with each article initially assigned its own cluster. \\
+	\item \textbf{Generate a similarity matrix} with initial values for each cell determined by the "Finding Similarities" algorithm detailed below. The purpose of this is to store the "distance" between a cluster and all other clusters, and to quickly and easily find similarities. \\
+\end{enumerate}
+
+The article, along with a list of TF-IDF scores for each noun, and the timestamp score, are kept in a class known as an ArticleVector. These ArticleVector instances form the cluster items in the algorithms. \\
+
+\textbf{Finding Similarities}
+
+The principle behind this step of the algorithm is to compare two clusters and generate a score to keep in the similarity matrix. To do this, each ArticleVector from one cluster is compared with every ArticleVector from the second cluster. These similarity scores are then added together to form a final similarity score between the clusters. So, for example, if there was a cluster with three articles, and a second cluster with four articles, then the final similarity score would be the sum of the twelve possible combinations. The algorithm I used for determining the similarity between two ArticleVector instances is detailed below: \\
+
+\begin{lstlisting}[style=MyJava, firstnumber=1, label={lst:clusteringsimilarity}, caption={Finding similarities between two ArticleVectors}]
+	List<TfIdfScores> firstNounScores = firstArticleVector.getNounScores();
+        List<TfIdfScores> secondNounScores = secondArticleVector.getNounScores();
+        
+        double similarityRunningTotal = 0;
+        double differenceRunningTotal = 0;
+        
+        double averageWords = (firstNounScores.size() + secondNounScores.size()) / 2;
+        double totalSimilarWords = 0;
+        
+        for (TfIdfScores word : firstNounScores) {
+            String noun = word.getLabel();
+            if (secondNounScores.hasWord(noun)) {
+                TfIdfScores score = secondNounScores.scoreForWord(noun);
+                double number = word.getTfIdf() - score.getTfIdf();
+                similarityRunningTotal += Math.pow(number, 2);
+                totalSimilarWords++;
+            } else {
+                differenceRunningTotal += word.getTfIdf();
+            }
+        }
+        for (TfIdfScores word : secondNounScores) {
+            String noun = word.getLabel();
+            if ( ! firstNounScores.hasWord(noun)) {
+                differenceRunningTotal += word.getTfIdf();
+            }
+        }
+        
+        double multiplicationFactor = totalSimilarWords / averageWords;
+        
+        similarityRunningTotal = Math.pow(similarityRunningTotal, 0.5) * multiplicationFactor;
+        
+        return similarityRunningTotal / differenceRunningTotal; 
+        
+\end{lstlisting}
+
+\emph{Explanation of Listing \ref{lst:clusteringsimilarity}}
+
+\begin{enumerate}
+	\item \textbf{Initialise variables}: similarityRunningTotal and differenceRunningTotal will form the backbone of the final calculation, and act almost like a running total. averageWords stores (as the name suggests) the average number of nouns in the two ArticleVector items - this will help to normalise the calculation somewhat. \\
+	\item \textbf{For each word in the first ArticleVector:}
+		\begin{itemize}
+			\item If the word is in the second ArticleVector, increment a counter for the total similar words. Add the square of the difference between the word's TF-IDF scores in each item to the similarityRunningTotal. \\
+			\item If the word is not in the second ArticleVector, add its TF-IDF score from the first ArticleVector to the differenceRunningTotal. \\
+		\end{itemize}
+	\item \textbf{For each word in the second ArticleVector that's not in the first}, add the TF-IDF score to the differenceRunningTotal. \\
+	\item \textbf{A multiplicationFactor is calculated} to be the number of similar words divided by the average words. \\
+	\item \textbf{The final similarityRunningTotal} is calculated to be the square root of the similarityRunningTotal multiplied by the multiplicationFactor calculated earlier.\\
+	\item \textbf{Calculate the final similarity} by dividing the similarityRunningTotal by the differenceRunningTotal. \\
+\end{enumerate}
+
+\emph{Factoring in the timestamp}
+
+Once the similarity from listing \ref{lst:clusteringsimilarity} has been calculated, the timestamp is then factored in.
+
+The theory behind this is simple. 
+
+If the similarity is above a certain threshold then the timestamp difference between the two ArticleVector's is considered and the final similarity score adjusted accordingly. 
+
+If not, then the final similarity is reset to -1, as it is determined that the ArticleVector are not about the same topic, and therefore there is no need for a timestamp check.
+
+When the timestamp is considered, the absolute difference between the two timestamps is calculated, and the similarity score is divided by the result. The logic behind this is that it means that a small difference between the timestamps results in the similarity score increasing significantly, whilst the converse is also true.
+
+The timestamps are also subjected to a multiplication factor before the absolute difference between them is calculated. The theory behind this is that this will mean that similarity scores are penalised more heavily, rather than on a standard linear scale. \\
+
+\textbf{Combining clusters}
+
+Once the similarity scores have been calculated for all clusters and the full similarity matrix has been generated, the clusters can be combined.
+
+To do this, the highest similarity score from the matrix is found. If it is above a threshold (all thresholds are tabled below) then the two clusters are combined. Once the clusters have been combined, the entire process is started again, with a new similarity matrix being generated.
+
+If the similarity score was below a threshold, then the clusters are not combined. At this point the clustering process is declared to be finished, as no clusters have changed in this iteration. \\
+
+\textbf{Parameter Selection}
+
+I tried different values for the three parameters in the clustering algorithm, each with varying degrees of success. I conducted a survey that involved the clusters produced by testing multiple clustering parameters. The results of this survey are documented in the evaluation section. The final parameters chosen are listed below:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r}
+		\textbf{Parameter} & \textbf{Final Value} \\ \hline
+		Similarity score threshold to bring in the timestamp & 0.0005 \\ \hline
+		Timestamp multiplication factor & 36000 \\ \hline
+		Threshold for combining clusters &  0.005 \\ \hline
+	\end{tabular}
+	\caption[Parameters for the clustering algorithn]{A table showing the final parameters chosen for the clustering algorithm}
+	\label{clusteringparameters}
+\end{table}
+
 \subsection{Summarisation}
+
+For the summarisation of articles, I initially intended to use LexRank for extractive summarisation, followed by Semantic Graph summarisation for abstractive summarisation. However, it became clear that abstractive summarisation would not be time efficient, which is detailed in section \ref{abstractiveimplementation}.
 
 \subsubsection{Extractive Summarisation}
 
+\label{extractiveimplementation}
+
+\textbf{Modified LexRank algorithm}
+
+The core aspects of the extractive summarisation follow the LexRank algorithm that was investigated in section \ref{extractiveSummarisation}. 
+
+\begin{enumerate}
+	\item \textbf{Create a Graph}, with each sentence in each article corresponding to a node in the graph. Information stored in the node includes:
+		\begin{itemize}
+			\item The original sentence
+			\item The position of the sentence (as a decimal) in the original article
+			\item The absolute position of the sentence in the original article
+			\item An identifier for the node
+			\item A list of related nodes, initialised as an empty list
+			\item The source of the original article \\
+		\end{itemize}
+	\item \textbf{Apply cosine similarities} as in the original LexRank algorithm. I initially attempted this with just nouns, but that approach is not particularly suitable for summarisation, as verbs become important in identifying similarities between two individual sentences. As a result, I decided to use the stoplists file that was provided by Mallet for topic modelling. Words are filtered out before the LexRank cosine similarity function is applied. \\
+	\item \textbf{Filter the graph}, removing connections between nodes that has similarity values that are below a selected threshold. \\
+	\item \textbf{Page Rank is applied}, using the equation given in section \ref{abstractiveimplementation}. \\
+	\item \textbf{Redundant nodes are filtered out}. This is done by iterating through the nodes returned by the page rank algorithm. For each node, if there are nodes which share more than 75\% of the same words (minus the words in the stoplist file provided by Mallet), it is marked as a related node. When a node is marked as a related node, it is added to the related nodes list in the original node, and the related node is not considered for the final summary. \\ 
+\end{enumerate}
+
+At this stage the summary is considered to be ready to go through quotation and coreference resolution, in order to ensure the summary is as readable as possible. These processes are detailed below.
+
+\textbf{Quotation resolution}
+
+In order for the summary to be as readable as possible, it's important that quotations are complete. An incomplete quotation could mean that the reader is reading a quotation from someone that can easily be taken out of context, or that just doesn't make much sense.
+
+In the quotation resolution phase of the summarisation, each node is analysed in order. There are four types of quotation that the algorithm looks for:
+
+\begin{enumerate}
+	\item A quote is started in the sentence, but is not completed.
+	\item A quote is ended in the sentence, but wasn't started in the same sentence.
+	\item There are no quotation marks in the sentence, but it is the middle sentence in a longer quotation.
+	\item A quote is both started and ended in the same sentence.
+\end{enumerate}
+
+There is no issue with a quote outlined as in (4). However, with the first three, resolution needs to take place. With resolution, one of two things will happen:
+
+\begin{itemize}
+	\item \textbf{If the rest of the quote is in the summary} \\ The nodes comprising the quotation will be combined, ensuring that in the final summary they are kept together. \\
+	\item \textbf{If the rest of the quote is not in the summary} \\ Depending on whether the current node starts or ends the quote, adjacent sentences from the original are added to the summary (this is done using the absoluteSentencePosition field on the node). The adjacent sentences are combined with the node to ensure that they are kept together in the final summary. \\
+\end{itemize}
+
+\textbf{Coreference resolution}
+
+Pronouns in a sentence can also cause readability issues, as the sentence could be out of context, meaning it would not be clear what the pronoun is referring to.
+
+Initially I aimed to fix these issues using the coreference resolution part of the Stanford CoreNLP library, which is outlined in section \ref{nlp}. However, there were two issues with this. On test runs, it would take nearly a minute to produce the coreference resolution for an article. In a summary that has several original articles this would become prohibitively expensive. In addition to this, it was also clear that whilst Stanford's coreference resolution might be competition-winning, it certainly isn't perfect. In a climate such as journalism, any incorrect coreference resolution could alter the meaning of a sentence significantly. If the article is about a sensitive subject, it could create some liability issues.
+
+As a result, I decided that the best way to approach coreference resolution would be a similar manner to quotation resolution. Using the Apache OpenNLP library to identify pronouns, I would then add the previous sentence to the summary (if it wasn't already present), and combine the two nodes to ensure that they were kept together in the final summary, thus preserving readability.
+
+\textbf{Ordering}
+
+Another key aspect to the summarisation's readability is that sentences perform the same task that they were meant to in the original article. For example, a sentence that was meant to set the scene near the start of an article, should also appear near the start of the summary. 
+
+This is achieved by ordering the sentences according to the sentencePosition field on the Node object. 
+
+\subsubsection{Summary Evaluation Resource}
+
+In order to provide an easy way to track progress on how my summarisation algorithm was doing, I created a simple web page to test it out. 
+
+On this web page I could input the URL to an article from \emph{Reuters}, an article from \emph{The Independent} and an article from \emph{The Telegraph}. This would then submit these three articles to the server, which would obtain the article text from the websites. It would then summarise it, and send it back to the web page.
+
+This was particularly useful as it would mean that I could fully test summarisation without having to go through the process of modelling, labelling and clustering the articles.
+
+A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{SummaryEvaluationResource}
+   \caption[A screenshot of the Summary Evaluation Resource]{A screenshot of the Summary Evaluation Resource. On the left is the extractive summary, and on the right is the extractive summary after the coreferences and quotations have been resolved as in section \ref{extractiveimplementation}}
+   \label{summaryevaluationresource}
+\end{figure} 
+
 \subsubsection{An attempt at Abstractive Summarisation}
+
+\label{abstractiveimplementation}
+
+
 
 \subsection{Restlet}
 
