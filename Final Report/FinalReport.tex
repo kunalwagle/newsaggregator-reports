@@ -1137,7 +1137,7 @@ A sample document for a cluster can be seen below:
         ObjectId("591df7cfacea820abe2970a9"), 
         ObjectId("591df7cfacea820abe2970b2")
     ],
-    "Summaries" : "{\"[daily-mail,the-guardian-uk]\":[{\"sentence\":\"President Donald Trump says he's 'very close' to naming an FBI director.\",\"sentencePosition\":0.0,\"absoluteSentencePosition\":0,\"identifier\":0,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"Trump confirmed Thursday afternoon that former Democratic Sen. Joe Lieberman is a favorite for the position.\",\"sentencePosition\":0.019230769230769232,\"absoluteSentencePosition\":1,\"identifier\":1,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"'We're very close to an FBI director,' Trump told reporters shouting questions at him as he met with the Colombian president in the Oval Office.\",\"sentencePosition\":0.038461538461538464,\"absoluteSentencePosition\":2,\"identifier\":2,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"'Soon,' he added.\",\"sentencePosition\":0.057692307692307696,\"absoluteSentencePosition\":3,\"identifier\":3,\"relatedNodes\":[],\"source\":\"daily-mail\"}
+    "Summaries" : "{\"[http://www.cnn.com/2017/06/01/politics/trump-paris-climate-decision/index.html,http://www.reuters.com/article/us-usa-climatechange-eu-idUSKBN18S5IT]\":[{\"sentence\":\"BRUSSELS The European Union said on Thursday it had made its position on climate change clear and was not engaged in last-minute lobbying of the Trump administration to keep the United States aboard the Paris climate accord.\",\"sentencePosition\":0.0,\"absoluteSentencePosition\":0,\"identifier\":26,\"relatedNodes\":[],\"source\":\"reuters\"}
     ...
     ]}"
 }
@@ -1145,13 +1145,15 @@ A sample document for a cluster can be seen below:
 
 An object in this table represents a Summary, and corresponds to the Clusters array in a Topic. It contains an array of references to the original articles used for the summarisation.
 
-The \emph{Summaries} field is a string representation of a map object, with the values representing to a summary, and the corresponding key representing a combination of articles used to make that summary (represented using their sources). For example, in the full version of the sample document, there would be three keys in the string representation:
+The \emph{Summaries} field is a string representation of a map object, with the values representing to a summary, and the corresponding key representing a combination of articles used to make that summary (represented using their URLs). For example, in the full version of the sample document, there would be three keys in the string representation:
 
+\begin{sloppypar}
 \begin{itemize}
-	\item \textbf{[daily-mail,the-guardian-uk]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}.
-	\item \textbf{[daily-mail]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}.
-	\item \textbf{[the-guardian-uk]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}. \\
+	\item \textbf{[http://www.cnn.com/2017/06/01/politics/trump-paris-climate-decision/index.html,http://www.reuters.com/article/us-usa-climatechange-eu-idUSKBN18S5IT]{}}, for a summary using articles from \emph{CNN} and \emph{Reuters}.
+	\item \textbf{[http://www.cnn.com/2017/06/01/politics/trump-paris-climate-decision/index.html]}, for a summary using an article from \emph{CNN}.
+	\item \textbf{[http://www.reuters.com/article/us-usa-climatechange-eu-idUSKBN18S5IT]}, for a summary using an article from \emph{Reuters}. \\
 \end{itemize}
+\end{sloppypar}
 
 These represent all the possible permutations (of size greater than zero) of the articles in the cluster. Its primary use is in the customisation offered to users, that can be seen in more detail in section \ref{frontendimplementation}.
 
@@ -1781,6 +1783,8 @@ According to WordNet, there are two meanings to the word "computing", eleven for
 
 \subsection{Restlet}
 
+\label{Restlet}
+
 For my server I used the Restlet framework for Java. Restlet is a powerful open source framework that allows users to create vastly scalable Rest APIs and back end servers. There are three key classes in Restlet that I used.\\
 
 \begin{itemize}
@@ -1794,6 +1798,59 @@ Documentation on the Web API I created is provided in Appendix \ref{WebAPI} and 
 \subsection{Server Tasks}
 
 \label{ServerTasks}
+
+The following jobs are back end server tasks using the Restlet framework's TaskService (section \ref{Restlet}). I created them with the purpose of fetching, labelling, clustering and summarising articles. They also perform other important tasks such as sending digests to subscribed users.  
+
+\subsubsection{ArticleFetchRunnable}
+
+The ArticleFetchRunnable runs through every source and fetches the latest articles. Each article is then checked against the database to see if it exists. If it does, then it is removed from the list of latest articles, whereas it is kept if it isn't present in the database.
+
+Each article has the "isLabelled" flag set to false, and is then saved to the database.
+
+\subsubsection{TopicLabellingRunnable}
+
+The concept of the TopicLabellingRunnable is to model and label a set of articles. It has a constructor that takes as a parameter a list of articles. 
+
+The Runnable models and labels each article, changing the "isLabelled" flag on the articles to true, and the "NeedsClustering" flag on the labels to true, before saving all to the database. 
+
+\subsubsection{ClusteringRunnable}
+
+The ClusteringRunnable is responsible for both clustering topics, and for producing the summaries. 
+
+Initially, each label is clustered. Then, for each cluster, a "power set", consisting of all possible combinations of articles in the cluster (of size greater than or equal to one) is created. For each combination of articles an extractive summary is produced (this allows for the customisation of survey sources). 
+
+Once the summaries have been generated, the clusters have been saved. They are added to the list of the labels' clusters in the database. In addition to this, for each label, a call to the Wikipedia API is made to find the list of categories that the label belongs to. The clusters are added to these labels as well.
+
+In a time-saving measure, a list of clusters that have been summarised during the course of the runnable is kept. This means that if a cluster is created that has already been created for a different label, it doesn't need to be summaries again.
+
+The "NeedsClustering" on the labels are also set to false.
+
+\subsubsection{LabellingRunnable}
+
+The LabellingRunnable's main function is to find articles that, for various reasons, could have "slipped through the cracks". It is fired at regular intervals, and takes fifteen articles from the database that have been marked as needing labelling, and calls the TopicLabellingRunnable with these articles.
+
+\subsubsection{DigestRunnable}
+
+The DigestRunnable is run each day. It goes through each user in the database, creating digests for those who have requested them. It then saves these digests in the database, thus creating an ID that is used to create a link to each. It then sends an email to each of the users with a digest, each email equipped with the generated link to view their digest.
+
+\subsubsection{Scheduling of tasks}
+
+In order to make sure no new articles from external outlets are missed, the ArticleFetchRunnable is run every three minutes. The ArticleFetchRunnable, on completion, fires the TopicLabellingRunnable with the new articles as a parameter (this only happens if there is at least one new article). Once the TopicLabellingRunnable has completed, it in turn fires the ClusteringRunnable. 
+
+The principle behind this is to create a cascading effect. With the ArticleFetchRunnable being called so frequently, the TopicLabellingRunnable should rarely have to deal with a large batch of articles in a single run (the largest recorded so far is 22 articles in one Runnable). This cascading effect also means that the ClusteringRunnable wouldn't have to deal with a massive batch of topics at any one time either. This will all minimise the delay between an article first being published on an external outlet, and then reaching the NewSumm website.
+
+With the LabellingRunnable, once the articles that have been picked up have gone through the whole process, and clustering has finished, the ClusteringRunnable then schedules the LabellingRunnable to start again a minute later. This means that only a maximum of one thread in the thread pool is dedicated to summarising old articles, and as many threads as possible can be dedicated to bringing news to the website as soon as possible after publication.
+
+The DigestRunnable is fired once a day, at five in the morning in the UTC time zone.
+
+Figure \ref{servertasks} shows how tasks are scheduled in the back end, and how the information flows between the separate server tasks.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{TaskService.png}
+   \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks}
+   \label{servertasks}
+\end{figure} 
 
 \subsection{Front End}
 
