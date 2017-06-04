@@ -588,6 +588,8 @@ Topic Labelling techniques in the project for labelling the topics that are gene
 
 \emph{A rough version of Lau, Grieser, Newman and Baldwin's algorithm:}
 
+\label{labellingalgorithm}
+
 \begin{enumerate}
 	\item \textbf{Calculate the top 10 topic terms.} This is done by finding the marginal probabilities of each word from the original topic models, and taking the top ten. The marginal probability of a term is the probability of that term being randomly selected given a topic \emph{t}. \\
 	\item \textbf{Search Wikipedia\index{Wikipedia} using these terms.} We also search Google\cite{google}\index{Google} using a site restricted search (to Wikipedia) and take the top eight results from each. These are called the \emph{primary labels}. \\
@@ -605,6 +607,8 @@ Topic Labelling techniques in the project for labelling the topics that are gene
 \end{enumerate}
 
 \textbf{Calculating the \emph{Related Article Conceptual Overlap}\index{Related Article Conceptual Overlap} }
+
+\label{RACOcalculation}
 
 \emph{Related Article Conceptual Overlap\index{Related Article Conceptual Overlap} } (RACO) was first introduced as a concept in the paper \emph{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}\cite{racoCalculation} \index{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}by Grieser, Baldwin, Bohnert and Sonenberg in 2011. It compares two terms and estimates their similarity by comparing the two terms' similarity on Wikipedia. The core calculation for RACO goes as follows: 
 \[Category-Overlap(a,b) = \left|
@@ -1499,6 +1503,44 @@ The final parameters chosen can be seen in table \ref{topicmodellingestimation}.
 \end{table}
 
 \subsubsection{Topic Labelling}
+
+When I first implemented the Topic Labelling phase of the backend, I aimed to emulate the algorithm of Lau, Grieser, Newman and Baldwin as closely as possible. This algorithm is detailed in section \ref{labellingalgorithm}. However, once this algorithm had been implemented, it was clear that there were some potential flaws when it applied to my project.
+
+A key issue in the topic labelling phase was that of speed. The algorithm required dozens (and potentially hundreds) of calls to the Wikipedia API. There are ten calls in step two (searching Wikipedia for the original top ten topic terms), followed by calls on every single noun chunk found in step three of the algorithm. Calculating the Related Article Conceptual Overlap scores (RACO, see section \ref{RACOcalculation} would also require every single "outlink" to be found, and every category of it. Given this needs to be done for every single noun chunk found earlier, it was easy to see why this could become prohibitively costly in terms of speed. 
+
+A simple test run using five articles from \emph{The Guardian} of varying lengths resulted in each taking at least fifteen minutes to complete the topic labelling process. Given the potential volume of articles expected per day, I reluctantly dismissed the algorithm as too expensive for the project.
+
+In order to streamline the labelling process I removed major aspects of the algorithm. This included removing the creation of noun chunks, and the RACO calculation. I also looked to some simple heuristics, such as isolating names using the OpenNLP library and automatically adding them as labels. \\
+
+\textbf{Brief overview of final labelling algorithm} \\
+
+\begin{enumerate}
+	\item \textbf{Find all proper names} in the article body using the Apache OpenNLP library. I used the models for Locations, Organisations and People in this phase. \\
+	\item \textbf{Search Wikipedia} for the top fifteen results for each of the ten topic words provided by the modelling algorithm. \\
+	\item \textbf{Retrieve text from Wikipedia articles} for all results in step two that aren't in the list of names found in step one. \\
+	\item \textbf{Perform Candidate Ranking.} This step is described in more detail below. \\
+	\item \textbf{Add top 18 results to candidates from step one.} The number 18 was found via trial and error, with the aim of striking a balance between too many potential labels and too few. Too many could result in a very slow clustering process, as there are too many topics that need clustering, causing a backlog. Too few could reduce accuracy. \\
+\end{enumerate}
+
+This significantly increased the speed of the algorithm, and articles that were taking fifteen minutes or more on the previous algorithm were now taking less than a minute, which I decided would be fast enough for the expected volume of articles.
+
+A full analysis of the speed of the new topic labelling algorithm, and its role in the bigger picture of the summarisation process is outlined in the evaluation section. \\
+
+\textbf{Brief overview of candidate ranking algorithm} \\
+
+\begin{enumerate}
+	\item \textbf{Isolate the nouns from the Wikipedia articles of every label}\\
+	\item \textbf{Use nouns from step one as a corpus in a TF-IDF model} \\
+	\item \textbf{Isolate the nouns from the original article} \\
+	\item \textbf{For each label:}
+		\begin{itemize}
+			\item Calculate the sum of performing TF-IDF on each individual noun from the label's article. The TF-IDF algorithm is explained in full detail in section \ref{ClusteringTechniques}. \\
+			\item Find the total number of nouns that are present in the original article that are also present in the candidate article. This is known as the crossover. \\
+			\item Normalise the crossover by dividing it by the total number of nouns in the candidate article and the original article. \\
+			\item Multiply the crossover by the sum of TF-IDF operations found earlier to give a final total. \\
+		\end{itemize}
+	\item \textbf{Order the candidates by score}, highest to lowest.\\
+\end{enumerate}
 
 \subsubsection{Clustering}
 
