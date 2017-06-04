@@ -706,6 +706,8 @@ After this has been calculated, the top ranked sentences are taken by the TextRa
 
 \subsubsection{Abstractive Summarisation Techniques}\index{Summarisation!Abstractive}
 
+\label{abstractiveSummarisation}
+
 There are six common methods for abstractive summarisation, which can be split evenly into two distinct categories\cite{abstractiveTechniques}. These two categories centre around the creation of a representation of the given document: \\
 
 \begin{itemize}
@@ -1432,6 +1434,8 @@ Map<Integer, CorefChain> graph =
 
 \textbf{\\ WordNet}
 
+\label{WordNet}
+
 WordNet is a large scale database developed by Princeton that offers a lexical database of the English language. It can primarily be used as a thesaurus, and could therefore be useful in the natural language generation of abstractive summarisation, as well as in finding similarities between sentences.
 
 \subsection{Machine Learning}
@@ -1745,11 +1749,51 @@ A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}
 
 \label{abstractiveimplementation}
 
+I made an initial attempt at abstractive summarisation, before reluctantly abandoning it on the grounds of infeasibility (further details on why are provided on why this was the case are given further on in this section). \\
 
+\textbf{Brief overview of Abstractive Summarisation algorithm}
+
+The following algorithm presents in more detail the ideas presented in the Semantic Graph section in section \ref{abstractiveSummarisation}. \\
+
+\begin{enumerate}
+	\item \textbf{Rich Semantic Graph creation} \\ 
+	In this process, the first step is to perform an analysis on each of the original articles using the Stanford CoreNLP library. I then perform coreference resolution on the articles, replacing relevant nodes in the summary. I do this because it reduces the length of the summary significantly. The Rich Semantic Graph is then created from the Rich Semantic Subgraphs, which are created according to the procedure below. \\
+	\item \textbf{Rich Semantic SubGraph creation} \\
+	In this step, the original summary is converted into several rich semantic subgraphs. First, the Stanford analyses computed in the first step are used to find a collection of "Relation Triples". Relation Triples are groups of subject, verb, object patterns. Each of these triples will be given its own subgraph. Each word in the triple is fed into the WordNet library (section \ref{WordNet} to find all the possible meanings of the word. \\
+	Once every possible meaning has been found, the cartesian product of every possible meaning is generated, and assigned a score based off the WordNet usage statistics. The graph is created from this cartesian product, with each meaning of an individual word constituting a node. \\
+	\item \textbf{Rich Semantic Graph reduction} \\
+	The graph is reduced by applying heuristics to combine sentences. For example, if two consecutive sentences both have the same subject, they can be combined into one sentence, with a conjunction for the object. \\
+	\item \textbf{Natural Language Generation}\\
+	The final stage is to pass the reduced semantic graph into a natural language generator, in order to generate the final summary sentences.\\
+\end{enumerate}
+
+\textbf{Feasibility issues}
+
+The major issue with this algorithm again centred around time. The designer of the algorithm had only presented results on simple sentence structures. As a result, when it came to the more complex structures and sentence lengths that inevitably appear in news articles, the algorithm began to struggle.
+
+The major issue came in the creation of rich semantic subgraphs. Take the following relation triple for example.\\
+
+\begin{displayquote}\emph{
+Computing is hard\\}
+\end{displayquote}
+
+According to WordNet, there are two meanings to the word "computing", eleven for the word "is" and twelve for the word "hard". All told, that alone would result in 264 different combinations presented in the cartesian product. Given this would be just one out of potentially dozens of relation triples in an article, the amount of time to generate a single summary would become prohibitive. As a result, I decided that it would make more sense to focus on making the extractive summarisation as readable as possible instead. 
 
 \subsection{Restlet}
 
+For my server I used the Restlet framework for Java. Restlet is a powerful open source framework that allows users to create vastly scalable Rest APIs and back end servers. There are three key classes in Restlet that I used.\\
+
+\begin{itemize}
+	\item \textbf{ServerResource} is a wrapper class, that provides the class with both a request object, and a response object. A server method can be created by using the annotation @Get or @Post as appropriate above a method. \\
+	\item \textbf{Application} is the base class for Restlet. Here, in an overrided method createInboundRoot I set the routes for the API to follow, and which ServerResource subclass to use when a request comes in to a specific api address. \\
+	\item \textbf{TaskService} is a service that allows the asynchronous scheduling and running of "tasks". I used this to run the server jobs required for fetching, labelling, clustering and summarisation. \\
+\end{itemize}
+
+Documentation on the Web API I created is provided in Appendix \ref{WebAPI} and for the server jobs in section \ref{ServerTasks}.
+
 \subsection{Server Tasks}
+
+\label{ServerTasks}
 
 \subsection{Front End}
 
@@ -1830,6 +1874,8 @@ A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}
 \newpage
 
 \section{API}
+
+\label{WebAPI}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
