@@ -180,7 +180,10 @@ Acknowledgements to be written
 \tableofcontents
 \pagebreak
 \listoffigures
+\pagebreak
 \listoftables
+\pagebreak
+\lstlistoflistings
 \singlespacing
 \pagebreak
 
@@ -1049,11 +1052,137 @@ Having resolved to do this, I then decided to make use of Digital Ocean. This wa
 In the end, a final nail in the coffin for my use of Amazon Web Services came when I wanted to change the way my articles table worked in the database. I had wanted the ability to search by date published (as I was considering at the time removing articles published before a certain date), but found that I would have to recreate my entire table in order to add this functionality to my table. As a result, and combined with the fact I now had a much larger amount of storage space on my new Digital Ocean droplet, I took the decision to make a new MongoDB database, knowing that it was still early enough in the development process that losing all my previous database work would not affect the finished product, or the development timeline.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
-\section{Libraries and APIs}
+\section{Implementation}
+
+\subsection{Database Schema}
+
+\subsubsection{Schema Diagram}
+
+Figure \ref{dbschema} shows the basic components of the various collections in the Mongo Database, along with some of the connections involved. Further details on each are given in each of the following sections.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{dbschema.png}
+   \caption[A diagram of the MongoDB schema]{A diagram of the core MongoDB schema.}
+   \label{dbschema}
+\end{figure} 
+
+\subsubsection{Articles}
+
+A sample document for an article can be seen below:
+
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Article table}]
+{
+    "_id" : ObjectId("591df7cfacea820abe29709f"),
+    "Title" : "Kirsten, Simons on five-man panel in hunt for new SA coach",
+    "Body" : "Cricket South Africa has nominated a five-man panel including two former national coaches, Gary Kirsten and Eric Simons, to recommend a suitable candidate for the position of head coach, which it aims to fill by the beginning of September
+    ...
+    ",
+    "ImageURL" : "http://www.espncricinfo.com/db/PICTURES/CMS/157600/157626.5.jpg",
+    "ArticleURL" : "http://www.espncricinfo.com/southafrica/content/story/1098337.html",
+    "Source" : "espn-cric-info",
+    "LastPublished" : "2017-05-18T10:42:38Z",
+    "isLabelled" : true
+}
+\end{lstlisting}
+
+The purpose of the article table is for storage of raw article data that has been brought in by the article fetcher. Most fields are self explanatory. The \emph{isLabelled} field is defaulted to false when an article is first brought in, and is then changed to true when the Topic Labeller has labelled it. This is present so that articles that either weren't labelled, or caused an error when being labelled, can be found with a simple search in the database.
+
+\subsubsection{Topics}
+
+A sample document for a topic can be seen below:
+
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Topics table}]
+{
+    "_id" : ObjectId("591df830acea820aebf55465"),
+    "Label" : "Opposition (politics)",
+    "Articles" : [ 
+        ObjectId("591e172dacea820aebf55a74"), 
+        ObjectId("5925f959acea821a75b831bc"), 
+        ObjectId("59281cddacea821ab611d3ed"), 
+        ObjectId("59291a47acea82594af9ef53"), 
+        ObjectId("592aa5daacea8264125210d3")
+    ],
+    "Clusters" : [ 
+        ObjectId("591f8bc7acea821e031f4dc6")
+    ],
+    "NeedsClustering" : true,
+    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d1/Stand_in_opposition_city_hall_boston.jpg"
+}
+\end{lstlisting}
+
+A topic object is a core concept in the back end. It keeps references to all articles that have been labelled with that topic, and also holds references to all the clusters (summaries) that are produced from these articles. The \emph{imageUrl} field holds either the lead image for the corresponding Wikipedia article, or a placeholder if the Wikipedia article doesn't have an image. 
+
+The \emph{NeedsClustering} flag performs a similar function to the \emph{isLabelled} flag in the Articles table. It is defaulted to true, and is changed to false once all the clustering (but not necessarily summarisation) is completed. It is used again to find topics that may have "slipped through the cracks", either due to an error, or for some other reason. 
+
+\subsubsection{Clusters}
+
+A sample document for a cluster can be seen below:
+
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Summaries table}]
+{
+    "_id" : ObjectId("591e47f7acea8221dcb97c42"),
+    "Articles" : [ 
+        ObjectId("591df7cfacea820abe2970a9"), 
+        ObjectId("591df7cfacea820abe2970b2")
+    ],
+    "Summaries" : "{\"[daily-mail,the-guardian-uk]\":[{\"sentence\":\"President Donald Trump says he's 'very close' to naming an FBI director.\",\"sentencePosition\":0.0,\"absoluteSentencePosition\":0,\"identifier\":0,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"Trump confirmed Thursday afternoon that former Democratic Sen. Joe Lieberman is a favorite for the position.\",\"sentencePosition\":0.019230769230769232,\"absoluteSentencePosition\":1,\"identifier\":1,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"'We're very close to an FBI director,' Trump told reporters shouting questions at him as he met with the Colombian president in the Oval Office.\",\"sentencePosition\":0.038461538461538464,\"absoluteSentencePosition\":2,\"identifier\":2,\"relatedNodes\":[],\"source\":\"daily-mail\"},{\"sentence\":\"'Soon,' he added.\",\"sentencePosition\":0.057692307692307696,\"absoluteSentencePosition\":3,\"identifier\":3,\"relatedNodes\":[],\"source\":\"daily-mail\"}
+    ...
+    ]}"
+}
+\end{lstlisting}
+
+An object in this table represents a Summary, and corresponds to the Clusters array in a Topic. It contains an array of references to the original articles used for the summarisation.
+
+The \emph{Summaries} field is a string representation of a map object, with the values representing to a summary, and the corresponding key representing a combination of articles used to make that summary (represented using their sources). For example, in the full version of the sample document, there would be three keys in the string representation:
+
+\begin{itemize}
+	\item \textbf{[daily-mail,the-guardian-uk]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}.
+	\item \textbf{[daily-mail]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}.
+	\item \textbf{[the-guardian-uk]}, for a summary using sources from \emph{The Daily Mail} and \emph{The Guardian}. \\
+\end{itemize}
+
+These represent all the possible permutations (of size greater than zero) of the articles in the cluster. Its primary use is in the customisation offered to users, that can be seen in more detail in section \ref{frontendimplementation}.
+
+\subsubsection{Users}
+
+A sample document for a User can be seen below:
+
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Users table}]
+{
+    "_id" : ObjectId("592c5288acea82147ca7f0d1"),
+    "emailAddress" : "fake@gmail.com",
+    "topicIds" : "[{\"topicId\":\"591e3c74acea821e2b7e6c02\",\"sources\":[\"wikipedia\",\"business-insider-uk\",\"daily-mail\",\"espn-cric-info\",\"metro\",\"mirror\",\"newsweek\",\"sky-sports-news\",\"the-telegraph\",\"the-times-of-india\",\"bbc-news\",\"bbc-sport\",\"bloomberg\",\"cnn\",\"cnbc\",\"espn\",\"four-four-two\",\"the-washington-post\",\"the-wall-street-journal\",\"associated-press\",\"the-guardian-uk\"],\"digests\":false}]"
+}
+\end{lstlisting}
+
+A user object is very simple. The only field that is not necessarily self-explanatory is the \emph{topicIds} field. 
+
+This is an array of strings, with each string forming a representation of a user's topic subscription (the topic being represented by the field marked \emph{topicId}), and the settings for that topic. The two core settings for each subscription is the digests setting (a boolean flag indicating whether a user wants to receive email digests that include this topic), and a list of sources that the user would like their news to default to (further information on this feature can be seen in section \ref{frontendimplementation}). By default, when a user subscribes to a topic, defaults is set to false, and sources is represented by a list comprising all possible sources.
+
+\subsubsection{Digests}
+
+A sample document for a digest can be seen below:
+
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Digests table}]
+{
+    "_id" : ObjectId("591ec5c433625db581d77cc6"),
+    "id" : "591ec5c433625db581d77cc6",
+    "articleHolders" : "[{\"topicId\":\"593020de5826a72aa697a201\",\"articleId\":\"59322bc5acea820dd0c7ef37\",\"title\":\"Elon Musk 'intrigued' by India's objective of all-electric cars by 2030 - Times of India\",\"imageUrl\":\"http://timesofindia.indiatimes.com/photo/msid-58964385/58964385.jpg?53722\",\"lastPublished\":\"2017-06-03T08:40:00Z\"},{\"topicId\":\"5930210d5826a72aa697a227\",\"articleId\":\"59324084acea820dd0c7f65b\",\"title\":\"Kathy Griffin loses ALL of her tour gigs in wake of Trump scandal\",\"imageUrl\":\"http://i.dailymail.co.uk/i/pix/2017/06/03/05/410C672100000578-0-image-a-41_1496464334669.jpg\",\"lastPublished\":\"2017-06-03T04:39:14Z\"},{\"topicId\":\"593020de5826a72aa697a201\",\"articleId\":\"59323dddacea820dd0c7f566\",\"title\":\"Putin says hacking of Democratic Party may have been CIA false flag op\",\"imageUrl\":\"http://i.dailymail.co.uk/i/pix/2017/06/03/05/410C6AD500000578-0-image-a-92_1496463783859.jpg\",\"lastPublished\":\"2017-06-03T04:28:04Z\"}
+    ...
+    ",
+    "emailAddress" : "specialk109@gmail.com"
+}
+\end{lstlisting}
+
+A digest document represents a single daily digest for a user. Thus, a user who gets daily digests would have a single object for each day. Having said a user would have a single object for each day, it's worth pointing out that the digests are not linked to the User object. Whilst there is no concrete justification for this to be the case either way, a reason for the digests table and users table to not be linked in some way is that they simply don't need to be. A user is never called when a digest is retrieved, and similar a digest is never called when a user is retrieved.
+
+The \emph{articleHolders} field in the document above represents the articles in a digest. It is an array of strings, with each string a JSON representation of an object containing a topic id, article id, and basic information about the cluster (title, image url, and a publishing date). The reasoning behind having the topic id in addition to the cluster is due to the pattern matching employed in the URL for the article viewer on the website (this is explained in further detail in section \ref{frontendimplementation}).
 
 \subsection{Potentially Useful APIs}
 
@@ -1085,7 +1214,7 @@ Statistics below are taken from the \emph{Digital News Report 2016}\cite{digital
 
 To obtain an article from \emph{The Guardian} there are two calls that need to be made. First, we make a call to the search endpoint, which returns a JSON object similar to this:
 
-\begin{lstlisting}[language=json, firstnumber=1]]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to The Guardian}]
 {
     "response": {
         "status": "ok",
@@ -1113,38 +1242,13 @@ To obtain an article from \emph{The Guardian} there are two calls that need to b
 
 From this, we extract the apiUrl, and call this, with the API key in the request headers. This will return the raw text for the article. \\
 
-\textbf{The Financial Times}\index{Financial Times, The}
-
-\emph{The Financial Times} is an internationally renowned, UK based broadsheet that provides news primarily on politics and the financial sector. Their API is similar to that of \emph{The Guardian}, but with a key difference that could prove very useful. While \emph{The Guardian} allows a user to query the API by date, \emph{The Financial Times} does better. It has a notification endpoint, which allows a user to query with a specific date and time. They are then returned a list of "notifications", showing articles that have been created, updated or deleted since the time provided, as shown in the example below.
-
-\begin{lstlisting}[language=json, firstnumber=1]]
-{
-  "requestUrl": "http://api.ft.com/content/notifications?since=2014-05-06T10:00:00.000Z",
-  "notifications": [
-    {
-      "type": "http://www.ft.com/thing/ThingChangeType/UPDATE",
-      "id": "http://www.ft.com/thing/7348edd8-0403-11de-845b-000077b07658",
-      "apiUrl": "http://api.ft.com/content/7348edd8-0403-11de-845b-000077b07658"
-    }
-  ],
-  "links": [
-    {
-      "href": "http://api.ft.com/content/notifications?since=2014-05-06T18:42:35.000Z",
-      "rel": "next"
-    }
-  ]
-}
-\end{lstlisting}
-
-Using this, the notifications of type UPDATE are kept, and we query for the raw data using the apiUrl in a similar fashion to before in the example for \emph{The Guardian}\index{Guardian, The}. \\
-
 \textbf{News API}
 
 A major issue is that most newspapers (for example, \emph{The New York Times}\cite{newYorkTimes}\index{New York Times}) only give the first paragraph to an article in their API, and don't give out their full articles as standard. There are solutions, such as Webhose\cite{webhose}\index{Webhose}, that offer feeds into this outlets, but at either a cost, or with a very limited number of requests per month. 
 
 News API\cite{newsApi}\index{News API} is a company that provides an API to get headlines for over seventy different news outlets. A call returns data in the JSON format as follows:
 
-\begin{lstlisting}[language=json, firstnumber=1]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to News API}]
 {
 "status": "ok",
 "source": "the-next-web",
@@ -1178,11 +1282,11 @@ News API counts amongst its 70 sources the following: \\
 
 News API also has \emph{The Financial Times}\index{Financial Times, The} and \emph{The Guardian}\index{Guardian, The}, although these are left off the list above as they have their own fully accessible APIs.  
 
-\subsubsection{Wikipedia}
+\textbf{Wikipedia}
 
 Wikimedia\index{Wikimedia} (the parent company for Wikipedia\cite{wikipedia}) provides documentation for the Wikipedia\index{Wikipedia} API on its website MediaWiki website. Here, I can search using the search term that a user has used (perhaps in searching for a topic), and get a result that is as follows:
 
-\begin{lstlisting}[language=json, firstnumber=1]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to Wikipedia's API}]
 {
     "query": {
         "searchinfo": {
@@ -1203,9 +1307,11 @@ Wikimedia\index{Wikimedia} (the parent company for Wikipedia\cite{wikipedia}) pr
 
 The search query can be altered to provide different information, such as the URL for the lead image, which can be used to show previews of various items to users. The Wikipedia API can also be used in the topic labelling aspect of the Machine Learning techniques (see Section \ref{TopicLabelingTechniques}).
 
-\subsection{Libraries}
+\subsection{Potentially useful libraries}
 
 \subsubsection{Mallet}
+
+\label{mallet}
 
 Mallet (Machine Learning for Language Toolkit) is a java library that provides an interface for various natural language-based machine learning tasks. These tasks include:
 
@@ -1287,7 +1393,7 @@ As a result, CoreNLP could have a major benefit for abstractive summarisation, t
 
 The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given annotated document. \\
 
-\begin{lstlisting}[style=MyJava, firstnumber=1]
+\begin{lstlisting}[style=MyJava, firstnumber=1, caption={Analysing an annotated document using Stanford's CoreNLP}]
 
 // these are all the sentences in this document
 // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
@@ -1322,23 +1428,93 @@ Map<Integer, CorefChain> graph =
 
 WordNet is a large scale database developed by Princeton that offers a lexical database of the English language. It can primarily be used as a thesaurus, and could therefore be useful in the natural language generation of abstractive summarisation, as well as in finding similarities between sentences.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-\section{Implementation}
-
-
-
 \subsection{Machine Learning}
 
+\subsubsection{Topic Modelling}
+
+For the Topic Modelling task I used the Mallet library, which is described in full detail in section \ref{mallet}.
+
+There are two sections to the topic modelling phase: Training, and Estimating. \\
+
+\textbf{Training}
+
+For training the model, I used the ParallelTopicModel class provided by the Mallet library. The class provides a parallel implementation of Latent Dirichlet Allocation. There are several key parameters that need to be passed in to the model before it can be estimated:
+
+\begin{itemize}
+	\item \textbf{numTopics}, the number of topics to model the corpus into.\\
+	\item \textbf{alphaSum} is distributed evenly across all topics. For example, an alphaSum of 1 over 100 topics would result in each topic having an alpha score of 0.01. An alpha score is viewed as a smoothing term. It ensures that the probability of a given topic being in a document is never zero.\\
+	\item \textbf{beta} is similar to alpha, and is the corresponding smoothing factor ensuring that the probability of a word being in a given topic is never zero.\\
+	\item \textbf{numIterations} is the number of iterations the trainer should run through before presenting a final model.\\
+\end{itemize}
+
+Initially I attempted to model topics by feeding in articles and seeing what topics came up. However, it was clear that this wasn't ideal, as frequently occurring words, such as "a", "the" and "and" were too prominent in the list of words in each topic, and thus were skewing any results from the estimation stage.
+
+I then tried to use the provided "stoplists" file. With this file, Mallet aims to filter out common words with no real significance out of the given texts, before training topics. It became noticeable quickly though that the stoplists file wasn't extensive enough, as it was missing contracted words, such as "it's". Given the frequency of these words, I dismissed this idea and set about a new solution.
+
+As a final solution, I decided to remove all insignificant words by removing all non-nouns from the article bodies. I did this using the Apache OpenNLP library, and found that this made (to the naked eye) the topic models look a lot better. 
+
+My final parameters can be seen in table \ref{topicmodellingtraining}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r}
+		\textbf{Parameter} & \textbf{Final Value} \\ \hline
+		alphaSum & 1.0 \\ \hline
+		beta & 0.01 \\ \hline
+		numTopics & 500 \\ \hline
+		numIterations & 1500 \\ \hline
+	\end{tabular}
+	\caption[Parameters for training topic models]{A table showing the final parameters chosen for the topic modelling training}
+	\label{topicmodellingtraining}
+\end{table}
+
+Initially, the articles would be used to retrain the model each time a set of articles were about to be labelled. However, in the optimisation phase of the project, I changed this so that the training would happen once a week, and a model saved on file. Full details and justification can be found in section \ref{topicmodellingoptimisation}. \\
+
+\textbf{Estimation}
+
+The body of the article to be estimated is passed in to the model. This was initially the whole article, but after I decided to keep only nouns for training, I did the same for estimation. 
+
+There are three key parameters for estimation. These are:
+
+\begin{itemize}
+	\item \textbf{numIterations}, which is the number of times to iterate through the model before producing a final estimate. \\
+	\item \textbf{thinning}, which is the number of iterations to run before saving an interim model.\\
+	\item \textbf{burn-in} is the number of iterations to perform before beginning the estimation. The reasoning behind this is that since the first iteration begins with a random distribution, the first set of iterations are unlikely to be truly representative of the actual model. The burn-in period could potentially be compared to the warm-up of an athlete. \\
+\end{itemize}
+
+After the topic model for the new article has been estimated, I prepare the result for topic labelling. To do this, I parse the data into a new custom class I created, that stores the word and the "distribution". The distribution is calculated by the Mallet library, and is an indication of the likelihood that an article belongs to a certain topic.
+
+The final parameters chosen can be seen in table \ref{topicmodellingestimation}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r}
+		\textbf{Parameter} & \textbf{Final Value} \\ \hline
+		numIterations & 2500 \\ \hline
+		thinning & 40 \\ \hline
+		burn-in & 50 \\ \hline
+	\end{tabular}
+	\caption[Parameters for estimating topic models]{A table showing the final parameters chosen for the topic modelling estimation}
+	\label{topicmodellingestimation}
+\end{table}
+
+\subsubsection{Topic Labelling}
+
+\subsubsection{Clustering}
+
 \subsection{Summarisation}
+
+\subsubsection{Extractive Summarisation}
+
+\subsubsection{An attempt at Abstractive Summarisation}
 
 \subsection{Restlet}
 
 \subsection{Server Tasks}
 
 \subsection{Front End}
+
+\label{frontendimplementation}
 
 \subsection{Key Classes}
 
@@ -1353,6 +1529,8 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 \subsection{Speed Optimisations}
 
 \subsubsection{Topic Modelling}
+
+\label{topicmodellingoptimisation}
 
 \subsubsection{Topic Labelling}
 
