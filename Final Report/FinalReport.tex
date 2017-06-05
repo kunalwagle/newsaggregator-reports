@@ -1856,13 +1856,44 @@ Figure \ref{servertasks} shows how tasks are scheduled in the back end, and how 
 
 \label{frontendimplementation}
 
-\subsection{Key Classes}
+For the implementation of the front end, I created a website and an iOS app.
 
-% Mention classes such as the LabelHolder and ClusterHolder here?
+The iPad version of the iOS app is designed to mirror the interface of the desktop website, whilst the iPhone version mirrors the interface of the mobile website. 
+
+There are a few key differences from the initial design. These are:
+
+\begin{itemize}
+	\item \textbf{The Home Page} - In the initial design, it was stated that a signed in user's home page would be their topic dashboard screen. This is now changed, so that they still receive the original home page, but the "Top Stories" section is now tailored to their specific subscriptions. This means that the large search bar still has major prominence, which, in my opinion, emphasises the search capabilities of NewSumm, whilst still providing the user with their articles at a glance. \\
+	\item \textbf{Profiles} - Users no longer have a profile picture, and in fact only an email address is stored to link to their accounts, and so there is no longer a profile settings page. \\
+	\item \textbf{Article Viewer} - This screen now allows a greater amount of customisation on a user's part. Each article that the summary is created from is now accompanied by a switch. Turning this switch off will remove the article from the summary. The same happens in the opposite direction.\\
+	\item \textbf{Summary Annotations} - Users can now see where the individual sentences of their summary are coming from. There is now a checkbox marked "Show Summary Annotations" in the corner, and when selected the text from the summary is highlighted according to its source (the source colours are shown on the corresponding switches on the right of the screen). Clicking on a highlighted piece of text will reveal a popover showing the source, along with the original sentence. If a sentence has some related sentences that aren't in the summary, the text won't be highlighted, and the popover will show the original, as well as all related sentences. \\
+\end{itemize}
+
+Screenshots from the website and apps can be seen in figure \ref{appscreenshots}, and further details are provided in the user guide in Appendix \ref{userguide}.
+
+\begin{figure}[ht!]
+  \centering
+  \begin{subfigure}[t]{0.6\textwidth}
+        \includegraphics[width=\textwidth]{DesktopScreenshot}
+        \caption{The article viewer, with summary annotations on, on the desktop website}
+    \end{subfigure}
+   \qquad
+    \begin{subfigure}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{iPhoneScreenshot.PNG}
+   \caption{Search Results on the iPhone application.}
+   \end{subfigure}
+   \qquad
+    \begin{subfigure}[t]{0.6\textwidth}
+    \includegraphics[width=\textwidth]{iPadScreenshot.PNG}
+   \caption{The topic viewer on the iPad application.}
+   \end{subfigure}
+   \caption[Screenshots from the website and iOS Applications]{Screenshots from the website and iOS Applications.}
+   \label{appscreenshots}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+\clearpage
 
 \section{Optimisation}
 
@@ -1939,6 +1970,8 @@ Figure \ref{servertasks} shows how tasks are scheduled in the back end, and how 
 \newpage
 
 \section{User Guide}
+
+\label{userguide}
 
 \end{appendices}
 
