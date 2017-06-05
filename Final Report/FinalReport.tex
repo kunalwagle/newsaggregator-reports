@@ -924,6 +924,10 @@ The other option upon clicking on the profile button in the navigation bar of th
    \label{profileSettings}
 \end{figure}
 
+\subsubsection{Digest Viewer}
+
+The digest viewer will show users (who have requested them) their daily digest. The form would be nearly identical to that seen in the topic dashboard of figure \ref{topicDashboard}. However the articles would be made up of the ten latest articles across the user's subscriptions, rather than from a single topic. The link to this page would be sent daily to the user via email.
+
 \subsection{Back End\index{Back End} Flow Diagram}
 
 In Figure \ref{backEndArchitecture} the expected flow of the machine learning aspects of the back end is presented. The process of an article being summarised is as follows:
@@ -931,7 +935,7 @@ In Figure \ref{backEndArchitecture} the expected flow of the machine learning as
 \begin{enumerate}
 	\item The \textbf{Article Fetcher} queries the various News APIs used for new articles. \\
 	\item The \textbf{Article Curator} takes the response from the News APIs and performs any scraping that may be necessary, before passing the article to the Machine Learning phases. \\
-	\item The article is then passed to the \textbf{Topic Modelling}\textbf{Topic Modelling} phase, which identifies which topics it consists of. \\
+	\item The article is then passed to the \textbf{Topic Modelling}\index{Topic Modelling} phase, which identifies which topics it consists of. \\
 	\item The \textbf{Topic Labelling}\index{Topic Labelling} section takes the results of the Topic Modelling phase, and proceeds to label its topic \\
 	\item \textbf{Clustering}\index{Clustering} then occurs. The article, along with its topic label is passed to this phase, and the program pulls articles from the database that have already been assigned the same topic. These articles are then clustered, and the cluster containing this article is passed to the next phase. \\
 	\item Now that the cluster has been passed, \textbf{Summarisation}\index{Summarisation} occurs on the article, which is then put in the Summarised Articles database, ready to be called for a user to read. \\
@@ -1874,6 +1878,18 @@ Screenshots from the website and apps can be seen in figure \ref{appscreenshots}
 
 \clearpage
 
+\section{Evaluation}
+
+\subsection{Machine Learning and Summarisation}
+
+\subsection{Summary Analysis}
+
+\subsection{User Interface Evaluation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
 \section{Optimisation}
 
 \subsection{Speed Optimisations}
@@ -1887,20 +1903,6 @@ Screenshots from the website and apps can be seen in figure \ref{appscreenshots}
 \subsubsection{Clustering}
 
 \subsection{Memory Optimisations}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-\section{Evaluation}
-
-\subsection{Machine Learning and Summarisation}
-
-%Summary Evaluation Resource
-
-\subsection{Summary Analysis}
-
-\subsection{User Interface Evaluation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

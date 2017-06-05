@@ -66,11 +66,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.8}Profile Settings}{49}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.9}Digest Viewer}{50}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Back End Flow Diagram}{50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Language and Platform Choices}{51}
+\contentsline {subsection}{\numberline {4.4}Language and Platform Choices}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Front End}{51}
+\contentsline {subsubsection}{\numberline {4.4.1}Front End}{52}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.4.2}Back End}{52}
 \defcounter {refsection}{0}\relax 
@@ -142,25 +144,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.8}Front End}{88}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Optimisation}{91}
+\contentsline {section}{\numberline {6}Evaluation}{91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Speed Optimisations}{91}
+\contentsline {subsection}{\numberline {6.1}Machine Learning and Summarisation}{91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.1}Topic Modelling}{91}
+\contentsline {subsection}{\numberline {6.2}Summary Analysis}{91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.2}Topic Labelling}{91}
+\contentsline {subsection}{\numberline {6.3}User Interface Evaluation}{91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.3}Clustering}{91}
+\contentsline {section}{\numberline {7}Optimisation}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Memory Optimisations}{91}
+\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Evaluation}{92}
+\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Machine Learning and Summarisation}{92}
+\contentsline {subsubsection}{\numberline {7.1.2}Topic Labelling}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Summary Analysis}{92}
+\contentsline {subsubsection}{\numberline {7.1.3}Clustering}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}User Interface Evaluation}{92}
+\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{92}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}Conclusion}{93}
 \defcounter {refsection}{0}\relax 
