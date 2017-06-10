@@ -58,13 +58,13 @@
 \indexentry{Wikipedia}{32}
 \indexentry{Google}{32}
 \indexentry{Related Article Conceptual Overlap}{32}
-\indexentry{Related Article Conceptual Overlap}{33}
+\indexentry{Related Article Conceptual Overlap}{32}
 \indexentry{Related Article Conceptual Overlap}{33}
 \indexentry{Related Article Conceptual Overlap}{33}
 \indexentry{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}{33}
 \indexentry{Wikipedia}{33}
 \indexentry{Dice's coefficient}{33}
-\indexentry{Clustering}{34}
+\indexentry{Clustering}{33}
 \indexentry{Centroid Clustering}{34}
 \indexentry{Clustering!Centroid}{34}
 \indexentry{Clustering!k-means}{34}
@@ -76,12 +76,12 @@
 \indexentry{Connectivity}{34}
 \indexentry{Hierarchical Clustering!Agglomerative}{34}
 \indexentry{Hierarchical Clustering!Divisive}{34}
-\indexentry{Term Frequency-Inverse Document Frequency}{35}
-\indexentry{TF-IDF}{35}
+\indexentry{Term Frequency-Inverse Document Frequency}{34}
+\indexentry{TF-IDF}{34}
 \indexentry{Term Frequency-Inverse Document Frequency}{35}
 \indexentry{Term Frequency-Inverse Document Frequency!Term Frequency}{35}
 \indexentry{Term Frequency-Inverse Document Frequency!Inverse Document Frequency}{35}
-\indexentry{Term Frequency-Inverse Document Frequency}{36}
+\indexentry{Term Frequency-Inverse Document Frequency}{35}
 \indexentry{Summarisation}{36}
 \indexentry{Topic Modelling}{36}
 \indexentry{Topic Labelling}{36}
@@ -101,44 +101,44 @@
 \indexentry{Summarisation!Multimodal Semantic}{39}
 \indexentry{Summarisation!Abstractive}{39}
 \indexentry{Concept!Multimodal Summarisation}{39}
-\indexentry{Summarisation!Information Item}{40}
+\indexentry{Summarisation!Information Item}{39}
 \indexentry{Summarisation!Extractive}{40}
 \indexentry{Summarisation!Semantic Graph}{40}
 \indexentry{Rich Semantic Graph}{40}
-\indexentry{Front End}{43}
-\indexentry{Architecture}{43}
-\indexentry{Wireframe}{43}
-\indexentry{wikipedia}{45}
-\indexentry{Back End}{50}
-\indexentry{Topic Modelling}{51}
-\indexentry{Topic Labelling}{51}
-\indexentry{Clustering}{51}
-\indexentry{Summarisation}{51}
-\indexentry{Survey}{52}
-\indexentry{Redux}{52}
-\indexentry{React}{52}
-\indexentry{News!Outlets}{62}
-\indexentry{United Kingdom}{62}
-\indexentry{Digital News Report}{62}
-\indexentry{Reuters Institute for the Study of Journalism}{62}
-\indexentry{BBC}{63}
-\indexentry{Mail Online}{63}
-\indexentry{Huffington Post}{63}
-\indexentry{Sky News}{63}
-\indexentry{Telegraph, The}{63}
-\indexentry{Independent, The}{63}
-\indexentry{Guardian, The}{63}
-\indexentry{New York Times}{64}
-\indexentry{Webhose}{64}
-\indexentry{News API}{64}
-\indexentry{BBC}{65}
-\indexentry{Mail Online}{65}
-\indexentry{Telegraph, The}{65}
-\indexentry{New York Times}{65}
-\indexentry{Associated Press}{65}
-\indexentry{Independent, The}{65}
-\indexentry{Daily Mirror, The}{65}
-\indexentry{Financial Times, The}{65}
-\indexentry{Guardian, The}{65}
-\indexentry{Wikimedia}{65}
-\indexentry{Wikipedia}{65}
+\indexentry{Front End}{44}
+\indexentry{Architecture}{44}
+\indexentry{Wireframe}{45}
+\indexentry{wikipedia}{46}
+\indexentry{Back End}{52}
+\indexentry{Topic Modelling}{52}
+\indexentry{Topic Labelling}{52}
+\indexentry{Clustering}{52}
+\indexentry{Summarisation}{52}
+\indexentry{Survey}{58}
+\indexentry{Redux}{58}
+\indexentry{React}{58}
+\indexentry{News!Outlets}{64}
+\indexentry{United Kingdom}{64}
+\indexentry{Digital News Report}{64}
+\indexentry{Reuters Institute for the Study of Journalism}{64}
+\indexentry{BBC}{64}
+\indexentry{Mail Online}{64}
+\indexentry{Huffington Post}{64}
+\indexentry{Sky News}{64}
+\indexentry{Telegraph, The}{64}
+\indexentry{Independent, The}{64}
+\indexentry{Guardian, The}{64}
+\indexentry{New York Times}{66}
+\indexentry{Webhose}{66}
+\indexentry{News API}{66}
+\indexentry{BBC}{67}
+\indexentry{Mail Online}{67}
+\indexentry{Telegraph, The}{67}
+\indexentry{New York Times}{67}
+\indexentry{Associated Press}{67}
+\indexentry{Independent, The}{67}
+\indexentry{Daily Mirror, The}{67}
+\indexentry{Financial Times, The}{67}
+\indexentry{Guardian, The}{67}
+\indexentry{Wikimedia}{67}
+\indexentry{Wikipedia}{67}

@@ -40,6 +40,7 @@ urldate=long
 \colorlet{numb}{magenta!60!black}
 
 \usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{inconsolata}
 
 \usepackage{color}
@@ -48,6 +49,8 @@ urldate=long
 \definecolor{pgreen}{rgb}{0,0.5,0}
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{upquote=true}
 
 \lstdefinelanguage{json}{
     basicstyle=\normalfont\ttfamily,
@@ -75,7 +78,8 @@ urldate=long
       {\{}{{{\color{delim}{\{}}}}{1}
       {\}}{{{\color{delim}{\}}}}}{1}
       {[}{{{\color{delim}{[}}}}{1}
-      {]}{{{\color{delim}{]}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+      morestring=[b]"
 }
 
 \lstdefinestyle{MyJava}{language=Java,
@@ -128,6 +132,8 @@ urlseen = {Retrieved},
 
 \begin{document}
 
+\counterwithin{lstlisting}{section}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
@@ -166,7 +172,11 @@ Abstract to be written
 
 \section*{Acknowledgements}
 
-Acknowledgements to be written
+I would like to offer my sincere gratitude to my supervisor, Anandha Gopalan, for his total support and advice during the course of this project, and for ensuring I never strayed too far from the right track.
+
+I would also like to thank my family for their unbounded love and support, and tolerance as this project went through its most trying moments.
+
+Finally, I'd like to thank Joe Letts, a friend who would always be willing to take time out of his schedule to help test the system, and who would prove an invaluable sounding board in times of crisis.
 
 \clearpage
 
@@ -186,9 +196,13 @@ Acknowledgements to be written
 
 \section{Introduction}
 
-The onset of the digital age has resulted in an insurmountable volume of news for a consumer to read. With the advent of the internet, not only are all the traditional news outlets publishing stories (and not just about local news, but news from all over the globe), but blogs are getting in on the act as well. 
+\label{intro}
+
+The onset of the digital age has resulted in an insurmountable volume of news for a consumer to read. Not only are all the traditional news outlets publishing stories (and not just about local news, but news from all over the globe), but blogs are getting in on the act as well. 
 
 In May 2017 President Donald Trump visited the Vatican. If I were to search Google News on the 24th May 2017, I'd find a story about the President's meeting with the Pope (see Figure \ref{DonaldTrumpPope}). 
+
+On further inspection, I can see that there are several pages of results about the meeting itself, from dozens of different news sources. They've all covered the story from different perspectives as well. Some have covered the contents of the meeting itself, some covered the general concept of the meeting in the wider context of Trump's trip to Saudi Arabia earlier that week, and some even chose to focus on everyone's attire at the meeting.
 
 \begin{figure}[h]
   \centering
@@ -197,17 +211,17 @@ In May 2017 President Donald Trump visited the Vatican. If I were to search Goog
    \label{DonaldTrumpPope}
 \end{figure}
 
-On further inspection, I can see that there are several pages of results about the meeting itself, from dozens of different news sources. They've all covered the story from different perspectives as well. Some have covered the contents of the meeting itself, some covered the general concept of the meeting in the wider context of Trump's trip to Saudi Arabia earlier that week, and some even chose to focus on everyone's attire at the meeting.
-
 When a consumer has to search for the news and find these sources themselves, it's more than probable that they will end up missing something. Also, which sources should they go to? And how many sources are enough to get a full and accurate picture? 
 
 News Aggregators, such as Flipboard and Apple News, remove the requirement for a user to source articles themselves. The aggregators find the news and present it to the user in a way that is nicely grouped by topic. Other aggregators, such as Google News, allow consumers to search for news topics of their choosing as well, and present all the articles it finds on the same topic.
 
 But these solutions don't go far enough, as they don't address a major issue - there is still a very high volume of news.
 
-In July 2016 a study was conducted by the Statistic Brain Research Institute that said that the average attention span of a person is now as low as 8.25 seconds. In addition to this, the Institute's findings also said that the average person only reads 28\% of a webpage of average length (593 words). Another key finding was that users spend only 4.4 seconds to cover each additional 100 words on a webpage. It's simply not feasible for a consumer to go through several different sources' take on a piece of news, which is what many aggregators still expect them to do.
+In July 2016, a study was conducted by the Statistic Brain Research Institute that said that the average attention span of a person is now as low as 8.25 seconds. In addition to this, the Institute's findings also said that the average person only reads 28\% of a webpage of average length (593 words). Another key finding was that users spend only 4.4 seconds to cover each additional 100 words on a webpage. It's simply not feasible for a consumer to go through several different sources' take on a piece of news, which is what many aggregators still expect them to do.
 
-My solution is for a news aggregator that goes further. My news aggregator, NewSumm, would have a primary aim of not only aggregating news, but of combining multiple sources' articles on a piece of news, and summarising them into one short piece. Using the example from before, the intention would be that the consumer only has to read one summary that incorporates the facts from several different sources on Trump's visit to the Vatican.
+The primary objectives of my project are therefore two-fold. Firstly, the solution to the project needs to tackle the issue of users missing information because they need to find multiple sources for a topic. Secondly, the project will have to present a solution to the very high volume of news that a consumer needs to read. 
+
+My solution is for a news aggregator that goes further than current products. NewSumm would have a primary aim of not only aggregating news, but of combining multiple sources' articles on a piece of news, and summarising them into one short piece. Using the example from before, the intention would be that the consumer only has to read one summary that incorporates the facts from several different sources on Trump's visit to the Vatican.
 
 There is also the issue of reliability and trust to consider. The Digital News Report 2016 found that in the United Kingdom only 50\% of readers trust what they see in the news. Could this be a case that there is simply so much news that it is hard to tell which is real? This could be the case because some readers will also be aware that a consequence of the new digital age is that anyone with an internet connection can create a blog and start spreading "fake news". 
 
@@ -218,9 +232,13 @@ There is also the issue of reliability and trust to consider. The Digital News R
    \label{TrustInNews}
 \end{figure}
 
+Leading from this issue of trust, a secondary objective of the news aggregator would be that it produces content that users can be near certain is trustworthy and reliable - effectively a news aggregator that is free from "fake news".
+
 Whilst it should be emphasised that the primary aim of NewSumm would be to reduce the sheer volume of news that a consumer has to read, it could be argued that the problem of "fake news" could be indirectly minimised in the same way that other news aggregators attempt to tackle the issue. This would be by limiting articles to trusted sources from across the political spectrum. This would be reputable news organisations, and articles from random blogs on the internet would not be considered. In addition to this, a clear indication when reading the summary of what facts different outlets all agree on, and what facts they either differ on or omit, will allow the user to easily corroborate parts of the story.
 
-A further secondary aim to this could be to allow a user to customise their summary, taking in information from the outlets of their choice (from the original "trusted" list). The advantage to this would potentially be that if a user decides that too many issues from one source are uncorroborated, they can remove them, and see only information from the other sources that have written about a topic. The disadvantage to this could be that if a user dismisses an entire section of the political spectrum as uncorroborated continuously, they'll pick up a political bias on the facts of the topic. Although, it could be said that the Digital News Report 2016 findings suggest that this is a feature that won't be used much. One of the more interesting findings in the report was that more than 60\% (in the United Kingdom) were concerned about the potential impact of personalising their news feeds. They felt that it could lead to both "missing information" and "missing challenging viewpoints".   
+Beyond this, another objective of the project should be for the News Aggregator to allow users to eliminate elements of news, or sources themselves that they deem to be untrustworthy, thus alleviating consumer concerns about fake news.
+
+A further secondary aim to this could be to allow a user to customise their summary, taking in information from the outlets of their choice (from the original "trusted" list). The advantage to this would potentially be that if a user decides that too many issues from one source are uncorroborated, they can remove them, and see only information from the other sources that have written about a topic. The disadvantage to this could be that if a user dismisses an entire Section of the political spectrum as uncorroborated continuously, they'll pick up a political bias on the facts of the topic. Although, it could be said that the Digital News Report 2016 findings suggest that this is a feature that won't be used much. One of the more interesting findings in the report was that more than 60\% (in the United Kingdom) were concerned about the potential impact of personalising their news feeds. They felt that it could lead to both "missing information" and "missing challenging viewpoints".   
 
 The remainder of this report will follow the development of this concept, as both a website and as an iOS application. The following sections will set out NewSumm to be an ambitious project that aims to automatically fetch, label, cluster and summarise articles without supervision. NewSumm will be outlined as a user-friendly application that allows consumers a large level of control over what they read, through topic subscriptions and the ability to alter sources for summaries, as well as providing a daily digest for users who want them.
 
@@ -240,7 +258,7 @@ Going side by side with this evaluation of the fundamentals of the system itself
 
 \label{DigitalNewsReport}
 
-Conducted by the Reuters Institute for the Study of Journalism\cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism} in Oxford University\cite{oxford}\index{University of Oxford}, the Digital News Report\index{Digital News Report}\cite{digitalNewsReport} is an annual study that serves to investigate how people access and find out about news in various countries across the globe, including the United Kingdom\index{United Kingdom}.
+Conducted by the Reuters Institute for the Study of Journalism \cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism} in Oxford University \cite{oxford}\index{University of Oxford}, the Digital News Report\index{Digital News Report} \cite{digitalNewsReport} is an annual study that serves to investigate how people access and find out about news in various countries across the globe, including the United Kingdom\index{United Kingdom}.
 
 The study attempts to cover, amongst other things how people get the news, how they use social media\index{Social Media}, what types of news they trust, and both the reasons to use and concerns about news aggregators. Findings of the report relevant to my concept are listed below:
 
@@ -264,7 +282,7 @@ As shown in the graph in Figure \ref{WhySocialAggregatedNews} the key to the pop
    \label{PersonalisedNewsConcerns}
 \end{figure}
 
-Key concerns, especially in the United Kingdom\index{United Kingdom}, with Personalised News\index{News ! Personalised} is that information might be incomplete. It is not difficult to see why this may be a concern - if you limit your news to a subset of the sources that might be available then it's possible to miss parts of the story - the parts that challenge aspects of the articles you're reading. It's therefore important that the project reflects this concern, which is why it is listed as a secondary aim (See section \ref{ChallengingViewpoints}). \\
+Key concerns, especially in the United Kingdom\index{United Kingdom}, with Personalised News\index{News ! Personalised} is that information might be incomplete. It is not difficult to see why this may be a concern - if you limit your news to a subset of the sources that might be available then it's possible to miss parts of the story - the parts that challenge aspects of the articles you're reading. It's therefore important that the project reflects this concern, which is why it is considered a secondary aim (see Section \ref{intro}). \\
 
 \textbf{What should determine what someone reads next}
 
@@ -275,15 +293,15 @@ Key concerns, especially in the United Kingdom\index{United Kingdom}, with Perso
    \label{HowPeopleTrustNews}
 \end{figure}
 
-Least popular are algorithms that present news based on what people's friends have been reading. In general, according to the Reuters Institute\cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism}, "People think *they* are the best judge of what's important to them." More interesting, is that people are now less inclined to allow journalists or editors to push articles to the top of reading lists than having an algorithm suggest similar stories to what they've just consumed. This could perhaps indicate that they aren't as trusting in journalists and editors as before - something that the Reuters Institute\index{Reuters Institute for the Study of Journalism} touches upon in an essay near the end of the report. \\
+Least popular are algorithms that present news based on what people's friends have been reading. In general, according to the Reuters Institute \cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism}, "People think *they* are the best judge of what's important to them." More interesting, is that people are now less inclined to allow journalists or editors to push articles to the top of reading lists than having an algorithm suggest similar stories to what they've just consumed. This could perhaps indicate that they aren't as trusting in journalists and editors as before - something that the Reuters Institute\index{Reuters Institute for the Study of Journalism} touches upon in an essay near the end of the report. \\
 
 \textbf{Conclusions}
 
-The Reuters Institute for the Study of Journalism\index{Reuters Institute for the Study of Journalism} is a trusted and respected organisation, and this study has been supported by institutions varying from media outlets such as the BBC\cite{bbc}\index{BBC}, news search engines such as Google\index{Google}\index{Google!Search Engine}, and other Universities, such as University of Canberra\cite{canberra}\index{University of Canberra}. Importantly, it's also supported by regulators, including Ofcom\cite{ofcom}\index{Ofcom}, which is the regulator in the United Kingdom\index{United Kingdom}. 
+The Reuters Institute for the Study of Journalism\index{Reuters Institute for the Study of Journalism} is a trusted and respected organisation, and this study has been supported by institutions varying from media outlets such as the BBC \cite{bbc}\index{BBC}, news search engines such as Google\index{Google}\index{Google!Search Engine}, and other Universities, such as University of Canberra \cite{canberra}\index{University of Canberra}. Importantly, it's also supported by regulators, including Ofcom \cite{ofcom}\index{Ofcom}, which is the regulator in the United Kingdom\index{United Kingdom}. 
 
-The survey was conducted on their behalf by YouGov\cite{yougov}\index{YouGov}, which is a highly respected polling company in the United Kingdom\index{United Kingdom}, and it surveyed more than 50,000 people, including over 2000 in the United Kingdom. In addition, the report is coupled with numerous essays on various key points that arose from the study. The writers of these essays varied from the Director of Research at the Reuters Institute\index{Reuters Institute for the Study of Journalism} to the Chief Executive Officer of The New York Times\cite{newYorkTimes}\index{New York Times}.
+The survey was conducted on their behalf by YouGov \cite{yougov}\index{YouGov}, which is a highly respected polling company in the United Kingdom\index{United Kingdom}, and it surveyed more than 50,000 people, including over 2000 in the United Kingdom. In addition, the report is coupled with numerous essays on various key points that arose from the study. The writers of these essays varied from the Director of Research at the Reuters Institute\index{Reuters Institute for the Study of Journalism} to the Chief Executive Officer of The New York Times \cite{newYorkTimes}\index{New York Times}.
 
-As a result of this, I deemed the Digital News Report 2016\index{Digital News Report}\cite{digitalNewsReport} to be a very reliable source of information with regards to how people read the news, and their preferences in the field. 
+As a result of this, I deemed the Digital News Report 2016\index{Digital News Report} \cite{digitalNewsReport} to be a very reliable source of information with regards to how people read the news, and their preferences in the field. 
 
 \subsubsection{Potential User Survey\index{User!Survey}}
 
@@ -291,12 +309,12 @@ As a result of this, I deemed the Digital News Report 2016\index{Digital News Re
 
 Following this initial research I decided to conduct a survey of potential users to delve into more specific aspects of News Reading Habits. I was more focused on the number of sources people use to ascertain the facts about a piece of news. I also asked questions regarding the summarisation\index{Summarisation} of news and news digests.
 
-I was interested in the questions about summarisation and digests after reading some data from a study conducted by the Statistic Brain Research Institute\cite{statisticBrain}\index{Statistic Brain Research Institute}. Statistic Brain conducted a study in July 2016 that suggested that the average attention span of a human is now only 8.25 seconds\cite{attentionSpan}. They coupled the presentation of this data with statistics about people browsing the internet taken from the paper \emph{Not Quite the Average:
-An Empirical Study of Web Use}\index{Not Quite the Average: An Empirical Study of Web Use}\cite{empiricalStudyofWebUse}. The statistics suggest that the average user only reads 28\% of the words on the average webpage, and that for each additional 100 words beyond that, the user would only spend an additional 4.4 seconds on the page.
+I was interested in the questions about summarisation and digests after reading some data from a study conducted by the Statistic Brain Research Institute \cite{statisticBrain}\index{Statistic Brain Research Institute}. Statistic Brain conducted a study in July 2016 that suggested that the average attention span of a human is now only 8.25 seconds \cite{attentionSpan}. They coupled the presentation of this data with statistics about people browsing the internet taken from the paper \emph{Not Quite the Average:
+An Empirical Study of Web Use}\index{Not Quite the Average: An Empirical Study of Web Use} \cite{empiricalStudyofWebUse}. The statistics suggest that the average user only reads 28\% of the words on the average webpage, and that for each additional 100 words beyond that, the user would only spend an additional 4.4 seconds on the page.
 
-Admittedly, the paper was written in 2008, and so might not reflect average web browsing activity, but it raised a question worth answering in my opinion. Do users actually read full articles on the news, and if not, would summarising articles help make sure they didn't miss out on key points, thus counteracting an issue discovered in the Digital News Report 2016\index{Digital News Report}\cite{digitalNewsReport} (Section \ref{DigitalNewsReport})? 
+Admittedly, the paper was written in 2008, and so might not reflect average web browsing activity, but it raised a question worth answering in my opinion. Do users actually read full articles on the news, and if not, would summarising articles help make sure they didn't miss out on key points, thus counteracting an issue discovered in the Digital News Report 2016\index{Digital News Report} \cite{digitalNewsReport} (Section \ref{DigitalNewsReport})? 
 
-The survey was presented on Google Forms\cite{googleForms}\index{Google!Forms} and was answered by 96 respondents. Further findings are shown below:
+The survey was presented on Google Forms \cite{googleForms}\index{Google!Forms} and was answered by 96 respondents. Further findings are shown below:
 
 \begin{enumerate}
 
@@ -440,7 +458,7 @@ Finally, respondents were asked which platform they would prefer to see the news
   \centering
   \begin{subfigure}{0.8\textwidth}
         \includegraphics[width=\textwidth]{GoogleHome}
-        \caption[Screenshot from the Google News home page]{A section of the homepage for Google News.\cite{googleNews}}
+        \caption[Screenshot from the Google News home page]{A Section of the homepage for Google News. \cite{googleNews}}
         \label{GoogleNewsHome}
     \end{subfigure}
     
@@ -452,7 +470,7 @@ Finally, respondents were asked which platform they would prefer to see the news
    \caption[Screenshots from Google News]{Screenshots from Google News}
 \end{figure}
 
-Initially developed early in the century and released in 2006, Google News\cite{googleNews} is a free-to-use news aggregator. Google News operates in a similar manner to the traditional Google\cite{google} search engine, thus making it a go to aggregator when searching for a specific topic. Google News also groups "similar" articles together using Clustering\index{Clustering} techniques\cite{googleClustering}. Google News operates purely as a go-between - when clicking on an article the user is taken straight to the media source itself, rather than being able to read the article on Google News itself. 
+Initially developed early in the century and released in 2006, Google News \cite{googleNews} is a free-to-use news aggregator. Google News operates in a similar manner to the traditional Google \cite{google} search engine, thus making it a go to aggregator when searching for a specific topic. Google News also groups "similar" articles together using Clustering\index{Clustering} techniques \cite{googleClustering}. Google News operates purely as a go-between - when clicking on an article the user is taken straight to the media source itself, rather than being able to read the article on Google News itself. 
 
 \subsubsection{Flipboard}\index{Flipboard}
 
@@ -472,7 +490,7 @@ Initially developed early in the century and released in 2006, Google News\cite{
    \caption[Screenshots from the Flipboard app]{Screenshots from the Flipboard app}
 \end{figure}
 
-Flipboard\cite{flipboard} is a much more recent attempt at a news aggregator (developed in 2010), and relies on the concept of users subscribing to "magazines" on different topics. There's a central "cover page" on the home page that shows the most recent stories from across all a user's subscriptions. Like Google News\index{Google!News}, links from the desktop website send the user to the original media source, while links from within the mobile applications open a browser within the app itself.
+Flipboard \cite{flipboard} is a much more recent attempt at a news aggregator (developed in 2010), and relies on the concept of users subscribing to "magazines" on different topics. There's a central "cover page" on the home page that shows the most recent stories from across all a user's subscriptions. Like Google News\index{Google!News}, links from the desktop website send the user to the original media source, while links from within the mobile applications open a browser within the app itself.
 
 \subsubsection{Yahoo News Digest}\index{Yahoo News Digest}
 
@@ -480,7 +498,7 @@ Flipboard\cite{flipboard} is a much more recent attempt at a news aggregator (de
   \centering
   \begin{subfigure}[t]{0.3\textwidth}
         \includegraphics[width=\textwidth]{YNDHome.PNG}
-        \caption{A section of the home screen, which displays the top ten stories for the day.}
+        \caption{A Section of the home screen, which displays the top ten stories for the day.}
         \label{YNDHome}
     \end{subfigure}
     \qquad
@@ -489,10 +507,10 @@ Flipboard\cite{flipboard} is a much more recent attempt at a news aggregator (de
    \caption{The Yahoo News Digest app provides links and infographics that are relevant to the article.}
    \label{YNDInfo}
    \end{subfigure}
-   \caption[Screenshots from the Yahoo News Digest app]{Screenshots from the Yahoo News Digest app\cite{yahooNewsDigest}}
+   \caption[Screenshots from the Yahoo News Digest app]{Screenshots from the Yahoo News Digest app \cite{yahooNewsDigest}}
 \end{figure}
 
-Yahoo News Digest\cite{yahooNewsDigest} is a direct evolution from Summly\cite{summly}, which was an app that summarised news. Yahoo News Digest is a phone application that creates two digests a day: one in the morning and one in the evening. Each digest contains the ten leading articles from the previous 12 hours. Each article provides a summary of the story and links to relevant other pages - such as articles from Wikipedia\cite{wikipedia}.
+Yahoo News Digest \cite{yahooNewsDigest} is a direct evolution from Summly \cite{summly}, which was an app that summarised news. Yahoo News Digest is a phone application that creates two digests a day: one in the morning and one in the evening. Each digest contains the ten leading articles from the previous 12 hours. Each article provides a summary of the story and links to relevant other pages - such as articles from Wikipedia \cite{wikipedia}.
 
 \subsubsection{Apple News}\index{Apple!News}
 
@@ -509,10 +527,10 @@ Yahoo News Digest\cite{yahooNewsDigest} is a direct evolution from Summly\cite{s
    \caption{Apple News allows users to select sources and topics to be their favourites.}
    \label{AppleSources}
    \end{subfigure}
-   \caption[Screenshots from the Apple News app]{Screenshots from the Apple News app\cite{appleNews}.}
+   \caption[Screenshots from the Apple News app]{Screenshots from the Apple News app \cite{appleNews}.}
 \end{figure}
 
-Apple News\cite{appleNews} is an application that is installed by default on all recent iOS devices. Apple's default attempt at a news aggregator allows users to select their preferred news sources, and from a selection of topics. Apple\cite{apple} then presents on a home screen news from those sources and topics. Clicking on each article keeps it in the native application, rather than sending the user to the media source itself.
+Apple News \cite{appleNews} is an application that is installed by default on all recent iOS devices. Apple's default attempt at a news aggregator allows users to select their preferred news sources, and from a selection of topics. Apple \cite{apple} then presents on a home screen news from those sources and topics. Clicking on each article keeps it in the native application, rather than sending the user to the media source itself.
 
 \subsubsection{Comparing the existing products}
 
@@ -523,7 +541,7 @@ The existing products are compared in Table \ref{relatedProductsTable} on page \
     \textbf{Product} & \textbf{What it does well} & \textbf{What it doesn't do well} \\ \hline
     Google News & \tabitem Groups similar articles together & \tabitem Doesn\'t host articles itself - therefore making it harder to navigate than perhaps could be possible. Although, this could be to avoid any copyright issues. \\ & \tabitem Similar to a traditional search engine and so is easy to use\\ & \tabitem Obtains articles instantly, thus providing most up-to-date information when searching  \\ \hline
     Flipboard & \tabitem Provides a home page that allows a user to see the most popular stories at the time related to the user's subscriptions. & \tabitem Topics are much broader than Google News, thus meaning that users can't necessarily search for topics specific-enough for them.\\ & \tabitem Available as a mobile application & \tabitem Flipboard requires registration before being able to read articles \\ \hline
-    Yahoo News Digest & \tabitem Yahoo News Digest won the 2014 Apple\index{Apple} Design award\cite{appleDesignAward}\index{Apple!Design award}. & \tabitem There are only ten articles available per digest, and no capability for searching by topic. \\ & \tabitem The articles also provide key infographics, quotes, and other information potentially relevant to the article. & \tabitem Digests are only produced in the morning and the evening, so the news articles presented could be out of date. \\ \hline
+    Yahoo News Digest & \tabitem Yahoo News Digest won the 2014 Apple\index{Apple} Design award \cite{appleDesignAward}\index{Apple!Design award}. & \tabitem There are only ten articles available per digest, and no capability for searching by topic. \\ & \tabitem The articles also provide key infographics, quotes, and other information potentially relevant to the article. & \tabitem Digests are only produced in the morning and the evening, so the news articles presented could be out of date. \\ \hline
     Apple News & \tabitem Allows selection based off both topics and the news sources themselves. & \tabitem Navigation on the application is not simple. If a user has accessed many articles from push notifications, then the user could have to press the back button several times to get back to the home screen.\\ & \tabitem The home screen for the app allows users to see a lot of headlines at a glance. & \tabitem The topics that a user can subscribe to can be quite limited, and aren't reactive to current affairs - for example, if a natural disaster occurs, you couldn't then subscribe to that natural disaster as a topic. \\
   \end{tabular}
   \caption[Related Products in the market and their benefits and drawbacks]{Comparing the relative benefits and drawbacks of Google News, Flipboard, Yahoo News Digest and Apple News}
@@ -546,42 +564,42 @@ Topic modelling is a subsection of Machine Learning\index{Machine Learning} that
 
 \textbf{Latent Semantic Indexing}\index{Latent Semantic Indexing}\index{Topic Modelling!Latent Semantic Indexing}
 
-Also known as Latent Semantic Analysis\index{Latent Semantic Analysis}\cite{lsa}, Latent Semantic Indexing (LSI) was one of the initial forerunners in the field of topic modelling. It uses singular value decomposition to locate patterns in the text of a document and thus form a basis on which to categorise the document. A major benefit of LSI\index{LSI} is that it is fast to train, but in general it has lower accuracy when compared to models that are probabilistic, such as Latent Dirichlet Allocation\index{Latent Dirichlet Allocation}\cite{differenceBetweenLSIAndLDA}.
+Also known as Latent Semantic Analysis\index{Latent Semantic Analysis} \cite{lsa}, Latent Semantic Indexing (LSI) was one of the initial forerunners in the field of topic modelling. It uses singular value decomposition to locate patterns in the text of a document and thus form a basis on which to categorise the document. A major benefit of LSI\index{LSI} is that it is fast to train, but in general it has lower accuracy when compared to models that are probabilistic, such as Latent Dirichlet Allocation\index{Latent Dirichlet Allocation} \cite{differenceBetweenLSIAndLDA}.
 
 \textbf{Latent Dirichlet Allocation}
 
 Latent Dirichlet Allocation\index{Latent Dirichlet Allocation} (LDA)\index{LDA}\index{Topic Modelling!Latent Dirichlet Allocation} is a generative probablistic model that assumes that the topic distribution has a Dirichlet prior. The theory behind LDA is that a document of words contains a mixture of different topics, and this is reflected in the final answers given for the algorithm.
 
-\emph{A rough algorithm for performing LDA\cite{ldaExplanation}:}
+\emph{A rough algorithm for performing LDA \cite{ldaExplanation}:}
 
 \begin{enumerate}
-	\item \textbf{Set \emph{n} to be the number of topics there are in the document.} We can do this by trial and error. \\
-	\item \textbf{Assign every word \emph{w} in the document {d} to a random topic.} These topics are temporary. At this stage we can remove function words, such as "the". However, we keep duplicates - in fact, at this stage they could be in different topics. \\
+	\item \textbf{Set \emph{n} to be the number of topics there are in the document.} We can do this by trial and error. 
+	\item \textbf{Assign every word \emph{w} in the document {d} to a random topic.} These topics are temporary. At this stage we can remove function words, such as "the". However, we keep duplicates - in fact, at this stage they could be in different topics. 
 	\item \textbf{Check and update topic assignments.} To do this, we loop through each word in the document, taking note of how prevalent the word is across documents, and prevalent those topics are in the document. These two probabilities are then passed to a sampling algorithm to generate a new topic for the word. This step is usually completed using the statistical model \emph{Gibbs Sampling}\index{Gibbs Sampling}.
 	\item \textbf{Repeat step 3 until there are no more topic-reassignments}. 
 \end{enumerate}
 
 \subsubsection{Topic Labelling Techniques}\index{Topic Labelling}
 
-Topic Labelling techniques in the project for labelling the topics that are generated from the LDA analysis of the document in Section \ref{TopicModellingTechniques}. When conducting research into this topic specifically, I found a paper (\emph{Automatic Labelling of Topic Models}\index{Automatic Labelling of Topic Models} by Lau, Grieser, Newman and Baldwin in 2011\cite{topicLabelling}) that documents the creation of an algorithm that labels topics using Wikipedia\cite{wikipedia}\index{Wikipedia} titles. This could work very well in my project, as Wikipedia titles as title headings would allow users to search for topics that are both broad and specific. 
+Topic Labelling techniques in the project for labelling the topics that are generated from the LDA analysis of the document in Section \ref{TopicModellingTechniques}. When conducting research into this topic specifically, I found a paper (\emph{Automatic Labelling of Topic Models}\index{Automatic Labelling of Topic Models} by Lau, Grieser, Newman and Baldwin in 2011 \cite{topicLabelling}) that documents the creation of an algorithm that labels topics using Wikipedia \cite{wikipedia}\index{Wikipedia} titles. This could work very well in my project, as Wikipedia titles as title headings would allow users to search for topics that are both broad and specific. 
 
 \emph{A rough version of Lau, Grieser, Newman and Baldwin's algorithm:}
 
 \label{labellingalgorithm}
 
 \begin{enumerate}
-	\item \textbf{Calculate the top 10 topic terms.} This is done by finding the marginal probabilities of each word from the original topic models, and taking the top ten. The marginal probability of a term is the probability of that term being randomly selected given a topic \emph{t}. \\
-	\item \textbf{Search Wikipedia\index{Wikipedia} using these terms.} We also search Google\cite{google}\index{Google} using a site restricted search (to Wikipedia) and take the top eight results from each. These are called the \emph{primary labels}. \\
-	\item \textbf{Isolate all "noun chunks" from the terms.} In this case noun chunks are combinations of words from the terms that appear next to each other. For example, with the term "Summer Olympic Games" the noun chunks would be "Summer", "Olympic", "Games", "Summer Olympic", "Olympic Games" and "Summer Olympic Games". Note that "Summer Games" is not a noun chunk as the words don't appear juxtaposed. These noun chunks are added to the primary labels from step 2 and are deemed \emph{secondary labels}. \\
+	\item \textbf{Calculate the top 10 topic terms.} This is done by finding the marginal probabilities of each word from the original topic models, and taking the top ten. The marginal probability of a term is the probability of that term being randomly selected given a topic \emph{t}. 
+	\item \textbf{Search Wikipedia\index{Wikipedia} using these terms.} We also search Google \cite{google}\index{Google} using a site restricted search (to Wikipedia) and take the top eight results from each. These are called the \emph{primary labels}. 
+	\item \textbf{Isolate all "noun chunks" from the terms.} In this case noun chunks are combinations of words from the terms that appear next to each other. For example, with the term "Summer Olympic Games" the noun chunks would be "Summer", "Olympic", "Games", "Summer Olympic", "Olympic Games" and "Summer Olympic Games". Note that "Summer Games" is not a noun chunk as the words don't appear juxtaposed. These noun chunks are added to the primary labels from step 2 and are deemed \emph{secondary labels}. 
 	\item \textbf{For each noun chunk:} 
 		\begin{itemize}
 			\item Check to see if the noun chunk is the title for a Wikipedia article
-			\item Remove the noun chunk if it doesn't correspond to a Wikipedia article\\
+			\item Remove the noun chunk if it doesn't correspond to a Wikipedia article
 		\end{itemize}
 		
-	\item \textbf{Calculate the \emph{Related Article Conceptual Overlap}\index{Related Article Conceptual Overlap} scores.} Related Article Conceptual Overlap (RACO), developed by Grieser et al in 2011\cite{racoCalculation},  is a calculation designed to identify the strength of relationship between terms by inspecting the category overlap between the terms' corresponding articles. We do this for each secondary label still remaining - details on how to calculate the RACO scores are explained in further detail below. \\
-	\item \textbf{Discard all secondary labels with RACO\index{Related Article Conceptual Overlap}  score of less than 0.1.} \\
-	\item \textbf{Add five highest topic terms to the list.} Now we return to the original list of topic terms from step 1 and add the five highest to the remaining candidates. \\
+	\item \textbf{Calculate the \emph{Related Article Conceptual Overlap}\index{Related Article Conceptual Overlap} scores.} Related Article Conceptual Overlap (RACO), developed by Grieser et al in 2011 \cite{racoCalculation},  is a calculation designed to identify the strength of relationship between terms by inspecting the category overlap between the terms' corresponding articles. We do this for each secondary label still remaining - details on how to calculate the RACO scores are explained in further detail below. 
+	\item \textbf{Discard all secondary labels with RACO\index{Related Article Conceptual Overlap}  score of less than 0.1.} 
+	\item \textbf{Add five highest topic terms to the list.} Now we return to the original list of topic terms from step 1 and add the five highest to the remaining candidates. 
 	\item \textbf{Perform candidate ranking.} There are multiple ways to do this, but the original paper recommends using a variety of statistical methods, based around a T-test, the Chi-squared test and a log-likelihood test. The aim is to estimate how closely related the candidate is to all the terms in the topic. We then take the top candidate as our final answer. \\
 \end{enumerate}
 
@@ -589,7 +607,7 @@ Topic Labelling techniques in the project for labelling the topics that are gene
 
 \label{RACOcalculation}
 
-\emph{Related Article Conceptual Overlap\index{Related Article Conceptual Overlap} } (RACO) was first introduced as a concept in the paper \emph{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}\cite{racoCalculation} \index{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}by Grieser, Baldwin, Bohnert and Sonenberg in 2011. It compares two terms and estimates their similarity by comparing the two terms' similarity on Wikipedia. The core calculation for RACO goes as follows: 
+\emph{Related Article Conceptual Overlap\index{Related Article Conceptual Overlap} } (RACO) was first introduced as a concept in the paper \emph{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness} \cite{racoCalculation} \index{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}by Grieser, Baldwin, Bohnert and Sonenberg in 2011. It compares two terms and estimates their similarity by comparing the two terms' similarity on Wikipedia. The core calculation for RACO goes as follows: 
 \[Category-Overlap(a,b) = \left|
 \left(\bigcup_{p \in O(a)} C(p)\right) \bigcap \left(\bigcup_{p \in O(b)} C(p)\right)\right|
 \]
@@ -609,19 +627,19 @@ An issue with the Category-Overlap calculation as it is, is that there's a bias 
 
 \label{ClusteringTechniques}
 
-Cluster analysis is a machine learning technique that is used to put items that are similar to each other into groups. In practice it's used by Google News\cite{googleNews} to put articles about the same topic together for a user\cite{googleClustering}. There are multiple commonly used types of cluster analysis: \\
+Cluster analysis is a machine learning technique that is used to put items that are similar to each other into groups. In practice it's used by Google News \cite{googleNews} to put articles about the same topic together for a user \cite{googleClustering}. There are multiple commonly used types of cluster analysis: \\
 
 \textbf{Centroid Clustering}\index{Centroid Clustering}\index{Clustering!Centroid}
 
-In Centroid Clustering\cite{clusteringWikipedia}, also known as k-means clustering\index{Clustering!k-means}, there are \emph{k} clusters. A vector is calculated for each article in the list. The article is then assigned to the cluster that is closest to it's vector score. A major downside to this method however is that it requires \emph{k} to be defined in advance. In the context of this project, that's not applicable as we don't know how many different articles we are clustering based on. \\
+In Centroid Clustering \cite{clusteringWikipedia}, also known as k-means clustering\index{Clustering!k-means}, there are \emph{k} clusters. A vector is calculated for each article in the list. The article is then assigned to the cluster that is closest to it's vector score. A major downside to this method however is that it requires \emph{k} to be defined in advance. In the context of this project, that's not applicable as we don't know how many different articles we are clustering based on. \\
 
 \textbf{Density Clustering}\index{Density Clustering}\index{Clustering!Density}
 
-Density Clustering\cite{clusteringWikipedia} also involves calculating a vector score for each article. Once these have been calculated, they can be graphed, and the areas of the graph that have highest density are chosen as the clusters. An advantage of this over the centroid clustering methods is that we don't need to know the number of clusters beforehand. However, density clustering can become less accurate as it requires areas of sparse density on the graph to precisely separate the different groups, which isn't always possible. \\
+Density Clustering \cite{clusteringWikipedia} also involves calculating a vector score for each article. Once these have been calculated, they can be graphed, and the areas of the graph that have highest density are chosen as the clusters. An advantage of this over the centroid clustering methods is that we don't need to know the number of clusters beforehand. However, density clustering can become less accurate as it requires areas of sparse density on the graph to precisely separate the different groups, which isn't always possible. \\
 
 \textbf{Hierarchical Clustering}\index{Hierarchical Clustering}\index{Clustering!Hierarchical}
 
-Hierarchical Clustering\cite{hierarchicalClustering}, which is also known as Connectivity Clustering\index{Clustering}\index{Connectivity}, is based on the idea of using distance measures between articles to identify which ones are most similar. There are two approaches to Hierarchical Clustering: 
+Hierarchical Clustering \cite{hierarchicalClustering}, which is also known as Connectivity Clustering\index{Clustering}\index{Connectivity}, is based on the idea of using distance measures between articles to identify which ones are most similar. There are two approaches to Hierarchical Clustering: 
  \begin{itemize}
  	\item \emph{Agglomerative}\index{Hierarchical Clustering!Agglomerative}, which is a bottom-up approach, assigns each item to its own cluster and then merges pairs that are closer together. 
 	\item \emph{Divisive}\index{Hierarchical Clustering!Divisive}, a top-down approach, that begins with all items in a single cluster, and then proceeds to split it into multiple clusters. \\
@@ -632,13 +650,13 @@ Hierarchical Clustering\cite{hierarchicalClustering}, which is also known as Con
 The first step in each of the three clustering techniques is to create a vector score for each item. As this will play a big part in the final results, it's important to get this stage right. This can be split into two steps: \\
 
 \begin{enumerate}
-	\item \textbf{Find definitive terms within the article.} This can be done using techniques such as the popular \emph{Term Frequency-Inverse Document Frequency}\index{Term Frequency-Inverse Document Frequency}  (TF-IDF)\index{TF-IDF} , which is explained in further detail below. Proper nouns would be useful in this step, as they are more likely to be relevant to what the article is specifically about. \\
+	\item \textbf{Find definitive terms within the article.} This can be done using techniques such as the popular \emph{Term Frequency-Inverse Document Frequency}\index{Term Frequency-Inverse Document Frequency}  (TF-IDF)\index{TF-IDF} , which is explained in further detail below. Proper nouns would be useful in this step, as they are more likely to be relevant to what the article is specifically about. 
 	\item \textbf{Create a vector.} This vector, based from the definitive terms from the first step, would be a set of keywords and corresponding weights. \\
 \end{enumerate}
 
 \textbf{Term Frequency-Inverse Document Frequency}\index{Term Frequency-Inverse Document Frequency}
 
-TF-IDF\cite{tfidf} is designed to identify terms that appear frequently in one article that don't occur a lot over the entire set of articles (also known as the \emph{corpus}). Variations of it are commonly used by search engines to identify search results that are most relevant to a query. The calculation for TF-IDF is as follows: \\
+TF-IDF \cite{tfidf} is designed to identify terms that appear frequently in one article that don't occur a lot over the entire set of articles (also known as the \emph{corpus}). Variations of it are commonly used by search engines to identify search results that are most relevant to a query. The calculation for TF-IDF is as follows: \\
 
 \emph{Term Frequency}\index{Term Frequency-Inverse Document Frequency!Term Frequency}
 
@@ -656,12 +674,14 @@ Inverse Document Frequency is used to check in how many documents of a corpus \e
 
 \[tfidf(t,d,D) = tf(t,d) \times idf(t,D)\] 
 
-\subsection{Summarisation Techniques}       
+\subsection{Summarisation Techniques} 
+
+\label{summarisation}      
 
 Summarisation\index{Summarisation} techniques will be (predictably) used for summarising the merged articles that were identified by the processes of Topic Modelling \index{Topic Modelling}, Topic Labelling\index{Topic Labelling} and Clustering\index{Clustering}. There are two types of summarisation: 
 
 \begin{itemize}
-	\item \textbf{Extractive Summarisation}\index{Summarisation!Extractive}, which consists of taking sentences that are important from the original text, and discarding the rest.\cite{extractiveTechniques}
+	\item \textbf{Extractive Summarisation}\index{Summarisation!Extractive}, which consists of taking sentences that are important from the original text, and discarding the rest \cite{extractiveTechniques}. 
 	\item \textbf{Abstractive Summarisation}\index{Summarisation!Abstractive}, which aims to generate a piece of text using natural language techniques. A key to this is that some words in the final summary may not have been the original piece of text.
 \end{itemize}
 
@@ -673,11 +693,11 @@ Summarisation\index{Summarisation} techniques will be (predictably) used for sum
 
 There are two well known examples of extractive summarisation: LexRank and TextRank.
 
-LexRank and TextRank have very similar methods for extracting a summary\cite{lexRank}. Initially a graph is constructed, that consists of one node for each sentence in the corpus. Then a clustering algorithm is applied, using a TF-IDF\index{TF-IDF} calculation to determine similarities. 
+LexRank and TextRank have very similar methods for extracting a summary \cite{lexRank}. Initially a graph is constructed, that consists of one node for each sentence in the corpus. Then a clustering algorithm is applied, using a TF-IDF\index{TF-IDF} calculation to determine similarities. 
 
 There are a couple of key differences between LexRank and TextRank. The first arises in the calculation. Both use a TF-IDF calculation, but they are varied slightly. LexRank uses a cosine similarity function in order to weight the final calculation, whereas TextRank uses a more simple logarithmic weighting to perform the calculation. 
 
-Both use Google's famous PageRank\index{PageRank} algorithm to then rank the importance of each sentence based on the calculations in the previous step. With \emph{d} being a damping factor, the PageRank of a node \emph{u} is given as:
+Both use Google's PageRank\index{PageRank} algorithm to then rank the importance of each sentence based on the calculations in the previous step. With \emph{d} being a damping factor, the PageRank of a node \emph{u} is given as:
 
 \[p(u) = \frac{d}{N} + (1-d)\sum_{v \in adj[u]}\frac{p(v)}{deg(v)} \] 
 
@@ -687,10 +707,10 @@ After this has been calculated, the top ranked sentences are taken by the TextRa
 
 \label{abstractiveSummarisation}
 
-There are six common methods for abstractive summarisation, which can be split evenly into two distinct categories\cite{abstractiveTechniques}. These two categories centre around the creation of a representation of the given document: \\
+There are six common methods for abstractive summarisation, which can be split evenly into two distinct categories \cite{abstractiveTechniques}. These two categories centre around the creation of a representation of the given document: \\
 
 \begin{itemize}
-	\item \textbf{Structure based methods} consist of techniques that involve determining the important information in a document by considering its structure\cite{abstractiveTechniquesOriginal}. Ways of doing this include fitting the given document to a template, or converting the text in a tree-like structure. \\
+	\item \textbf{Structure based methods} consist of techniques that involve determining the important information in a document by considering its structure \cite{abstractiveTechniquesOriginal}. Ways of doing this include fitting the given document to a template, or converting the text in a tree-like structure. 
 	\item \textbf{Semantic based methods} involve building a semantic representation of the given document and then feeding that into an algorithm that generates natural language that forms the final summary. \\
 \end{itemize}
 
@@ -698,7 +718,7 @@ There are six common methods for abstractive summarisation, which can be split e
 
 \emph{Tree based summarisation}\index{Summarisation!Tree based}
 
-With tree based structuring, the first step is to create a dependency tree to represent the document. A dependency tree\index{Dependency Tree} is a tree with a node for each word in a sentence, the links between the trees show which words depend on each other. For example, given the sentence \emph{This is an example}, we can construct a tree as in figure \ref{dependencyTree}:
+With tree based structuring, the first step is to create a dependency tree to represent the document. A dependency tree\index{Dependency Tree} is a tree with a node for each word in a sentence, the links between the trees show which words depend on each other. For example, given the sentence \emph{This is an example}, we can construct a tree as in Figure \ref{dependencyTree}:
 
 \begin{figure}[ht!]
   \centering
@@ -707,7 +727,7 @@ With tree based structuring, the first step is to create a dependency tree to re
    \label{dependencyTree}
 \end{figure}
 
-In the tree (figure \ref{dependencyTree}), the word \emph{This} is dependent on \emph{is} and so is linked. \emph{an} is linked to \emph{example} in a similar way, and \emph{an example} is dependent on the verb \emph{is} and so also has a link to it. 
+In the tree (Figure \ref{dependencyTree}), the word \emph{This} is dependent on \emph{is} and so is linked. \emph{an} is linked to \emph{example} in a similar way, and \emph{an example} is dependent on the verb \emph{is} and so also has a link to it. 
 
 Once dependency trees have been created for each of the sentences a similarity algorithm is used to find sentences that are similar. The common phrases between these similar sentences are then taken and form the basis of the final summary. A language generator then combines the common phrases and arranges it to create a final set of summary sentences.
 
@@ -715,7 +735,7 @@ An obvious disadvantage to this method is that if only common phrases are taken 
 
 \emph{Rule based summarisation}\index{Summarisation!Rule based}
 
-In rule based summarisation\cite{ruleBasedSummarisation}, the process is centred around a list of pre-determined categories. With each of these categories, there is a pre-determined set of questions to be answered. 
+In rule based summarisation \cite{ruleBasedSummarisation}, the process is centred around a list of pre-determined categories. With each of these categories, there is a pre-determined set of questions to be answered. 
 
 For example, with a theoretical category \emph{Product Launch} we could have the following questions:
 
@@ -743,7 +763,7 @@ A key disadvantage to this method is that a lot of the domain ontologies has to 
 
 \emph{Multimodal Semantic summarisation}\index{Summarisation!Multimodal Semantic}
 
-Multimodal semantic summarisation can work on documents that contains both text and images. First, a semantic model is built to represent the document. This model is made up of different concepts that are surmised from the text. For example, the sentence \emph{Multimodal Semantic summarisation is an example of an algorithm that performs abstractive summarisation}\index{Summarisation!Abstractive} could form the concept shown in figure \ref{multimodalSummarisation}:
+Multimodal semantic summarisation can work on documents that contains both text and images. First, a semantic model is built to represent the document. This model is made up of different concepts that are surmised from the text. For example, the sentence \emph{Multimodal Semantic summarisation is an example of an algorithm that performs abstractive summarisation}\index{Summarisation!Abstractive} could form the concept shown in Figure \ref{multimodalSummarisation}:
 
 \begin{figure}[ht!]
   \centering
@@ -752,13 +772,13 @@ Multimodal semantic summarisation can work on documents that contains both text 
    \label{multimodalSummarisation}
 \end{figure}
 
-Concepts\index{Concept!Multimodal Summarisation} are gradually filled with more information as the entire text is analysed. Links are also added between concepts that share some relationship. For example in figure \ref{multimodalSummarisation} if there was another sentence that surmised a concept called \emph{Abstractive Summarisation} then there would be a link from \emph{Algorithm1} to that new concept. 
+Concepts\index{Concept!Multimodal Summarisation} are gradually filled with more information as the entire text is analysed. Links are also added between concepts that share some relationship. For example in Figure \ref{multimodalSummarisation} if there was another sentence that surmised a concept called \emph{Abstractive Summarisation} then there would be a link from \emph{Algorithm1} to that new concept. 
 
 The next step is to rank the concepts. This is done by taking into account the completeness of the concept, and the number of links that the concept as to others. This way, the concepts are ranked by which is most important to the original document. Once the key concepts have been identified summary sentences can be generated featuring these concepts. \\
 
 \emph{Information Item based method}\index{Summarisation!Information Item}
 
-Information Item based summarisation\cite{informationBasedSummarisation} relies on the content of the summary being determined from an abstract representation of the original document, rather than the sentences from the document themselves. To do this, the document is first scanned so that Information Items (InIt) can be generated. An information item is defined as being "the smallest element of coherent information in a text or sentence". 
+Information Item based summarisation \cite{informationBasedSummarisation} relies on the content of the summary being determined from an abstract representation of the original document, rather than the sentences from the document themselves. To do this, the document is first scanned so that Information Items (InIt) can be generated. An information item is defined as being "the smallest element of coherent information in a text or sentence". 
 
 Once the information items have been created, they are then ranked using frequency analysis to find the most important predicates and entities from the original document. This step is near identical to the term frequency stage in extractive summarisation (Section \ref{extractiveSummarisation})\index{Summarisation!Extractive}. These information items that are ranked highly are then combined and fed into a natural language generator to form the final summary sentences. \\
 
@@ -766,12 +786,12 @@ Once the information items have been created, they are then ranked using frequen
 
 Semantic Graph summarisation centres around a rich semantic graph (RSG)\index{Rich Semantic Graph}. The document is first converted into a RSG. Each node in the RSG represents a noun or verb in the document, and the links between the nodes represent the semantic and topological relations between these nouns and verbs. In the second stage, heuristic rules are used to reduce the semantic graph to a more minimalistic version. This will form the basis of the final summary. In the final step, the minimised RSG is passed into a generator that creates the final summary sentences.
 
-The steps are outlined in the flowchart provided in figure \ref{semanticGraphSummarisation}.
+The steps are outlined in the flowchart provided in Figure \ref{semanticGraphSummarisation}.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.4]{SemanticGraphSummarisation.png}
-   \caption[A flowchart showing the process of semantic graph summarisation]{This shows the process of semantic graph summarisation in a flowchart based on those provided in \cite{abstractiveTechniques, abstractiveTechniquesOriginal}}.
+   \caption[A flowchart showing the process of semantic graph summarisation]{This shows the process of semantic graph summarisation in a flowchart based on those provided in  \cite{abstractiveTechniques, abstractiveTechniquesOriginal}}.
    \label{semanticGraphSummarisation}
 \end{figure}
 
@@ -781,29 +801,51 @@ Semantic Graph summarisation has had success with producing an abstractive summa
 
 A lot of the summarisation techniques specified earlier, especially for abstractive summarisation, would require a full analysis of the semantics of a body of text. As a result, it's clear that a Natural Language Processing library will be needed for this task.
 
+In the book \emph{Natural Language Processing in the kitchen}, Anthony Pesce says "Natural Language Processing is a field that covers computer understanding and manipulation of human language, and it's ripe with possibilities of for newsgathering. You usually hear about it in the context of analyzing (sic) large pools of legislation or other document sets, attempting to discover patterns or root out corruption."
+
+Therefore, a Natural Language Processing (NLP) library could you be used for various aspects of summarisation, as well as potentially in areas such as clustering and labelling. With this in mind I started to do some research in the area to identify what features could prove useful going forward.
+
 \subsubsection{Aspects of Natural Language Processing} 
 
 \label{nlptypes}
 
-There are several different tasks that a Natural Language Processor. A few key ones that are most likely to be required for the project are explained briefly below: \\
+There are several different tasks that a Natural Language Processor. A few key ones that are most likely to be required for the project are explained briefly below: 
 
 \begin{itemize}
-	\item \textbf{Tokenisation} is the splitting of words in a given document. \\
-	\item \textbf{Sentence Segmentation} is the splitting of sentences in a given document. \\
-	\item \textbf{Part-of-Speech (POS) tagging} takes a list of tokens and analyses them, returning tags for each. A tag represents the grammatical function of the token in the sentence (for example if it is a noun, verb or adjective). \\
-	\item \textbf{Named entity extraction} identifies the proper nouns within a document, such as people, dates or locations, as well as other categories of noun. \\
-	\item \textbf{Chunking} takes a list of tags from a POS tagger and groups sets of tokens by their function in a sentence. Examples can include noun phrases and verb phrases. \\
-	\item \textbf{Parsing} takes a sentence and develops a tree showing the functions of each section of the sentence. \\
+	\item \textbf{Tokenisation} is the splitting of words in a given document. 
+	\item \textbf{Sentence Segmentation} is the splitting of sentences in a given document. 
+	\item \textbf{Part-of-Speech (POS) tagging} takes a list of tokens and analyses them, returning tags for each. A tag represents the grammatical function of the token in the sentence (for example if it is a noun, verb or adjective). 
+	\item \textbf{Named entity extraction} identifies the proper nouns within a document, such as people, dates or locations, as well as other categories of noun. 
+	\item \textbf{Chunking} takes a list of tags from a POS tagger and groups sets of tokens by their function in a sentence. Examples can include noun phrases and verb phrases. 
+	\item \textbf{Parsing} takes a sentence and develops a tree showing the functions of each Section of the sentence. 
 	\item \textbf{Coreference Resolution} identifies noun phrases within a document that are the same. This can commonly be used for replacing pronouns with the original noun phrase. 
 \end{itemize}
 
+\subsection{Conclusions}
 
+After conducting the background research I was able to come up with the following basic conclusions as to how to lead in to the design phase of the project.
+
+\begin{itemize}
+	\item In \textbf{Topic Modelling} (Section \ref{TopicModellingTechniques}) the better initial approach will be to employ (or to use a library) that employs Latent Dirichlet Allocation (LDA) as opposed to Latent Semantic Indexing (LSI). LDA uses a generative probabilistic model, which has in practice produced significantly more accurate results. Time shouldn't be of much concern in this case, as the model won't have to be generated very often. As a result, LSI's major advantage is rendered irrelevant.
+	\item For \textbf{Topic Labelling} (Section \ref{labellingalgorithm}) following the algorithm set out by Lau, Grieser, Newman Baldwin would be the best option, as it has had strong success in its methods (although admittedly this is their own claim). A potential issue to consider however is that the algorithm would require several (and perhaps dozens) of calls to Wikipedia. This could be time intensive.
+	\item With \textbf{Clustering} (Section \ref{ClusteringTechniques}), there are significant disadvantages with the techniques of centroid clustering and density clustering. With the first, the number of clusters need to be known, and with density clustering accuracy can be lower than needed. Out of the two hierarchical clustering approaches, agglomerative would probably be the most useful, as it could be slightly faster than a top-down divisive approach. A vector score based on Term Frequency-Inverse Document Frequency is a tried and tested metric for clustering, and will also come in handy.
+	\item For \textbf{Summarisation} (Section \ref{summarisation}), a combination of extractive and abstractive summarisation would probably be best. The LexRank approach for extractive summarisation could help combine the multiple articles into one document, which could then be fed into the semantic graph abstractive summarisation algorithm.
+	\item \textbf{Natural Language Processing}, (Section \ref{nlptypes}) will come in handy, especially in the summarisation phase. For example, with abstractive summarisation, it could be used to analyse the grammatical structures of the text in the semantic graphing phase.  
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
 \section{Design}
+
+In this section I set out the overview of the design for the product. There are three important aspects to consider. 
+
+Firstly, how the front end should look, and what the underlying infrastructure and flow of it should be. 
+
+Secondly is the back end, and more importantly the process of an article being summarised, starting with taking an article from an outlet and going all the way until the summary itself is generated. 
+
+The last point that is considered is the infrastructure of the back end, namely the storage system and the company used to host the server. 
 
 \subsection{Front End Architecture\index{Front End}\index{Architecture} Diagram}
 
@@ -842,7 +884,7 @@ Articles themselves are presented as panels. On a panel is an image for the arti
 
 \subsubsection{Search Results Page}
 
-The search results page is designed to allow users to see as much as possible and do as much as possible without having to leave the page. The results are presented in the application's panel design, with an image corresponding to each panel. Below the panel, is a description of the topic, that is likely to be created from the first paragraph of the Wikipedia\cite{wikipedia}\index{wikipedia} article about that particular topic. Below this are two buttons, one to view the topic's articles, which will go to a topic viewer page (shown later), and a subscribe button. If logged in, the user is taken to the topic settings page, where they can choose any particular preferences they have for this specific topic. If the user isn't logged in, they are taken to a page allowing them to log in or register, before being taken to the preference page.
+The search results page is designed to allow users to see as much as possible and do as much as possible without having to leave the page. The results are presented in the application's panel design, with an image corresponding to each panel. Below the panel, is a description of the topic, that is likely to be created from the first paragraph of the Wikipedia \cite{wikipedia}\index{wikipedia} article about that particular topic. Below this are two buttons, one to view the topic's articles, which will go to a topic viewer page (shown later), and a subscribe button. If logged in, the user is taken to the topic settings page, where they can choose any particular preferences they have for this specific topic. If the user isn't logged in, they are taken to a page allowing them to log in or register, before being taken to the preference page.
 
 It's necessary at this stage to have a user sign in if they want to subscribe to a topic. This way, they can access their topics from anywhere. In addition to this, the search bar is still prominent on the search results page, so that users can edit their queries easily in case of minor errors.
 
@@ -873,7 +915,7 @@ The aforementioned Topic Settings page sets out two preferences from the user fo
 \begin{itemize}
 	\item \textbf{Should the topic's articles be included in the user's email digest?}
 	
-	This is answered by a simple on/off switch. \\
+	This is answered by a simple on/off switch. 
 	
 	\item \textbf{Which sources should be used to construct summaries}
 	
@@ -926,19 +968,19 @@ The other option upon clicking on the profile button in the navigation bar of th
 
 \subsubsection{Digest Viewer}
 
-The digest viewer will show users (who have requested them) their daily digest. The form would be nearly identical to that seen in the topic dashboard of figure \ref{topicDashboard}. However the articles would be made up of the ten latest articles across the user's subscriptions, rather than from a single topic. The link to this page would be sent daily to the user via email.
+The digest viewer will show users (who have requested them) their daily digest. The form would be nearly identical to that seen in the topic dashboard of Figure \ref{topicDashboard}. However the articles would be made up of the ten latest articles across the user's subscriptions, rather than from a single topic. The link to this page would be sent daily to the user via email.
 
 \subsection{Back End\index{Back End} Flow Diagram}
 
 In Figure \ref{backEndArchitecture} the expected flow of the machine learning aspects of the back end is presented. The process of an article being summarised is as follows:
 
 \begin{enumerate}
-	\item The \textbf{Article Fetcher} queries the various News APIs used for new articles. \\
-	\item The \textbf{Article Curator} takes the response from the News APIs and performs any scraping that may be necessary, before passing the article to the Machine Learning phases. \\
-	\item The article is then passed to the \textbf{Topic Modelling}\index{Topic Modelling} phase, which identifies which topics it consists of. \\
-	\item The \textbf{Topic Labelling}\index{Topic Labelling} section takes the results of the Topic Modelling phase, and proceeds to label its topic \\
-	\item \textbf{Clustering}\index{Clustering} then occurs. The article, along with its topic label is passed to this phase, and the program pulls articles from the database that have already been assigned the same topic. These articles are then clustered, and the cluster containing this article is passed to the next phase. \\
-	\item Now that the cluster has been passed, \textbf{Summarisation}\index{Summarisation} occurs on the article, which is then put in the Summarised Articles database, ready to be called for a user to read. \\
+	\item The \textbf{Article Fetcher} queries the various News APIs used for new articles. 
+	\item The \textbf{Article Curator} takes the response from the News APIs and performs any scraping that may be necessary, before passing the article to the Machine Learning phases. 
+	\item The article is then passed to the \textbf{Topic Modelling}\index{Topic Modelling} phase, which identifies which topics it consists of. 
+	\item The \textbf{Topic Labelling}\index{Topic Labelling} Section takes the results of the Topic Modelling phase, and proceeds to label its topic. 
+	\item \textbf{Clustering}\index{Clustering} then occurs. The article, along with its topic label is passed to this phase, and the program pulls articles from the database that have already been assigned the same topic. These articles are then clustered, and the cluster containing this article is passed to the next phase. 
+	\item Now that the cluster has been passed, \textbf{Summarisation}\index{Summarisation} occurs on the article, which is then put in the Summarised Articles database, ready to be called for a user to read. 
 \end{enumerate}
 
 \begin{figure}[ht!]
@@ -947,22 +989,6 @@ In Figure \ref{backEndArchitecture} the expected flow of the machine learning as
    \caption[A guide to the expected flow of the Back End]{The expected flow of the Back End.}
    \label{backEndArchitecture}
 \end{figure}
-
-\subsection{Language and Platform Choices}
-
-\subsubsection{Front End}
-
-The survey\index{Survey} that was conducted in Section \ref{survey} clearly presented the result that a website would be the preferred option for the application, followed by a mobile application in either iOS or Android. Therefore I've decided to follow this and create a WebApp as a primary platform. If time permits, I'll then develop the application for a second platform, which will be a mobile platform.
-
-For the WebApp I will primarily use Bootstrap for the Interface. One design framework I used to great effect during my Industrial Placement in Summer 2016 was React and Redux\index{Redux}\index{React}. React is a JavaScript library developed by Facebook that is designed for building scalable and reusable user interfaces. Redux is a design pattern for JavaScript that is designed around a central predictable state container that is the single source of truth for a User Interface. 
-
-The benefit of this framework is that it allows for very clean code in the user interface. This is because the concept of a single source of truth allows for data flow that is purely in only one direction, making it easier to understand.
-
-\subsubsection{Back End}
-
-\label{languagechoice}
-
-The back end will be constructed using Java. The reasoning behind this is that I have experience from my Industrial Placement using Java as the basis of a server and a back end.
 
 \subsection{Infrastructure}
 
@@ -977,7 +1003,7 @@ Amazon Web Services (AWS) is a set of cloud computing platforms provided by Amaz
 Some of the key platforms offered by AWS include: \\
 
 \begin{itemize}
-	\item \textbf{EC2} allows a user to create a single virtual machine for free on which to run software. This would be with a limit of 750 hours of use per month. In my case this would be used for running the back end of the News Aggregator. \\
+	\item \textbf{EC2} allows a user to create a single virtual machine for free on which to run software. This would be with a limit of 750 hours of use per month. In my case this would be used for running the back end of the News Aggregator. 
 	\item \textbf{S3} is a storage system provided by Amazon that allows a user 5GB of space for free. \\
 \end{itemize} 
 
@@ -1048,6 +1074,22 @@ In the end, a final nail in the coffin for my use of Amazon Web Services came wh
 
 \section{Implementation}
 
+\subsection{Language and Platform Choices}
+
+\subsubsection{Front End}
+
+The survey\index{Survey} that was conducted in Section \ref{survey} clearly presented the result that a website would be the preferred option for the application, followed by a mobile application in either iOS or Android. Therefore I've decided to follow this and create a WebApp as a primary platform. If time permits, I'll then develop the application for a second platform, which will be a mobile platform.
+
+For the WebApp I will primarily use Bootstrap for the Interface. One design framework I used to great effect during my Industrial Placement in Summer 2016 was React and Redux\index{Redux}\index{React}. React is a JavaScript library developed by Facebook that is designed for building scalable and reusable user interfaces. Redux is a design pattern for JavaScript that is designed around a central predictable state container that is the single source of truth for a User Interface. 
+
+The benefit of this framework is that it allows for very clean code in the user interface. This is because the concept of a single source of truth allows for data flow that is purely in only one direction, making it easier to understand.
+
+\subsubsection{Back End}
+
+\label{languagechoice}
+
+The back end will be constructed using Java. The reasoning behind this is that I have experience from my Industrial Placement using Java as the basis of a server and a back end.
+
 \subsection{Database Schema}
 
 \subsubsection{Schema Diagram}
@@ -1065,7 +1107,7 @@ Figure \ref{dbschema} shows the basic components of the various collections in t
 
 A sample document for an article can be seen below:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Article table}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Article table},captionpos=b]
 {
     "_id" : ObjectId("591df7cfacea820abe29709f"),
     "Title" : "Kirsten, Simons on five-man panel in hunt for new SA coach",
@@ -1086,7 +1128,7 @@ The purpose of the article table is for storage of raw article data that has bee
 
 A sample document for a topic can be seen below:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Topics table}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Topics table},captionpos=b]
 {
     "_id" : ObjectId("591df830acea820aebf55465"),
     "Label" : "Opposition (politics)",
@@ -1113,7 +1155,7 @@ The \emph{NeedsClustering} flag performs a similar function to the \emph{isLabel
 
 A sample document for a cluster can be seen below:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Summaries table}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Summaries table},captionpos=b]
 {
     "_id" : ObjectId("591e47f7acea8221dcb97c42"),
     "Articles" : [ 
@@ -1138,13 +1180,13 @@ The \emph{Summaries} field is a string representation of a map object, with the 
 \end{itemize}
 \end{sloppypar}
 
-These represent all the possible permutations (of size greater than zero) of the articles in the cluster. Its primary use is in the customisation offered to users, that can be seen in more detail in section \ref{frontendimplementation}.
+These represent all the possible permutations (of size greater than zero) of the articles in the cluster. Its primary use is in the customisation offered to users, that can be seen in more detail in Section \ref{frontendimplementation}.
 
 \subsubsection{Users}
 
 A sample document for a User can be seen below:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Users table}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Users table},captionpos=b]
 {
     "_id" : ObjectId("592c5288acea82147ca7f0d1"),
     "emailAddress" : "fake@gmail.com",
@@ -1154,13 +1196,13 @@ A sample document for a User can be seen below:
 
 A user object is very simple. The only field that is not necessarily self-explanatory is the \emph{topicIds} field. 
 
-This is an array of strings, with each string forming a representation of a user's topic subscription (the topic being represented by the field marked \emph{topicId}), and the settings for that topic. The two core settings for each subscription is the digests setting (a boolean flag indicating whether a user wants to receive email digests that include this topic), and a list of sources that the user would like their news to default to (further information on this feature can be seen in section \ref{frontendimplementation}). By default, when a user subscribes to a topic, defaults is set to false, and sources is represented by a list comprising all possible sources.
+This is an array of strings, with each string forming a representation of a user's topic subscription (the topic being represented by the field marked \emph{topicId}), and the settings for that topic. The two core settings for each subscription is the digests setting (a boolean flag indicating whether a user wants to receive email digests that include this topic), and a list of sources that the user would like their news to default to (further information on this feature can be seen in Section \ref{frontendimplementation}). By default, when a user subscribes to a topic, defaults is set to false, and sources is represented by a list comprising all possible sources.
 
 \subsubsection{Digests}
 
 A sample document for a digest can be seen below:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Digests table}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample document in the Digests table},captionpos=b]
 {
     "_id" : ObjectId("591ec5c433625db581d77cc6"),
     "id" : "591ec5c433625db581d77cc6",
@@ -1173,15 +1215,15 @@ A sample document for a digest can be seen below:
 
 A digest document represents a single daily digest for a user. Thus, a user who gets daily digests would have a single object for each day. Having said a user would have a single object for each day, it's worth pointing out that the digests are not linked to the User object. Whilst there is no concrete justification for this to be the case either way, a reason for the digests table and users table to not be linked in some way is that they simply don't need to be. A user is never called when a digest is retrieved, and similar a digest is never called when a user is retrieved.
 
-The \emph{articleHolders} field in the document above represents the articles in a digest. It is an array of strings, with each string a JSON representation of an object containing a topic id, article id, and basic information about the cluster (title, image url, and a publishing date). The reasoning behind having the topic id in addition to the cluster is due to the pattern matching employed in the URL for the article viewer on the website (this is explained in further detail in section \ref{frontendimplementation}).
+The \emph{articleHolders} field in the document above represents the articles in a digest. It is an array of strings, with each string a JSON representation of an object containing a topic id, article id, and basic information about the cluster (title, image url, and a publishing date). The reasoning behind having the topic id in addition to the cluster is due to the pattern matching employed in the URL for the article viewer on the website (this is explained in further detail in Section \ref{frontendimplementation}).
 
-\subsection{Potentially Useful APIs}
+\subsection{Useful APIs}
 
 \subsubsection{News Outlets}\index{News!Outlets}
 
 \textbf{Readership statistics for selected outlets in the United Kingdom\index{United Kingdom}}
 
-Statistics below are taken from the \emph{Digital News Report 2016}\cite{digitalNewsReport}\index{Digital News Report} by the Reuters Institute for the Study of Journalism\cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism}. Viewership is given as a percentage of people who say they use the outlet at least weekly.
+Statistics below are taken from the \emph{Digital News Report 2016} \cite{digitalNewsReport}\index{Digital News Report} by the Reuters Institute for the Study of Journalism \cite{reutersInstitute}\index{Reuters Institute for the Study of Journalism}. Viewership is given as a percentage of people who say they use the outlet at least weekly.
 
 \begin{table}[H]
 	\centering
@@ -1199,13 +1241,13 @@ Statistics below are taken from the \emph{Digital News Report 2016}\cite{digital
 	\label{viewershipFigures}
 \end{table}
 
-\textbf{\\The Guardian\cite{guardian}}
+\textbf{\\The Guardian }
 
-\emph{The Guardian}\index{Guardian, The} is a UK newspaper that commands about 14\% of the viewership as outlined in Table \ref{viewershipFigures}. It is also known for having an API that allows a user full and free access to all articles, including the article text itself. The API can access any article dated on or after 1999, and as long as not used for a commercial purpose, is completely free to use. 
+\emph{The Guardian} \cite{guardian}\index{Guardian, The} is a UK newspaper that commands about 14\% of the viewership as outlined in Table \ref{viewershipFigures}. It is also known for having an API that allows a user full and free access to all articles, including the article text itself. The API can access any article dated on or after 1999, and as long as not used for a commercial purpose, is completely free to use. 
 
 To obtain an article from \emph{The Guardian} there are two calls that need to be made. First, we make a call to the search endpoint, which returns a JSON object similar to this:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to The Guardian}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to The Guardian},captionpos=b]
 {
     "response": {
         "status": "ok",
@@ -1235,11 +1277,11 @@ From this, we extract the apiUrl, and call this, with the API key in the request
 
 \textbf{News API}
 
-A major issue is that most newspapers (for example, \emph{The New York Times}\cite{newYorkTimes}\index{New York Times}) only give the first paragraph to an article in their API, and don't give out their full articles as standard. There are solutions, such as Webhose\cite{webhose}\index{Webhose}, that offer feeds into this outlets, but at either a cost, or with a very limited number of requests per month. 
+A major issue is that most newspapers (for example, \emph{The New York Times} \cite{newYorkTimes}\index{New York Times}) only give the first paragraph to an article in their API, and don't give out their full articles as standard. There are solutions, such as Webhose \cite{webhose}\index{Webhose}, that offer feeds into this outlets, but at either a cost, or with a very limited number of requests per month. 
 
-News API\cite{newsApi}\index{News API} is a company that provides an API to get headlines for over seventy different news outlets. A call returns data in the JSON format as follows:
+News API \cite{newsApi}\index{News API} is a company that provides an API to get headlines for over seventy different news outlets. A call returns data in the JSON format as follows:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to News API}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to News API},captionpos=b]
 {
 "status": "ok",
 "source": "the-next-web",
@@ -1275,9 +1317,9 @@ News API also has \emph{The Financial Times}\index{Financial Times, The} and \em
 
 \textbf{Wikipedia}
 
-Wikimedia\index{Wikimedia} (the parent company for Wikipedia\cite{wikipedia}) provides documentation for the Wikipedia\index{Wikipedia} API on its website MediaWiki website. Here, I can search using the search term that a user has used (perhaps in searching for a topic), and get a result that is as follows:
+Wikimedia\index{Wikimedia} (the parent company for Wikipedia \cite{wikipedia}) provides documentation for the Wikipedia\index{Wikipedia} API on its website MediaWiki website. Here, I can search using the search term that a user has used (perhaps in searching for a topic), and get a result that is as follows:
 
-\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to Wikipedia's API}]
+\begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to Wikipedia's API},captionpos=b]
 {
     "query": {
         "searchinfo": {
@@ -1298,7 +1340,7 @@ Wikimedia\index{Wikimedia} (the parent company for Wikipedia\cite{wikipedia}) pr
 
 The search query can be altered to provide different information, such as the URL for the lead image, which can be used to show previews of various items to users. The Wikipedia API can also be used in the topic labelling aspect of the Machine Learning techniques (see Section \ref{TopicLabelingTechniques}).
 
-\subsection{Potentially useful libraries}
+\subsection{Useful libraries}
 
 \subsubsection{Mallet}
 
@@ -1331,7 +1373,7 @@ There are several Natural Language Processing libraries available. The following
 
 OpenNLP is an open source library developed by Apache. The aim of the project is to support the basic aspects of natural language processing.
 
-OpenNLP supports all of the basic tasks that were specified in section \ref{nlptypes} with varying degrees of success, plus "document categorisation".
+OpenNLP supports all of the basic tasks that were specified in Section \ref{nlptypes} with varying degrees of success, plus "document categorisation".
 
 Document Categorisation, as the name suggests, takes a document and categorises it. This could potentially be used in the topic modelling phase, but has the disadvantage that it doesn't come with a model for training, and the user of the library has to create their own. This is a contrast to the Mallet library, which can create a model when the user passes in the raw data.
 
@@ -1378,7 +1420,7 @@ Table \ref{opennlpspace} shows each model and their respective sizes. As Apache'
 
 \textbf{Stanford CoreNLP}
 
-The Stanford CoreNLP is a toolkit provided for Java by the Stanford Natural Language Processing Group. Like Apache OpenNLP, CoreNLP also offers the same functionalities that were discussed in section \ref{nlptypes}. However, Stanford go above and beyond this list in what they can provide. Their coreference and name recognition solutions are "competition winning", whilst they also provide functionality for semantic analysis of text.
+The Stanford CoreNLP is a toolkit provided for Java by the Stanford Natural Language Processing Group. Like Apache OpenNLP, CoreNLP also offers the same functionalities that were discussed in Section \ref{nlptypes}. However, Stanford go above and beyond this list in what they can provide. Their coreference and name recognition solutions are "competition winning", whilst they also provide functionality for semantic analysis of text.
 
 As a result, CoreNLP could have a major benefit for abstractive summarisation, through its coreference resolution. \\
 
@@ -1386,7 +1428,7 @@ As a result, CoreNLP could have a major benefit for abstractive summarisation, t
 
 The following is a code snippet, taken from the Stanford CoreNLP documentation that demonstrates how to perform certain Natural Language tasks from a given annotated document. \\
 
-\begin{lstlisting}[style=MyJava, firstnumber=1, caption={Analysing an annotated document using Stanford's CoreNLP}]
+\begin{lstlisting}[style=MyJava, firstnumber=1, caption={Analysing an annotated document using Stanford's CoreNLP},captionpos=b]
 
 // these are all the sentences in this document
 // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
@@ -1427,7 +1469,7 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 
 \subsubsection{Topic Modelling}
 
-For the Topic Modelling task I used the Mallet library, which is described in full detail in section \ref{mallet}.
+For the Topic Modelling task I used the Mallet library, which is described in full detail in Section \ref{mallet}.
 
 There are two sections to the topic modelling phase: Training, and Estimating. \\
 
@@ -1436,10 +1478,10 @@ There are two sections to the topic modelling phase: Training, and Estimating. \
 For training the model, I used the ParallelTopicModel class provided by the Mallet library. The class provides a parallel implementation of Latent Dirichlet Allocation. There are several key parameters that need to be passed in to the model before it can be estimated:
 
 \begin{itemize}
-	\item \textbf{numTopics}, the number of topics to model the corpus into.\\
-	\item \textbf{alphaSum} is distributed evenly across all topics. For example, an alphaSum of 1 over 100 topics would result in each topic having an alpha score of 0.01. An alpha score is viewed as a smoothing term. It ensures that the probability of a given topic being in a document is never zero.\\
-	\item \textbf{beta} is similar to alpha, and is the corresponding smoothing factor ensuring that the probability of a word being in a given topic is never zero.\\
-	\item \textbf{numIterations} is the number of iterations the trainer should run through before presenting a final model.\\
+	\item \textbf{numTopics}, the number of topics to model the corpus into.
+	\item \textbf{alphaSum} is distributed evenly across all topics. For example, an alphaSum of 1 over 100 topics would result in each topic having an alpha score of 0.01. An alpha score is viewed as a smoothing term. It ensures that the probability of a given topic being in a document is never zero.
+	\item \textbf{beta} is similar to alpha, and is the corresponding smoothing factor ensuring that the probability of a word being in a given topic is never zero.
+	\item \textbf{numIterations} is the number of iterations the trainer should run through before presenting a final model.
 \end{itemize}
 
 Initially I attempted to model topics by feeding in articles and seeing what topics came up. However, it was clear that this wasn't ideal, as frequently occurring words, such as "a", "the" and "and" were too prominent in the list of words in each topic, and thus were skewing any results from the estimation stage.
@@ -1448,7 +1490,7 @@ I then tried to use the provided "stoplists" file. With this file, Mallet aims t
 
 As a final solution, I decided to remove all insignificant words by removing all non-nouns from the article bodies. I did this using the Apache OpenNLP library, and found that this made (to the naked eye) the topic models look a lot better. 
 
-My final parameters can be seen in table \ref{topicmodellingtraining}.
+My final parameters can be seen in Table \ref{topicmodellingtraining}.
 
 \begin{table}[H]
 	\centering
@@ -1463,7 +1505,7 @@ My final parameters can be seen in table \ref{topicmodellingtraining}.
 	\label{topicmodellingtraining}
 \end{table}
 
-Initially, the articles would be used to retrain the model each time a set of articles were about to be labelled. However, in the optimisation phase of the project, I changed this so that the training would happen once a week, and a model saved on file. Full details and justification can be found in section \ref{topicmodellingoptimisation}. \\
+Initially, the articles would be used to retrain the model each time a set of articles were about to be labelled. However, in the optimisation phase of the project, I changed this so that the training would happen once a week, and a model saved on file. Full details and justification can be found in Section \ref{topicmodellingoptimisation}. \\
 
 \textbf{Estimation}
 
@@ -1472,9 +1514,9 @@ The body of the article to be estimated is passed in to the model. This was init
 There are three key parameters for estimation. These are:
 
 \begin{itemize}
-	\item \textbf{numIterations}, which is the number of times to iterate through the model before producing a final estimate. \\
-	\item \textbf{thinning}, which is the number of iterations to run before saving an interim model.\\
-	\item \textbf{burn-in} is the number of iterations to perform before beginning the estimation. The reasoning behind this is that since the first iteration begins with a random distribution, the first set of iterations are unlikely to be truly representative of the actual model. The burn-in period could potentially be compared to the warm-up of an athlete. \\
+	\item \textbf{numIterations}, which is the number of times to iterate through the model before producing a final estimate. 
+	\item \textbf{thinning}, which is the number of iterations to run before saving an interim model.
+	\item \textbf{burn-in} is the number of iterations to perform before beginning the estimation. The reasoning behind this is that since the first iteration begins with a random distribution, the first set of iterations are unlikely to be truly representative of the actual model. The burn-in period could potentially be compared to the warm-up of an athlete. 
 \end{itemize}
 
 After the topic model for the new article has been estimated, I prepare the result for topic labelling. To do this, I parse the data into a new custom class I created, that stores the word and the "distribution". The distribution is calculated by the Mallet library, and is an indication of the likelihood that an article belongs to a certain topic.
@@ -1495,9 +1537,9 @@ The final parameters chosen can be seen in table \ref{topicmodellingestimation}.
 
 \subsubsection{Topic Labelling}
 
-When I first implemented the Topic Labelling phase of the backend, I aimed to emulate the algorithm of Lau, Grieser, Newman and Baldwin as closely as possible. This algorithm is detailed in section \ref{labellingalgorithm}. However, once this algorithm had been implemented, it was clear that there were some potential flaws when it applied to my project.
+When I first implemented the Topic Labelling phase of the backend, I aimed to emulate the algorithm of Lau, Grieser, Newman and Baldwin as closely as possible. This algorithm is detailed in Section \ref{labellingalgorithm}. However, once this algorithm had been implemented, it was clear that there were some potential flaws when it applied to my project.
 
-A key issue in the topic labelling phase was that of speed. The algorithm required dozens (and potentially hundreds) of calls to the Wikipedia API. There are ten calls in step two (searching Wikipedia for the original top ten topic terms), followed by calls on every single noun chunk found in step three of the algorithm. Calculating the Related Article Conceptual Overlap scores (RACO, see section \ref{RACOcalculation} would also require every single "outlink" to be found, and every category of it. Given this needs to be done for every single noun chunk found earlier, it was easy to see why this could become prohibitively costly in terms of speed. 
+A key issue in the topic labelling phase was that of speed. The algorithm required dozens (and potentially hundreds) of calls to the Wikipedia API. There are ten calls in step two (searching Wikipedia for the original top ten topic terms), followed by calls on every single noun chunk found in step three of the algorithm. Calculating the Related Article Conceptual Overlap scores (RACO, see Section \ref{RACOcalculation} would also require every single "outlink" to be found, and every category of it. Given this needs to be done for every single noun chunk found earlier, it was easy to see why this could become prohibitively costly in terms of speed. 
 
 A simple test run using five articles from \emph{The Guardian} of varying lengths resulted in each taking at least fifteen minutes to complete the topic labelling process. Given the potential volume of articles expected per day, I reluctantly dismissed the algorithm as too expensive for the project.
 
@@ -1506,11 +1548,11 @@ In order to streamline the labelling process I removed major aspects of the algo
 \textbf{Brief overview of final labelling algorithm} \\
 
 \begin{enumerate}
-	\item \textbf{Find all proper names} in the article body using the Apache OpenNLP library. I used the models for Locations, Organisations and People in this phase. \\
-	\item \textbf{Search Wikipedia} for the top fifteen results for each of the ten topic words provided by the modelling algorithm. \\
-	\item \textbf{Retrieve text from Wikipedia articles} for all results in step two that aren't in the list of names found in step one. \\
-	\item \textbf{Perform Candidate Ranking.} This step is described in more detail below. \\
-	\item \textbf{Add top 18 results to candidates from step one.} The number 18 was found via trial and error, with the aim of striking a balance between too many potential labels and too few. Too many could result in a very slow clustering process, as there are too many topics that need clustering, causing a backlog. Too few could reduce accuracy. \\
+	\item \textbf{Find all proper names} in the article body using the Apache OpenNLP library. I used the models for Locations, Organisations and People in this phase. 
+	\item \textbf{Search Wikipedia} for the top fifteen results for each of the ten topic words provided by the modelling algorithm. 
+	\item \textbf{Retrieve text from Wikipedia articles} for all results in step two that aren't in the list of names found in step one. 
+	\item \textbf{Perform Candidate Ranking.} This step is described in more detail below. 
+	\item \textbf{Add top 18 results to candidates from step one.} The number 18 was found via trial and error, with the aim of striking a balance between too many potential labels and too few. Too many could result in a very slow clustering process, as there are too many topics that need clustering, causing a backlog. Too few could reduce accuracy. 
 \end{enumerate}
 
 This significantly increased the speed of the algorithm, and articles that were taking fifteen minutes or more on the previous algorithm were now taking less than a minute, which I decided would be fast enough for the expected volume of articles.
@@ -1520,17 +1562,17 @@ A full analysis of the speed of the new topic labelling algorithm, and its role 
 \textbf{Brief overview of candidate ranking algorithm} \\
 
 \begin{enumerate}
-	\item \textbf{Isolate the nouns from the Wikipedia articles of every label}\\
-	\item \textbf{Use nouns from step one as a corpus in a Term Frequency-Inverse Document Frequency (TF-IDF) model} \\
-	\item \textbf{Isolate the nouns from the original article} \\
+	\item \textbf{Isolate the nouns from the Wikipedia articles of every label}
+	\item \textbf{Use nouns from step one as a corpus in a Term Frequency-Inverse Document Frequency (TF-IDF) model} 
+	\item \textbf{Isolate the nouns from the original article} 
 	\item \textbf{For each label:}
 		\begin{itemize}
-			\item Calculate the sum of performing TF-IDF on each individual noun from the label's article. The TF-IDF algorithm is explained in full detail in section \ref{ClusteringTechniques}. \\
-			\item Find the total number of nouns that are present in the original article that are also present in the candidate article. This is known as the crossover. \\
-			\item Normalise the crossover by dividing it by the total number of nouns in the candidate article and the original article. \\
-			\item Multiply the crossover by the sum of TF-IDF operations found earlier to give a final total. \\
+			\item Calculate the sum of performing TF-IDF on each individual noun from the label's article. The TF-IDF algorithm is explained in full detail in Section \ref{ClusteringTechniques}. 
+			\item Find the total number of nouns that are present in the original article that are also present in the candidate article. This is known as the crossover. 
+			\item Normalise the crossover by dividing it by the total number of nouns in the candidate article and the original article. 
+			\item Multiply the crossover by the sum of TF-IDF operations found earlier to give a final total. 
 		\end{itemize}
-	\item \textbf{Order the candidates by score}, highest to lowest.\\
+	\item \textbf{Order the candidates by score}, highest to lowest.
 \end{enumerate}
 
 \subsubsection{Clustering}
@@ -1540,18 +1582,18 @@ For the project, I developed my own clustering algorithm, based on the metric of
 The intention of the make up of my clustering algorithm is that the following two items must be true for a pair of articles to be clustered together: \\
 
 \begin{itemize}
-	\item \textbf{Noun similarity}: The content of the articles themselves needs to be similar. To do this I'll again look for similarity between "significant words" (nouns) in the articles. \\
-	\item \textbf{Timestamp similarity}: When a piece of news is published, if other outlets are going to cover it, they will publish as soon as possible. Therefore, the difference between timestamps should be used as a factor in deciding if articles are genuinely about the same topic or not, or just about similar topics. \\
+	\item \textbf{Noun similarity}: The content of the articles themselves needs to be similar. To do this I'll again look for similarity between "significant words" (nouns) in the articles. 
+	\item \textbf{Timestamp similarity}: When a piece of news is published, if other outlets are going to cover it, they will publish as soon as possible. Therefore, the difference between timestamps should be used as a factor in deciding if articles are genuinely about the same topic or not, or just about similar topics. 
 \end{itemize}
 
 \textbf{Initialisation}
 
 \begin{enumerate}
-	\item \textbf{Create a TF-IDF corpus} from the content of every article to be clustered. \\
-	\item For every article \textbf{perform TF-IDF on each noun}. \\
-	\item For every article \textbf{generate a "timestamp" score}. The timestamp is represented by the number of milliseconds since midnight on January 1, 1970. This is the result of the Java Date class' getTime() method.\\
-	\item \textbf{Create clusters}, with each article initially assigned its own cluster. \\
-	\item \textbf{Generate a similarity matrix} with initial values for each cell determined by the "Finding Similarities" algorithm detailed below. The purpose of this is to store the "distance" between a cluster and all other clusters, and to quickly and easily find similarities. \\
+	\item \textbf{Create a TF-IDF corpus} from the content of every article to be clustered. 
+	\item For every article \textbf{perform TF-IDF on each noun}. 
+	\item For every article \textbf{generate a "timestamp" score}. The timestamp is represented by the number of milliseconds since midnight on January 1, 1970. This is the result of the Java Date class' getTime() method.
+	\item \textbf{Create clusters}, with each article initially assigned its own cluster. 
+	\item \textbf{Generate a similarity matrix} with initial values for each cell determined by the "Finding Similarities" algorithm detailed below. The purpose of this is to store the "distance" between a cluster and all other clusters, and to quickly and easily find similarities. 
 \end{enumerate}
 
 The article, along with a list of TF-IDF scores for each noun, and the timestamp score, are kept in a class known as an ArticleVector. These ArticleVector instances form the cluster items in the algorithms. \\
@@ -1560,7 +1602,7 @@ The article, along with a list of TF-IDF scores for each noun, and the timestamp
 
 The principle behind this step of the algorithm is to compare two clusters and generate a score to keep in the similarity matrix. To do this, each ArticleVector from one cluster is compared with every ArticleVector from the second cluster. These similarity scores are then added together to form a final similarity score between the clusters. So, for example, if there was a cluster with three articles, and a second cluster with four articles, then the final similarity score would be the sum of the twelve possible combinations. The algorithm I used for determining the similarity between two ArticleVector instances is detailed below: \\
 
-\begin{lstlisting}[style=MyJava, firstnumber=1, label={lst:clusteringsimilarity}, caption={Finding similarities between two ArticleVectors}]
+\begin{lstlisting}[style=MyJava, firstnumber=1, label={lst:clusteringsimilarity}, caption={Finding similarities between two ArticleVectors},captionpos=b]
 	List<TfIdfScores> firstNounScores = firstArticleVector.getNounScores();
         List<TfIdfScores> secondNounScores = secondArticleVector.getNounScores();
         
@@ -1596,18 +1638,16 @@ The principle behind this step of the algorithm is to compare two clusters and g
         
 \end{lstlisting}
 
-\emph{Explanation of Listing \ref{lst:clusteringsimilarity}}
-
 \begin{enumerate}
-	\item \textbf{Initialise variables}: similarityRunningTotal and differenceRunningTotal will form the backbone of the final calculation, and act almost like a running total. averageWords stores (as the name suggests) the average number of nouns in the two ArticleVector items - this will help to normalise the calculation somewhat. \\
+	\item \textbf{Initialise variables}: similarityRunningTotal and differenceRunningTotal will form the backbone of the final calculation, and act almost like a running total. averageWords stores (as the name suggests) the average number of nouns in the two ArticleVector items - this will help to normalise the calculation somewhat. 
 	\item \textbf{For each word in the first ArticleVector:}
 		\begin{itemize}
-			\item If the word is in the second ArticleVector, increment a counter for the total similar words. Add the square of the difference between the word's TF-IDF scores in each item to the similarityRunningTotal. \\
-			\item If the word is not in the second ArticleVector, add its TF-IDF score from the first ArticleVector to the differenceRunningTotal. \\
+			\item If the word is in the second ArticleVector, increment a counter for the total similar words. Add the square of the difference between the word's TF-IDF scores in each item to the similarityRunningTotal. 
+			\item If the word is not in the second ArticleVector, add its TF-IDF score from the first ArticleVector to the differenceRunningTotal. 
 		\end{itemize}
-	\item \textbf{For each word in the second ArticleVector that's not in the first}, add the TF-IDF score to the differenceRunningTotal. \\
-	\item \textbf{A multiplicationFactor is calculated} to be the number of similar words divided by the average words. \\
-	\item \textbf{The final similarityRunningTotal} is calculated to be the square root of the similarityRunningTotal multiplied by the multiplicationFactor calculated earlier.\\
+	\item \textbf{For each word in the second ArticleVector that's not in the first}, add the TF-IDF score to the differenceRunningTotal. 
+	\item \textbf{A multiplicationFactor is calculated} to be the number of similar words divided by the average words. 
+	\item \textbf{The final similarityRunningTotal} is calculated to be the square root of the similarityRunningTotal multiplied by the multiplicationFactor calculated earlier.
 	\item \textbf{Calculate the final similarity} by dividing the similarityRunningTotal by the differenceRunningTotal. \\
 \end{enumerate}
 
@@ -1635,7 +1675,7 @@ If the similarity score was below a threshold, then the clusters are not combine
 
 \textbf{Parameter Selection}
 
-I tried different values for the three parameters in the clustering algorithm, each with varying degrees of success. I conducted a survey that involved the clusters produced by testing multiple clustering parameters. The results of this survey are documented in the evaluation section. The final parameters chosen are listed below:
+I tried different values for the three parameters in the clustering algorithm, each with varying degrees of success. I conducted a survey that involved the clusters produced by testing multiple clustering parameters. The results of this survey are documented in the evaluation Section. The final parameters chosen are listed below:
 
 \begin{table}[H]
 	\centering
@@ -1651,7 +1691,7 @@ I tried different values for the three parameters in the clustering algorithm, e
 
 \subsection{Summarisation}
 
-For the summarisation of articles, I initially intended to use LexRank for extractive summarisation, followed by Semantic Graph summarisation for abstractive summarisation. However, it became clear that abstractive summarisation would not be time efficient, which is detailed in section \ref{abstractiveimplementation}.
+For the summarisation of articles, I initially intended to use LexRank for extractive summarisation, followed by Semantic Graph summarisation for abstractive summarisation. However, it became clear that abstractive summarisation would not be time efficient, which is detailed in Section \ref{abstractiveimplementation}.
 
 \subsubsection{Extractive Summarisation}
 
@@ -1659,7 +1699,7 @@ For the summarisation of articles, I initially intended to use LexRank for extra
 
 \textbf{Modified LexRank algorithm}
 
-The core aspects of the extractive summarisation follow the LexRank algorithm that was investigated in section \ref{extractiveSummarisation}. 
+The core aspects of the extractive summarisation follow the LexRank algorithm that was investigated in Section \ref{extractiveSummarisation}. 
 
 \begin{enumerate}
 	\item \textbf{Create a Graph}, with each sentence in each article corresponding to a node in the graph. Information stored in the node includes:
@@ -1669,12 +1709,12 @@ The core aspects of the extractive summarisation follow the LexRank algorithm th
 			\item The absolute position of the sentence in the original article
 			\item An identifier for the node
 			\item A list of related nodes, initialised as an empty list
-			\item The source of the original article \\
+			\item The source of the original article 
 		\end{itemize}
-	\item \textbf{Apply cosine similarities} as in the original LexRank algorithm. I initially attempted this with just nouns, but that approach is not particularly suitable for summarisation, as verbs become important in identifying similarities between two individual sentences. As a result, I decided to use the stoplists file that was provided by Mallet for topic modelling. Words are filtered out before the LexRank cosine similarity function is applied. \\
-	\item \textbf{Filter the graph}, removing connections between nodes that has similarity values that are below a selected threshold. \\
-	\item \textbf{Page Rank is applied}, using the equation given in section \ref{abstractiveimplementation}. \\
-	\item \textbf{Redundant nodes are filtered out}. This is done by iterating through the nodes returned by the page rank algorithm. For each node, if there are nodes which share more than 75\% of the same words (minus the words in the stoplist file provided by Mallet), it is marked as a related node. When a node is marked as a related node, it is added to the related nodes list in the original node, and the related node is not considered for the final summary. \\ 
+	\item \textbf{Apply cosine similarities} as in the original LexRank algorithm. I initially attempted this with just nouns, but that approach is not particularly suitable for summarisation, as verbs become important in identifying similarities between two individual sentences. As a result, I decided to use the stoplists file that was provided by Mallet for topic modelling. Words are filtered out before the LexRank cosine similarity function is applied. 
+	\item \textbf{Filter the graph}, removing connections between nodes that has similarity values that are below a selected threshold. 
+	\item \textbf{Page Rank is applied}, using the equation given in Section \ref{abstractiveimplementation}. 
+	\item \textbf{Redundant nodes are filtered out}. This is done by iterating through the nodes returned by the page rank algorithm. For each node, if there are nodes which share more than 75\% of the same words (minus the words in the stoplist file provided by Mallet), it is marked as a related node. When a node is marked as a related node, it is added to the related nodes list in the original node, and the related node is not considered for the final summary. 
 \end{enumerate}
 
 At this stage the summary is considered to be ready to go through quotation and coreference resolution, in order to ensure the summary is as readable as possible. These processes are detailed below.
@@ -1695,7 +1735,7 @@ In the quotation resolution phase of the summarisation, each node is analysed in
 There is no issue with a quote outlined as in (4). However, with the first three, resolution needs to take place. With resolution, one of two things will happen:
 
 \begin{itemize}
-	\item \textbf{If the rest of the quote is in the summary} \\ The nodes comprising the quotation will be combined, ensuring that in the final summary they are kept together. \\
+	\item \textbf{If the rest of the quote is in the summary} \\ The nodes comprising the quotation will be combined, ensuring that in the final summary they are kept together. 
 	\item \textbf{If the rest of the quote is not in the summary} \\ Depending on whether the current node starts or ends the quote, adjacent sentences from the original are added to the summary (this is done using the absoluteSentencePosition field on the node). The adjacent sentences are combined with the node to ensure that they are kept together in the final summary. \\
 \end{itemize}
 
@@ -1703,7 +1743,7 @@ There is no issue with a quote outlined as in (4). However, with the first three
 
 Pronouns in a sentence can also cause readability issues, as the sentence could be out of context, meaning it would not be clear what the pronoun is referring to.
 
-Initially I aimed to fix these issues using the coreference resolution part of the Stanford CoreNLP library, which is outlined in section \ref{nlp}. However, there were two issues with this. On test runs, it would take nearly a minute to produce the coreference resolution for an article. In a summary that has several original articles this would become prohibitively expensive. In addition to this, it was also clear that whilst Stanford's coreference resolution might be competition-winning, it certainly isn't perfect. In a climate such as journalism, any incorrect coreference resolution could alter the meaning of a sentence significantly. If the article is about a sensitive subject, it could create some liability issues.
+Initially I aimed to fix these issues using the coreference resolution part of the Stanford CoreNLP library, which is outlined in Section \ref{nlp}. However, there were two issues with this. On test runs, it would take nearly a minute to produce the coreference resolution for an article. In a summary that has several original articles this would become prohibitively expensive. In addition to this, it was also clear that whilst Stanford's coreference resolution might be competition-winning, it certainly isn't perfect. In a climate such as journalism, any incorrect coreference resolution could alter the meaning of a sentence significantly. If the article is about a sensitive subject, it could create some liability issues.
 
 As a result, I decided that the best way to approach coreference resolution would be a similar manner to quotation resolution. Using the Apache OpenNLP library to identify pronouns, I would then add the previous sentence to the summary (if it wasn't already present), and combine the two nodes to ensure that they were kept together in the final summary, thus preserving readability.
 
@@ -1726,7 +1766,7 @@ A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{SummaryEvaluationResource}
-   \caption[A screenshot of the Summary Evaluation Resource]{A screenshot of the Summary Evaluation Resource. On the left is the extractive summary, and on the right is the extractive summary after the coreferences and quotations have been resolved as in section \ref{extractiveimplementation}}
+   \caption[A screenshot of the Summary Evaluation Resource]{A screenshot of the Summary Evaluation Resource. On the left is the extractive summary, and on the right is the extractive summary after the coreferences and quotations have been resolved as in Section \ref{extractiveimplementation}}
    \label{summaryevaluationresource}
 \end{figure} 
 
@@ -1734,20 +1774,20 @@ A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}
 
 \label{abstractiveimplementation}
 
-I made an initial attempt at abstractive summarisation, before reluctantly abandoning it on the grounds of infeasibility (further details on why are provided on why this was the case are given further on in this section). \\
+I made an initial attempt at abstractive summarisation, before reluctantly abandoning it on the grounds of infeasibility (further details on why are provided on why this was the case are given further on in this Section). \\
 
 \textbf{Brief overview of Abstractive Summarisation algorithm}
 
-The following algorithm presents in more detail the ideas presented in the Semantic Graph section in section \ref{abstractiveSummarisation}. \\
+The following algorithm presents in more detail the ideas presented in the Semantic Graph Section in Section \ref{abstractiveSummarisation}. \\
 
 \begin{enumerate}
 	\item \textbf{Rich Semantic Graph creation} \\ 
-	In this process, the first step is to perform an analysis on each of the original articles using the Stanford CoreNLP library. I then perform coreference resolution on the articles, replacing relevant nodes in the summary. I do this because it reduces the length of the summary significantly. The Rich Semantic Graph is then created from the Rich Semantic Subgraphs, which are created according to the procedure below. \\
+	In this process, the first step is to perform an analysis on each of the original articles using the Stanford CoreNLP library. I then perform coreference resolution on the articles, replacing relevant nodes in the summary. I do this because it reduces the length of the summary significantly. The Rich Semantic Graph is then created from the Rich Semantic Subgraphs, which are created according to the procedure below. 
 	\item \textbf{Rich Semantic SubGraph creation} \\
-	In this step, the original summary is converted into several rich semantic subgraphs. First, the Stanford analyses computed in the first step are used to find a collection of "Relation Triples". Relation Triples are groups of subject, verb, object patterns. Each of these triples will be given its own subgraph. Each word in the triple is fed into the WordNet library (section \ref{WordNet} to find all the possible meanings of the word. \\
-	Once every possible meaning has been found, the cartesian product of every possible meaning is generated, and assigned a score based off the WordNet usage statistics. The graph is created from this cartesian product, with each meaning of an individual word constituting a node. \\
+	In this step, the original summary is converted into several rich semantic subgraphs. First, the Stanford analyses computed in the first step are used to find a collection of "Relation Triples". Relation Triples are groups of subject, verb, object patterns. Each of these triples will be given its own subgraph. Each word in the triple is fed into the WordNet library (Section \ref{WordNet} to find all the possible meanings of the word. \\
+	Once every possible meaning has been found, the cartesian product of every possible meaning is generated, and assigned a score based off the WordNet usage statistics. The graph is created from this cartesian product, with each meaning of an individual word constituting a node. 
 	\item \textbf{Rich Semantic Graph reduction} \\
-	The graph is reduced by applying heuristics to combine sentences. For example, if two consecutive sentences both have the same subject, they can be combined into one sentence, with a conjunction for the object. \\
+	The graph is reduced by applying heuristics to combine sentences. For example, if two consecutive sentences both have the same subject, they can be combined into one sentence, with a conjunction for the object. 
 	\item \textbf{Natural Language Generation}\\
 	The final stage is to pass the reduced semantic graph into a natural language generator, in order to generate the final summary sentences.\\
 \end{enumerate}
@@ -1771,18 +1811,39 @@ According to WordNet, there are two meanings to the word "computing", eleven for
 For my server I used the Restlet framework for Java. Restlet is a powerful open source framework that allows users to create vastly scalable Rest APIs and back end servers. There are three key classes in Restlet that I used.\\
 
 \begin{itemize}
-	\item \textbf{ServerResource} is a wrapper class, that provides the class with both a request object, and a response object. A server method can be created by using the annotation @Get or @Post as appropriate above a method. \\
-	\item \textbf{Application} is the base class for Restlet. Here, in an overrided method createInboundRoot I set the routes for the API to follow, and which ServerResource subclass to use when a request comes in to a specific api address. \\
-	\item \textbf{TaskService} is a service that allows the asynchronous scheduling and running of "tasks". I used this to run the server jobs required for fetching, labelling, clustering and summarisation. \\
+	\item \textbf{ServerResource} is a wrapper class, that provides the class with both a request object, and a response object. A server method can be created by using the annotation @Get or @Post as appropriate above a method. 
+	\item \textbf{Application} is the base class for Restlet. Here, in an overrided method createInboundRoot I set the routes for the API to follow, and which ServerResource subclass to use when a request comes in to a specific api address. 
+	\item \textbf{TaskService} is a service that allows the asynchronous scheduling and running of "tasks". I used this to run the server jobs required for fetching, labelling, clustering and summarisation. 
 \end{itemize}
 
-Documentation on the Web API I created is provided in Appendix \ref{WebAPI} and for the server jobs in section \ref{ServerTasks}.
+Documentation on the Web API I created is provided in Appendix \ref{WebAPI} and for the server jobs in Section \ref{ServerTasks}.
 
 \subsection{Server Tasks}
 
 \label{ServerTasks}
 
-The following jobs are back end server tasks using the Restlet framework's TaskService (section \ref{Restlet}). I created them with the purpose of fetching, labelling, clustering and summarising articles. They also perform other important tasks such as sending digests to subscribed users.  
+The following jobs are back end server tasks using the Restlet framework's TaskService (Section \ref{Restlet}). I created them with the purpose of fetching, labelling, clustering and summarising articles. They also perform other important tasks such as sending digests to subscribed users.  
+
+\subsubsection{Scheduling of tasks}
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{TaskService.png}
+   \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks}
+   \label{servertasks}
+\end{figure} 
+
+In order to make sure no new articles from external outlets are missed, the ArticleFetchRunnable is run every three minutes. The ArticleFetchRunnable, on completion, fires the TopicLabellingRunnable with the new articles as a parameter (this only happens if there is at least one new article). Once the TopicLabellingRunnable has completed, it in turn fires the ClusteringRunnable. 
+
+\begin{sloppypar}
+The principle behind this is to create a cascading effect. With the ArticleFetchRunnable being called so frequently, the TopicLabellingRunnable should rarely have to deal with a large batch of articles in a single run (the largest recorded so far is 22 articles in one Runnable). This cascading effect also means that the ClusteringRunnable wouldn't have to deal with a massive batch of topics at any one time either. This will all minimise the delay between an article first being published on an external outlet, and then reaching the NewSumm website.
+\end{sloppypar}
+
+With the LabellingRunnable, once the articles that have been picked up have gone through the whole process, and clustering has finished, the ClusteringRunnable then schedules the LabellingRunnable to start again a minute later. This means that only a maximum of one thread in the thread pool is dedicated to summarising old articles, and as many threads as possible can be dedicated to bringing news to the website as soon as possible after publication.
+
+The DigestRunnable is fired once a day, at five in the morning in the UTC time zone.
+
+Figure \ref{servertasks} shows how tasks are scheduled in the back end, and how the information flows between the separate server tasks.
 
 \subsubsection{ArticleFetchRunnable}
 
@@ -1804,7 +1865,7 @@ Initially, each label is clustered. Then, for each cluster, a "power set", consi
 
 Once the summaries have been generated, the clusters have been saved. They are added to the list of the labels' clusters in the database. In addition to this, for each label, a call to the Wikipedia API is made to find the list of categories that the label belongs to. The clusters are added to these labels as well.
 
-In a time-saving measure, a list of clusters that have been summarised during the course of the runnable is kept. This means that if a cluster is created that has already been created for a different label, it doesn't need to be summaries again.
+In a time-saving measure, a list of clusters that have been summarised during the course of the runnable is kept. This means that if a cluster is created that has already been created for a different label, it doesn't need to be summarised again.
 
 The "NeedsClustering" on the labels are also set to false.
 
@@ -1815,25 +1876,6 @@ The LabellingRunnable's main function is to find articles that, for various reas
 \subsubsection{DigestRunnable}
 
 The DigestRunnable is run each day. It goes through each user in the database, creating digests for those who have requested them. It then saves these digests in the database, thus creating an ID that is used to create a link to each. It then sends an email to each of the users with a digest, each email equipped with the generated link to view their digest.
-
-\subsubsection{Scheduling of tasks}
-
-In order to make sure no new articles from external outlets are missed, the ArticleFetchRunnable is run every three minutes. The ArticleFetchRunnable, on completion, fires the TopicLabellingRunnable with the new articles as a parameter (this only happens if there is at least one new article). Once the TopicLabellingRunnable has completed, it in turn fires the ClusteringRunnable. 
-
-The principle behind this is to create a cascading effect. With the ArticleFetchRunnable being called so frequently, the TopicLabellingRunnable should rarely have to deal with a large batch of articles in a single run (the largest recorded so far is 22 articles in one Runnable). This cascading effect also means that the ClusteringRunnable wouldn't have to deal with a massive batch of topics at any one time either. This will all minimise the delay between an article first being published on an external outlet, and then reaching the NewSumm website.
-
-With the LabellingRunnable, once the articles that have been picked up have gone through the whole process, and clustering has finished, the ClusteringRunnable then schedules the LabellingRunnable to start again a minute later. This means that only a maximum of one thread in the thread pool is dedicated to summarising old articles, and as many threads as possible can be dedicated to bringing news to the website as soon as possible after publication.
-
-The DigestRunnable is fired once a day, at five in the morning in the UTC time zone.
-
-Figure \ref{servertasks} shows how tasks are scheduled in the back end, and how the information flows between the separate server tasks.
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{TaskService.png}
-   \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks}
-   \label{servertasks}
-\end{figure} 
 
 \subsection{Front End}
 
@@ -1846,13 +1888,13 @@ The iPad version of the iOS app is designed to mirror the interface of the deskt
 There are a few key differences from the initial design. These are:
 
 \begin{itemize}
-	\item \textbf{The Home Page} - In the initial design, it was stated that a signed in user's home page would be their topic dashboard screen. This is now changed, so that they still receive the original home page, but the "Top Stories" section is now tailored to their specific subscriptions. This means that the large search bar still has major prominence, which, in my opinion, emphasises the search capabilities of NewSumm, whilst still providing the user with their articles at a glance. \\
-	\item \textbf{Profiles} - Users no longer have a profile picture, and in fact only an email address is stored to link to their accounts, and so there is no longer a profile settings page. \\
-	\item \textbf{Article Viewer} - This screen now allows a greater amount of customisation on a user's part. Each article that the summary is created from is now accompanied by a switch. Turning this switch off will remove the article from the summary. The same happens in the opposite direction.\\
+	\item \textbf{The Home Page} - In the initial design, it was stated that a signed in user's home page would be their topic dashboard screen. This is now changed, so that they still receive the original home page, but the "Top Stories" Section is now tailored to their specific subscriptions. This means that the large search bar still has major prominence, which, in my opinion, emphasises the search capabilities of NewSumm, whilst still providing the user with their articles at a glance. 
+	\item \textbf{Profiles} - Users no longer have a profile picture, and in fact only an email address is stored to link to their accounts, and so there is no longer a profile settings page. 
+	\item \textbf{Article Viewer} - This screen now allows a greater amount of customisation on a user's part. Each article that the summary is created from is now accompanied by a switch. Turning this switch off will remove the article from the summary. The same happens in the opposite direction.
 	\item \textbf{Summary Annotations} - Users can now see where the individual sentences of their summary are coming from. There is now a checkbox marked "Show Summary Annotations" in the corner, and when selected the text from the summary is highlighted according to its source (the source colours are shown on the corresponding switches on the right of the screen). Clicking on a highlighted piece of text will reveal a popover showing the source, along with the original sentence. If a sentence has some related sentences that aren't in the summary, the text won't be highlighted, and the popover will show the original, as well as all related sentences. \\
 \end{itemize}
 
-Screenshots from the website and apps can be seen in figure \ref{appscreenshots}, and further details are provided in the user guide in Appendix \ref{userguide}.
+Screenshots from the website and apps can be seen in Figure \ref{appscreenshots}, and further details are provided in the user guide in Appendix \ref{userguide}.
 
 \begin{figure}[ht!]
   \centering
@@ -1936,7 +1978,35 @@ Screenshots from the website and apps can be seen in figure \ref{appscreenshots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Source Code}
+\section{Source Code and Documentation Repositories}
+
+The various aspects of the project are implemented on four different GitHub repositories:
+
+The source code for the \textbf{back end and WebApp} can be found at:
+
+\begin{displayquote}\emph{
+https://github.com/kunalwagle/newsaggregator-backend\\}
+\end{displayquote}
+
+The source code for the \textbf{iOS application} can be found at:
+
+\begin{displayquote}\emph{
+https://github.com/kunalwagle/newsaggregator-ios\\}
+\end{displayquote}
+
+The python notebook that was used for the \textbf{evaluation and analysis} can be found at:
+
+\begin{displayquote}\emph{
+https://github.com/kunalwagle/newsaggregator-evaluation\\}
+\end{displayquote}
+
+The repository for the \textbf{report} can be found at:
+
+\begin{displayquote}\emph{
+https://github.com/kunalwagle/newsaggregator-reports\\}
+\end{displayquote}
+
+The report repository also includes all graphs and charts that were displayed at points in the report. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
