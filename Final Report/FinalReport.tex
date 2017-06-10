@@ -852,15 +852,27 @@ The last point that is considered is the infrastructure of the back end, namely 
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.4]{FrontEndArchitecture.png}
-   \caption[A basic diagram of the expected architecture of the front end]{This diagram doesn't show all anticipated connections between each facet of the application's front end. For example, the profile icon is in theory accessible anywhere when the user is logged in.}
+   \caption[A basic diagram of the expected architecture of the front end]{A diagram showing the expected architecture of the front end application}
    \label{frontEndArchitecture}
 \end{figure}
+
+Figure \ref{frontEndArchitecture} depicts the expected flow for the front end. A navigation bar will be present on all screens, and will provide links to the Home Page (Section \ref{homepage}), the Topic Dashboard (Section \ref{topicdashboard}) and Settings pages (Section \ref{topicsettings}). 
+
+From the Home Page, the user can search for a topic, taking them to the Search Results screen (Section \ref{searchresults}). They can alternatively click on one of the latest articles, which will in turn take them to the Article Viewer (Section \ref{articleviewer}).
+
+Both the Topic Dashboard and the Search Results screen will display a list of topics in some form - in the case of the dashboard, it will be a list of the user's subscriptions, and in the latter a list of search results. They thus both have a direct link to the Topic Viewer (Section \ref{topicviewer}), which can be accessed by clicking on one of the items in the list.
+
+The Topic Viewer presents the articles for the topic, and clicking on one will take the user to the aforementioned Article Viewer.
+
+The Topic Settings screen is a standalone screen accessible from the Navigation Bar on any page.
 
 \subsection{User Story}
 
 \subsubsection{Home Page}
 
 If a user has not logged in, the first page they will see on opening to the website will be the Home Page. The key to the design of the home page is that it's easy to get started for a user. They are presented with a large search box that they can use without having to sign in. There'll also be a row of trending articles displayed below the search bar. This row will consist of icons consisting of images and titles below, as shown in the wireframe\index{Wireframe}. There's a navigation bar at the top, that is present on all screens, with a button to register and a button to sign in on the top right, and a link to information about the application itself on the top left.
+
+\label{homepage}
 
 \begin{figure}[ht!]
   \centering
@@ -875,6 +887,8 @@ For a user that is logged in, or alternatively a user that has logged in (or sig
 
 Articles themselves are presented as panels. On a panel is an image for the article, with the title overlaid. In the top right hand corner are icons corresponding to the sources that the article has been summarised from. Leading articles (those out of the most recent that have the most sources attached) are placed in the larger panels on the top left and bottom right of the screen, as shown in the diagram.
 
+\label{topicdashboard}
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{TopicDashboard.png}
@@ -888,6 +902,8 @@ The search results page is designed to allow users to see as much as possible an
 
 It's necessary at this stage to have a user sign in if they want to subscribe to a topic. This way, they can access their topics from anywhere. In addition to this, the search bar is still prominent on the search results page, so that users can edit their queries easily in case of minor errors.
 
+\label{searchresults}
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{SearchPage.png}
@@ -900,6 +916,8 @@ It's necessary at this stage to have a user sign in if they want to subscribe to
 The topic viewer is accessed if a user has clicked on the view button from the search results page. This screen is similar to that of the topic dashboard. Minor changes include the page control at the bottom of the screen being replaced by page statistics, including figures about how often articles are created, the number of subscribers, and the total number of hits that the page has had. The other major difference is the presence of a subscribe button in the top right hand side of the screen. As with the search results page, this leads to the topic preferences screen if logged in, and to a page prompting a user to sign in or register when not already logged in.
 
 The remaining aspects of the screen are the same - namely the panelled articles, and the icons in the top right of each panel that indicate which sources the article originated from.
+
+\label{topicviewer}
 
 \begin{figure}[ht!]
   \centering
@@ -922,6 +940,8 @@ The aforementioned Topic Settings page sets out two preferences from the user fo
 	This aspect is done using the panelling effect used in other screens. Each news outlet's logo forms the basis of the panel, with the title of the outlet below. These panels form buttons that the user can click on to either select or deselect an outlet. The panel will either have a coloured outer rim, or an embedded effect to indicate selection. \\
 \end{itemize}
 
+\label{topicsettings}
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{TopicSettings.png}
@@ -935,35 +955,13 @@ When the user clicks on an article panel in the topic viewer or topic dashboard 
 
 Like most other screens in the application, there is also a share button on the top right, and an email button.
 
+\label{articleviewer}
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{ArticleViewer.png}
    \caption[A wireframe of the Article Viewer]{The Article Viewer is modelled on standard news outlets' interfaces.}
    \label{articleViewer}
-\end{figure}
-
-\subsubsection{Topic Lists}
-
-The Topic List page is accessed by clicking on the profile button when logged in to the application. A panel appears, listing two choices - My Topics, and My Settings. This page is presented on the selection of the My Topics button.
-
-The aim of the topic list is self-explanatory. It lists all topics that a user is subscribed to. Upon clicking on a topic in the list, a user would be taken to the Topic Settings page for that topic.
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{UserTopics.png}
-   \caption[A wireframe of the Topic List page]{The Topic List page allows users to select and adjust the settings of a topic.}
-   \label{userTopics}
-\end{figure} 
-
-\subsubsection{Profile Settings}
-
-The other option upon clicking on the profile button in the navigation bar of the application is to access the Profile Settings page. Here, the user is able to change their profile picture using the button in the top half of the page. Also present on this page are the user's digest settings. Here the user can set whether they want to receive a news digest in the morning, the afternoon, at both times, or not at all. They can also specify the email address that they wish the news digest to be sent to.
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{ProfileSettings.png}
-   \caption[A wireframe of the Profile Settings page]{The profile settings page allows the user to adjust their profile picture and digest settings.}
-   \label{profileSettings}
 \end{figure}
 
 \subsubsection{Digest Viewer}
