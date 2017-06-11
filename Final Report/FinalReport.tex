@@ -2014,6 +2014,108 @@ The report repository also includes all graphs and charts that were displayed at
 
 \label{WebAPI}
 
+The following constitutes the API that the iOS application and WebApp uses to make requests to the server.
+
+All calls below should be prefixed with \emph{http://kunalnewsaggregator.co.uk:8182}.
+
+\subsection{Searching for Topics}
+
+\emph{GET	/api/wikipedia/\{searchTerm\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{searchTerm}: The keyword(s) to search the Wikipedia API for.
+\end{itemize}
+
+Search Wikipedia for a list of topics pertaining to the user's search request. Combine with the contents of the topic database to return the Wikipedia titles, first paragraphs, links to images and an article count for each topic in the database.
+
+\subsection{Getting a topic}
+
+\emph{GET	/api/topic/\{topic\}/user/\{userId\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{topic}: The id of the topic to return the contents for.
+	\item \textbf{userId}: (optional) The id of the logged in user, if applicable.
+\end{itemize}
+
+Returns the basic information (titles, ids and image links) of the articles within a topic in a wrapper with a list of settings for the topic. The settings are set to the user preferences. If none exist, or the user is not provided, the default topic settings are provided.
+
+\subsection{Settings}
+
+\emph{POST	/api/settings}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{user}: The id of the user changing their settings.
+	\item \textbf{digest}: True if the user is requesting digests for the topic. False otherwise.
+	\item \textbf{sources}: A list of sources that the user wants to set as their default sources for the given topic
+	\item \textbf{topicId}: (optional) The id of the topic to apply changes to. If not present, then apply changes to all of the user's subscriptions.
+\end{itemize}
+
+Given the request parameters in a multipart form, the server sets the user's settings for the topic (or for all their topics if a topicId is absent). Returns the updated User object.
+
+\subsection{Subscriptions}
+
+\subsubsection{Subscribing and Unsubscribing}
+
+\emph{GET	/api/user/subscribe/\{user\}/\{topicId\}}\\
+\emph{GET	/api/user/unsubscribe/\{user\}/\{topicId\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{user}: The id of the user subscribing or unsubscribing to the topic.
+	\item \textbf{topicId}: The id of the topic concerned.
+\end{itemize}
+
+Subscribes, or unsubscribes the user to/from the topic provided. Returns the topic object.
+
+\subsubsection{Getting a user's subscriptions}
+
+\emph{GET	/api/user/subscriptions/\{user\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{user}: The id of the user.
+\end{itemize}
+
+Returns a User object, populated with a list of the user's subscriptions and the relevant settings for them.
+
+\subsection{Digests}
+
+\emph{GET	/api/digest/\{digestId\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{digestId}: The id of the digest to fetch.
+\end{itemize}
+
+Returns a list of titles, ids and image links for the articles in the corresponding digest.
+
+\subsection{Getting an Article}
+
+\emph{GET	/api/article/\{articleId\}/topic/\{topicId\}/user/\{user\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{articleId}: The id of the article.
+	\item \textbf{topicId}: The id of the topic the article is in.
+	\item \textbf{user}: (optional) The id of the user making the request (if logged in).
+\end{itemize}
+
+Returns the requested article in a wrapper with a list of default sources to display the summary for. The default sources are generated using the topicId and user parameters. 
+
+\subsection{Home Page}
+
+\emph{GET	/api/home/\{userId\}}
+
+Request Parameters:
+\begin{itemize}
+	\item \textbf{userId}: (optional) The id of the user making the request (if logged in).
+\end{itemize}
+
+If the userId parameter is present, returns the ten latest articles from across the user's subscriptions. If the userId isn't passed, or if the user doesn't have subscriptions, returns the ten latest articles in the database.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage

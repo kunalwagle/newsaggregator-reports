@@ -180,6 +180,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B}API}{98}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}User Guide}{99}
+\contentsline {subsection}{\numberline {B.1}Searching for Topics}{98}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Index}{100}
+\contentsline {subsection}{\numberline {B.2}Getting a topic}{98}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3}Settings}{98}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4}Subscriptions}{99}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {B.4.1}Subscribing and Unsubscribing}{99}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {B.4.2}Getting a user's subscriptions}{99}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.5}Digests}{99}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.6}Getting an Article}{100}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.7}Home Page}{100}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}User Guide}{101}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Index}{102}

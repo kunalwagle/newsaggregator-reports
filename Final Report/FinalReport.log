@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  11 JUN 2017 00:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  11 JUN 2017 08:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1189,11 +1189,11 @@ Package pdftex.def Info: images/Imperial_College_London_crest.png used on input
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
 s/Imperial_College_London_crest.png>] [1] [2] (./FinalReport.toc [3
 
-] [4] [5])
+] [4] [5] [6])
 \tf@toc=\write6
 \openout6 = `FinalReport.toc'.
 
- [6] [7] (./FinalReport.lof
+ [7] (./FinalReport.lof
 [8])
 \tf@lof=\write7
 \openout7 = `FinalReport.lof'.
@@ -2035,13 +2035,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
 
  []
 
-[97] [98] [99]
+[97] [98] [99] [100] [101]
 runsystem(makeindex -s mystyle.ist FinalReport.idx)...executed safely (allowed)
 .
 
- (./FinalReport.ind [100
+ (./FinalReport.ind [102
 
-]) [101] (./FinalReport.aux)
+]) [103] (./FinalReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2052,7 +2052,7 @@ Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 Here is how much of TeX's memory you used:
  14825 strings out of 493014
  237584 string characters out of 6133350
- 725656 words of memory out of 5000000
+ 725657 words of memory out of 5000000
  18063 multiletter control sequences out of 15000+600000
  23332 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2087,10 +2087,10 @@ ts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
 e1/public/cm-super/sfxc1440.pfb>
-Output written on FinalReport.pdf (102 pages, 13960181 bytes).
+Output written on FinalReport.pdf (104 pages, 13964657 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
+ 533 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
