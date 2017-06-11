@@ -2151,13 +2151,13 @@
     <bcf:citekey order="52">abstractiveTechniquesOriginal</bcf:citekey>
     <bcf:citekey order="53">abstractiveTechniques</bcf:citekey>
     <bcf:citekey order="53">abstractiveTechniquesOriginal</bcf:citekey>
-    <bcf:citekey order="54">wikipedia</bcf:citekey>
-    <bcf:citekey order="55">digitalNewsReport</bcf:citekey>
-    <bcf:citekey order="56">reutersInstitute</bcf:citekey>
-    <bcf:citekey order="57">guardian</bcf:citekey>
-    <bcf:citekey order="58">newYorkTimes</bcf:citekey>
-    <bcf:citekey order="59">webhose</bcf:citekey>
-    <bcf:citekey order="60">newsApi</bcf:citekey>
+    <bcf:citekey order="54">digitalNewsReport</bcf:citekey>
+    <bcf:citekey order="55">reutersInstitute</bcf:citekey>
+    <bcf:citekey order="56">guardian</bcf:citekey>
+    <bcf:citekey order="57">newYorkTimes</bcf:citekey>
+    <bcf:citekey order="58">webhose</bcf:citekey>
+    <bcf:citekey order="59">newsApi</bcf:citekey>
+    <bcf:citekey order="60">wikipedia</bcf:citekey>
     <bcf:citekey order="61">wikipedia</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">

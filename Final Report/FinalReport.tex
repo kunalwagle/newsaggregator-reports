@@ -868,9 +868,13 @@ The Topic Settings screen is a standalone screen accessible from the Navigation 
 
 \subsection{User Story}
 
+\label{userstory}
+
+In the following the designs and justifications for the Home Page, Topic Dashboard and Article Viewer screens are presented. Other screens, including the Search Results screen, Topic Viewer and Topic Settings pages can be found in Appendix \ref{wireframes}.
+
 \subsubsection{Home Page}
 
-If a user has not logged in, the first page they will see on opening to the website will be the Home Page. The key to the design of the home page is that it's easy to get started for a user. They are presented with a large search box that they can use without having to sign in. There'll also be a row of trending articles displayed below the search bar. This row will consist of icons consisting of images and titles below, as shown in the wireframe\index{Wireframe}. There's a navigation bar at the top, that is present on all screens, with a button to register and a button to sign in on the top right, and a link to information about the application itself on the top left.
+The first page that a consumer will see on the website is the Home Page (Figure \ref{homePage}). The key to the design of the home page is that it's easy to get started for a user. They are presented with a large search box that they can use without having to sign in. There'll also be a row of trending articles displayed below the search bar. This row will consist of icons consisting of images and titles below, as shown in the wireframe\index{Wireframe} of Figure \ref{homePage}. There's a navigation bar at the top, that is present on all screens, with a button to register and a button to sign in on the top right, and a link to information about the application itself on the top left.
 
 \label{homepage}
 
@@ -883,7 +887,7 @@ If a user has not logged in, the first page they will see on opening to the webs
 
 \subsubsection{Topic Dashboard}
 
-For a user that is logged in, or alternatively a user that has logged in (or signed up) from the home page will first see the topic dashboard screen that shows sets of articles corresponding to each topic they are subscribed. For users who don't have any topics that they are subscribed to, they will instead go back to the home page. The topic dashboard initially shows leading articles from across all the topics they are subscribed to. They can drag to one direction (akin to a sideways swipe on a phone or tablet) to see articles pertaining to the next topic. 
+Clicking on the "My Topics" button in the navigation bar will take the user to the Topic Dashboard, assuming they have logged in. If they haven't, they will first be prompted to log in. Here the user can see all the topics that they have subscribed to. As shown in Figure \ref{topicDashboard}, there is a section showing the various articles in a topic, along with a tab bar at the bottom indicating the topics that a consumer is subscribed to. They can drag to one direction (akin to a sideways swipe on a phone or tablet) to see articles pertaining to the next topic. 
 
 Articles themselves are presented as panels. On a panel is an image for the article, with the title overlaid. In the top right hand corner are icons corresponding to the sources that the article has been summarised from. Leading articles (those out of the most recent that have the most sources attached) are placed in the larger panels on the top left and bottom right of the screen, as shown in the diagram.
 
@@ -896,62 +900,9 @@ Articles themselves are presented as panels. On a panel is an image for the arti
    \label{topicDashboard}
 \end{figure}
 
-\subsubsection{Search Results Page}
-
-The search results page is designed to allow users to see as much as possible and do as much as possible without having to leave the page. The results are presented in the application's panel design, with an image corresponding to each panel. Below the panel, is a description of the topic, that is likely to be created from the first paragraph of the Wikipedia \cite{wikipedia}\index{wikipedia} article about that particular topic. Below this are two buttons, one to view the topic's articles, which will go to a topic viewer page (shown later), and a subscribe button. If logged in, the user is taken to the topic settings page, where they can choose any particular preferences they have for this specific topic. If the user isn't logged in, they are taken to a page allowing them to log in or register, before being taken to the preference page.
-
-It's necessary at this stage to have a user sign in if they want to subscribe to a topic. This way, they can access their topics from anywhere. In addition to this, the search bar is still prominent on the search results page, so that users can edit their queries easily in case of minor errors.
-
-\label{searchresults}
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{SearchPage.png}
-   \caption[A wireframe of the Search Results page]{The Search Results page has a focus on showing users as much information as possible about each topic.}
-   \label{searchPage}
-\end{figure}
-
-\subsubsection{Topic Viewer}
-
-The topic viewer is accessed if a user has clicked on the view button from the search results page. This screen is similar to that of the topic dashboard. Minor changes include the page control at the bottom of the screen being replaced by page statistics, including figures about how often articles are created, the number of subscribers, and the total number of hits that the page has had. The other major difference is the presence of a subscribe button in the top right hand side of the screen. As with the search results page, this leads to the topic preferences screen if logged in, and to a page prompting a user to sign in or register when not already logged in.
-
-The remaining aspects of the screen are the same - namely the panelled articles, and the icons in the top right of each panel that indicate which sources the article originated from.
-
-\label{topicviewer}
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{TopicViewer.png}
-   \caption[A wireframe of the Topic Viewer]{The topic viewer is similar in structure to the topic dashboard, but with the addition of statistics and a subscribe button.}
-   \label{topicViewer}
-\end{figure}
-
-\subsubsection{Topic Settings}
-
-The aforementioned Topic Settings page sets out two preferences from the user for a specific topic. These are namely: \\
-
-\begin{itemize}
-	\item \textbf{Should the topic's articles be included in the user's email digest?}
-	
-	This is answered by a simple on/off switch. 
-	
-	\item \textbf{Which sources should be used to construct summaries}
-	
-	This aspect is done using the panelling effect used in other screens. Each news outlet's logo forms the basis of the panel, with the title of the outlet below. These panels form buttons that the user can click on to either select or deselect an outlet. The panel will either have a coloured outer rim, or an embedded effect to indicate selection. \\
-\end{itemize}
-
-\label{topicsettings}
-
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[scale=0.3]{TopicSettings.png}
-   \caption[A wireframe of the Topic Settings page]{The Topic Settings page allows users to specify key preferences about the topic.}
-   \label{topicSettings}
-\end{figure}
-
 \subsubsection{Article Viewer}
 
-When the user clicks on an article panel in the topic viewer or topic dashboard they are presented with the summarised article itself. This screen is modelled on standard news interfaces, and produces the headline, image and article body on the left hand side of the page. On the right hand side are links to the original articles that the summary was generated from, and links to other articles that are in the same topic. 
+When the user clicks on an article panel in the topic viewer or topic dashboard they are presented with the summarised article itself. This screen \ref{articleViewer} is modelled on standard news interfaces, and produces the headline, image and article body on the left hand side of the page. On the right hand side are links to the original articles that the summary was generated from, and links to other articles that are in the same topic. 
 
 Like most other screens in the application, there is also a share button on the top right, and an email button.
 
@@ -963,10 +914,6 @@ Like most other screens in the application, there is also a share button on the 
    \caption[A wireframe of the Article Viewer]{The Article Viewer is modelled on standard news outlets' interfaces.}
    \label{articleViewer}
 \end{figure}
-
-\subsubsection{Digest Viewer}
-
-The digest viewer will show users (who have requested them) their daily digest. The form would be nearly identical to that seen in the topic dashboard of Figure \ref{topicDashboard}. However the articles would be made up of the ten latest articles across the user's subscriptions, rather than from a single topic. The link to this page would be sent daily to the user via email.
 
 \subsection{Back End\index{Back End} Flow Diagram}
 
@@ -1096,7 +1043,7 @@ Figure \ref{dbschema} shows the basic components of the various collections in t
 
 \begin{figure}[ht!]
   \centering
-    \includegraphics[scale=0.5]{dbschema.png}
+    \includegraphics[width=\textwidth]{DBSchema.png}
    \caption[A diagram of the MongoDB schema]{A diagram of the core MongoDB schema.}
    \label{dbschema}
 \end{figure} 
@@ -2005,6 +1952,75 @@ https://github.com/kunalwagle/newsaggregator-reports\\}
 \end{displayquote}
 
 The report repository also includes all graphs and charts that were displayed at points in the report. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Secondary Screen Wireframes}
+
+\label{wireframes}
+
+In this section the designs and justifications for the remaining screens in the application are set out. This section is intended to follow from the initial user story section, which can be seen in Section \ref{userstory}.
+
+\subsection{Search Results Page}
+
+The search results page (depicted in Figure \ref{searchPage}) is designed to allow users to see as much as possible and do as much as possible without having to leave the page. The results are presented in the application's panel design, with an image corresponding to each panel. Below the panel, is a description of the topic, that is likely to be created from the first paragraph of the Wikipedia \cite{wikipedia}\index{wikipedia} article about that particular topic. 
+
+Below this is a button, to view the topic's articles, and which takes the user to a topic viewer page (Section \ref{topicviewer}). If logged in, the user is taken to the topic settings page, where they can choose any particular preferences they have for this specific topic. If the user isn't logged in, they are taken to a page allowing them to log in or register, before being taken to the preference page.
+
+In addition to this, the search bar is still prominent on the search results page, so that users can edit their queries easily in case of minor errors.
+
+\label{searchresults}
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{SearchPage.png}
+   \caption[A wireframe of the Search Results page]{The Search Results page has a focus on showing users as much information as possible about each topic.}
+   \label{searchPage}
+\end{figure}
+
+\subsection{Topic Viewer}
+
+The topic viewer (Figure \ref{topicViewer}) is accessed if a user has clicked on the view button from the search results page. This screen is similar to that of the topic dashboard (Section \ref{topicdashboard}). Minor changes include the page control at the bottom of the screen being replaced by page statistics, including figures about how often articles are created, the number of subscribers, and the total number of hits that the page has had. The other major difference is the presence of a subscribe button in the top right hand side of the screen. If a user is logged in, this will subscribe them to the topic, and if they aren't, it will prompt them to log in.
+
+The remaining aspects of the screen are the same - namely the panelled articles, and the icons in the top right of each panel that indicate which sources the article originated from.
+
+\label{topicviewer}
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{TopicViewer.png}
+   \caption[A wireframe of the Topic Viewer]{The topic viewer is similar in structure to the topic dashboard, but with the addition of statistics and a subscribe button.}
+   \label{topicViewer}
+\end{figure}
+
+\subsection{Topic Settings}
+
+The aforementioned Topic Settings page sets out two preferences from the user for a specific topic (shown in Figure \ref{topicSettings}). These are namely: \\
+
+\begin{itemize}
+	\item \textbf{Should the topic's articles be included in the user's email digest?}
+	
+	This is answered by a simple on/off switch. 
+	
+	\item \textbf{Which sources should be used to construct summaries}
+	
+	This aspect is done using the panelling effect used in other screens. Each news outlet's logo forms the basis of the panel, with the title of the outlet below. These panels form buttons that the user can click on to either select or deselect an outlet. The panel will either have a coloured outer rim, or an embedded effect to indicate selection. \\
+\end{itemize}
+
+\label{topicsettings}
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{TopicSettings.png}
+   \caption[A wireframe of the Topic Settings page]{The Topic Settings page allows users to specify key preferences about the topic.}
+   \label{topicSettings}
+\end{figure}
+
+\subsection{Digest Viewer}
+
+The digest viewer will show users (who have requested them) their daily digest. The form would be nearly identical to that seen in the topic dashboard of Figure \ref{topicDashboard}. However the articles would be made up of the ten latest articles across the user's subscriptions, rather than from a single topic. The link to this page would be sent daily to the user via email.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
