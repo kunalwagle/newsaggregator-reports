@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  11 JUN 2017 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  12 JUN 2017 04:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1106,25 +1106,25 @@ LaTeX Warning: Label `SurveyArticleLength' multiply defined.
 )
 \openout1 = `FinalReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 134.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    ... okay on input line 134.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1167,9 +1167,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'FinalReport.bbl' found.
 
 (./FinalReport.bbl)
-Package biblatex Info: Reference section=0 on input line 133.
-Package biblatex Info: Reference segment=0 on input line 133.
-Package csquotes Info: Making character " active on input line 133.
+Package biblatex Info: Reference section=0 on input line 134.
+Package biblatex Info: Reference segment=0 on input line 134.
+Package csquotes Info: Making character " active on input line 134.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1182,7 +1182,7 @@ File: images/Imperial_College_London_crest.png Graphic file (type png)
 
 <use images/Imperial_College_London_crest.png>
 Package pdftex.def Info: images/Imperial_College_London_crest.png used on input
- line 142.
+ line 145.
 (pdftex.def)             Requested size: 100.38087pt x 107.0562pt.
  [1
 
@@ -1193,357 +1193,339 @@ s/Imperial_College_London_crest.png>] [1] [2] (./FinalReport.toc [3
 \tf@toc=\write6
 \openout6 = `FinalReport.toc'.
 
- [7] (./FinalReport.lof
-[8])
-\tf@lof=\write7
-\openout7 = `FinalReport.lof'.
-
- [9] (./FinalReport.lot)
-\tf@lot=\write8
-\openout8 = `FinalReport.lot'.
-
- [10] (./FinalReport.lol)
-\tf@lol=\write9
-\openout9 = `FinalReport.lol'.
-
- [11]
-<images/DonaldTrumpPope.png, id=52, 613.29124pt x 367.3725pt>
+ [7]
+<images/DonaldTrumpPope.png, id=40, 613.29124pt x 367.3725pt>
 File: images/DonaldTrumpPope.png Graphic file (type png)
 
 <use images/DonaldTrumpPope.png>
-Package pdftex.def Info: images/DonaldTrumpPope.png used on input line 209.
+Package pdftex.def Info: images/DonaldTrumpPope.png used on input line 212.
 (pdftex.def)             Requested size: 427.43153pt x 256.03786pt.
- [12 <./images/DonaldTrumpPope.png>]
-<images/TrustInNews.png, id=60, 783.4068pt x 224.037pt>
+ [8 <./images/DonaldTrumpPope.png>]
+<images/TrustInNews.png, id=47, 783.4068pt x 224.037pt>
 File: images/TrustInNews.png Graphic file (type png)
 
 <use images/TrustInNews.png>
-Package pdftex.def Info: images/TrustInNews.png used on input line 230.
+Package pdftex.def Info: images/TrustInNews.png used on input line 233.
 (pdftex.def)             Requested size: 427.43153pt x 122.2396pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14 <./images/TrustInNews.png>] [15]
-<images/WhySocialAggregatedNews.png, id=71, 418.2024pt x 321.8424pt>
+[9] [10 <./images/TrustInNews.png>] [11]
+<images/WhySocialAggregatedNews.png, id=58, 418.2024pt x 321.8424pt>
 File: images/WhySocialAggregatedNews.png Graphic file (type png)
 
 <use images/WhySocialAggregatedNews.png>
 Package pdftex.def Info: images/WhySocialAggregatedNews.png used on input line 
-269.
+272.
 (pdftex.def)             Requested size: 250.92337pt x 193.10692pt.
 
-<images/PersonalisedNewsConcerns.png, id=72, 402.7848pt x 297.7524pt>
+<images/PersonalisedNewsConcerns.png, id=59, 402.7848pt x 297.7524pt>
 File: images/PersonalisedNewsConcerns.png Graphic file (type png)
 
 <use images/PersonalisedNewsConcerns.png>
 Package pdftex.def Info: images/PersonalisedNewsConcerns.png used on input line
- 280.
+ 283.
 (pdftex.def)             Requested size: 241.67274pt x 178.6528pt.
- [16 <./images/WhySocialAggregatedNews.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+ [12 <./images/WhySocialAggregatedNews.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-<images/HowPeopleTrustNews.png, id=78, 438.9198pt x 193.6836pt>
+<images/HowPeopleTrustNews.png, id=66, 438.9198pt x 193.6836pt>
 File: images/HowPeopleTrustNews.png Graphic file (type png)
 
 <use images/HowPeopleTrustNews.png>
-Package pdftex.def Info: images/HowPeopleTrustNews.png used on input line 291.
+Package pdftex.def Info: images/HowPeopleTrustNews.png used on input line 294.
 (pdftex.def)             Requested size: 263.3539pt x 116.21104pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
-[17 <./images/PersonalisedNewsConcerns.png> <./images/HowPeopleTrustNews.png>]
-[18] <images/01HowOftenDoYouReadTheNews.png, id=88, 554.07pt x 228.855pt>
+[13 <./images/PersonalisedNewsConcerns.png> <./images/HowPeopleTrustNews.png>]
+[14] <images/01HowOftenDoYouReadTheNews.png, id=75, 554.07pt x 228.855pt>
 File: images/01HowOftenDoYouReadTheNews.png Graphic file (type png)
 
 <use images/01HowOftenDoYouReadTheNews.png>
 Package pdftex.def Info: images/01HowOftenDoYouReadTheNews.png used on input li
-ne 325.
+ne 328.
 (pdftex.def)             Requested size: 387.84636pt x 160.1974pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-<images/02HowManySourcesDoYouRead.png, id=89, 494.8086pt x 327.1422pt>
+<images/02HowManySourcesDoYouRead.png, id=76, 494.8086pt x 327.1422pt>
 File: images/02HowManySourcesDoYouRead.png Graphic file (type png)
 
 <use images/02HowManySourcesDoYouRead.png>
 Package pdftex.def Info: images/02HowManySourcesDoYouRead.png used on input lin
-e 336.
+e 339.
 (pdftex.def)             Requested size: 346.36365pt x 228.99797pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 
-<images/03AreTheseTheSameSourcesEverytime.png, id=90, 595.22375pt x 235.88126pt
+<images/03AreTheseTheSameSourcesEverytime.png, id=77, 595.22375pt x 235.88126pt
 >
 File: images/03AreTheseTheSameSourcesEverytime.png Graphic file (type png)
  <use images/03AreTheseTheSameSourcesEverytime.png>
 Package pdftex.def Info: images/03AreTheseTheSameSourcesEverytime.png used on i
-nput line 347.
+nput line 350.
 (pdftex.def)             Requested size: 416.6538pt x 165.11575pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
-[19 <./images/01HowOftenDoYouReadTheNews.png>]
-<images/05HowMuchOfAnArticleDoYouRead.png, id=95, 587.19376pt x 231.86626pt>
+[15 <./images/01HowOftenDoYouReadTheNews.png>]
+<images/05HowMuchOfAnArticleDoYouRead.png, id=82, 587.19376pt x 231.86626pt>
 File: images/05HowMuchOfAnArticleDoYouRead.png Graphic file (type png)
 
 <use images/05HowMuchOfAnArticleDoYouRead.png>
 Package pdftex.def Info: images/05HowMuchOfAnArticleDoYouRead.png used on input
- line 358.
+ line 361.
 (pdftex.def)             Requested size: 411.03282pt x 162.30525pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
-[20 <./images/02HowManySourcesDoYouRead.png> <./images/03AreTheseTheSameSources
+[16 <./images/02HowManySourcesDoYouRead.png> <./images/03AreTheseTheSameSources
 Everytime.png>]
-<images/06WouldYouReadAShorterSummary.png, id=101, 592.2125pt x 239.89626pt>
+<images/06WouldYouReadAShorterSummary.png, id=88, 592.2125pt x 239.89626pt>
 File: images/06WouldYouReadAShorterSummary.png Graphic file (type png)
 
 <use images/06WouldYouReadAShorterSummary.png>
 Package pdftex.def Info: images/06WouldYouReadAShorterSummary.png used on input
- line 369.
+ line 372.
 (pdftex.def)             Requested size: 414.54591pt x 167.92622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
-[21 <./images/05HowMuchOfAnArticleDoYouRead.png> <./images/06WouldYouReadAShort
+[17 <./images/05HowMuchOfAnArticleDoYouRead.png> <./images/06WouldYouReadAShort
 erSummary.png>]
-<images/07WouldYouReadASummaryOfArticlesCombined.png, id=107, 551.05875pt x 226
-.8475pt>
+<images/07WouldYouReadASummaryOfArticlesCombined.png, id=94, 551.05875pt x 226.
+8475pt>
 File: images/07WouldYouReadASummaryOfArticlesCombined.png Graphic file (type pn
 g)
  <use images/07WouldYouReadASummaryOfArticlesCombined.png>
 Package pdftex.def Info: images/07WouldYouReadASummaryOfArticlesCombined.png us
-ed on input line 380.
+ed on input line 383.
 (pdftex.def)             Requested size: 385.73848pt x 158.79216pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-<images/08WouldYouUseANewsAggregatorThatSummarised.png, id=108, 551.05875pt x 2
-31.86626pt>
+<images/08WouldYouUseANewsAggregatorThatSummarised.png, id=95, 551.05875pt x 23
+1.86626pt>
 File: images/08WouldYouUseANewsAggregatorThatSummarised.png Graphic file (type 
 png)
  <use images/08WouldYouUseANewsAggregatorThatSummarised.png>
 Package pdftex.def Info: images/08WouldYouUseANewsAggregatorThatSummarised.png 
-used on input line 391.
+used on input line 394.
 (pdftex.def)             Requested size: 385.73848pt x 162.30525pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 
-<images/10HowOftenDoYouSearchForASpecificTopic.png, id=109, 564.1075pt x 239.89
-626pt>
+<images/10HowOftenDoYouSearchForASpecificTopic.png, id=96, 564.1075pt x 239.896
+26pt>
 File: images/10HowOftenDoYouSearchForASpecificTopic.png Graphic file (type png)
 
  <use images/10HowOftenDoYouSearchForASpecificTopic.png>
 Package pdftex.def Info: images/10HowOftenDoYouSearchForASpecificTopic.png used
- on input line 402.
+ on input line 405.
 (pdftex.def)             Requested size: 394.87254pt x 167.92622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-[22 <./images/07WouldYouReadASummaryOfArticlesCombined.png>]
-<images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png, id=114, 506
+[18 <./images/07WouldYouReadASummaryOfArticlesCombined.png>]
+<images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png, id=102, 506
 .89375pt x 243.91125pt>
 File: images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png Graphic
  file (type png)
 
 <use images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png>
 Package pdftex.def Info: images/11ShouldNewsAggregatorProvideSearchingForSpecif
-icTopic.png used on input line 413.
+icTopic.png used on input line 416.
 (pdftex.def)             Requested size: 354.82321pt x 170.7367pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
-[23 <./images/08WouldYouUseANewsAggregatorThatSummarised.png> <./images/10HowOf
+[19 <./images/08WouldYouUseANewsAggregatorThatSummarised.png> <./images/10HowOf
 tenDoYouSearchForASpecificTopic.png>]
-<images/12DoYouLikeServicesThatProduceDigests.png, id=120, 522.95375pt x 233.87
+<images/12DoYouLikeServicesThatProduceDigests.png, id=108, 522.95375pt x 233.87
 375pt>
 File: images/12DoYouLikeServicesThatProduceDigests.png Graphic file (type png)
  <use images/12DoYouLikeServicesThatProduceDigests.png>
 Package pdftex.def Info: images/12DoYouLikeServicesThatProduceDigests.png used 
-on input line 423.
+on input line 426.
 (pdftex.def)             Requested size: 366.06512pt x 163.71048pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-<images/13HowOftenShouldTheseDigestsBeProduced.png, id=121, 563.10374pt x 233.8
+<images/13HowOftenShouldTheseDigestsBeProduced.png, id=109, 563.10374pt x 233.8
 7375pt>
 File: images/13HowOftenShouldTheseDigestsBeProduced.png Graphic file (type png)
 
  <use images/13HowOftenShouldTheseDigestsBeProduced.png>
 Package pdftex.def Info: images/13HowOftenShouldTheseDigestsBeProduced.png used
- on input line 434.
+ on input line 437.
 (pdftex.def)             Requested size: 394.16994pt x 163.71048pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-[24 <./images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png> <./im
+[20 <./images/11ShouldNewsAggregatorProvideSearchingForSpecificTopic.png> <./im
 ages/12DoYouLikeServicesThatProduceDigests.png>]
-<images/09WhatPlatform.png, id=128, 517.935pt x 310.761pt>
+<images/09WhatPlatform.png, id=115, 517.935pt x 310.761pt>
 File: images/09WhatPlatform.png Graphic file (type png)
 
 <use images/09WhatPlatform.png>
-Package pdftex.def Info: images/09WhatPlatform.png used on input line 444.
+Package pdftex.def Info: images/09WhatPlatform.png used on input line 447.
 (pdftex.def)             Requested size: 362.55202pt x 217.5312pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
-[25 <./images/13HowOftenShouldTheseDigestsBeProduced.png> <./images/09WhatPlatf
-orm.png>] <images/GoogleHome.png, id=134, 1421.31pt x 772.8875pt>
+[21 <./images/13HowOftenShouldTheseDigestsBeProduced.png> <./images/09WhatPlatf
+orm.png>] <images/GoogleHome.png, id=121, 1426.32875pt x 739.76375pt>
 File: images/GoogleHome.png Graphic file (type png)
 
 <use images/GoogleHome.png>
-Package pdftex.def Info: images/GoogleHome.png used on input line 460.
-(pdftex.def)             Requested size: 341.94652pt x 185.94493pt.
+Package pdftex.def Info: images/GoogleHome.png used on input line 463.
+(pdftex.def)             Requested size: 341.94652pt x 177.34373pt.
 
-<images/GoogleUber.png, id=135, 992.70876pt x 439.6425pt>
+<images/GoogleUber.png, id=122, 877.2775pt x 521.95pt>
 File: images/GoogleUber.png Graphic file (type png)
 
 <use images/GoogleUber.png>
-Package pdftex.def Info: images/GoogleUber.png used on input line 466.
-(pdftex.def)             Requested size: 427.43153pt x 189.2975pt.
- [26 <./images/GoogleHome.png> <./images/GoogleUber.png>] <images/FlipboardHome
-.PNG, id=143, 752.8125pt x 1339.0025pt>
+Package pdftex.def Info: images/GoogleUber.png used on input line 469.
+(pdftex.def)             Requested size: 427.43153pt x 254.30823pt.
+ [22] [23 <./images/GoogleHome.png> <./images/GoogleUber.png>] <images/Flipboar
+dHome.PNG, id=133, 752.8125pt x 1339.0025pt>
 File: images/FlipboardHome.PNG Graphic file (type png)
 
 <use images/FlipboardHome.PNG>
-Package pdftex.def Info: images/FlipboardHome.PNG used on input line 480.
+Package pdftex.def Info: images/FlipboardHome.PNG used on input line 483.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-<images/Flipboard.PNG, id=144, 752.8125pt x 1339.0025pt>
+<images/Flipboard.PNG, id=134, 752.8125pt x 1339.0025pt>
 File: images/Flipboard.PNG Graphic file (type png)
 
 <use images/Flipboard.PNG>
-Package pdftex.def Info: images/Flipboard.PNG used on input line 486.
+Package pdftex.def Info: images/Flipboard.PNG used on input line 489.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-<images/YNDHome.PNG, id=145, 752.8125pt x 1339.0025pt>
+<images/YNDHome.PNG, id=135, 752.8125pt x 1339.0025pt>
 File: images/YNDHome.PNG Graphic file (type png)
 
 <use images/YNDHome.PNG>
-Package pdftex.def Info: images/YNDHome.PNG used on input line 500.
+Package pdftex.def Info: images/YNDHome.PNG used on input line 503.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-<images/YNDInfo.PNG, id=146, 752.8125pt x 1339.0025pt>
+<images/YNDInfo.PNG, id=136, 752.8125pt x 1339.0025pt>
 File: images/YNDInfo.PNG Graphic file (type png)
 
 <use images/YNDInfo.PNG>
-Package pdftex.def Info: images/YNDInfo.PNG used on input line 506.
+Package pdftex.def Info: images/YNDInfo.PNG used on input line 509.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
- [27 <./images/FlipboardHome.PNG> <./images/Flipboard.PNG>] <images/AppleHome.P
-NG, id=151, 752.8125pt x 1339.0025pt>
+ [24 <./images/FlipboardHome.PNG> <./images/Flipboard.PNG>] <images/AppleHome.P
+NG, id=144, 752.8125pt x 1339.0025pt>
 File: images/AppleHome.PNG Graphic file (type png)
 
 <use images/AppleHome.PNG>
-Package pdftex.def Info: images/AppleHome.PNG used on input line 520.
+Package pdftex.def Info: images/AppleHome.PNG used on input line 523.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-<images/AppleSources.PNG, id=152, 752.8125pt x 1339.0025pt>
+<images/AppleSources.PNG, id=145, 752.8125pt x 1339.0025pt>
 File: images/AppleSources.PNG Graphic file (type png)
 
 <use images/AppleSources.PNG>
-Package pdftex.def Info: images/AppleSources.PNG used on input line 526.
+Package pdftex.def Info: images/AppleSources.PNG used on input line 529.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-Underfull \hbox (badness 6236) in paragraph at lines 544--544
+Underfull \hbox (badness 6236) in paragraph at lines 547--547
 []\T1/cmr/m/n/12 Yahoo News
  []
 
 
-Overfull \hbox (15.22943pt too wide) in paragraph at lines 540--547
+Overfull \hbox (15.22943pt too wide) in paragraph at lines 543--550
 [][] 
  []
 
-[28 <./images/YNDHome.PNG> <./images/YNDInfo.PNG>] [29 <./images/AppleHome.PNG>
- <./images/AppleSources.PNG>] [30] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+[25 <./images/YNDHome.PNG> <./images/YNDInfo.PNG>] [26 <./images/AppleHome.PNG>
+ <./images/AppleSources.PNG>] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--646
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 650--651
-
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 654--655
+Underfull \hbox (badness 10000) in paragraph at lines 648--649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--666
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
-
- []
-
-[35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
+Underfull \hbox (badness 10000) in paragraph at lines 668--669
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--715
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+[32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
@@ -1552,392 +1534,708 @@ Underfull \hbox (badness 10000) in paragraph at lines 717--718
 
  []
 
-<images/DependencyTree.png, id=191, 518.93875pt x 347.2975pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
+
+ []
+
+<images/DependencyTree.png, id=187, 518.93875pt x 347.2975pt>
 File: images/DependencyTree.png Graphic file (type png)
 
 <use images/DependencyTree.png>
-Package pdftex.def Info: images/DependencyTree.png used on input line 725.
+Package pdftex.def Info: images/DependencyTree.png used on input line 728.
 (pdftex.def)             Requested size: 207.57182pt x 138.91653pt.
- [37 <./images/DependencyTree.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+ [34 <./images/DependencyTree.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 760--761
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 763--764
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 
  []
 
-<images/MultimodalSummarisation.png, id=199, 492.84125pt x 580.1675pt>
+<images/MultimodalSummarisation.png, id=195, 492.84125pt x 580.1675pt>
 File: images/MultimodalSummarisation.png Graphic file (type png)
 
 <use images/MultimodalSummarisation.png>
 Package pdftex.def Info: images/MultimodalSummarisation.png used on input line 
-770.
+773.
 (pdftex.def)             Requested size: 147.8535pt x 174.05157pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
 
  []
 
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
 
  []
 
-<images/SemanticGraphSummarisation.png, id=203, 996.72375pt x 562.1pt>
+<images/SemanticGraphSummarisation.png, id=200, 996.72375pt x 562.1pt>
 File: images/SemanticGraphSummarisation.png Graphic file (type png)
 
 <use images/SemanticGraphSummarisation.png>
 Package pdftex.def Info: images/SemanticGraphSummarisation.png used on input li
-ne 793.
+ne 796.
 (pdftex.def)             Requested size: 398.68243pt x 224.83601pt.
- [40 <./images/MultimodalSummarisation.png>] [41 <./images/SemanticGraphSummari
-sation.png>] [42] [43]
-<images/FrontEndArchitecture.png, id=219, 1039.885pt x 764.8575pt>
+ [37 <./images/MultimodalSummarisation.png>] [38 <./images/SemanticGraphSummari
+sation.png>] [39] [40]
+<images/FrontEndArchitecture.png, id=215, 1039.885pt x 764.8575pt>
 File: images/FrontEndArchitecture.png Graphic file (type png)
 
 <use images/FrontEndArchitecture.png>
-Package pdftex.def Info: images/FrontEndArchitecture.png used on input line 854
+Package pdftex.def Info: images/FrontEndArchitecture.png used on input line 857
 .
 (pdftex.def)             Requested size: 415.94662pt x 305.93758pt.
- [44] [45 <./images/FrontEndArchitecture.png>] <images/HomePage.png, id=227, 11
+ [41] [42 <./images/FrontEndArchitecture.png>] <images/HomePage.png, id=224, 11
 55.31625pt x 794.97pt>
 File: images/HomePage.png Graphic file (type png)
 
 <use images/HomePage.png>
-Package pdftex.def Info: images/HomePage.png used on input line 883.
+Package pdftex.def Info: images/HomePage.png used on input line 886.
 (pdftex.def)             Requested size: 346.59755pt x 238.49284pt.
 
-<images/TopicDashboard.png, id=228, 1166.3575pt x 791.95876pt>
+<images/TopicDashboard.png, id=225, 1166.3575pt x 791.95876pt>
 File: images/TopicDashboard.png Graphic file (type png)
 
 <use images/TopicDashboard.png>
-Package pdftex.def Info: images/TopicDashboard.png used on input line 898.
+Package pdftex.def Info: images/TopicDashboard.png used on input line 901.
 (pdftex.def)             Requested size: 349.90994pt x 237.58946pt.
- [46]
+ [43]
 
-LaTeX Warning: Text page 47 contains only floats.
+LaTeX Warning: Text page 44 contains only floats.
 
 
 Overfull \vbox (0.2566pt too high) has occurred while \output is active []
 
 
-[47 <./images/HomePage.png> <./images/TopicDashboard.png>]
-<images/ArticleViewer.png, id=237, 1162.3425pt x 792.9625pt>
+[44 <./images/HomePage.png> <./images/TopicDashboard.png>]
+<images/ArticleViewer.png, id=234, 1162.3425pt x 792.9625pt>
 File: images/ArticleViewer.png Graphic file (type png)
 
 <use images/ArticleViewer.png>
-Package pdftex.def Info: images/ArticleViewer.png used on input line 913.
+Package pdftex.def Info: images/ArticleViewer.png used on input line 916.
 (pdftex.def)             Requested size: 348.70544pt x 237.89058pt.
- [48 <./images/ArticleViewer.png>]
-<images/BackEndArchitecture.png, id=243, 1105.12875pt x 764.8575pt>
+ [45 <./images/ArticleViewer.png>]
+<images/BackEndArchitecture.png, id=239, 1105.12875pt x 764.8575pt>
 File: images/BackEndArchitecture.png Graphic file (type png)
 
 <use images/BackEndArchitecture.png>
-Package pdftex.def Info: images/BackEndArchitecture.png used on input line 933.
+Package pdftex.def Info: images/BackEndArchitecture.png used on input line 936.
 
 (pdftex.def)             Requested size: 442.04367pt x 305.93758pt.
 
-Overfull \hbox (14.61214pt too wide) in paragraph at lines 933--934
+Overfull \hbox (14.61214pt too wide) in paragraph at lines 936--937
  [][] 
  []
 
-[49 <./images/BackEndArchitecture.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 948--949
+[46 <./images/BackEndArchitecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 951--952
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--953
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
 
  []
 
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 987--988
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 976--977
 
  []
 
 
-Overfull \hbox (15.22943pt too wide) in paragraph at lines 990--997
+Underfull \hbox (badness 10000) in paragraph at lines 990--991
+
+ []
+
+
+Overfull \hbox (15.22943pt too wide) in paragraph at lines 993--1000
 [][] 
  []
 
-[51] [52] [53] <images/DBSchema.png, id=261, 1075.01625pt x 679.53876pt>
+[48] [49] [50] [51] <images/DBSchema.png, id=261, 1075.01625pt x 679.53876pt>
 File: images/DBSchema.png Graphic file (type png)
 
 <use images/DBSchema.png>
-Package pdftex.def Info: images/DBSchema.png used on input line 1046.
+Package pdftex.def Info: images/DBSchema.png used on input line 1055.
 (pdftex.def)             Requested size: 427.43153pt x 270.18277pt.
- [54]
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 1055.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 1064.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
-) [55 <./images/DBSchema.png>] [56] [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+) [52 <./images/DBSchema.png>] [53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 []\T1/cmr/bx/n/12 [http://www.cnn.com/2017/06/01/politics/trump-paris-climate-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 \T1/cmr/bx/n/12 decision/index.html,http://www.reuters.com/article/us-usa-
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 1122--1123
+Underfull \hbox (badness 3930) in paragraph at lines 1131--1132
 \T1/cmr/bx/n/12 climatechange-eu-idUSKBN18S5IT]\T1/cmr/m/n/12 , for a sum-mary 
 us-ing ar-ti-cles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
 []\T1/cmr/bx/n/12 [http://www.cnn.com/2017/06/01/politics/trump-paris-climate-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
 []\T1/cmr/bx/n/12 [http://www.reuters.com/article/us-usa-climatechange-eu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
 
  []
 
-[58]
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 1154
+[55]
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 1163
 .
  (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2014/06/22 Fontinst v1.933 font definitions for TS1/zi4.
 )
-[59] [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+[56] [57] [58]
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
+
+ []
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
+
+ []
+
+[60] [61]
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1328--1329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1330--1331
 
  []
 
 [62]
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
-
- []
-
-[63]
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
-
- []
-
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
-
- []
-
-[65]
 Underfull \hbox (badness 10000) in paragraph at lines 1338--1339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
 
  []
 
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
 
  []
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [67]
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1420
+) [64]
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 1436--1437
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 1470--1471
+
+ []
+
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 1508--1509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1511
 
  []
 
 [68]
-Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
-
- []
-
-[69] [70]
-Underfull \hbox (badness 10000) in paragraph at lines 1491--1492
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1525
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
-
- []
-
-[71]
-Underfull \hbox (badness 10000) in paragraph at lines 1527--1528
-
- []
-
-[72]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 1544--1545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1549
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1562
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1565--1566
+
+ []
+
+[70] [71]
+Underfull \hbox (badness 10000) in paragraph at lines 1613--1614
+
+ []
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 1628--1629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1636--1637
 
  []
 
 [73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 1596--1597
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1611--1612
-
- []
-
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1620
-
- []
-
-[76] [77]
-Underfull \hbox (badness 10000) in paragraph at lines 1684--1685
-
- []
-
-[78] <images/SummaryEvaluationResource.png, id=346, 1445.4pt x 805.0075pt>
+[75] [76]
+<images/SummaryEvaluationResource.png, id=345, 1445.4pt x 805.0075pt>
 File: images/SummaryEvaluationResource.png Graphic file (type png)
 
 <use images/SummaryEvaluationResource.png>
 Package pdftex.def Info: images/SummaryEvaluationResource.png used on input lin
-e 1713.
+e 1730.
 (pdftex.def)             Requested size: 433.62335pt x 241.50412pt.
 
-Overfull \hbox (6.19182pt too wide) in paragraph at lines 1713--1714
+Overfull \hbox (6.19182pt too wide) in paragraph at lines 1730--1731
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1723
-
- []
-
-[79 <./images/SummaryEvaluationResource.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1726--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1740
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1736--1738
+Underfull \hbox (badness 10000) in paragraph at lines 1743--1744
 
  []
 
-[80]
-Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1747--1748
+[77 <./images/SummaryEvaluationResource.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1753--1755
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1756--1757
+Underfull \hbox (badness 10000) in paragraph at lines 1761--1762
 
  []
 
-[81] <images/TaskService.png, id=357, 1092.08pt x 663.47874pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1764--1765
+
+ []
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 1773--1774
+
+ []
+
+<images/TaskService.png, id=354, 1092.08pt x 663.47874pt>
 File: images/TaskService.png Graphic file (type png)
 
 <use images/TaskService.png>
-Package pdftex.def Info: images/TaskService.png used on input line 1776.
+Package pdftex.def Info: images/TaskService.png used on input line 1793.
 (pdftex.def)             Requested size: 327.62653pt x 199.04515pt.
- [82 <./images/TaskService.png>] [83] [84]
-Underfull \hbox (badness 10000) in paragraph at lines 1839--1840
+ [79] [80 <./images/TaskService.png>] [81] [82]
+Underfull \hbox (badness 10000) in paragraph at lines 1856--1857
 
  []
 
-<images/DesktopScreenshot.png, id=369, 1445.4pt x 804.00375pt>
+<images/DesktopScreenshot.png, id=368, 1445.4pt x 804.00375pt>
 File: images/DesktopScreenshot.png Graphic file (type png)
 
 <use images/DesktopScreenshot.png>
-Package pdftex.def Info: images/DesktopScreenshot.png used on input line 1847.
+Package pdftex.def Info: images/DesktopScreenshot.png used on input line 1864.
 (pdftex.def)             Requested size: 256.46152pt x 142.65338pt.
 
-<images/iPhoneScreenshot.PNG, id=370, 752.8125pt x 1339.0025pt>
+<images/iPhoneScreenshot.PNG, id=369, 752.8125pt x 1339.0025pt>
 File: images/iPhoneScreenshot.PNG Graphic file (type png)
 
 <use images/iPhoneScreenshot.PNG>
-Package pdftex.def Info: images/iPhoneScreenshot.PNG used on input line 1852.
+Package pdftex.def Info: images/iPhoneScreenshot.PNG used on input line 1869.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
 
-<images/iPadScreenshot.PNG, id=371, 2055.68pt x 1541.76pt>
+<images/iPadScreenshot.PNG, id=370, 2055.68pt x 1541.76pt>
 File: images/iPadScreenshot.PNG Graphic file (type png)
 
 <use images/iPadScreenshot.PNG>
-Package pdftex.def Info: images/iPadScreenshot.PNG used on input line 1857.
+Package pdftex.def Info: images/iPadScreenshot.PNG used on input line 1874.
 (pdftex.def)             Requested size: 256.46152pt x 192.34312pt.
- [85] [86 <./images/DesktopScreenshot.png> <./images/iPhoneScreenshot.PNG> <./i
-mages/iPadScreenshot.PNG>] [87
+ [83] [84 <./images/DesktopScreenshot.png> <./images/iPhoneScreenshot.PNG> <./i
+mages/iPadScreenshot.PNG>] [85
 
-] [88] [89]
-[90]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1931--1932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1936--1937
+
+ []
+
+<images/label1score.png, id=383, 362.3136pt x 217.7736pt>
+File: images/label1score.png Graphic file (type png)
+
+<use images/label1score.png>
+Package pdftex.def Info: images/label1score.png used on input line 1944.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [86] [87 <./images/label1score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1974--1975
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1978--1979
+
+ []
+
+<images/labels.png, id=391, 409.53pt x 524.96124pt>
+File: images/labels.png Graphic file (type png)
+ <use images/labels.png>
+Package pdftex.def Info: images/labels.png used on input line 1982.
+(pdftex.def)             Requested size: 204.7645pt x 262.47998pt.
+
+<images/label2score.png, id=392, 362.3136pt x 217.7736pt>
+File: images/label2score.png Graphic file (type png)
+
+<use images/label2score.png>
+Package pdftex.def Info: images/label2score.png used on input line 1993.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
+
+ []
+
+[88] [89 <./images/labels.png> <./images/label2score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2006--2007
+
+ []
+
+<images/label3score.png, id=401, 362.3136pt x 217.7736pt>
+File: images/label3score.png Graphic file (type png)
+
+<use images/label3score.png>
+Package pdftex.def Info: images/label3score.png used on input line 2014.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [90 <./images/label3score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2029--2030
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2037--2038
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2042
+
+ []
+
+<images/cluster1score.png, id=407, 362.3136pt x 217.7736pt>
+File: images/cluster1score.png Graphic file (type png)
+
+<use images/cluster1score.png>
+Package pdftex.def Info: images/cluster1score.png used on input line 2045.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [91 <./images/cluster1score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2066--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2070--2071
+
+ []
+
+<images/cluster2score.png, id=412, 362.3136pt x 217.7736pt>
+File: images/cluster2score.png Graphic file (type png)
+
+<use images/cluster2score.png>
+Package pdftex.def Info: images/cluster2score.png used on input line 2074.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2091--2092
+
+ []
+
+[92 <./images/cluster2score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2095--2096
+
+ []
+
+<images/cluster3score.png, id=417, 362.3136pt x 217.7736pt>
+File: images/cluster3score.png Graphic file (type png)
+
+<use images/cluster3score.png>
+Package pdftex.def Info: images/cluster3score.png used on input line 2099.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2120--2121
+
+ []
+
+<images/cluster4score.png, id=418, 362.3136pt x 217.7736pt>
+File: images/cluster4score.png Graphic file (type png)
+
+<use images/cluster4score.png>
+Package pdftex.def Info: images/cluster4score.png used on input line 2124.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [93 <./images/cluster3score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2154
+
+ []
+
+[94 <./images/cluster4score.png>]
+Overfull \hbox (3.29236pt too wide) in paragraph at lines 2157--2158
+[]\T1/cmr/m/n/12 Celebrities have be-gun pay-ing trib-ute to vic-tims of ter-ri
+-fy-ing ex-plo-sions in-side Manch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2185--2186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2189--2190
+
+ []
+
+<images/summ1score.png, id=427, 362.3136pt x 217.7736pt>
+File: images/summ1score.png Graphic file (type png)
+
+<use images/summ1score.png>
+Package pdftex.def Info: images/summ1score.png used on input line 2193.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [95]
+Underfull \hbox (badness 10000) in paragraph at lines 2206--2207
+
+ []
+
+[96 <./images/summ1score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2238--2239
+
+ []
+
+<images/summ2score.png, id=436, 362.3136pt x 217.7736pt>
+File: images/summ2score.png Graphic file (type png)
+
+<use images/summ2score.png>
+Package pdftex.def Info: images/summ2score.png used on input line 2242.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2255--2256
+
+ []
+
+[97] [98 <./images/summ2score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2283--2284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2287--2288
+
+ []
+
+<images/summ3score.png, id=444, 362.3136pt x 217.7736pt>
+File: images/summ3score.png Graphic file (type png)
+
+<use images/summ3score.png>
+Package pdftex.def Info: images/summ3score.png used on input line 2291.
+(pdftex.def)             Requested size: 253.61778pt x 152.44046pt.
+ [99 <./images/summ3score.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2308--2309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2316--2317
+
+ []
+
+<images/ui1.png, id=450, 517.4532pt x 414.348pt>
+File: images/ui1.png Graphic file (type png)
+ <use images/ui1.png>
+Package pdftex.def Info: images/ui1.png used on input line 2320.
+(pdftex.def)             Requested size: 258.72595pt x 207.1735pt.
+
+<images/ui2.png, id=451, 510.708pt x 340.1508pt>
+File: images/ui2.png Graphic file (type png)
+ <use images/ui2.png>
+Package pdftex.def Info: images/ui2.png used on input line 2327.
+(pdftex.def)             Requested size: 255.35336pt x 170.07498pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2336--2337
+
+ []
+
+<images/ui3.png, id=452, 513.5988pt x 347.8596pt>
+File: images/ui3.png Graphic file (type png)
+ <use images/ui3.png>
+Package pdftex.def Info: images/ui3.png used on input line 2340.
+(pdftex.def)             Requested size: 256.79877pt x 173.92937pt.
+ [100]
+Underfull \hbox (badness 10000) in paragraph at lines 2351--2352
+
+ []
+
+[101 <./images/ui1.png> <./images/ui2.png>]
+<images/ui4.png, id=461, 505.89pt x 369.0588pt>
+File: images/ui4.png Graphic file (type png)
+ <use images/ui4.png>
+Package pdftex.def Info: images/ui4.png used on input line 2355.
+(pdftex.def)             Requested size: 252.94437pt x 184.52895pt.
+
+<images/ui5.png, id=462, 500.1084pt x 328.5876pt>
+File: images/ui5.png Graphic file (type png)
+ <use images/ui5.png>
+Package pdftex.def Info: images/ui5.png used on input line 2362.
+(pdftex.def)             Requested size: 250.05359pt x 164.2934pt.
+
+
+LaTeX Warning: Reference `u6' on page 102 undefined on input line 2369.
+
+[102 <./images/ui3.png> <./images/ui4.png>]
+<images/ui6.png, id=469, 490.4724pt x 324.7332pt>
+File: images/ui6.png Graphic file (type png)
+ <use images/ui6.png>
+Package pdftex.def Info: images/ui6.png used on input line 2375.
+(pdftex.def)             Requested size: 245.2356pt x 162.3662pt.
+
+<images/ui7.png, id=470, 563.706pt x 328.5876pt>
+File: images/ui7.png Graphic file (type png)
+ <use images/ui7.png>
+Package pdftex.def Info: images/ui7.png used on input line 2382.
+(pdftex.def)             Requested size: 281.85231pt x 164.2934pt.
+ [103 <./images/ui5.png> <./images/ui6.png>] [104 <./images/ui7.png>]
+<images/matrix.png, id=480, 808.9422pt x 544.9158pt>
+File: images/matrix.png Graphic file (type png)
+ <use images/matrix.png>
+Package pdftex.def Info: images/matrix.png used on input line 2415.
+(pdftex.def)             Requested size: 589.82567pt x 397.31128pt.
+
+<images/bbc-news.png, id=481, 1062.8508pt x 520.8258pt>
+File: images/bbc-news.png Graphic file (type png)
+
+<use images/bbc-news.png>
+Package pdftex.def Info: images/bbc-news.png used on input line 2434.
+(pdftex.def)             Requested size: 318.8577pt x 156.24893pt.
+
+<images/reuters.png, id=482, 1047.4332pt x 525.162pt>
+File: images/reuters.png Graphic file (type png)
+ <use images/reuters.png>
+Package pdftex.def Info: images/reuters.png used on input line 2441.
+(pdftex.def)             Requested size: 314.23238pt x 157.5498pt.
+
+[105] [106 <./images/matrix.png>]
+<images/yougovpoll.png, id=490, 1027.84pt x 761.84625pt>
+File: images/yougovpoll.png Graphic file (type png)
+
+<use images/yougovpoll.png>
+Package pdftex.def Info: images/yougovpoll.png used on input line 2452.
+(pdftex.def)             Requested size: 308.35437pt x 228.55563pt.
+ [107 <./images/bbc-news.png> <./images/reuters.png>] <images/pewresearch.png, 
+id=496, 559.08875pt x 503.8825pt>
+File: images/pewresearch.png Graphic file (type png)
+
+<use images/pewresearch.png>
+Package pdftex.def Info: images/pewresearch.png used on input line 2479.
+(pdftex.def)             Requested size: 279.54369pt x 251.94063pt.
+ [108 <./images/yougovpoll.png (PNG copy)>]
+<images/sentencestats.png, id=501, 591.6504pt x 436.9926pt>
+File: images/sentencestats.png Graphic file (type png)
+
+<use images/sentencestats.png>
+Package pdftex.def Info: images/sentencestats.png used on input line 2492.
+(pdftex.def)             Requested size: 295.82448pt x 218.49576pt.
+ [109 <./images/pewresearch.png>]
+<images/articlelength.png, id=506, 491.436pt x 291.9708pt>
+File: images/articlelength.png Graphic file (type png)
+
+<use images/articlelength.png>
+Package pdftex.def Info: images/articlelength.png used on input line 2511.
+(pdftex.def)             Requested size: 245.71739pt x 145.98503pt.
+ [110 <./images/sentencestats.png>]
+<images/quotes.png, id=511, 451.9284pt x 271.2534pt>
+File: images/quotes.png Graphic file (type png)
+ <use images/quotes.png>
+Package pdftex.def Info: images/quotes.png used on input line 2526.
+(pdftex.def)             Requested size: 271.15912pt x 162.75328pt.
+
+[111 <./images/articlelength.png> <./images/quotes.png>] [112] [113] [114]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
-Overfull \hbox (9.20987pt too wide) in paragraph at lines 1916--1916
+Overfull \hbox (9.20987pt too wide) in paragraph at lines 2577--2577
 []\T1/cmr/m/n/12 Pierre-Etienne Gen-est and Guy La-palme. `  Fully Ab-strac-tiv
 e Ap-proach to Guided
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
-Overfull \hbox (9.86668pt too wide) in paragraph at lines 1916--1916
+Overfull \hbox (9.86668pt too wide) in paragraph at lines 2577--2577
 []\T1/cmr/m/it/12 Hierarchical Clus-ter-ing\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url
 \T1/cmr/m/n/12 : $\T1/zi4/m/n/12 https : / / en . wikipedia . org / wiki / Hier
 archical _
@@ -1945,109 +2243,106 @@ archical _
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
-[91]
+[115]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
-Overfull \hbox (28.99365pt too wide) in paragraph at lines 1916--1916
+Overfull \hbox (28.99365pt too wide) in paragraph at lines 2577--2577
 []\T1/cmr/m/it/12 Reuters In-sti-tute for the Study of Jour-nal-ism\T1/cmr/m/n/
 12 . www.reutersinstitute.politics.ox.ac.uk. 
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
-[92]
+[116]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 1916.
+(biblatex)                Using fallback driver on input line 2577.
 
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 1933--1934
+[117]
+Underfull \hbox (badness 10000) in paragraph at lines 2594--2595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1939--1940
+Underfull \hbox (badness 10000) in paragraph at lines 2600--2601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1945--1946
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1951--1952
+Underfull \hbox (badness 10000) in paragraph at lines 2612--2613
 
  []
 
-[94] <images/SearchPage.png, id=406, 1153.30875pt x 791.95876pt>
+[118] <images/SearchPage.png, id=540, 1153.30875pt x 791.95876pt>
 File: images/SearchPage.png Graphic file (type png)
 
 <use images/SearchPage.png>
-Package pdftex.def Info: images/SearchPage.png used on input line 1978.
+Package pdftex.def Info: images/SearchPage.png used on input line 2639.
 (pdftex.def)             Requested size: 345.9953pt x 237.58946pt.
 
-<images/TopicViewer.png, id=407, 1165.35374pt x 789.95125pt>
+<images/TopicViewer.png, id=541, 1165.35374pt x 789.95125pt>
 File: images/TopicViewer.png Graphic file (type png)
 
 <use images/TopicViewer.png>
-Package pdftex.def Info: images/TopicViewer.png used on input line 1993.
+Package pdftex.def Info: images/TopicViewer.png used on input line 2654.
 (pdftex.def)             Requested size: 349.60883pt x 236.9872pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2000--2001
+Underfull \hbox (badness 10000) in paragraph at lines 2661--2662
 
  []
 
-[95]
+[119]
 
-LaTeX Warning: Text page 96 contains only floats.
+LaTeX Warning: Text page 120 contains only floats.
 
-[96 <./images/SearchPage.png> <./images/TopicViewer.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2009--2010
+[120 <./images/SearchPage.png> <./images/TopicViewer.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2670--2671
 
  []
 
-<images/TopicSettings.png, id=417, 1167.36125pt x 797.98125pt>
+<images/TopicSettings.png, id=551, 1167.36125pt x 797.98125pt>
 File: images/TopicSettings.png Graphic file (type png)
 
 <use images/TopicSettings.png>
-Package pdftex.def Info: images/TopicSettings.png used on input line 2016.
+Package pdftex.def Info: images/TopicSettings.png used on input line 2677.
 (pdftex.def)             Requested size: 350.21107pt x 239.39621pt.
- [97 <./images/TopicSettings.png>] [98] [99]
-[100] [101] [102]
-runsystem(makeindex -s mystyle.ist FinalReport.idx)...executed safely (allowed)
-.
+ [121 <./images/TopicSettings.png>] [122]
+[123] [124] [125] [126] (./FinalReport.aux)
 
- (./FinalReport.ind [103
+LaTeX Warning: There were undefined references.
 
-]) [104] (./FinalReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2056,13 +2351,13 @@ Package logreq Info: Writing requests to 'FinalReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14827 strings out of 493014
- 237607 string characters out of 6133350
- 723672 words of memory out of 5000000
- 18065 multiletter control sequences out of 15000+600000
+ 14979 strings out of 493014
+ 240591 string characters out of 6133350
+ 732096 words of memory out of 5000000
+ 18204 multiletter control sequences out of 15000+600000
  23332 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,13n,97p,1084b,1885s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,13n,97p,1728b,1883s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/us
 r/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/l
@@ -2093,10 +2388,10 @@ ts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
 e1/public/cm-super/sfxc1440.pfb>
-Output written on FinalReport.pdf (105 pages, 14022623 bytes).
+Output written on FinalReport.pdf (127 pages, 15528577 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
+ 664 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

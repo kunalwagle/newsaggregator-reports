@@ -61,6 +61,7 @@ urldate=long
     showstringspaces=false,
     breaklines=true,
     frame=lines,
+    upquote=true,
     backgroundcolor=\color{background},
     literate=
      *{0}{{{\color{numb}0}}}{1}
@@ -132,6 +133,8 @@ urlseen = {Retrieved},
 
 \begin{document}
 
+\lstset{upquote=true}
+
 \counterwithin{lstlisting}{section}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,13 +186,13 @@ Finally, I'd like to thank Joe Letts, a friend who would always be willing to ta
 \doublespacing
 \tableofcontents
 \pagebreak
-\listoffigures
-\pagebreak
-\listoftables
-\pagebreak
-\lstlistoflistings
+%\listoffigures
+%\pagebreak
+%\listoftables
+%\pagebreak
+%\lstlistoflistings
 \singlespacing
-\pagebreak
+%\pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -207,7 +210,7 @@ On further inspection, I can see that there are several pages of results about t
 \begin{figure}[h]
   \centering
     \includegraphics[width=\textwidth]{DonaldTrumpPope.png}
-   \caption[A Google News Search on 24th May 2017]{A Google News search for stories about President Trump's visit to the Vatican on 24th May 2017}
+   \caption[A Google News Search on 24th May 2017]{A Google News search for stories about President Trump's visit to the Vatican on 24th May 2017.}
    \label{DonaldTrumpPope}
 \end{figure}
 
@@ -267,7 +270,7 @@ The study attempts to cover, amongst other things how people get the news, how t
 \begin{figure}[h]
   \centering
     \includegraphics[scale=0.6]{WhySocialAggregatedNews.png}
-   \caption[Why people use News Aggregators]{A graph showing why people use News Aggregators and Social Networks as news sources}
+   \caption[Why people use News Aggregators]{A graph showing why people use News Aggregators and Social Networks as news sources.}
    \label{WhySocialAggregatedNews}
 \end{figure}
 
@@ -389,7 +392,7 @@ With this question (Figure \ref{SurveySummarisedArticles}) I aimed to obtain an 
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.7]{08WouldYouUseANewsAggregatorThatSummarised}
-   \caption[Survey Graph concerning News Aggregators and summarisation]{A pie chart showing answers to the question: "Would you use a News Aggregator\index{News Aggregator} that summarised articles"}
+   \caption[Survey Graph concerning News Aggregators and summarisation]{A pie chart showing answers to the question: "Would you use a News Aggregator\index{News Aggregator} that summarised articles".}
   \label{NewsAggregatorThatSummarised}
 \end{figure}
 
@@ -458,7 +461,7 @@ Finally, respondents were asked which platform they would prefer to see the news
   \centering
   \begin{subfigure}{0.8\textwidth}
         \includegraphics[width=\textwidth]{GoogleHome}
-        \caption[Screenshot from the Google News home page]{A Section of the homepage for Google News. \cite{googleNews}}
+        \caption[Screenshot from the Google News home page]{A Section of the homepage for Google News \cite{googleNews}.}
         \label{GoogleNewsHome}
     \end{subfigure}
     
@@ -467,7 +470,7 @@ Finally, respondents were asked which platform they would prefer to see the news
    \caption[Screenshots from a Google News search]{Google News uses clustering techniques to group articles about the same topic together. }
    \label{GoogleNewsUber}
    \end{subfigure}
-   \caption[Screenshots from Google News]{Screenshots from Google News}
+   \caption[Screenshots from Google News]{Screenshots from Google News.}
 \end{figure}
 
 Initially developed early in the century and released in 2006, Google News \cite{googleNews} is a free-to-use news aggregator. Google News operates in a similar manner to the traditional Google \cite{google} search engine, thus making it a go to aggregator when searching for a specific topic. Google News also groups "similar" articles together using Clustering\index{Clustering} techniques \cite{googleClustering}. Google News operates purely as a go-between - when clicking on an article the user is taken straight to the media source itself, rather than being able to read the article on Google News itself. 
@@ -484,10 +487,10 @@ Initially developed early in the century and released in 2006, Google News \cite
     \qquad
     \begin{subfigure}[t]{0.3\textwidth}
     \includegraphics[width=\textwidth]{Flipboard.PNG}
-   \caption{All users are subscribed to \emph{The Daily Edition}, which puts together the latest most popular news.}
+   \caption{All users are subscribed to \emph{Cover Stories}, which puts together the latest most popular news.}
    \label{FlipboardDailyEdition}
    \end{subfigure}
-   \caption[Screenshots from the Flipboard app]{Screenshots from the Flipboard app}
+   \caption[Screenshots from the Flipboard app]{Screenshots from the Flipboard app.}
 \end{figure}
 
 Flipboard \cite{flipboard} is a much more recent attempt at a news aggregator (developed in 2010), and relies on the concept of users subscribing to "magazines" on different topics. There's a central "cover page" on the home page that shows the most recent stories from across all a user's subscriptions. Like Google News\index{Google!News}, links from the desktop website send the user to the original media source, while links from within the mobile applications open a browser within the app itself.
@@ -507,7 +510,7 @@ Flipboard \cite{flipboard} is a much more recent attempt at a news aggregator (d
    \caption{The Yahoo News Digest app provides links and infographics that are relevant to the article.}
    \label{YNDInfo}
    \end{subfigure}
-   \caption[Screenshots from the Yahoo News Digest app]{Screenshots from the Yahoo News Digest app \cite{yahooNewsDigest}}
+   \caption[Screenshots from the Yahoo News Digest app]{Screenshots from the Yahoo News Digest app \cite{yahooNewsDigest}.}
 \end{figure}
 
 Yahoo News Digest \cite{yahooNewsDigest} is a direct evolution from Summly \cite{summly}, which was an app that summarised news. Yahoo News Digest is a phone application that creates two digests a day: one in the morning and one in the evening. Each digest contains the ten leading articles from the previous 12 hours. Each article provides a summary of the story and links to relevant other pages - such as articles from Wikipedia \cite{wikipedia}.
@@ -518,7 +521,7 @@ Yahoo News Digest \cite{yahooNewsDigest} is a direct evolution from Summly \cite
   \centering
   \begin{subfigure}[t]{0.3\textwidth}
         \includegraphics[width=\textwidth]{AppleHome.PNG}
-        \caption{The home screen for the Apple News app}
+        \caption{The home screen for the Apple News app.}
         \label{AppleHome}
     \end{subfigure}
     \qquad
@@ -544,7 +547,7 @@ The existing products are compared in Table \ref{relatedProductsTable} on page \
     Yahoo News Digest & \tabitem Yahoo News Digest won the 2014 Apple\index{Apple} Design award \cite{appleDesignAward}\index{Apple!Design award}. & \tabitem There are only ten articles available per digest, and no capability for searching by topic. \\ & \tabitem The articles also provide key infographics, quotes, and other information potentially relevant to the article. & \tabitem Digests are only produced in the morning and the evening, so the news articles presented could be out of date. \\ \hline
     Apple News & \tabitem Allows selection based off both topics and the news sources themselves. & \tabitem Navigation on the application is not simple. If a user has accessed many articles from push notifications, then the user could have to press the back button several times to get back to the home screen.\\ & \tabitem The home screen for the app allows users to see a lot of headlines at a glance. & \tabitem The topics that a user can subscribe to can be quite limited, and aren't reactive to current affairs - for example, if a natural disaster occurs, you couldn't then subscribe to that natural disaster as a topic. \\
   \end{tabular}
-  \caption[Related Products in the market and their benefits and drawbacks]{Comparing the relative benefits and drawbacks of Google News, Flipboard, Yahoo News Digest and Apple News}
+  \caption[Related Products in the market and their benefits and drawbacks]{Comparing the relative benefits and drawbacks of Google News, Flipboard, Yahoo News Digest and Apple News.}
   \label{relatedProductsTable}
 \end{sidewaystable}
 
@@ -723,7 +726,7 @@ With tree based structuring, the first step is to create a dependency tree to re
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.4]{DependencyTree.png}
-   \caption[An example of a Dependency Tree]{A possible dependency tree for the sentence \emph{This is an example}}
+   \caption[An example of a Dependency Tree]{A possible dependency tree for the sentence \emph{This is an example}.}
    \label{dependencyTree}
 \end{figure}
 
@@ -768,7 +771,7 @@ Multimodal semantic summarisation can work on documents that contains both text 
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{MultimodalSummarisation.png}
-   \caption[A concept created during multimodal semantic summarisation]{A possible concept created from the analysis of the sentence \emph{Multimodal Semantic summarisation is an example of an algorithm that performs abstractive summarisation}}
+   \caption[A concept created during multimodal semantic summarisation]{A possible concept created from the analysis of the sentence \emph{Multimodal Semantic summarisation is an example of an algorithm that performs abstractive summarisation}.}
    \label{multimodalSummarisation}
 \end{figure}
 
@@ -791,7 +794,7 @@ The steps are outlined in the flowchart provided in Figure \ref{semanticGraphSum
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.4]{SemanticGraphSummarisation.png}
-   \caption[A flowchart showing the process of semantic graph summarisation]{This shows the process of semantic graph summarisation in a flowchart based on those provided in  \cite{abstractiveTechniques, abstractiveTechniquesOriginal}}.
+   \caption[A flowchart showing the process of semantic graph summarisation]{This shows the process of semantic graph summarisation in a flowchart based on those provided in  \cite{abstractiveTechniques, abstractiveTechniquesOriginal}.}
    \label{semanticGraphSummarisation}
 \end{figure}
 
@@ -852,7 +855,7 @@ The last point that is considered is the infrastructure of the back end, namely 
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.4]{FrontEndArchitecture.png}
-   \caption[A basic diagram of the expected architecture of the front end]{A diagram showing the expected architecture of the front end application}
+   \caption[A basic diagram of the expected architecture of the front end]{A diagram showing the expected architecture of the front end application.}
    \label{frontEndArchitecture}
 \end{figure}
 
@@ -1019,11 +1022,17 @@ In the end, a final nail in the coffin for my use of Amazon Web Services came wh
 
 \section{Implementation}
 
-\subsection{Language and Platform Choices}
+Having established the basic design of the front end of the application, and the platforms to be used for the server and database, I moved on to the implementation. In this section I present my ideas and justifications for language choices (Section \ref{languagechoice}), the schema for the database (Section \ref{database}), and use of specific APIs and libraries (Sections \ref{apis} and \ref{libraries}).
+
+In the latter parts of the implementation section, I also present in detail my algorithms for the machine learning and summarisation aspects (Section \ref{machinelearning}).  
+
+\subsection{Language Choices}
+
+\label{languagechoice}
 
 \subsubsection{Front End}
 
-The survey\index{Survey} that was conducted in Section \ref{survey} clearly presented the result that a website would be the preferred option for the application, followed by a mobile application in either iOS or Android. Therefore I've decided to follow this and create a WebApp as a primary platform. If time permits, I'll then develop the application for a second platform, which will be a mobile platform.
+The survey\index{Survey} that was conducted in Section \ref{survey} clearly presented the result that a website would be the preferred option for the application, followed by a mobile application in iOS. Therefore I've decided to follow this and create a WebApp as a primary platform. I'll then develop the application for a second platform, which will be iOS.
 
 For the WebApp I will primarily use Bootstrap for the Interface. One design framework I used to great effect during my Industrial Placement in Summer 2016 was React and Redux\index{Redux}\index{React}. React is a JavaScript library developed by Facebook that is designed for building scalable and reusable user interfaces. Redux is a design pattern for JavaScript that is designed around a central predictable state container that is the single source of truth for a User Interface. 
 
@@ -1031,11 +1040,11 @@ The benefit of this framework is that it allows for very clean code in the user 
 
 \subsubsection{Back End}
 
-\label{languagechoice}
-
 The back end will be constructed using Java. The reasoning behind this is that I have experience from my Industrial Placement using Java as the basis of a server and a back end.
 
 \subsection{Database Schema}
+
+\label{database}
 
 \subsubsection{Schema Diagram}
 
@@ -1164,6 +1173,8 @@ The \emph{articleHolders} field in the document above represents the articles in
 
 \subsection{Useful APIs}
 
+\label{apis}
+
 \subsubsection{News Outlets}\index{News!Outlets}
 
 \textbf{Readership statistics for selected outlets in the United Kingdom\index{United Kingdom}}
@@ -1182,7 +1193,7 @@ Statistics below are taken from the \emph{Digital News Report 2016} \cite{digita
 		The Telegraph Online\index{Telegraph, The} & 9\% & Right \\ \hline
 		The Independent\index{Independent, The} & 6\% & Centrist \\ \hline
 	\end{tabular}
-	\caption[Readership statistics for selected UK outlets]{Readership statistics for selected outlets in the United Kingdom}
+	\caption[Readership statistics for selected UK outlets]{Readership statistics for selected outlets in the United Kingdom.}
 	\label{viewershipFigures}
 \end{table}
 
@@ -1287,6 +1298,8 @@ The search query can be altered to provide different information, such as the UR
 
 \subsection{Useful libraries}
 
+\label{libraries}
+
 \subsubsection{Mallet}
 
 \label{mallet}
@@ -1359,7 +1372,7 @@ Table \ref{opennlpspace} shows each model and their respective sizes. As Apache'
 		en-token & Tokenisation & 0.44 \\ \hline
 		\textbf{Total if all used} & & \textbf{43.55} \\ \hline
 	\end{tabular}
-	\caption[Space used for OpenNLP models]{A table showing the space required for the various models provided for use with OpenNLP}
+	\caption[Space used for OpenNLP models]{A table showing the space required for the various models provided for use with OpenNLP.}
 	\label{opennlpspace}
 \end{table}
 
@@ -1412,7 +1425,11 @@ WordNet is a large scale database developed by Princeton that offers a lexical d
 
 \subsection{Machine Learning}
 
+\label{machinelearning}
+
 \subsubsection{Topic Modelling}
+
+\label{tm}
 
 For the Topic Modelling task I used the Mallet library, which is described in full detail in Section \ref{mallet}.
 
@@ -1446,7 +1463,7 @@ My final parameters can be seen in Table \ref{topicmodellingtraining}.
 		numTopics & 500 \\ \hline
 		numIterations & 1500 \\ \hline
 	\end{tabular}
-	\caption[Parameters for training topic models]{A table showing the final parameters chosen for the topic modelling training}
+	\caption[Parameters for training topic models]{A table showing the final parameters chosen for the topic modelling training.}
 	\label{topicmodellingtraining}
 \end{table}
 
@@ -1476,7 +1493,7 @@ The final parameters chosen can be seen in table \ref{topicmodellingestimation}.
 		thinning & 40 \\ \hline
 		burn-in & 50 \\ \hline
 	\end{tabular}
-	\caption[Parameters for estimating topic models]{A table showing the final parameters chosen for the topic modelling estimation}
+	\caption[Parameters for estimating topic models]{A table showing the final parameters chosen for the topic modelling estimation.}
 	\label{topicmodellingestimation}
 \end{table}
 
@@ -1630,7 +1647,7 @@ I tried different values for the three parameters in the clustering algorithm, e
 		Timestamp multiplication factor & 36000 \\ \hline
 		Threshold for combining clusters &  0.005 \\ \hline
 	\end{tabular}
-	\caption[Parameters for the clustering algorithn]{A table showing the final parameters chosen for the clustering algorithm}
+	\caption[Parameters for the clustering algorithn]{A table showing the final parameters chosen for the clustering algorithm.}
 	\label{clusteringparameters}
 \end{table}
 
@@ -1711,7 +1728,7 @@ A screenshot of the screen can be seen in Figure \ref{summaryevaluationresource}
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{SummaryEvaluationResource}
-   \caption[A screenshot of the Summary Evaluation Resource]{A screenshot of the Summary Evaluation Resource. On the left is the extractive summary, and on the right is the extractive summary after the coreferences and quotations have been resolved as in Section \ref{extractiveimplementation}}
+   \caption[A screenshot of the Summary Evaluation Resource]{A screenshot of the Summary Evaluation Resource. On the left is the extractive summary, and on the right is the extractive summary after the coreferences and quotations have been resolved as in Section \ref{extractiveimplementation}.}
    \label{summaryevaluationresource}
 \end{figure} 
 
@@ -1774,7 +1791,7 @@ The following jobs are back end server tasks using the Restlet framework's TaskS
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.3]{TaskService.png}
-   \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks}
+   \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks.}
    \label{servertasks}
 \end{figure} 
 
@@ -1845,7 +1862,7 @@ Screenshots from the website and apps can be seen in Figure \ref{appscreenshots}
   \centering
   \begin{subfigure}[t]{0.6\textwidth}
         \includegraphics[width=\textwidth]{DesktopScreenshot}
-        \caption{The article viewer, with summary annotations on, on the desktop website}
+        \caption{The article viewer, with summary annotations on, on the desktop website.}
     \end{subfigure}
    \qquad
     \begin{subfigure}[t]{0.3\textwidth}
@@ -1867,11 +1884,653 @@ Screenshots from the website and apps can be seen in Figure \ref{appscreenshots}
 
 \section{Evaluation}
 
-\subsection{Machine Learning and Summarisation}
+The process of evaluating the project is three-fold. Firstly, I sent a survey out which exposed different aspects of the back end flow (Topic Labelling, Clustering and Summarisation) and asked users to rate each step of the flow.
+
+Secondly I sent a second survey that runs users through various parts of the WebApp, asking for their opinions on important features, and rating the general look and feel. I also distributed the iOS application to a group of testers, and met people face to face to demonstrate the WebApp.
+
+Finally, I performed an in-depth analysis of the summariser itself, in an attempt to identify any major weaknesses in the tool. 
+
+\subsection{Machine Learning and Summarisation Survey}
+
+The following survey was conducted using SurveyMonkey, and was answered by 26 respondents. The survey was split into three key sections: Labelling, Clustering and Summarisation.
+
+\subsubsection{Labelling}
+
+To evaluate the labelling section, I selected three different articles from the database and presented them to the respondents, along with the corresponding labels that the algorithm produced. These three articles were chosen randomly, but were all selected because they used slightly altered algorithms.
+
+The respondents were requested to score each labelling out of ten, and to suggest labels that should (or should not) have been on the list.
+
+\textbf{First article}
+
+\emph{Conservative social care funding cap: Theresa May defends changes}
+
+Theresa May has defended her changes to the Tory social care policy, as critics called it a "manifesto meltdown".
+
+The PM told the BBC "nothing has changed" and said rival parties had been "trying to scare" elderly people.
+
+It came after she said earlier that there would be a cap on how much people paid for care - a change from the original policy which included no cap.
+
+She did not say what level the cap would be set at but said it would be in a post-election consultation.
+
+Labour and the Lib Dems said the Conservative social care policy was "in meltdown".
+
+Since the publication of the Conservative manifesto last week, much attention has been focused on reforms to the way care for elderly and vulnerable adults is funded.
+
+The manifesto did not mention an overall cap on costs, instead proposing a \pounds100,000 "floor" beyond which people's assets would be protected.
+
+Speaking to activists in Wales earlier, Mrs May said the package would now include an "absolute limit" on the money people would have to pay - triggering accusations that she had made a U-turn.
+
+In her interview, with the BBC's Andrew Neil, Mrs May denied this and said the principle the policy was based on remained absolutely the same.
+
+The whole package will be put out to consultation, Mrs May said, adding that people had been "worried" by the Labour Party saying her reforms could mean they would have to sell their homes to pay for care.
+
+Including an overall cap would mean the Tories were "protecting people for the future," Mrs May said.
+
+"We are providing a system that provides sustainability in our social care for the future and we have got an ageing population. We need to do this otherwise our system will collapse."
+
+Since the manifesto launch on Thursday, ministers had been saying the idea of a cap - as proposed by a government review in 2011 - had been rejected. \\
+
+
+\emph{Labels:}
+
+"May", "Theresa May", "May Queen", "Elizabeth May", "Jeremy Corbyn", "United Kingdom general election, 2015", "Forms of government", "Labour", "Elderly care", "Self-care", "Primary care", "May ministry", "Nick Clegg", "Conservatism", "Wales", "United Kingdom general election, 2005", "United Kingdom general election, 2010", "United Kingdom general election, 1997", "Thursday", "Health", "Investors in People", "Jeremy Hunt", "BBC", "Labour Party", "Yesterday", "Last Week Tonight with John Oliver", "2011", "Andrew Neil", "Scottish Parliament election, 2016", "Day care", "Managed care", "Home care", "Transitional care", "Neonatal intensive care unit" \\
+
+\emph{Results:}
+
+As Figure \ref{label1} shows, this labelling received an average score of 7.31 out of 10.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{label1score.png}
+   \caption[The average score for a labelling]{The average score for the first article's labelling.}
+   \label{label1}
+\end{figure} 
+
+
+\textbf{Second Article}
+
+\emph{Chelsea flower show: "abandoned Maltese quarry" wins top prize}
+
+It was not supposed to be pretty, but the judges certainly found it impressive. James Basson's take on an abandoned Maltese limestone quarry has won best in show at this year's Chelsea flower show.
+
+The construction, which includes slabs of limestone and evergreens, perennials and ground cover, was designed to show the interaction between humans and nature on the island, Basson has said, and draws attention to the balance that needs to be maintained.
+ 
+"I am absolutely thrilled to have won best in show for the first time," Basson said on Tuesday. "It is an incredible feeling and a testimony to the hard work of the whole team."
+
+He thanked his wife, Helen, as well as Crocus, the nursery that built the garden, and his financial backer, M\&G Investments, for the roles they played.
+
+"The garden is faultless and outstanding in terms of both construction and attention to detail," said the chair of the judging panel, James Alexander-Sinclair, after the decision was announced.
+
+Discussing his design beforehand, Basson stressed its ecological message. After a research trip to the Maltese quarry that the garden is intended to evoke, he told the Daily Telegraph that it was "not supposed to be pretty. It is stark and monumentally brutal."
+
+"I am fanatical about quarries anyway; the cleanliness and purity of them can be like a contemporary building. I love the graphic patterns of the blocks, the scouring marks, and the way nature regenerates after man has left. A client told me about this one, and when I had the chance of coming to Malta for a design job, I came to see it and was blown away," he said.
+
+His design was divided into zones, each with its own ecology. It included shrubland, the landscape of the hills of the Mediterranean coastline and clifftop scenes, echoing the variety seen in Malta.
+
+The garden also received the best construction award - the second such award in two years for Crocus.
+
+"The message behind the designer's creation is that humans need to take action to preserve the fragile environment of our planet. Sustainable water disposal, recycling and composting: all are vital if Malta is to save its distinct and delicate landscapes," said the Royal Horticultural Society, which runs the annual flower show in London.
+
+It said it awarded 73 gold medals. Kate Gould's "city living" garden, representing an urban apartment block and how to innovatively use space in an urban context, won best fresh garden. The award for best artisan garden went to Walker's wharf garden, supported by Doncaster Deaf Trust, by the designer Graham Bodle. \\
+
+\emph{Labels:}
+
+See Figure \ref{labels}. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{labels.png}
+   \caption[A list of labels for an article in the evaluation survey]{The list of labels for the second article.}
+   \label{labels}
+\end{figure} 
+
+\emph{Results:}
+
+As Figure \ref{label2} shows, this labelling received an average score of 4.39 out of 10.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{label2score.png}
+   \caption[The average score for a labelling]{The average score for the second article's labelling.}
+   \label{label2}
+\end{figure} 
+
+\textbf{Third Article}
+
+\emph{Global markets are fighting back against Trump uncertainty}
+
+After a brutal beatdown on Wednesday, investors are wasting no time picking themselves up off the mat. The S\&P 500 climbed 0.6\% to 2,370.71 at 2:24 p.m. ET, close to its highest level of the day. It's been quite the recovery for the benchmark. In premarket trading, the index looked headed for a second straight drop following former FBI Director Robert Mueller's appointment as special counsel to investigate Russian efforts to influence the November election. All it took was some better-than-expected economic data for them to change their tune, as initial jobless claims unexpectedly dropped. The relief rally can also be seen elsewhere in global markets. Haven assets gave back some earlier gains as gold decreased by 1\% and the yen slid by 0.7\% versus the US dollar. But the relief did not translate overseas, as the Stoxx Europe 600 dropped by 0.5\% during regular trading hours, while the MSCI All-World Index lost 1.2\%. The relatively muted reaction is a far cry from what was seen Wednesday, when the S\&P 500 dropped 1.7\%, its biggest decline since September 9, and a stock market fear gauge spiked by almost 50\%. The snappy recovery in stocks should be of little surprise, considering US equity investors have made a habit of buying on weakness throughout the eight-year bull market. Following the UK's vote last June to leave the European Union, the S\&P 500 fell by 5.3\% over two trading sessions, only to make up those losses in about a week. The same dynamic was in play when China unexpectedly devalued its currency in August 2015. After the S\&P 500 underwent an 11\% correction, traders bought the dip and restored the benchmark to its pre-sell-off levels within about two months. \\
+
+\emph{Labels:}
+
+"Time zone", "Time in China", "Pacific Time Zone", "Market (economics)", "Capital market", "Emerging markets", "Prediction market", "Fish market", "Donald Trump", "Day", "Robert Mueller", "Haven" \\
+
+\emph{Results:}
+
+As Figure \ref{label3} shows, this labelling received an average score of 6.54 out of 10.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{label3score.png}
+   \caption[The average score for a labelling]{The average score for the third article's labelling.}
+   \label{label3}
+\end{figure} 
+
+\textbf{Labelling Conclusions}
+
+The overarching criticism that people wrote about in the feedback section of the survey was that the labelling algorithm suffers from an issue of "false positives" - that is to say, it frequently identifies labels that in all likelihood shouldn't be present.
+
+Key differences between the three articles is that the first one was labelled using an algorithm that used the Apache OpenNLP library's name finder to find key words. In the second, the labelling algorithm was designed to return more results by default, which explains its low score (primarily because there were too many false positives, as well as the fact that it missed key names, such as "Chelsea Flower Show"). The third article used no name finder, and had a smaller number of labels to return.
+
+In the final product, I chose to use the first labelling algorithm, but with a modified name finder, that would only return names for organisations, people and locations, as opposed to including dates, percentages and money (which was the default). 
+
+\subsubsection{Clustering}
+
+For Clustering, I provided respondents with four different sets of articles that have been clustered. For each article I provided the headline and a link to the original article. As before, I asked respondents to rate each clustering out of ten and provide additional justification. The clusters below were randomly selected, based on criteria including number of articles in the cluster, and different parameters used to cluster. \\
+
+\textbf{First Cluster}
+
+\emph{Cluster:}
+
+Joe Biden just made a stunning admission about Hillary Clinton's 2016 election bid
+
+Congressman for Salem brilliantly trolls Donald Trump over 'witch hunt' claims \\
+
+\emph{Results:}
+
+As Figure \ref{cluster1} shows, this cluster received an average score of 5.23 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{cluster1score.png}
+   \caption[The average score for a cluster]{The average score for the first set's clustering.}
+   \label{cluster1}
+\end{figure} 
+
+\textbf{Second Cluster}
+
+\emph{Cluster:}
+
+Manchester United Player's Player of the Year revealed
+
+Manchester United Player of the Year awards are underway
+
+Live Manchester United Player of the Year Awards
+
+Our 7 favourite photos from Manchester United's Player of the Year Awards night
+
+Man United fans say the same thing as Ander Herrera is named Player of the Year
+
+Manchester United stars and WAGS turn on the style at Player of the Year awards
+
+Anthony Martial among five first-team absentees from Man Utd awards ceremony \\
+
+\emph{Results:}
+
+As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{cluster2score.png}
+   \caption[The average score for a cluster]{The average score for the second set's clustering.} 
+   \label{cluster2}
+\end{figure} 
+
+\textbf{Third Cluster}
+
+\emph{Cluster:}
+
+Uber to appeal arbitration ruling in self driving car lawsuit
+
+Uber threatens to fire self-driving car engineer in trade secrets case
+
+Uber threatened to fire engineer accused by rival Alphabet of stealing self-driving trade secrets
+
+Uber is threatening to fire the engineer at the heart of its legal battle with Google
+
+Uber threatens to fire former Google engineer over self-driving car spat with Waymo \\
+
+\emph{Results:}
+
+As Figure \ref{cluster3} shows, this cluster received an average score of 6.54 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{cluster3score.png}
+   \caption[The average score for a cluster]{The average score for the third set's clustering.}
+   \label{cluster3}
+\end{figure} 
+
+\textbf{Fourth Cluster}
+
+\emph{Cluster:}
+
+'Two explosions' heard at Ariana Grande concert in Manchester
+
+Concert goers 'run out screaming' after loud bangs at Manchester Arena
+
+Celebs pray for victims of Manchester Arena explosions
+
+'A major incident targeted at our city' MPs respond to Manchester explosion
+
+Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
+
+\emph{Results:}
+
+As Figure \ref{cluster4} shows, this cluster received an average score of 9.23 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{cluster4score.png}
+   \caption[The average score for a cluster]{The average score for the fourth set's clustering.}
+   \label{cluster4}
+\end{figure} 
+
+\textbf{Clustering Conclusions}
+
+In the first cluster, the main criticism was that the articles were about two very different topics. In reaction to this, I raised the thresholds significantly in the similarity algorithm. 
+
+Whilst the second was universally agreeable, the third cluster had a lower score. This was because one of the articles in the cluster was about a slightly different topic, and had been published nearly a week before. In reaction to this, I increased the penalty for the difference in timestamps in the clustering algorithm, thus ensuring articles a week apart wouldn't be clustered together.
+
+The final cluster was also considered to be very good, and incorporated the successful thresholds from the second cluster with a timestamp penalty derived from the third cluster. It formed the basis of my final set of parameters.
+
+\subsubsection{Summarisation}
+
+I presented respondents with summaries for three different clusters. The clusters were again chosen randomly, and users were again asked to give a rating for each out of ten and a justification for doing so.
+
+\textbf{First Summary}
+
+\emph{Cluster:}
+
+'Two explosions' heard at Ariana Grande concert in Manchester
+
+Concert goers 'run out screaming' after loud bangs at Manchester Arena
+
+Celebs pray for victims of Manchester Arena explosions
+
+'A major incident targeted at our city' MPs respond to Manchester explosion
+
+Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
+
+\emph{Summary:}
+
+Celebrities have begun paying tribute to victims of terrifying explosions inside Manchester Arena on Monday night.
+
+Several people were killed after explosions were heard inside the venue, with video footage showing concert goers fleeing the arena after bangs rang out immediately after the Ariana Grande concert finished.
+
+In response to the tragic events various celebs tweeted condolences and prayers.
+
+Demi Lovato tweeted: 'Tearing up imaging innocent concert goers losing their lives.. praying for everyone and all \#arianators.'
+
+Katy Perry responded on the micro blogging site: 'Praying for everyone at @arianagrande's show'.
+
+While Ellie Goulding responded with a message to all affected by the tragic eventes: 'Sending love to those affected in Manchester.' Olly Murs wrote in two tweets.
+
+'Shocked!
+
+Can't believe it!! Sending my love to everyone that was @ManchesterArena tonight!' and added, 'No one should go to a concert and never come home'.
+
+Gary Lineker wrote: 'Truly awful news from the great city of Manchester.
+
+Thoughts are with all those affected.'
+
+Jeremy Corbyn made sure to thank Emergency responders: 'Terrible incident in Manchester.
+
+My thoughts are with all those affected and our brilliant emergency services.'
+
+Rio Ferdinand tweeted: 'Just heard the news what's happening in Manchester.. hope everyone safe and sound!' Bloodied concertgoers were pictured being helped by emergency services outside the gig and armed police were seen patrolling the arena.
+
+Evie Brewster, who attended the concert, told MailOnline: 'Ariana Grange had just finished her last song and left the stage when a huge explosion sounded.
+
+'Suddenly everybody started screaming and running for the exit. \\
+
+\emph{Results:}
+
+As Figure \ref{summ1} shows, this summary received an average score of 7.54 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{summ1score.png}
+   \caption[The average score for a summary]{The average score for the first cluster's summary.}
+   \label{summ1}
+\end{figure} 
+
+\textbf{Second Summary}
+
+\emph{Cluster:}
+
+Donald Trump says special counsel 'hurts our country' as Russia probe 'becoming criminal investigation'
+
+Trump says, speaking for himself, there was no collusion with Russia
+
+Donald Trump says 'even my enemies say there is no Russia collusion' \\
+
+\emph{Summary:}
+
+WASHINGTON President Donald Trump on Thursday said the appointment of a special counsel to investigate possible collusion between his presidential campaign on Russia was dividing the country, and he repeated his contention there was no such collusion.
+
+Lindsey Graham, the Republican senator, said Russia probe seemed to be moving from counter-intelligence to a criminal investigation.
+
+Mr Trump has told US media oulets that the appointment of a special counsel "hurts our country terribly" as it shows how divided the United States.
+
+"I believe it hurts our country terribly, because it shows we're a divided, mixed-up, not-unified country," Mr Trump told news outlets.
+
+He said the counsel was a "pure excuse for the Democrats having lost an election".
+
+Michael Flynn discussed establishing a back channel for communication between Donald Trump and Vladimir Putin that could be used to bypass national security bureaucracy,  it has been reported.
+
+Mr Flynn and other advisers to the president's election campaign were in contact with Russian officials and others with Kremlin ties in at least 18 calls and emails during the last seven months of the 2016 presidential race, current and former US officials familiar with the exchanges told Reuters.
+
+Mr Trump reacted angrily to the latest allegations on Thursday, tweeting: "With all the illegal acts that took place in the Clinton campaign \& Obama Administration, there was never a special coucel (SIC) appointed!"
+
+Mr Trump added: "This is the single greatest witch hunt of a politician in American history!"
+
+Describing the investigation into any possible links with Moscow, the President said he was the victim of a ?witch hunt?.
+
+Six of the previously undisclosed contacts described to Reuters were phone calls between Sergei Kislyak, Russia's ambassador to the United States, and Trump advisers, including Mr Flynn, Mr Trump?s first national security adviser, three current and former officials said.
+
+Conversations between Mr Flynn and Mr Kislyak accelerated after the November 8 vote as the two discussed establishing a back channel for communication between Trump and Russian President Vladimir Putin that could bypass the US national security bureaucracy, which both sides considered hostile to improved relations, four current US officials said.
+
+But the disclosure could increase the pressure on Mr Trump and his aides to provide the FBI and Congress with a full account of interactions with Russian officials and others with links to the Kremlin during and immediately after the 2016 election. \\
+
+\emph{Results:}
+
+As Figure \ref{summ2} shows, this summary received an average score of 8.31 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{summ2score.png}
+   \caption[The average score for a summary]{The average score for the second cluster's summary.}
+   \label{summ2}
+\end{figure} 
+
+\textbf{Third Summary}
+
+\emph{Cluster:}
+
+When is Pippa Middleton marrying James Matthews? Everything you need to know
+
+Pippa Middleton's dream wedding set to be soggy as Met Office predicts rain
+
+What time is Pippa Middleton's wedding and where is St Mark's Church? \\
+
+\emph{Summary:}
+
+It is one element of a bride's big day that she has no control over: the weather.
+
+So Pippa Middleton will be hoping that the forecasters are wrong to predict showers that threaten to hit during her wedding on Saturday.
+
+The Duchess of Cambridge's younger sister is to tie the knot with James Matthews in what will be the society wedding of 2017.
+
+Their ceremony is due to start at St Mark's Church in Englefield, Berkshire, at 11.30am on Saturday.
+
+The Met Office is predicting rain for the area on Saturday - the same time Pippa and her new husband are likely to pose for wedding pictures.
+
+But the couple will no doubt be hoping they can dodge the showers and enjoy some of the predicted sunshine that is likely to break through the clouds throughout the afternoon.
+
+After making an unforgettable appearance at the royal wedding of big sister Kate, Pippa will take centre stage on Saturday at the picturesque 12th century church.
+
+The Duke and Duchess of Cambridge will be among the guests as their children Prince George and Princess Charlotte play starring roles as a page boy and bridesmaid.
+
+But Kate has already confessed to a Buckingham Palace garden party guest that she is a little apprehensive about how her children will behave.
+
+Prince Harry will also be sitting among the congregation, but royal-watchers will be waiting to see if he brings his American actress girlfriend Meghan Markle.
+
+Kate's controversial uncle, Gary Goldsmith, who was a guest at the Duke and Duchess of Cambridge's 2011 wedding, is also said to be attending.
+
+Hedge fund boss Mr Matthews got down on bended knee during a trip to the Lake District last summer to propose to Miss Middleton.
+
+At the time, the couple had been dating for less than a year, but had moved in together and a thrilled Pippa was said to have been totally surprised by the proposal. \\
+
+\emph{Results:}
+
+As Figure \ref{summ3} shows, this summary received an average score of 8.85 out of 10. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.7]{summ3score.png}
+   \caption[The average score for a summary]{The average score for the third cluster's summary.}
+   \label{summ3}
+\end{figure} 
+
+\textbf{Summary Conclusions}
+
+The reaction to the summaries was reasonably positive. In the first summary, a common criticism was that the way the paragraphs were breaking in the summary made it much less readable. 
+
+The second and third summaries both used a different procedure for breaking paragraphs up, which was much better received. The second summary has a slightly lower score than the third summary as it was believed the second summary had a few more redundant sentences than the third. As a result, the threshold for redundant sentences in the summarisation algorithm was set at the level of the third summary.
+
+\subsection{User Interface Evaluation}
+
+The evaluation of the user interface was three-fold. First, I provided a survey that asked respondents to perform certain functions and provide their opinions on how easy or difficult certain features were to use. Then I went to an Undergraduate Fair, and provided a demonstration of the product to peers, asking them to fill out feedback forms afterwards. Finally, I distributed the iOS app to a group of testers to try out. 
+
+\subsubsection{A Survey}
+
+The following is a subset of the answers given to the survey, which was filled in by 22 respondents. Questions omitted usually follow the user completing a task, and are simple yes/no questions regarding the success (or failure) of the task. Answers that are shown below are the key opinions formed by users about the application. \\
+
+\textbf{Search Results}
+
+At this stage of the survey, a user has been asked to search for the topic "Russia" on the home page, and have now reached the search results screen.
+
+The panels on the search results screen provide the first 250 characters of the Wikipedia article pertaining to the topic. However, users were split on whether this was clear or not (Figure \ref{ui1}), and in fact were generally in agreement that there needed to be more clarity on this (Figure \ref{ui2}). 
+
+In order to tackle this issue, I added "Wikipedia:" in front of each 250 character extract. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui1.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui1}
+\end{figure} 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui2.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui2}
+\end{figure} 
+
+\textbf{Topic Viewer}
+
+Once the user has clicked on the "Russia" topic, they are taken to the Topic Viewer screen. Users generally felt very happy with the layout of this screen (Figure \ref{ui3}), but one point for improvement was that the screen was very "data hungry" and "took too long to load".
+
+In reaction to this, I decided to streamline the information that is provided to the Topic Viewer screen through the API. Details on this can be found in the Optimisation section (Section \ref{apioptimisation}). \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui3.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui3}
+\end{figure} 
+
+\textbf{Article Viewer}
+
+At this point the respondent has been provided a link to a specific article. 
+
+Users were happy with the layout of the article viewer (Figure \ref{ui4}), but felt that the image was a bit too large. This was rectified afterwards.
+
+The users were then taken through the steps of using the Summary Annotations portion of the screen. Feedback for this was again positive, if a bit lower than the score for the article viewer overall (Figure \ref{ui5}). A lot of the reasoning for this was that the availability of certain features needed to be made clearer, which they have been in later versions of the product, with the help of status messages in the bottom right-hand corner of the screen. \\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui4.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui4}
+\end{figure} 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui5.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui5}
+\end{figure} 
+
+\textbf{Topic Dashboard and Topic Settings}
+
+The final aspects of the survey centre around the topic dashboard and the topic settings pages. The user first visits the topic dashboard, where they should see their subscription to the "Russia" topic that they searched for earlier. Users again felt positive about this screen (Figure \ref{u6}).
+
+One of the last tasks the respondents were asked to perform was the deselection of default sources for the "Russia" topic. Users felt that this was not intuitive (Figure \ref{ui7}) and that there should be some more information explicitly informing a user what deselecting a source does. This has since been put in.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui6.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui6}
+\end{figure} 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{ui7.png}
+   \caption[A graph depicting responses to the User Interface Survey]{}
+   \label{ui7}
+\end{figure} 
+
+\subsubsection{Feedback from Undergraduate Fair}
+
+At the Undergraduate Fair twelve peers filled out the feedback form for the product. The overarching theme of the feedback was that the product would be useful, as it would "save a lot of time" and "users won't need to read as much". This is a clear indication that NewSumm goes some way, if not all the way to solving the volume problem set out in the Introduction (Section \ref{intro}).
+
+Users felt that the User Interface was very polished, but that the overall WebApp was at times frustratingly slow. This point, which also came up at points in the main survey, is addressed in Section \ref{apioptimisation}.
+
+\subsubsection{iOS Applications}
+
+Due to limitations imposed by Apple on the distribution of applications, evaluation of the iOS app could not be performed in the formal manner that the Back End and WebApp had been evaluated. 
+
+As a result, I assembled a group of "testers" who would sign up as a beta tester of the application on iTunes Connect, allowing them to download a build of the app without it being formally placed on the App Store.
+
+The last build of the iPhone application was installed 11 times, and the last build of the iPad application was installed 8 times. A total of four different builds were looked at by testers, with each new build being released in response to feedback from the previous.   
 
 \subsection{Summary Analysis}
 
-\subsection{User Interface Evaluation}
+In this section I aimed to analyse the summaries that are produced by the back end. To do this, I used a Jupyter notebook and python to analyse different aspects of each summary in the database. I then transferred the data into Microsoft Excel, and made use of its extensive graphing capabilities to visualise the data.
+
+\subsubsection{Outlet Matrix}
+
+Figure \ref{fig:matrix} shows a matrix of different sources when pitted against each other. To produce this matrix, I took each of the outlets that are used in the back end. For each outlet, I then found the summaries it has in common with each of the other outlets. For the purposes of this matrix, I only included summaries where there were only these two outlets, thus enabling a direct comparison without external interference.
+
+In each set of summaries I found how the text was split between the two outlets, and recorded the average percentages in the matrix. This matrix will be used in the following sections in order to identify interesting points in the data. 
+
+The matrix is colour coded. The averages in the final column are on a colour scale, with the highest values being dark green, and the lowest being a deep red. On the inner columns of the table, a cell is coloured yellow if between 30 and 40, and 60 and 70. It is coloured red if below 30, green if above 70 and not shaded if between 40 and 60.
+
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=\textwidth]{matrix.png}
+    \caption{A matrix comparing outlets when summarised together}
+    \label{fig:matrix}
+\end{sidewaysfigure}
+
+\subsubsection{Neutral Outlets}
+
+Ignoring sources such as ESPN, Cricinfo and Four-Four-Two, which are purely sporting websites, the two key "neutral" sources in the application are the BBC and Reuters.
+
+Figures \ref{bbc-news} and \ref{reuters} paint a stark picture on summary distribution when these two sources are included. In fact, the matrix (Figure \ref{fig:matrix}) says that the BBC and Reuters have the two lowest contributions to summaries out of all the outlets in the system. 
+
+For the BBC, the percentage contribution is below 50\% for the vast majority of other outlets, whilst the same can be said of Reuters.
+
+Also notable from the charts is the fact that, with the exception of The Daily Mail in the BBC's case and The Telegraph in Reuters', the neutral sources fare poorly against the partisan UK newspapers that are in the system (namely The Daily Mail, The Guardian, The Telegraph, The Mirror and The Independent). 
+
+A explanation for this would be that the BBC and Reuters supply the facts for a summary, whilst the partisan organisations produce articles that are a bit more opinionated. These opinions are then prioritised by the LexRank algorithm as they are usually unique, and so are included in droves, thus marginalising slightly the apparent contributions of the neutral sources. 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{bbc-news.png}
+   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from the BBC when compared to other outlets.}
+   \label{bbc-news}
+\end{figure} 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{reuters.png}
+   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from Reuters when compared to other outlets.}
+   \label{reuters}
+\end{figure} 
+
+\subsubsection{The Political Spectrum}
+
+In February 2017 polling organisation YouGov ran a poll to find out the public's perception of the political leanings of mainstream newspapers in the United Kingdom. Their results found that The Daily Mail is viewed to be Britain's most right-wing paper, whilst The Guardian edges The Mirror as the most left-wing. The Independent is considered broadly centrist, whilst The Telegraph is also placed on the right (Figure \ref{yougov}). 
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.3]{yougovpoll.png}
+   \caption[A graph depicting responses to the User Interface Survey]{The results of the YouGov poll.}
+   \label{yougov}
+\end{figure}
+
+NewSumm has five outlets that are on the list of newspapers considered by YouGov. They are listed in Table \ref{mediaorganisations}, along with their respective percentages from the matrix.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r}
+		\textbf{Outlet} & \textbf{Percentage} \\ \hline
+		The Guardian & 62.19 \\ \hline
+		The Mirror & 49.29 \\ \hline
+		The Independent & 41.44 \\ \hline
+		The Telegraph & 44.51 \\ \hline
+		The Daily Mail & 59.73 \\ \hline
+	\end{tabular}
+	\caption[Parameters for estimating topic models]{The five mainstream UK newspapers in NewSumm.}
+	\label{mediaorganisations}
+\end{table}
+
+From this table a clear trend can already be seen. The further to the left or right a newspaper is, the higher the overall percentage contribution they make in the summary. A potential explanation for this would be that an opinion expressed by an organisation farther from the centre is less likely to be reproduced as an opinion of an organisation closer to the centre. 
+
+This trend amongst the UK newspapers is backed up by the US equivalents. Pew Research Center conducted a survey in early 2014 to establish the "Ideological Placement of Each Source's Audience" (Figure \ref{pewresearch}). Out of the outlets represented in NewSumm, the survey findings found that The Guardian is furthest left, followed by The Washington Post, CNN and then CNBC News (which is close to the centre). This also constitutes the trend of the matrix, with the Guardian on a high percentage, and CNBC on a low percentage.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{pewresearch.png}
+   \caption[A graph depicting responses to the User Interface Survey]{The results of the Pew Research Center poll.}
+   \label{pewresearch}
+\end{figure}
+
+\subsubsection{Sentence Analysis}
+
+In order to try and identify more specifically what helps an article contribute more to a summary I then investigated how sentence length affects the summaries.
+
+To do this I went through each outlet, finding every summary that it is included in. For each of those summaries, I compared the sentence lengths in the summary to the sentence lengths in the original article. The average for both for every outlet is displayed in Figure \ref{sentencestats}.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{sentencestats.png}
+   \caption[A graph depicting responses to the User Interface Survey]{How sentence length affects summaries.}
+   \label{sentencestats}
+\end{figure}
+
+From Figure \ref{sentencestats} it would initially seem clear from the orange and blue lines that sentence length definitely affects what goes in a summary and what doesn't, as the line indicating the sentences in a summary are almost always shorter than those that don't enter the survey. 
+
+However, this is highly likely to be little more than a coincidence. Using the knowledge that the summariser strips each article sentence, removing every word in Mallet's stopwords (Section \ref{tm}), I then did the same myself and reproduced the graph. As can be seen from the yellow and grey lines the lines are now nearly on top of each throughout, which in turn would strongly suggest that sentence length plays no major part in influencing what the summariser selects.
+
+\subsubsection{Article Length Analysis}
+
+Having investigated the effects of sentence length on summaries, the next logical step was to investigate the effect of the original article's length.
+
+To do this I went through each outlet, finding each summary that it is included in. For each of these summaries I recorded the length of the original article (in words), and the percentage number of words that were included in the final summary. The results are shown in the scatter graph shown in Figure \ref{articlelength}, in which each dot represents a different outlet.
+
+An important point is that the graph shows the article length with stopwords removed, and so shows the exact length of article that the core of the summariser would be analysing.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.5]{articlelength.png}
+   \caption[A graph depicting responses to the User Interface Survey]{How article length affects summaries.}
+   \label{articlelength}
+\end{figure}
+
+As can be seen from the graph, whilst the data may appear quite spread out at first, there is a definite parabola-like effect, as represented by the curve on the graph. This would imply that there is a "sweet spot" on article length, between about 150 and just over 300 words per article. However, as there are clearly also some points in the sweet spot below the curve, a middling article length does not guarantee a high percentage of the summary.
+
+\subsubsection{Quotes}
+
+The final aspect of the investigation centres around quotes. The aim is to find whether the number of quotes an original article has plays a direct role on the final contribution an outlet makes to a summary.
+
+Figure \ref{quotes} depicts a scatter graph where the percentages from the matrix are on the y-axis, and the average number of quotes per original article is on the x-axis. Each dot on the scatter graph represents an outlet.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=0.6]{quotes.png}
+   \caption[A graph depicting responses to the User Interface Survey]{How the number of quotes affects summaries.}
+   \label{quotes}
+\end{figure}
+
+What we can see from Figure \ref{quotes} is that there may be a slight trend downwards as the number of quotes in an article rises, but it's not particularly clearcut, thus suggesting that quotes may not have much of an effect of the final summary. 
+
+\subsubsection{What makes an ideal article?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1888,6 +2547,10 @@ Screenshots from the website and apps can be seen in Figure \ref{appscreenshots}
 \subsubsection{Topic Labelling}
 
 \subsubsection{Clustering}
+
+\subsubsection{API Optimisation}
+
+\label{apioptimisation}
 
 \subsection{Memory Optimisations}
 
@@ -2144,7 +2807,7 @@ If the userId parameter is present, returns the ten latest articles from across 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
-\printindex
+%\newpage
+%\printindex
 
 \end{document}
