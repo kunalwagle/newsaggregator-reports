@@ -2610,9 +2610,29 @@ In addition to this, I've learnt that the overheads required in Natural Language
 
 \subsection{Foreign Languages}
 
+One interesting direction that NewSumm could go in would be to expand to languages other than English. 
+
+A lot of the important infrastructure would already be in place for such an endeavour, as Apache's OpenNLP library provides models for languages such as Spanish, French, German and Dutch, whilst NewsAPI's API counts several foreign language outlets amongst his collection. Mallet also provides stopwords files for foreign languages for use in Topic Modelling (and in my summarisation algorithm).
+
+Working on a foreign language (that I can speak) that has models ready for use in OpenNLP and a plethora of sources on NewsAPI could mean that this feature would be ready within a matter of a fortnight, as very little of the remaining infrastructure would need to change.
+
 \subsection{Copyright License}
 
+A key issue that could form an obstacle to NewSumm being released on the market is the copyright implications of the summariser. 
+
+In February 2007 Google were successfully taken to court by Copiepresse, which is an association of Belgian newspaper publishers. Copiepresse argued that the fact that Google News was presenting titles and small snippets to users constituted a breach in copyright. Considering NewSumm uses more of an article than just a small snippet, it can be reasonably concluded that NewSumm would breach copyright if published on the market.
+
+There are two potential options to take this forward. The first would be to develop further the abstractive summarisation algorithm, so that the final summary doesn't contain the original copyrighted material.
+
+The second would be to enter negotiations with each outlet for a copyright license. This could be potentially expensive, and is not guaranteed to be successful with every outlet, but unless abstractive summarisation works, it could become the only solution to a major blocker on any eventual release of the product. 
+
 \subsection{Other Apps}
+
+Having created a WebApp and an iOS application, the next logical step could be to develop an Android application. 
+
+Given I'm proficient in Java, which is the Android development language, and have some experience with Android development, this could be completed in a matter of a few weeks. 
+
+The fact that the API to the server has already been fully developed only serves to reinforce the concept that this could be completed quickly. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

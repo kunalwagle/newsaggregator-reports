@@ -190,42 +190,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.2}Copyright License}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Other Apps}{116}
+\contentsline {subsection}{\numberline {9.3}Other Apps}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{117}
+\contentsline {section}{References}{118}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{120}
+\contentsline {section}{Appendices}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{120}
+\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{121}
+\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Search Results Page}{121}
+\contentsline {subsection}{\numberline {B.1}Search Results Page}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Topic Viewer}{121}
+\contentsline {subsection}{\numberline {B.2}Topic Viewer}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3}Topic Settings}{123}
+\contentsline {subsection}{\numberline {B.3}Topic Settings}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4}Digest Viewer}{124}
+\contentsline {subsection}{\numberline {B.4}Digest Viewer}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}API}{125}
+\contentsline {section}{\numberline {C}API}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1}Searching for Topics}{125}
+\contentsline {subsection}{\numberline {C.1}Searching for Topics}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2}Getting a topic}{125}
+\contentsline {subsection}{\numberline {C.2}Getting a topic}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3}Settings}{125}
+\contentsline {subsection}{\numberline {C.3}Settings}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.4}Subscriptions}{126}
+\contentsline {subsection}{\numberline {C.4}Subscriptions}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{126}
+\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{126}
+\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.5}Digests}{126}
+\contentsline {subsection}{\numberline {C.5}Digests}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.6}Getting an Article}{127}
+\contentsline {subsection}{\numberline {C.6}Getting an Article}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.7}Home Page}{127}
+\contentsline {subsection}{\numberline {C.7}Home Page}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}User Guide}{128}
+\contentsline {section}{\numberline {D}User Guide}{129}
