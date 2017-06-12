@@ -2530,7 +2530,15 @@ Figure \ref{quotes} depicts a scatter graph where the percentages from the matri
 
 What we can see from Figure \ref{quotes} is that there may be a slight trend downwards as the number of quotes in an article rises, but it's not particularly clearcut, thus suggesting that quotes may not have much of an effect of the final summary. 
 
-\subsubsection{What makes an ideal article?}
+\subsubsection{What makes an "ideal" article?}
+
+Using the findings from the summary analysis, we can determine that the "ideal" (in this case an article that would form a very high percentage of the final summary) article will likely:
+
+\begin{itemize}
+	\item \textbf{Will present opinions} and not attempt to be a neutral piece. 
+	\item \textbf{Will aim to be on the political left or right} rather than a centrist piece.
+	\item \textbf{Will be of middling length}, preferably between 150 and 300 words.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2538,21 +2546,39 @@ What we can see from Figure \ref{quotes} is that there may be a slight trend dow
 
 \section{Optimisation}
 
+During the course of the project, various aspects proved to be lacking in efficiency, either in space or in time. The following subsections present how these issues were addressed. 
+
 \subsection{Speed Optimisations}
 
 \subsubsection{Topic Modelling}
 
-\label{topicmodellingoptimisation}
+Originally Topic Modelling would take place at the start of each Topic Labelling task on the server. This would prove to be very inefficient, as with a large data set the modeller could easily take more than a few minutes to train the models, which in turn adds an overhead to the labelling process each time new articles are fetched.
 
-\subsubsection{Topic Labelling}
+To rectify this, the model is trained once a week, and kept in a model file. At the start of each Topic Labelling task the model is read in, thus saving minutes of overhead on each run.
+
+\label{topicmodellingoptimisation}
 
 \subsubsection{Clustering}
 
+There would be stages in the early days of the server, where the application would crash periodically. Upon investigation I found that this was often due to the fact that the clustering algorithm was hanging. When topics would grow large, the clusterer would struggle, because every single article would be clustered every single time a new article was added to the topic.
+
+I applied a heuristic to the clustering algorithm to improve this. Working on the knowledge that a new article won't end in the same cluster as an older with a significantly different timestamp, I would only run the clusterer on the most recent articles in the topic. This meant that I had placed an upper bound on the number of articles being clustered at any one time, thus ensuring the server would crash less frequently.
+
+A consequence of this was that it meant that the percentage of articles being labelled increased dramatically. Before, whenever the application crashed, all the new articles that hadn't been labelled yet would be lost, and moved to the back of a long queue to be picked up by the LabellingRunnable. This meant that the percentage of articles labelled on the same day was about 50\% initially, but following the optimisation of the clusterer is up to nearly 95\%. 
+
 \subsubsection{API Optimisation}
+
+In response to complaints in the survey about the speed of the WebApp, I streamlined the amount of data transferred through the API as much as possible. 
+
+An example would be that in the past when a user requests a topic, the server would return a topic including all it's summaries. This would be a reasonably large data transfer, and one that would also require many database operations. Now, however, when a user requests a topic, the server returns only the absolutely necessary information for displaying the list of articles in panel form in the topic viewer. 
 
 \label{apioptimisation}
 
 \subsection{Memory Optimisations}
+
+One major issue is that of space. Some of the libraries used, such as the Apache OpenNLP library, are very space-intensive, and this was creating Out Of Memory exceptions, which would crash the server. 
+
+As a solution I implemented singleton patterns for each library that was space-intensive. However, I had to manage this carefully, as the Apache OpenNLP library is not thread-safe, meaning that I needed a singleton instance for each thread. Doing this, combined with increasing the available heap space to 3GB (and upgrading the server itself on Digital Ocean) meant that memory was no longer an issue in the application.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

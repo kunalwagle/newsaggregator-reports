@@ -166,66 +166,64 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.3.6}Quotes}{111}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.7}What makes an ideal article?}{111}
+\contentsline {subsubsection}{\numberline {6.3.7}What makes an \csqQQ {34}ideal\csqQQ {34} article?}{112}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Optimisation}{112}
+\contentsline {section}{\numberline {7}Optimisation}{113}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{112}
+\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{113}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{112}
+\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{113}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Topic Labelling}{112}
+\contentsline {subsubsection}{\numberline {7.1.2}Clustering}{113}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.3}Clustering}{112}
+\contentsline {subsubsection}{\numberline {7.1.3}API Optimisation}{114}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.4}API Optimisation}{112}
+\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{114}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{112}
+\contentsline {section}{\numberline {8}Conclusion}{115}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusion}{113}
+\contentsline {section}{\numberline {9}Future Work}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Future Work}{114}
+\contentsline {subsection}{\numberline {9.1}Foreign Languages}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Foreign Languages}{114}
+\contentsline {subsection}{\numberline {9.2}Further Optimisations}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Further Optimisations}{114}
+\contentsline {subsection}{\numberline {9.3}Other Apps}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Other Apps}{114}
+\contentsline {section}{References}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{115}
+\contentsline {section}{Appendices}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{118}
+\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{118}
+\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{119}
+\contentsline {subsection}{\numberline {B.1}Search Results Page}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Search Results Page}{119}
+\contentsline {subsection}{\numberline {B.2}Topic Viewer}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Topic Viewer}{119}
+\contentsline {subsection}{\numberline {B.3}Topic Settings}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3}Topic Settings}{121}
+\contentsline {subsection}{\numberline {B.4}Digest Viewer}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4}Digest Viewer}{122}
+\contentsline {section}{\numberline {C}API}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}API}{123}
+\contentsline {subsection}{\numberline {C.1}Searching for Topics}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1}Searching for Topics}{123}
+\contentsline {subsection}{\numberline {C.2}Getting a topic}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2}Getting a topic}{123}
+\contentsline {subsection}{\numberline {C.3}Settings}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3}Settings}{123}
+\contentsline {subsection}{\numberline {C.4}Subscriptions}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.4}Subscriptions}{124}
+\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{124}
+\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{124}
+\contentsline {subsection}{\numberline {C.5}Digests}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.5}Digests}{124}
+\contentsline {subsection}{\numberline {C.6}Getting an Article}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.6}Getting an Article}{125}
+\contentsline {subsection}{\numberline {C.7}Home Page}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.7}Home Page}{125}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}User Guide}{126}
+\contentsline {section}{\numberline {D}User Guide}{128}
