@@ -247,7 +247,11 @@ The remainder of this report will follow the development of this concept, as bot
 
 Whilst the ultimate goal of an abstractive summarisation tool in the back end will prove to be infeasible, NewSumm, after thorough evaluation, will be found to be an application that provides more than competent summarisation of articles and effective clustering that goes a large way to reducing the large volume of news that a consumer has to get through.
 
-Going side by side with this evaluation of the fundamentals of the system itself is a rigorous analysis of the summaries produced to establish whether the system can be affected by the various political biases of its sources. The root causes of any political bias will also be fully investigated, and the role of the neutral source in a summary will also be discussed.
+The primary aims are largely satisfied by the final product, as proven by feedback from potential users through an extensive survey amongst other things.
+
+Users speak of the clean and slick design that NewSumm has, and are captured by the concept of being able to "gather all sources on a particular topic at once", thus "saving time".
+
+Going side by side with this evaluation of the fundamentals of the system itself is a rigorous analysis of the summaries produced to establish whether the system can be affected by the various political biases of its sources. The analysis will showcase a potential vulnerability in the summariser, in that articles from sources that are considered to be purely factual can be marginalised, which in turn affects the success of the secondary aim of providing a near guarantee that all news produced is trustworthy. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1850,8 +1854,6 @@ The iPad version of the iOS app is designed to mirror the interface of the deskt
 There are a few key differences from the initial design. These are:
 
 \begin{itemize}
-	\item \textbf{The Home Page} - In the initial design, it was stated that a signed in user's home page would be their topic dashboard screen. This is now changed, so that they still receive the original home page, but the "Top Stories" Section is now tailored to their specific subscriptions. This means that the large search bar still has major prominence, which, in my opinion, emphasises the search capabilities of NewSumm, whilst still providing the user with their articles at a glance. 
-	\item \textbf{Profiles} - Users no longer have a profile picture, and in fact only an email address is stored to link to their accounts, and so there is no longer a profile settings page. 
 	\item \textbf{Article Viewer} - This screen now allows a greater amount of customisation on a user's part. Each article that the summary is created from is now accompanied by a switch. Turning this switch off will remove the article from the summary. The same happens in the opposite direction.
 	\item \textbf{Summary Annotations} - Users can now see where the individual sentences of their summary are coming from. There is now a checkbox marked "Show Summary Annotations" in the corner, and when selected the text from the summary is highlighted according to its source (the source colours are shown on the corresponding switches on the right of the screen). Clicking on a highlighted piece of text will reveal a popover showing the source, along with the original sentence. If a sentence has some related sentences that aren't in the summary, the text won't be highlighted, and the popover will show the original, as well as all related sentences. \\
 \end{itemize}
@@ -2540,6 +2542,16 @@ Using the findings from the summary analysis, we can determine that the "ideal" 
 	\item \textbf{Will be of middling length}, preferably between 150 and 300 words.
 \end{itemize}
 
+\subsection{Evaluation Conclusion}
+
+The primary aims of NewSumm were to reduce the volume of articles that a user has to read, and to find a way to prevent users from missing information by collating multiple sources together. These aims have been largely satisfied by the final product, as proven by the feedback both at the Undergraduate Fair and in the UI survey.
+
+Feedback from the Undergraduate Fair indicates that potential users have been impressed by the "clean and slick" design.
+
+However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC and Reuters could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. The flip side to this argument though would be that if all sources are trusted sources, then this would negate any potential issues (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
+
+Continuing on the back end, whilst labelling has been shown to throw more than its fair share of false positive labels, the clustering and summarisation algorithms have been well received by respondents of the survey. This would indicate that if the small flaws in topic labelling can be addressed, then the system itself would start consistently producing very strong clusters and summaries for all topics.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -2586,6 +2598,10 @@ As a solution I implemented singleton patterns for each library that was space-i
 
 \section{Conclusion}
 
+On a personal level, I've learnt the value of a well designed singleton pattern in reducing the amount of heap space used. 
+
+In addition to this, I've learnt that the overheads required in Natural Language Processing can be very large, and so must be taken into account when designing a system. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -2594,7 +2610,7 @@ As a solution I implemented singleton patterns for each library that was space-i
 
 \subsection{Foreign Languages}
 
-\subsection{Further Optimisations}
+\subsection{Copyright License}
 
 \subsection{Other Apps}
 

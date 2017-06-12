@@ -168,6 +168,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.3.7}What makes an \csqQQ {34}ideal\csqQQ {34} article?}{112}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Evaluation Conclusion}{112}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7}Optimisation}{113}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1}Speed Optimisations}{113}
@@ -186,7 +188,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.1}Foreign Languages}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Further Optimisations}{116}
+\contentsline {subsection}{\numberline {9.2}Copyright License}{116}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.3}Other Apps}{116}
 \defcounter {refsection}{0}\relax 
