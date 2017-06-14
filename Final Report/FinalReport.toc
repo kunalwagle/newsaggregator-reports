@@ -2,103 +2,103 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{8}
+\contentsline {section}{\numberline {1}Introduction}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Market Research}{12}
+\contentsline {section}{\numberline {2}Market Research}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}News Reading Habits}{12}
+\contentsline {subsection}{\numberline {2.1}News Reading Habits}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Digital News Report 2016}{12}
+\contentsline {subsubsection}{\numberline {2.1.1}Digital News Report 2016}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Potential User Survey}{14}
+\contentsline {subsubsection}{\numberline {2.1.2}Potential User Survey}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Related Products}{23}
+\contentsline {subsection}{\numberline {2.2}Related Products}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Google News}{23}
+\contentsline {subsubsection}{\numberline {2.2.1}Google News}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Flipboard}{24}
+\contentsline {subsubsection}{\numberline {2.2.2}Flipboard}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Yahoo News Digest}{25}
+\contentsline {subsubsection}{\numberline {2.2.3}Yahoo News Digest}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.4}Apple News}{25}
+\contentsline {subsubsection}{\numberline {2.2.4}Apple News}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.5}Comparing the existing products}{26}
+\contentsline {subsubsection}{\numberline {2.2.5}Comparing the existing products}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Background Research}{28}
+\contentsline {section}{\numberline {3}Background Research}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Machine Learning Techniques}{28}
+\contentsline {subsection}{\numberline {3.1}Machine Learning Techniques}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Topic Modelling Techniques}{28}
+\contentsline {subsubsection}{\numberline {3.1.1}Topic Modelling Techniques}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Topic Labelling Techniques}{29}
+\contentsline {subsubsection}{\numberline {3.1.2}Topic Labelling Techniques}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Clustering Techniques}{30}
+\contentsline {subsubsection}{\numberline {3.1.3}Clustering Techniques}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Summarisation Techniques}{33}
+\contentsline {subsection}{\numberline {3.2}Summarisation Techniques}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Extractive Summarisation Techniques}{33}
+\contentsline {subsubsection}{\numberline {3.2.1}Extractive Summarisation Techniques}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}Abstractive Summarisation Techniques}{34}
+\contentsline {subsubsection}{\numberline {3.2.2}Abstractive Summarisation Techniques}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Natural Language Processing Libraries}{38}
+\contentsline {subsection}{\numberline {3.3}Natural Language Processing Libraries}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}Aspects of Natural Language Processing}{39}
+\contentsline {subsubsection}{\numberline {3.3.1}Aspects of Natural Language Processing}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Conclusions}{39}
+\contentsline {subsection}{\numberline {3.4}Conclusions}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Design}{41}
+\contentsline {section}{\numberline {4}Design}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Front End Architecture Diagram}{42}
+\contentsline {subsection}{\numberline {4.1}Front End Architecture Diagram}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}User Story}{43}
+\contentsline {subsection}{\numberline {4.2}User Story}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Home Page}{43}
+\contentsline {subsubsection}{\numberline {4.2.1}Home Page}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Topic Dashboard}{43}
+\contentsline {subsubsection}{\numberline {4.2.2}Topic Dashboard}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Article Viewer}{45}
+\contentsline {subsubsection}{\numberline {4.2.3}Article Viewer}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Back End Flow Diagram}{45}
+\contentsline {subsection}{\numberline {4.3}Back End Flow Diagram}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Infrastructure}{47}
+\contentsline {subsection}{\numberline {4.4}Infrastructure}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Hardware}{47}
+\contentsline {subsubsection}{\numberline {4.4.1}Hardware}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Database}{47}
+\contentsline {subsubsection}{\numberline {4.4.2}Database}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Infrastructure Decisions}{48}
+\contentsline {subsubsection}{\numberline {4.4.3}Infrastructure Decisions}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementation}{51}
+\contentsline {section}{\numberline {5}Implementation}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Language Choices}{51}
+\contentsline {subsection}{\numberline {5.1}Language Choices}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Front End}{51}
+\contentsline {subsubsection}{\numberline {5.1.1}Front End}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.2}Back End}{51}
+\contentsline {subsubsection}{\numberline {5.1.2}Back End}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Database Schema}{52}
+\contentsline {subsection}{\numberline {5.2}Database Schema}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1}Schema Diagram}{52}
+\contentsline {subsubsection}{\numberline {5.2.1}Schema Diagram}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Articles}{52}
+\contentsline {subsubsection}{\numberline {5.2.2}Articles}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.3}Topics}{53}
+\contentsline {subsubsection}{\numberline {5.2.3}Topics}{54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4}Clusters}{54}
+\contentsline {subsubsection}{\numberline {5.2.4}Clusters}{55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.5}Users}{55}
+\contentsline {subsubsection}{\numberline {5.2.5}Users}{56}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.6}Digests}{56}
+\contentsline {subsubsection}{\numberline {5.2.6}Digests}{57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Useful APIs}{57}
+\contentsline {subsection}{\numberline {5.3}Useful APIs}{58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1}News Outlets}{57}
+\contentsline {subsubsection}{\numberline {5.3.1}News Outlets}{58}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4}Useful libraries}{62}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.4.1}Mallet}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Natural Language Processing}{62}
+\contentsline {subsubsection}{\numberline {5.4.2}Natural Language Processing}{63}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.5}Machine Learning}{66}
 \defcounter {refsection}{0}\relax 
@@ -112,13 +112,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.6.1}Extractive Summarisation}{74}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.2}Summary Evaluation Resource}{76}
+\contentsline {subsubsection}{\numberline {5.6.2}Summary Evaluation Resource}{77}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.6.3}An attempt at Abstractive Summarisation}{77}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.7}Restlet}{79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.8}Server Tasks}{79}
+\contentsline {subsection}{\numberline {5.8}Server Tasks}{80}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.8.1}Scheduling of tasks}{80}
 \defcounter {refsection}{0}\relax 
@@ -229,3 +229,15 @@
 \contentsline {subsection}{\numberline {C.7}Home Page}{128}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {D}User Guide}{129}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.1}Home Page}{129}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.2}Searching}{130}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.3}Viewing a topic}{130}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.4}Viewing an article}{131}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.5}Viewing My Topics}{133}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {D.6}Changing User Settings}{134}
