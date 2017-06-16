@@ -127,7 +127,7 @@ urlseen = {Retrieved},
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\theauthor}
+\rhead{\nouppercase{\leftmark}}
 \lhead{\thetitle}
 \cfoot{\thepage}
 
@@ -170,15 +170,9 @@ urlseen = {Retrieved},
 
 \section*{Abstract}
 
-There is simply too large a volume of news available to read online, and each piece of news itself could have multiple different viewpoints depending on where you read it from.
+There is simply too large a volume of news available to read online, and each piece of news itself could have multiple different viewpoints depending on where you read it from. NewSumm is a news aggregator that summarises clusters of articles for users, thus allowing a reader to save time by covering multiple viewpoints on a piece of news within the scope of one short article. NewSumm aimed to allow customisability of summary sources for users, so that they can pick and choose which sources they read and tailor their experience.
 
-The aim of this project was to create a news aggregator, NewSumm, that summarises clusters of articles for users, thus allowing a reader to save time by covering multiple viewpoints on a piece of news within the scope of one short article. 
-
-NewSumm also aimed to allow customisability of summary sources for users, so that they can pick and choose which sources they read and tailor their experience.
-
-Whilst an ambitious initial plan to implement an algorithm for abstractive summarisation may have gone awry, NewSumm started producing more than competent summaries using a specially modified version of LexRank. 
-
-User feedback for NewSumm is largely positive so far, but not without potential areas for improvement.
+Whilst an ambitious initial plan to implement an algorithm for abstractive summarisation went awry, NewSumm produces more than competent summaries using a specially modified version of LexRank. User feedback for NewSumm was largely positive so far, but not without potential areas for improvement. Two surveys were put to users, and they found that the summaries produced were strong. Users thought that the user interface was slick, but that it could be faster in places. A thorough analysis of the summaries produced found that neutral sources can potentially be marginalised by sources that are on the political spectrum, which is an area that can be tightened up in any future work on the project. 
 
 \pagebreak
 
@@ -252,15 +246,11 @@ Beyond this, another objective of the project should be for the News Aggregator 
 
 A further secondary aim to this could be to allow a user to customise their summary, taking in information from the outlets of their choice (from the original "trusted" list). The advantage to this would potentially be that if a user decides that too many issues from one source are uncorroborated, they can remove them, and see only information from the other sources that have written about a topic. The disadvantage to this could be that if a user dismisses an entire section of the political spectrum as uncorroborated continuously, they'll pick up a political bias on the facts of the topic. Although, it could be said that the Digital News Report 2016 findings suggest that this is a feature that won't be used much. One of the more interesting findings in the report was that more than 60\% (in the United Kingdom) were concerned about the potential impact of personalising their news feeds. They felt that it could lead to both "missing information" and "missing challenging viewpoints".   
 
-The remainder of this report will follow the development of this concept, as both a website and as an iOS application. The following sections will set out NewSumm to be an ambitious project that aims to automatically fetch, label, cluster and summarise articles without supervision. NewSumm will be outlined as a user-friendly application that allows consumers a large level of control over what they read, through topic subscriptions and the ability to alter sources for summaries, as well as providing a daily digest for users who want them.
+Using these aims and objectives as an indicator of future success, I then created NewSumm, as both a website and as an iOS application. The following sections set out NewSumm as an ambitious project that automatically fetches, labels, clusters and summarises articles without supervision. NewSumm was outlined as a user-friendly application that allows consumers a large level of control over what they read, through topic subscriptions and the ability to alter sources for summaries, as well as providing a daily digest for users who want them.
 
-Whilst the ultimate goal of an abstractive summarisation tool in the back end will prove to be infeasible, NewSumm, after thorough evaluation, will be found to be an application that provides more than competent summarisation of articles and effective clustering that goes a large way to reducing the large volume of news that a consumer has to get through.
+Whilst the ultimate goal of an abstractive summarisation tool in the back end proved to be infeasible, NewSumm, after thorough evaluation, was found to be an application that provides more than competent summarisation of articles and effective clustering that goes a large way to reducing the large volume of news that a consumer has to get through, thus satisfying the first primary aim. This was backed up by feedback from potential users through extensive surveys. Users spoke of the clean and slick design that NewSumm has, and were captivated by the concept of being able to "gather all sources on a particular topic at once", thus "saving time".
 
-The primary aims will be largely satisfied by the final product, as proven by feedback from potential users through an extensive survey.
-
-Users will speak of the clean and slick design that NewSumm has, and will be found to be captured by the concept of being able to "gather all sources on a particular topic at once", thus "saving time".
-
-Going side by side with this evaluation of the fundamentals of the system itself will be a rigorous analysis of the summaries produced to establish whether the system can be affected by the various political biases of its sources. The analysis will showcase a potential vulnerability in the summariser, in that articles from sources that are considered to be purely factual can be marginalised, which in turn affects the success of the secondary aim of providing a near guarantee that all news produced is trustworthy. 
+Going side by side with this evaluation of the fundamentals of the system itself was a rigorous analysis of the summaries produced to establish whether the system can be affected by the various political biases of its sources. The analysis exposed a potential vulnerability in the summariser, in that articles from sources that are considered to be purely factual can be marginalised, which in turn affects the success of the secondary aim of providing a near guarantee that all news produced is trustworthy. This is mitigated, however, by the theory presented earlier that by limiting the sources of news to trustworthy outlets the issue of "fake news" is largely solved.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -857,15 +847,15 @@ After conducting the background research I was able to come up with the followin
 
 In this section I set out the overview of the design for the product. There are three important aspects to consider. 
 
-Firstly, how the front end should look, and what the underlying infrastructure and flow of it should be. 
-
-Secondly is the back end, and more importantly the process of an article being summarised, starting with taking an article from an outlet and going all the way until the summary itself is generated. 
-
-The last point that is considered is the infrastructure of the back end, namely the storage system and the company used to host the server. 
+\begin{itemize}
+	\item How the front end should look, and what the underlying infrastructure and flow of it should be. 
+	\item The back end, and more importantly the process of an article being summarised, starting with taking an article from an outlet and going all the way until the summary itself is generated. 
+	\item The infrastructure of the back end, namely the storage system and the company used to host the server. 
+\end{itemize}
 
 \subsection{Front End Architecture\index{Front End}\index{Architecture} Diagram}
 
-\begin{figure}[H]
+\begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.4]{FrontEndArchitecture.png}
    \caption[A basic diagram of the expected architecture of the front end]{A diagram showing the expected architecture of the front end application.}
@@ -1791,7 +1781,7 @@ The following jobs are back end server tasks using the Restlet \cite{restlet} fr
 
 \begin{figure}[ht!]
   \centering
-    \includegraphics[scale=0.3]{TaskService.png}
+    \includegraphics[width=\textwidth]{TaskService.png}
    \caption[A diagram showing the scheduling of tasks]{A diagram showing the scheduling of tasks using the TaskService and the flow of information in the server tasks.}
    \label{servertasks}
 \end{figure} 
@@ -2541,13 +2531,9 @@ Using the findings from the summary analysis, we can determine that the "ideal" 
 
 \subsection{Evaluation Conclusion}
 
-The primary aims of NewSumm were to reduce the volume of articles that a user has to read, and to find a way to prevent users from missing information by collating multiple sources together. These aims have been largely satisfied by the final product, as proven by the feedback both at the Undergraduate Fair and in the UI survey.
+In the first part of the evaluation, the inner workings were fully evaluated by potential users by way of surveys. The results were encouraging. Topic Labelling was deemed to be a bit more than adequate, but with room for improvement, whilst clustering and summarisation were generally considered to be strong. The User Interface was largely received very well, with the caveat that at times the applications appear to be quite slow. 
 
-Feedback from the Undergraduate Fair indicates that potential users have been impressed by the "clean and slick" design.
-
-However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC and Reuters could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. The flip side to this argument though would be that if all sources are trusted sources, then this would negate any potential issues (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
-
-Continuing on the back end, whilst labelling has been shown to throw more than its fair share of false positive labels, the clustering and summarisation algorithms have been well received by respondents of the survey. This would indicate that if the small flaws in topic labelling can be addressed, then the system itself would start consistently producing very strong clusters and summaries for all topics.
+The second part of the evaluation was aimed at the results produced by the summariser. This showed that very short and very large articles can be disadvantaged, as well as those that are purely factual, or in the political centre. This analysis hints at the possibility that "fake news" could permeate into the summaries at times, and so going forward this would be an area to tighten up the summariser. However, by limiting the sources for the summariser to purely trusted news sources, this problem can already be minimised without the need to specifically change how summarisation works.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2595,15 +2581,25 @@ As a solution I implemented singleton patterns for each library that was space-i
 
 \section{Conclusion}
 
-On a personal level, I've learnt the value of a well designed singleton pattern in reducing the amount of heap space used. 
+The primary aims of NewSumm were to reduce the volume of articles that a user has to read, and to find a way to prevent users from missing information by collating multiple sources together. These aims have been largely satisfied by the final product, as proven by the feedback both at the Undergraduate Fair and in the UI survey. Feedback from the Undergraduate Fair also indicated that potential users have been impressed by the "clean and slick" design.
 
-In addition to this, I've learnt that the overheads required in Natural Language Processing can be very large, and so must be taken into account when designing a system. 
+However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC and Reuters could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. In fact, it could even suggest that "fake news" could enter the application, and dominate a summary as it would be distinctive enough. The counter to this argument though would be that if all sources are trusted sources, then this would negate any potential issues as the outlets themselves are trusted enough to not produce "fake news" (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
+
+Continuing on the back end, whilst labelling has been shown to throw more than its fair share of false positive labels, the clustering and summarisation algorithms have been well received by respondents of the survey. This would indicate that if the small flaws in topic labelling can be addressed going forward, then the system itself would start consistently producing very strong clusters and summaries for all topics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
 \section{Future Work}
+
+\subsection{Back End Improvements}
+
+One of the issues raised during the evaluation was that labelling of articles was good, but not excellent. As a result, this is one area for improvement in future work. One way to do this would be to find a cheaper way of finding overlap between each pair of potential labels than the algorithm set out in Section \ref{labellingalgorithm}. Another potential way to improve labelling would be to apply more natural language heuristics. For example, the heuristic of adding every name in an article as a label worked well. Both of these methods would require investigation, and so improving labelling could have to be treated as a task with an open-ended timeline going forward.
+
+An area that worked well in evaluation, but could also be looked at is summarisation itself. The Summary Analysis found a slight vulnerability in that neutral sources can sometimes be marginalised in a summary. A simple solution for this would be to prioritise neutral sources in summaries over more partisan sources. 
+
+Another improvement for summarisation would be to implement aspects of the abstractive summarisation (as cheaply as possible). A core feature of the early stages of abstractive summarisation was analysing difference sentences for synonyms. This can be used to identify more related sentences, thus reducing the number of redundant sentences even lower in a summary. This would also be a reasonably fast implementation, as the libraries required have already been fully researched (Section \ref{nlp}). 
 
 \subsection{Foreign Languages}
 

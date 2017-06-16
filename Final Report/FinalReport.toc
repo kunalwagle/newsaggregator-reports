@@ -48,23 +48,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Design}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Front End Architecture Diagram}{43}
+\contentsline {subsection}{\numberline {4.1}Front End Architecture Diagram}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}User Story}{44}
+\contentsline {subsection}{\numberline {4.2}User Story}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Home Page}{44}
+\contentsline {subsubsection}{\numberline {4.2.1}Home Page}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Topic Dashboard}{44}
+\contentsline {subsubsection}{\numberline {4.2.2}Topic Dashboard}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Article Viewer}{46}
+\contentsline {subsubsection}{\numberline {4.2.3}Article Viewer}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Back End Flow Diagram}{46}
+\contentsline {subsection}{\numberline {4.3}Back End Flow Diagram}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Infrastructure}{48}
+\contentsline {subsection}{\numberline {4.4}Infrastructure}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Hardware}{48}
+\contentsline {subsubsection}{\numberline {4.4.1}Hardware}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Database}{49}
+\contentsline {subsubsection}{\numberline {4.4.2}Database}{48}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.4.3}Infrastructure Decisions}{49}
 \defcounter {refsection}{0}\relax 
@@ -126,7 +126,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.8.3}TopicLabellingRunnable}{81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.8.4}ClusteringRunnable}{81}
+\contentsline {subsubsection}{\numberline {5.8.4}ClusteringRunnable}{82}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.8.5}LabellingRunnable}{82}
 \defcounter {refsection}{0}\relax 
@@ -186,11 +186,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Future Work}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Foreign Languages}{116}
+\contentsline {subsection}{\numberline {9.1}Back End Improvements}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Copyright License}{116}
+\contentsline {subsection}{\numberline {9.2}Foreign Languages}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Other Apps}{117}
+\contentsline {subsection}{\numberline {9.3}Copyright License}{117}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Other Apps}{117}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{References}{118}
 \defcounter {refsection}{0}\relax 
