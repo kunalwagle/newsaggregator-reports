@@ -9,6 +9,7 @@ backend=biber,
 style=numeric,
 urldate=long
 ]{biblatex}
+\usepackage{mdframed}
 \usepackage{booktabs}
 \newcommand{\tabitem}{\makebox[1em][r]{\textbullet~}}
 \usepackage{amsmath}
@@ -1264,7 +1265,7 @@ News API counts more than 70 sources in its portfolio.
 
 \textbf{Wikipedia}
 
-Wikimedia\index{Wikimedia} (the parent company for Wikipedia \cite{wikipedia}) provides documentation for the Wikipedia\index{Wikipedia} API on its MediaWiki \cite{mediaWiki} website. Here, I can search using the search term that a user has used (perhaps in searching for a topic), and get a result that is as follows:
+Wikimedia\index{Wikimedia} (the parent company for Wikipedia \cite{wikipedia}) provides documentation for the Wikipedia\index{Wikipedia} API on its MediaWiki \cite{mediawiki} website. Here, I can search using the search term that a user has used (perhaps in searching for a topic), and get a result that is as follows:
 
 \begin{lstlisting}[language=json, firstnumber=1, caption={A sample response to an API call to Wikipedia's API},captionpos=b]
 {
@@ -1887,9 +1888,11 @@ The following survey was conducted using SurveyMonkey \cite{surveymonkey}, and w
 
 To evaluate the labelling section, I selected three different articles from the database and presented them to the respondents, along with the corresponding labels that the algorithm produced. These three articles were chosen randomly, but were all selected because they used slightly altered algorithms.
 
-The respondents were requested to score each labelling out of ten, and to suggest labels that should (or should not) have been on the list.
+The respondents were requested to score each labelling out of ten, and to suggest labels that should (or should not) have been on the list. \\
 
 \textbf{First article}
+
+\begin{mdframed}
 
 \emph{Conservative social care funding cap: Theresa May defends changes} \cite{tmarticle}
 
@@ -1919,10 +1922,15 @@ Including an overall cap would mean the Tories were "protecting people for the f
 
 Since the manifesto launch on Thursday, ministers had been saying the idea of a cap - as proposed by a government review in 2011 - had been rejected. \\
 
+\end{mdframed}
+
+\begin{mdframed}
 
 \emph{Labels:}
 
 "May", "Theresa May", "May Queen", "Elizabeth May", "Jeremy Corbyn", "United Kingdom general election, 2015", "Forms of government", "Labour", "Elderly care", "Self-care", "Primary care", "May ministry", "Nick Clegg", "Conservatism", "Wales", "United Kingdom general election, 2005", "United Kingdom general election, 2010", "United Kingdom general election, 1997", "Thursday", "Health", "Investors in People", "Jeremy Hunt", "BBC", "Labour Party", "Yesterday", "Last Week Tonight with John Oliver", "2011", "Andrew Neil", "Scottish Parliament election, 2016", "Day care", "Managed care", "Home care", "Transitional care", "Neonatal intensive care unit" \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -1930,13 +1938,15 @@ As Figure \ref{label1} shows, this labelling received an average score of 7.31 o
 
 \begin{figure}[ht!]
   \centering
-    \includegraphics[scale=0.7]{label1score.png}
+    \includegraphics[width=\textwidth]{label1score.png}
    \caption[The average score for a labelling]{The average score for the first article's labelling.}
    \label{label1}
 \end{figure} 
 
 
 \textbf{Second Article}
+
+\begin{mdframed}
 
 \emph{Chelsea flower show: "abandoned Maltese quarry" wins top prize} \cite{cfsarticle}
 
@@ -1962,9 +1972,15 @@ The garden also received the best construction award - the second such award in 
 
 It said it awarded 73 gold medals. Kate Gould's "city living" garden, representing an urban apartment block and how to innovatively use space in an urban context, won best fresh garden. The award for best artisan garden went to Walker's wharf garden, supported by Doncaster Deaf Trust, by the designer Graham Bodle. \\
 
+\end{mdframed}
+
+\begin{mdframed}
+
 \emph{Labels:}
 
 See Figure \ref{labels}. \\
+
+\end{mdframed}
 
 \begin{figure}[ht!]
   \centering
@@ -1986,13 +2002,21 @@ As Figure \ref{label2} shows, this labelling received an average score of 4.39 o
 
 \textbf{Third Article}
 
+\begin{mdframed}
+
 \emph{Global markets are fighting back against Trump uncertainty} \cite{trumparticle}
 
 After a brutal beatdown on Wednesday, investors are wasting no time picking themselves up off the mat. The S\&P 500 climbed 0.6\% to 2,370.71 at 2:24 p.m. ET, close to its highest level of the day. It's been quite the recovery for the benchmark. In premarket trading, the index looked headed for a second straight drop following former FBI Director Robert Mueller's appointment as special counsel to investigate Russian efforts to influence the November election. All it took was some better-than-expected economic data for them to change their tune, as initial jobless claims unexpectedly dropped. The relief rally can also be seen elsewhere in global markets. Haven assets gave back some earlier gains as gold decreased by 1\% and the yen slid by 0.7\% versus the US dollar. But the relief did not translate overseas, as the Stoxx Europe 600 dropped by 0.5\% during regular trading hours, while the MSCI All-World Index lost 1.2\%. The relatively muted reaction is a far cry from what was seen Wednesday, when the S\&P 500 dropped 1.7\%, its biggest decline since September 9, and a stock market fear gauge spiked by almost 50\%. The snappy recovery in stocks should be of little surprise, considering US equity investors have made a habit of buying on weakness throughout the eight-year bull market. Following the UK's vote last June to leave the European Union, the S\&P 500 fell by 5.3\% over two trading sessions, only to make up those losses in about a week. The same dynamic was in play when China unexpectedly devalued its currency in August 2015. After the S\&P 500 underwent an 11\% correction, traders bought the dip and restored the benchmark to its pre-sell-off levels within about two months. \\
 
+\end{mdframed}
+
+\begin{mdframed}
+
 \emph{Labels:}
 
 "Time zone", "Time in China", "Pacific Time Zone", "Market (economics)", "Capital market", "Emerging markets", "Prediction market", "Fish market", "Donald Trump", "Day", "Robert Mueller", "Haven" \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -2019,11 +2043,15 @@ For Clustering, I provided respondents with four different sets of articles that
 
 \textbf{First Cluster}
 
+\begin{mdframed}
+
 \emph{Cluster:}
 
 Joe Biden just made a stunning admission about Hillary Clinton's 2016 election bid
 
 Congressman for Salem brilliantly trolls Donald Trump over 'witch hunt' claims \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -2037,6 +2065,8 @@ As Figure \ref{cluster1} shows, this cluster received an average score of 5.23 o
 \end{figure} 
 
 \textbf{Second Cluster}
+
+\begin{mdframed}
 
 \emph{Cluster:}
 
@@ -2054,6 +2084,8 @@ Manchester United stars and WAGS turn on the style at Player of the Year awards
 
 Anthony Martial among five first-team absentees from Man Utd awards ceremony \\
 
+\end{mdframed}
+
 \emph{Results:}
 
 As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 out of 10. \\
@@ -2067,6 +2099,8 @@ As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 o
 
 \textbf{Third Cluster}
 
+\begin{mdframed}
+
 \emph{Cluster:}
 
 Uber to appeal arbitration ruling in self driving car lawsuit
@@ -2078,6 +2112,8 @@ Uber threatened to fire engineer accused by rival Alphabet of stealing self-driv
 Uber is threatening to fire the engineer at the heart of its legal battle with Google
 
 Uber threatens to fire former Google engineer over self-driving car spat with Waymo \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -2092,6 +2128,8 @@ As Figure \ref{cluster3} shows, this cluster received an average score of 6.54 o
 
 \textbf{Fourth Cluster}
 
+\begin{mdframed}
+
 \emph{Cluster:}
 
 'Two explosions' heard at Ariana Grande concert in Manchester
@@ -2103,6 +2141,8 @@ Celebs pray for victims of Manchester Arena explosions
 'A major incident targeted at our city' MPs respond to Manchester explosion
 
 Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -2128,6 +2168,8 @@ The final cluster was also considered to be very good, and incorporated the succ
 I presented respondents with summaries for three different clusters. The clusters were again chosen randomly, and users were again asked to give a rating for each out of ten and a justification for doing so.
 
 \textbf{First Summary}
+
+\begin{mdframed}
 
 \emph{Cluster:}
 
@@ -2173,6 +2215,8 @@ Evie Brewster, who attended the concert, told MailOnline: 'Ariana Grange had jus
 
 'Suddenly everybody started screaming and running for the exit. \\
 
+\end{mdframed}
+
 \emph{Results:}
 
 As Figure \ref{summ1} shows, this summary received an average score of 7.54 out of 10. \\
@@ -2185,6 +2229,8 @@ As Figure \ref{summ1} shows, this summary received an average score of 7.54 out 
 \end{figure} 
 
 \textbf{Second Summary}
+
+\begin{mdframed}
 
 \emph{Cluster:}
 
@@ -2222,6 +2268,8 @@ Conversations between Mr Flynn and Mr Kislyak accelerated after the November 8 v
 
 But the disclosure could increase the pressure on Mr Trump and his aides to provide the FBI and Congress with a full account of interactions with Russian officials and others with links to the Kremlin during and immediately after the 2016 election. \\
 
+\end{mdframed}
+
 \emph{Results:}
 
 As Figure \ref{summ2} shows, this summary received an average score of 8.31 out of 10. \\
@@ -2234,6 +2282,8 @@ As Figure \ref{summ2} shows, this summary received an average score of 8.31 out 
 \end{figure} 
 
 \textbf{Third Summary}
+
+\begin{mdframed}
 
 \emph{Cluster:}
 
@@ -2270,6 +2320,8 @@ Kate's controversial uncle, Gary Goldsmith, who was a guest at the Duke and Duch
 Hedge fund boss Mr Matthews got down on bended knee during a trip to the Lake District last summer to propose to Miss Middleton.
 
 At the time, the couple had been dating for less than a year, but had moved in together and a thrilled Pippa was said to have been totally surprised by the proposal. \\
+
+\end{mdframed}
 
 \emph{Results:}
 
@@ -2631,7 +2683,7 @@ The fact that the API to the server has already been fully developed only serves
 
 \newpage
 
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

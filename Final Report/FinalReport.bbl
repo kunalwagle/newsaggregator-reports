@@ -19,6 +19,59 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{amazon}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{title}{Amazon}
+      \verb{url}
+      \verb www.amazon.com
+      \endverb
+    \endentry
+    \entry{aws}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{title}{Amazon Web Services}
+      \verb{url}
+      \verb https://aws.amazon.com/
+      \endverb
+    \endentry
+    \entry{dynamodb}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://aws.amazon.com/dynamodb/?nc2=h_m1}
+      \field{title}{Amazon Web Services DyanmoDB}
+    \endentry
+    \entry{ec2}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://aws.amazon.com/ec2/?nc2=h_m1}
+      \field{title}{Amazon Web Services EC2}
+    \endentry
+    \entry{s3}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://aws.amazon.com/s3/?nc2=h_m1}
+      \field{title}{Amazon Web Services S3}
+    \endentry
+    \entry{apache}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.apache.org}
+      \field{title}{Apache}
+    \endentry
+    \entry{opennlp}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://opennlp.apache.org}
+      \field{title}{Apache OpenNLP}
+    \endentry
     \entry{apple}{misc}{}
       \field{sortinit}{A}
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
@@ -40,6 +93,20 @@
       \field{howpublished}{www.bbc.co.uk}
       \field{title}{BBC}
     \endentry
+    \entry{bootstrap}{misc}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://getbootstrap.com/}
+      \field{title}{Bootstrap}
+    \endentry
+    \entry{cfsarticle}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.theguardian.com/lifeandstyle/2017/may/23/chelsea-flower-show-james-basson-abandoned-maltese-quarry-wins-top-prize}
+      \field{title}{Chelsea flower show: abandoned Maltese quarry wins top prize}
+    \endentry
     \entry{clusteringWikipedia}{url}{}
       \field{sortinit}{C}
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
@@ -52,6 +119,23 @@
       \verb{url}
       \verb https://en.wikipedia.org/wiki/Cluster_analysis
       \endverb
+    \endentry
+    \entry{tmarticle}{url}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://www.bbc.co.uk/news/election-2017-40005257}
+      \field{title}{Conservative social care funding cap: Theresa May defends changes}
+      \field{urlday}{12}
+      \field{urlmonth}{06}
+      \field{urlyear}{2017}
+    \endentry
+    \entry{digitalOcean}{misc}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.digitalocean.com}
+      \field{title}{Digital Ocean}
     \endentry
     \entry{lexRank}{article}{}
       \name{author}{2}{}{%
@@ -76,6 +160,13 @@
       \field{journaltitle}{Journal of Artificial Intelligence Research}
       \field{title}{LexRank: Graph-based Lexical Centrality as Salience in Text Summarization}
       \field{year}{December 2004}
+    \endentry
+    \entry{facebook}{misc}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.facebook.com}
+      \field{title}{Facebook}
     \endentry
     \entry{flipboard}{misc}{}
       \field{sortinit}{F}
@@ -131,6 +222,20 @@
       \field{journaltitle}{Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics}
       \field{title}{Fully Abstractive Approach to Guided Summarization}
       \field{year}{July 2012}
+    \endentry
+    \entry{github}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.github.com}
+      \field{title}{GitHub}
+    \endentry
+    \entry{trumparticle}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://uk.businessinsider.com/stock-market-update-2017-5?r=UK&IR=T}
+      \field{title}{Global markets are fighting back against Trump uncertainty}
     \endentry
     \entry{google}{misc}{}
       \field{sortinit}{G}
@@ -320,6 +425,12 @@
       \field{title}{A review on abstractive summarization methods}
       \field{year}{January 2014}
     \endentry
+    \entry{latimes}{misc}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labeltitlesource}{title}
+      \field{title}{LA Times}
+    \endentry
     \entry{lsa}{url}{}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
@@ -367,6 +478,48 @@
       \field{title}{Automatic Labelling of Topic Models}
       \field{year}{June 2011}
     \endentry
+    \entry{mallet}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://mallet.cs.umass.edu/}
+      \field{title}{Mallet}
+    \endentry
+    \entry{mediawiki}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.mediawiki.org/wiki/MediaWiki}
+      \field{title}{MediaWiki}
+    \endentry
+    \entry{mongodb}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.mongodb.com}
+      \field{title}{MongoDB}
+    \endentry
+    \entry{nlpwiki}{url}{}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labeltitlesource}{title}
+      \field{title}{Natural Language Processing}
+      \field{urlday}{12}
+      \field{urlmonth}{06}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Natural_language_processing
+      \endverb
+    \endentry
+    \entry{nlpkitchen}{url}{}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labeltitlesource}{title}
+      \field{title}{Natural Language Processing in the kitchen}
+      \field{urlday}{12}
+      \field{urlmonth}{06}
+      \field{urlyear}{2017}
+    \endentry
     \entry{newsApi}{webpage}{}
       \field{sortinit}{N}
       \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
@@ -386,6 +539,41 @@
       \field{howpublished}{www.ofcom.org.uk}
       \field{title}{Ofcom}
     \endentry
+    \entry{princeton}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://princeton.edu/}
+      \field{title}{Princeton}
+    \endentry
+    \entry{react}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://facebook.github.io/react/}
+      \field{title}{React}
+    \endentry
+    \entry{redux}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://redux.js.org/docs/introduction/}
+      \field{title}{Redux}
+    \endentry
+    \entry{restlet}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://restlet.com/}
+      \field{title}{Restlet}
+    \endentry
+    \entry{reuters}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.reuters.com}
+      \field{title}{Reuters}
+    \endentry
     \entry{digitalNewsReport}{book}{}
       \list{publisher}{1}{%
         {Reuters Institute for the Study of Journalism}%
@@ -404,6 +592,20 @@
       \field{howpublished}{www.reutersinstitute.politics.ox.ac.uk}
       \field{title}{Reuters Institute for the Study of Journalism}
     \endentry
+    \entry{corenlp}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://stanfordnlp.github.io/CoreNLP/}
+      \field{title}{Stanford CoreNLP}
+    \endentry
+    \entry{stanford}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://stanfordnlp.github.io/CoreNLP/}
+      \field{title}{Stanford NLP}
+    \endentry
     \entry{statisticBrain}{misc}{}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
@@ -417,6 +619,13 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{www.summly.com}
       \field{title}{Summly}
+    \endentry
+    \entry{surveymonkey}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.surveymonkey.com}
+      \field{title}{Survey Monkey}
     \endentry
     \entry{tfidf}{url}{}
       \field{sortinit}{T}
@@ -438,12 +647,26 @@
       \field{howpublished}{www.theguardian.com}
       \field{title}{The Guardian}
     \endentry
+    \entry{independent}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.independent.co.uk}
+      \field{title}{The Independent}
+    \endentry
     \entry{newYorkTimes}{misc}{}
       \field{sortinit}{T}
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labeltitlesource}{title}
       \field{howpublished}{www.nytimes.com}
       \field{title}{The New York Times}
+    \endentry
+    \entry{telegraph}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.telegraph.co.uk}
+      \field{title}{The Telegraph}
     \endentry
     \entry{canberra}{misc}{}
       \field{sortinit}{U}
@@ -537,6 +760,13 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{www.wikipedia.org}
       \field{title}{Wikipedia}
+    \endentry
+    \entry{wordnet}{misc}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://wordnet.princeton.edu/}
+      \field{title}{WordNet}
     \endentry
     \entry{appleDesignAward}{url}{}
       \field{sortinit}{W}
