@@ -140,104 +140,114 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.1.1}Labelling}{85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.2}Clustering}{91}
+\contentsline {subsubsection}{\numberline {6.1.2}Clustering}{92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.3}Summarisation}{95}
+\contentsline {subsubsection}{\numberline {6.1.3}Summarisation}{97}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}User Interface Evaluation}{102}
+\contentsline {subsection}{\numberline {6.2}User Interface Evaluation}{104}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}A Survey}{102}
+\contentsline {subsubsection}{\numberline {6.2.1}A Survey}{104}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Feedback from Undergraduate Fair}{104}
+\contentsline {subsubsection}{\numberline {6.2.2}Feedback from Undergraduate Fair}{108}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}iOS Applications}{107}
+\contentsline {subsubsection}{\numberline {6.2.3}iOS Applications}{109}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Summary Analysis}{107}
+\contentsline {subsection}{\numberline {6.3}Summary Analysis}{109}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.1}Outlet Matrix}{107}
+\contentsline {subsubsection}{\numberline {6.3.1}Outlet Matrix}{109}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.2}Neutral Outlets}{109}
+\contentsline {subsubsection}{\numberline {6.3.2}Neutral Outlets}{111}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.3}The Political Spectrum}{110}
+\contentsline {subsubsection}{\numberline {6.3.3}The Political Spectrum}{111}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.4}Sentence Analysis}{111}
+\contentsline {subsubsection}{\numberline {6.3.4}Sentence Analysis}{114}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.5}Article Length Analysis}{113}
+\contentsline {subsubsection}{\numberline {6.3.5}Article Length Analysis}{115}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.6}Quotes}{114}
+\contentsline {subsubsection}{\numberline {6.3.6}Quotes}{116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.7}What makes an \csqQQ {34}ideal\csqQQ {34} article?}{114}
+\contentsline {subsubsection}{\numberline {6.3.7}What makes an \csqQQ {34}ideal\csqQQ {34} article?}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Evaluation Conclusion}{115}
+\contentsline {subsection}{\numberline {6.4}Evaluation Conclusion}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Optimisation}{117}
+\contentsline {section}{\numberline {7}Optimisation}{119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{117}
+\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{117}
+\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Clustering}{117}
+\contentsline {subsubsection}{\numberline {7.1.2}Clustering}{119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.3}API Optimisation}{118}
+\contentsline {subsubsection}{\numberline {7.1.3}API Optimisation}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{118}
+\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusion}{119}
+\contentsline {section}{\numberline {8}Conclusion}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Future Work}{120}
+\contentsline {section}{\numberline {9}Future Work}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Back End Improvements}{120}
+\contentsline {subsection}{\numberline {9.1}Back End Improvements}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Foreign Languages}{120}
+\contentsline {subsection}{\numberline {9.2}Foreign Languages}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Copyright License}{121}
+\contentsline {subsection}{\numberline {9.3}Copyright License}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Other Apps}{121}
+\contentsline {subsection}{\numberline {9.4}Other Apps}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{122}
+\contentsline {section}{Appendices}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{122}
+\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{123}
+\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Search Results Page}{123}
+\contentsline {subsection}{\numberline {B.1}Search Results Page}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Topic Viewer}{123}
+\contentsline {subsection}{\numberline {B.2}Topic Viewer}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3}Topic Settings}{125}
+\contentsline {subsection}{\numberline {B.3}Topic Settings}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4}Digest Viewer}{126}
+\contentsline {subsection}{\numberline {B.4}Digest Viewer}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}API}{127}
+\contentsline {section}{\numberline {C}Surveys and Feedback Forms}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1}Searching for Topics}{127}
+\contentsline {subsection}{\numberline {C.1}News Reading Habits}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2}Getting a topic}{127}
+\contentsline {subsection}{\numberline {C.2}Machine Learning and Summarisation}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3}Settings}{127}
+\contentsline {subsection}{\numberline {C.3}User Interface Survey}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.4}Subscriptions}{128}
+\contentsline {subsection}{\numberline {C.4}Undergraduate Fair Feedback Form}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{128}
+\contentsline {section}{\numberline {D}API}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{128}
+\contentsline {subsection}{\numberline {D.1}Searching for Topics}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.5}Digests}{128}
+\contentsline {subsection}{\numberline {D.2}Getting a topic}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.6}Getting an Article}{129}
+\contentsline {subsection}{\numberline {D.3}Settings}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.7}Home Page}{129}
+\contentsline {subsection}{\numberline {D.4}Subscriptions}{132}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}User Guide}{130}
+\contentsline {subsubsection}{\numberline {D.4.1}Subscribing and Unsubscribing}{132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.1}Home Page}{130}
+\contentsline {subsubsection}{\numberline {D.4.2}Getting a user's subscriptions}{132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2}Searching}{131}
+\contentsline {subsection}{\numberline {D.5}Digests}{132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.3}Viewing a topic}{131}
+\contentsline {subsection}{\numberline {D.6}Getting an Article}{133}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.4}Viewing an article}{132}
+\contentsline {subsection}{\numberline {D.7}Home Page}{133}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.5}Viewing My Topics}{134}
+\contentsline {section}{\numberline {E}User Guide}{134}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.6}Changing User Settings}{135}
+\contentsline {subsection}{\numberline {E.1}Home Page}{134}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {E.2}Searching}{135}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {E.3}Viewing a topic}{135}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {E.4}Viewing an article}{136}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {E.5}Viewing My Topics}{138}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {E.6}Changing User Settings}{139}

@@ -241,7 +241,7 @@ There is also the issue of reliability and trust to consider. The Digital News R
 
 Leading from this issue of trust, a secondary objective of the news aggregator would be that it produces content that users can be near certain is trustworthy and reliable - effectively a news aggregator that is free from "fake news".
 
-Whilst it should be emphasised that the primary aim of NewSumm would be to reduce the sheer volume of news that a consumer has to read, it could be argued that the problem of "fake news" could be indirectly minimised in the same way that other news aggregators attempt to tackle the issue. This would be by limiting articles to trusted sources from across the political spectrum. This would be reputable news organisations, and articles from random blogs on the internet would not be considered. In addition to this, a clear indication when reading the summary of what facts different outlets all agree on, and what facts they either differ on or omit, will allow the user to easily corroborate parts of the story.
+Whilst it should be emphasised that the primary aim of NewSumm would be to reduce the sheer volume of news that a consumer has to read, it could be argued that the problem of "fake news" could be indirectly minimised in the same way that other news aggregators attempt to tackle the issue. This would be by limiting articles to trusted sources from across the political spectrum, by using only reputable news organisations and not considering articles from random blogs on the Internet. In addition to this, a clear indication when reading the summary of what facts different outlets all agree on, and what facts they either differ on or omit, will allow the user to easily corroborate parts of the story.
 
 Beyond this, another objective of the project should be for the News Aggregator to allow users to eliminate elements of news, or sources themselves that they deem to be untrustworthy, thus alleviating consumer concerns about fake news.
 
@@ -321,7 +321,7 @@ An Empirical Study of Web Use}\index{Not Quite the Average: An Empirical Study o
 
 Admittedly, the paper was written in 2008, and so might not reflect average web browsing activity, but it raised a question worth answering in my opinion. Do users actually read full articles on the news, and if not, would summarising articles help make sure they didn't miss out on key points, thus counteracting an issue discovered in the Digital News Report 2016\index{Digital News Report} \cite{digitalNewsReport} (Section \ref{DigitalNewsReport})? 
 
-The survey was presented on Google Forms \cite{googleForms}\index{Google!Forms} and was answered by 96 respondents. Further findings are shown below:
+The survey was presented on Google Forms \cite{googleForms}\index{Google!Forms} and was answered by 96 respondents. A link to the original survey can be found in Appendix \ref{nrh}. Further findings are shown below:
 
 \begin{enumerate}
 
@@ -833,7 +833,7 @@ There are several different tasks that a Natural Language Processor \cite{nlpwik
 After conducting the background research I was able to come up with the following basic conclusions as to how to lead in to the design phase of the project.
 
 \begin{itemize}
-	\item In \textbf{Topic Modelling} (Section \ref{TopicModellingTechniques}) the better initial approach will be to employ (or to use a library) that employs Latent Dirichlet Allocation (LDA) as opposed to Latent Semantic Indexing (LSI). LDA uses a generative probabilistic model, which has in practice produced significantly more accurate results. Time shouldn't be of much concern in this case, as the model won't have to be generated very often. As a result, LSI's major advantage is rendered irrelevant.
+	\item In \textbf{Topic Modelling} (Section \ref{TopicModellingTechniques}) the better initial approach will be to employ (or to use a library that employs) Latent Dirichlet Allocation (LDA) as opposed to Latent Semantic Indexing (LSI). LDA uses a generative probabilistic model, which has in practice produced significantly more accurate results. Time shouldn't be of much concern in this case, as the model won't have to be generated very often. As a result, LSI's major advantage is rendered irrelevant.
 	\item For \textbf{Topic Labelling} (Section \ref{labellingalgorithm}) following the algorithm set out by Lau, Grieser, Newman Baldwin \cite{topicLabelling} would be the best option, as it has had strong success in its methods (although admittedly this is their own claim). A potential issue to consider however is that the algorithm would require several (and perhaps dozens) of calls to Wikipedia \cite{wikipedia}. This could be time intensive.
 	\item With \textbf{Clustering} (Section \ref{ClusteringTechniques}), there are significant disadvantages with the techniques of centroid clustering and density clustering. With the first, the number of clusters need to be known, and with density clustering accuracy can be lower than needed. Out of the two hierarchical clustering approaches, agglomerative would probably be the most useful, as it could be slightly faster than a top-down divisive approach. A vector score based on Term Frequency-Inverse Document Frequency \cite{tfidf} is a tried and tested metric for clustering, and will also come in handy.
 	\item For \textbf{Summarisation} (Section \ref{summarisation}), a combination of extractive and abstractive summarisation would probably be best. The LexRank \cite{lexRank} approach for extractive summarisation could help combine the multiple articles into one document, which could then be fed into the semantic graph abstractive summarisation algorithm \cite{abstractiveTechniques, abstractiveTechniquesOriginal}.
@@ -1014,7 +1014,7 @@ I initially started with the configuration with AWS and MongoDB. However, it bec
 
 In an attempt to counter this, and trying to avoid solutions that would require the spending of money, I then switched the database option to DynamoDB. This worked well for a time, but as the database grew, it became clearer that the throttling of the read and write operations to my database was going to cause major issues down the line for my background jobs on the server, as well as for simple API methods. In order to counteract this, I resolved that I would use vouchers for AWS from the GitHub student pack in order to fund some extra read-write operations per second.
 
-Having resolved to do this, I then decided to make use of Digital Ocean. This was because I wanted to experiment to see the effects of having an instance with extra RAM would do for the running of my program, and knew that the vouchers on the GitHub student pack would easily cover a Digital Ocean droplet until the end of the project. What I found was that my background jobs (such as pulling in articles, labelling, clustering and summarisation) were being performed faster in general, and so I decided to permanently move to Digital Ocean.
+Having resolved to do this, I then decided to make use of Digital Ocean. This was because I wanted to experiment to see the effects of having an instance with extra RAM on the running of my program, and knew that the vouchers on the GitHub student pack would easily cover a Digital Ocean droplet until the end of the project. What I found was that my background jobs (such as pulling in articles, labelling, clustering and summarisation) were being performed faster in general, and so I decided to permanently move to Digital Ocean.
 
 In the end, a final nail in the coffin for my use of Amazon Web Services came when I wanted to change the way my articles table worked in the database. I had wanted the ability to search by date published (as I was considering at the time removing articles published before a certain date), but found that I would have to recreate my entire table in order to add this functionality to my table. As a result, and combined with the fact I now had a much larger amount of storage space on my new Digital Ocean droplet, I took the decision to make a new MongoDB database, knowing that it was still early enough in the development process that losing all my previous database work would not affect the finished product, or the development timeline.
 
@@ -1874,19 +1874,21 @@ Screenshots from the website and apps can be seen in Figure \ref{appscreenshots}
 
 \section{Evaluation}
 
-The process of evaluating the project is three-fold. Firstly, I sent a survey out which exposed different aspects of the back end flow (Topic Labelling, Clustering and Summarisation) and asked users to rate each step of the flow.
+The process of evaluating the project is three-fold. The first part was focused on evaluating the three key areas of the back end flow: Topic Labelling, Clustering and Summarisation. To do this, I sent out a survey on social media that presented the respondents with articles that have been labelled, articles that have been clustered, and articles that have been summarised (Section \ref{mlsurvey}). They were asked to rate each labelling, clustering and summarisation out of ten. This survey was then used to determine what parameters worked better for each phase of the back end. 
 
-Secondly I sent a second survey that runs users through various parts of the WebApp, asking for their opinions on important features, and rating the general look and feel. I also distributed the iOS application to a group of testers, and met people face to face to demonstrate the WebApp.
+The second phase was evaluating the user interface. To do this, I sent out a second survey on social media (Section \ref{uisurvey}). This survey took potential users through the WebApp on a variety of devices (ranging from a standard desktop to tablets to mobile phones), asking them to perform basic tasks. At set stages of this survey, it also asked users to rate certain screens from one to ten, and to provide suggestions as to how these could be made more user-friendly. In addition to this I performed demonstrations of the WebApp and iOS applications at an Undergraduate Fair. Here I distributed a more simple Feedback Form, that requested feedback from attendees, and suggestions of what could be improved (Section \ref{uifeedback}). Finally, I also distributed the iOS application to a group of beta testers, made up of prospective users who had expressed an interest in the project at various stages, to get their opinions and suggestions.
 
 Finally, I performed an in-depth analysis of the summariser itself, in an attempt to identify any major weaknesses in the tool. 
 
 \subsection{Machine Learning and Summarisation Survey}
 
-The following survey was conducted using SurveyMonkey \cite{surveymonkey}, and was answered by 26 respondents. The survey was split into three key sections: Labelling, Clustering and Summarisation.
+\label{mlsurvey}
+
+The following survey was conducted using SurveyMonkey \cite{surveymonkey}, and was answered by 26 respondents. A link to the original survey can be found in Appendix \ref{mls}. The survey was split into three key sections: Labelling, Clustering and Summarisation. 
 
 \subsubsection{Labelling}
 
-To evaluate the labelling section, I selected three different articles from the database and presented them to the respondents, along with the corresponding labels that the algorithm produced. These three articles were chosen randomly, but were all selected because they used slightly altered algorithms.
+To evaluate the labelling section, I selected at random three articles from the database and presented them to the respondents, along with the corresponding labels that the algorithm produced. Whilst chosen randomly, each article had been labelled using different parameters, and so the results would help determine which set of parameters is the most appropriate for the labelling algorithm.
 
 The respondents were requested to score each labelling out of ten, and to suggest labels that should (or should not) have been on the list. \\
 
@@ -1934,7 +1936,7 @@ Since the manifesto launch on Thursday, ministers had been saying the idea of a 
 
 \emph{Results:}
 
-As Figure \ref{label1} shows, this labelling received an average score of 7.31 out of 10.
+As Figure \ref{label1} shows, this labelling received an average score of 7.31 out of 10. I considered this score to be strong, as it indicated a general satisfaction. Comments afterwards on the survey indicated that the obstacle to the labelling receiving a higher score was the level of false positives included. The labelling had included the heuristic of finding labels by sourcing proper nouns in the original article. However, this included finding dates, money, and percentages, which resulted in false positives such as "Yesterday", "2011" and "Last Week Tonight with John Oliver", which are clearly not relevant to the article.
 
 \begin{figure}[ht!]
   \centering
@@ -1944,7 +1946,7 @@ As Figure \ref{label1} shows, this labelling received an average score of 7.31 o
 \end{figure} 
 
 
-\textbf{Second Article}
+\textbf{\\ Second Article}
 
 \begin{mdframed}
 
@@ -1984,7 +1986,7 @@ It said it awarded 73 gold medals. Kate Gould's "city living" garden, representi
 
 \emph{Results:}
 
-As Figure \ref{label2} shows, this labelling received an average score of 4.39 out of 10.
+As Figure \ref{label2} shows, this labelling received an average score of 4.39 out of 10. I was expecting this article to receive a lower score out of ten, as it was an early iteration of the parameters used. In this case the number of labels to return had been artificially increased - my reasoning for this at the time was that this would increase the chances of slightly more obscure (but relevant labels) would be found in this way. However, users felt that this meant that the quality of labelling overall significantly deteriorated, as the level of false positives was far higher than the first article.
 
 \begin{figure}[ht!]
   \centering
@@ -1993,7 +1995,7 @@ As Figure \ref{label2} shows, this labelling received an average score of 4.39 o
    \label{label2}
 \end{figure} 
 
-\textbf{Third Article}
+\textbf{\\ Third Article}
 
 \begin{mdframed}
 
@@ -2013,7 +2015,7 @@ After a brutal beatdown on Wednesday, investors are wasting no time picking them
 
 \emph{Results:}
 
-As Figure \ref{label3} shows, this labelling received an average score of 6.54 out of 10.
+As Figure \ref{label3} shows, this labelling received an average score of 6.54 out of 10. This score was better than I expected. The labelling used a version of the algorithm that didn't make use of the name finder, so as to increase the speed of labelling. As a result, the number of labels returned are far lower. Whilst users felt that again the labels weren't largely relevant, they scored this set of labels higher than for the second article because there were fewer false positives than before (because there were simply fewer labels).
 
 \begin{figure}[ht!]
   \centering
@@ -2022,17 +2024,17 @@ As Figure \ref{label3} shows, this labelling received an average score of 6.54 o
    \label{label3}
 \end{figure} 
 
-\textbf{Labelling Conclusions}
+\textbf{\\ Labelling Conclusions}
 
 The overarching criticism that people wrote about in the feedback section of the survey was that the labelling algorithm suffers from an issue of "false positives" - that is to say, it frequently identifies labels that in all likelihood shouldn't be present.
 
 Key differences between the three articles is that the first one was labelled using an algorithm that used the Apache OpenNLP library's name finder to find key words. In the second, the labelling algorithm was designed to return more results by default, which explains its low score (primarily because there were too many false positives, as well as the fact that it missed key names, such as "Chelsea Flower Show"). The third article used no name finder, and had a smaller number of labels to return.
 
-In the final product, I chose to use the first labelling algorithm, but with a modified name finder, that would only return names for organisations, people and locations, as opposed to including dates, percentages and money (which was the default). 
+In the final product, I chose to use the first labelling algorithm, but with a modified name finder, that would only return names for organisations, people and locations, as opposed to including dates, percentages and money. I did this because I determined from the difference in score between the first and third articles that use of the name finder justified the increase in time required to label an article. However, because of the false positives due to dates, percentages and money in the first article, I removed searching for these from the name finder. 
 
 \subsubsection{Clustering}
 
-For Clustering, I provided respondents with four different sets of articles that have been clustered. For each article I provided the headline and a link to the original article. As before, I asked respondents to rate each clustering out of ten and provide additional justification. The clusters below were randomly selected, based on criteria including number of articles in the cluster, and different parameters used to cluster. \\
+For Clustering, I provided respondents with four different sets of articles that have been clustered. For each article I provided the headline and a link to the original article. As before, I asked respondents to rate each clustering out of ten and provide additional justification. The clusters below were randomly selected, based on criteria including number of articles in the cluster, and different parameters used to cluster. In my opinion, clustering requires better scores than labelling, as an incorrect cluster would automatically render a summary near useless. As a result, I decided that whilst a score of seven out of ten was strong for labelling, the bar would need to be closer to nine out of ten for clustering.\\
 
 \textbf{First Cluster}
 
@@ -2048,7 +2050,7 @@ Congressman for Salem brilliantly trolls Donald Trump over 'witch hunt' claims \
 
 \emph{Results:}
 
-As Figure \ref{cluster1} shows, this cluster received an average score of 5.23 out of 10. \\
+As Figure \ref{cluster1} shows, this cluster received an average score of 5.23 out of 10. This was largely expected, and in fact perhaps a bit higher than anticipated. The articles are about two different pieces of news, and shouldn't have been clustered together, hence the low score. This clustering algorithm used rather low thresholds for similarity, hence causing this false clustering.  \\
 
 \begin{figure}[ht!]
   \centering
@@ -2081,7 +2083,7 @@ Anthony Martial among five first-team absentees from Man Utd awards ceremony \\
 
 \emph{Results:}
 
-As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 out of 10. \\
+As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 out of 10. This was very much expected, as the articles were within an hour of each other and ostensibly about the same piece of news. It represents an example that should be bread and butter for the clustering algorithm , and it passed with flying colours. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2110,7 +2112,7 @@ Uber threatens to fire former Google engineer over self-driving car spat with Wa
 
 \emph{Results:}
 
-As Figure \ref{cluster3} shows, this cluster received an average score of 6.54 out of 10. \\
+As Figure \ref{cluster3} shows, this cluster received an average score of 6.54 out of 10. This cluster doesn't penalise the timestamp, and so an article that was published nearly a week before the others was included in the cluster, hence the lower score. Whilst this was largely expected, it did emphasise the fact that clustering had to be strong - the titles in this cluster were very similar, and yet the respondents noticed the difference between the articles in large numbers. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2139,7 +2141,7 @@ Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
 
 \emph{Results:}
 
-As Figure \ref{cluster4} shows, this cluster received an average score of 9.23 out of 10. \\
+As Figure \ref{cluster4} shows, this cluster received an average score of 9.23 out of 10. This, whilst indicating a very strong cluster, was ever so slightly below my expectations. I felt that this was a better cluster than the second cluster above. For this cluster I used the thresholds from the second cluster, along with an increased timestamp penalty when compared to the third article, hence the expectation of the high score. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2154,11 +2156,11 @@ In the first cluster, the main criticism was that the articles were about two ve
 
 Whilst the second was universally agreeable, the third cluster had a lower score. This was because one of the articles in the cluster was about a slightly different topic, and had been published nearly a week before. In reaction to this, I increased the penalty for the difference in timestamps in the clustering algorithm, thus ensuring articles a week apart wouldn't be clustered together.
 
-The final cluster was also considered to be very good, and incorporated the successful thresholds from the second cluster with a timestamp penalty derived from the third cluster. It formed the basis of my final set of parameters.
+The final cluster was also considered to be very good, and incorporated the successful thresholds from the second cluster with a timestamp penalty derived from the third cluster. I used the thresholds and timestamp penalty from this cluster as the basis for the parameters of the clustering algorithm. I used these ahead of the second cluster's parameters as it had a higher penalty for the timestamp than for the second cluster, which was shown by the third cluster to be of major importance.
 
 \subsubsection{Summarisation}
 
-I presented respondents with summaries for three different clusters. The clusters were again chosen randomly, and users were again asked to give a rating for each out of ten and a justification for doing so.
+I presented respondents with summaries for three different clusters. The clusters were again chosen randomly, and users were again asked to give a rating for each out of ten and a justification for doing so. There is an argument for using the same clusters as before, but I didn't do this. I decided that it was more important to show users summaries for clusters that I knew were strong, so that they could view summaries for correct clusters. I decided that the key is for the summaries to be coherent and readable, and to have as few redundant sentences as possible. \\
 
 \textbf{First Summary}
 
@@ -2188,11 +2190,9 @@ Demi Lovato tweeted: 'Tearing up imaging innocent concert goers losing their liv
 
 Katy Perry responded on the micro blogging site: 'Praying for everyone at @arianagrande's show'.
 
-While Ellie Goulding responded with a message to all affected by the tragic eventes: 'Sending love to those affected in Manchester.' Olly Murs wrote in two tweets.
+While Ellie Goulding responded with a message to all affected by the tragic events: 'Sending love to those affected in Manchester.' Olly Murs wrote in two tweets.
 
-'Shocked!
-
-Can't believe it!! Sending my love to everyone that was @ManchesterArena tonight!' and added, 'No one should go to a concert and never come home'.
+'Shocked! Can't believe it!! Sending my love to everyone that was @ManchesterArena tonight!' and added, 'No one should go to a concert and never come home'.
 
 Gary Lineker wrote: 'Truly awful news from the great city of Manchester.
 
@@ -2212,7 +2212,7 @@ Evie Brewster, who attended the concert, told MailOnline: 'Ariana Grange had jus
 
 \emph{Results:}
 
-As Figure \ref{summ1} shows, this summary received an average score of 7.54 out of 10. \\
+As Figure \ref{summ1} shows, this summary received an average score of 7.54 out of 10. This summary is coherent, and so I expected this to receive a decent mark, which it did. A complaint from users was that the extremely short paragraphs meant that the summary was not as readable as it could be, which is why the score for this summary is not higher. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2239,7 +2239,7 @@ WASHINGTON President Donald Trump on Thursday said the appointment of a special 
 
 Lindsey Graham, the Republican senator, said Russia probe seemed to be moving from counter-intelligence to a criminal investigation.
 
-Mr Trump has told US media oulets that the appointment of a special counsel "hurts our country terribly" as it shows how divided the United States.
+Mr Trump has told US media outlets that the appointment of a special counsel "hurts our country terribly" as it shows how divided the United States.
 
 "I believe it hurts our country terribly, because it shows we're a divided, mixed-up, not-unified country," Mr Trump told news outlets.
 
@@ -2265,7 +2265,7 @@ But the disclosure could increase the pressure on Mr Trump and his aides to prov
 
 \emph{Results:}
 
-As Figure \ref{summ2} shows, this summary received an average score of 8.31 out of 10. \\
+As Figure \ref{summ2} shows, this summary received an average score of 8.31 out of 10. A key difference between the first summary and this one is that the strategy for forming paragraphs is different. In this case, consecutive sentences from the same original source are grouped together, thus making longer, more coherent paragraphs. This is the key driver behind the higher score, as expected. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2318,7 +2318,7 @@ At the time, the couple had been dating for less than a year, but had moved in t
 
 \emph{Results:}
 
-As Figure \ref{summ3} shows, this summary received an average score of 8.85 out of 10. \\
+As Figure \ref{summ3} shows, this summary received an average score of 8.85 out of 10. I expected this summary to score the highest out of the three, and it reflected in the final results. The summary is the most coherent and readable - in fact it almost reads like an actual article in its own right, as opposed to a summary of several articles. The higher score was because respondents felt that this summary had fewer redundant sentences, a direct result of a higher threshold when finding redundant sentences in the algorithm. \\
 
 \begin{figure}[ht!]
   \centering
@@ -2339,7 +2339,9 @@ The evaluation of the user interface was three-fold. First, I provided a survey 
 
 \subsubsection{A Survey}
 
-The following is a subset of the answers given to the survey, which was filled in by 22 respondents. Questions omitted usually follow the user completing a task, and are simple yes/no questions regarding the success (or failure) of the task. Answers that are shown below are the key opinions formed by users about the application. \\
+\label{uisurvey}
+
+The following is a subset of the answers given to the survey (to which the link can be found in Appendix \ref{uis}), which was filled in by 22 respondents. These respondents were sourced using social media, and largely in the young to middle aged age bracket. They also all indicated in the first survey about News Reading Habits (Section \ref{survey}) that they would be interested in using a news summariser, making their opinions all the more important (which is why these respondents were sought after). A majority of questions in this survey asked the respondents to perform a task on the WebApp, before following up on whether it worked, and whether they found it easy to do. Answers to these questions are omitted below. The answers that are shown below are responses to questions about users' opinions of the various aspects of the WebApp in general, and their justifications for them. \\
 
 \textbf{Search Results}
 
@@ -2400,7 +2402,7 @@ The users were then taken through the steps of using the Summary Annotations por
 
 \textbf{Topic Dashboard and Topic Settings}
 
-The final aspects of the survey centre around the topic dashboard and the topic settings pages. The user first visits the topic dashboard, where they should see their subscription to the "Russia" topic that they searched for earlier. Users again felt positive about this screen (Figure \ref{u6}).
+The final aspects of the survey centre around the topic dashboard and the topic settings pages. The user first visits the topic dashboard, where they should see their subscription to the "Russia" topic that they searched for earlier. Users again felt positive about this screen (Figure \ref{ui6}).
 
 One of the last tasks the respondents were asked to perform was the deselection of default sources for the "Russia" topic. Users felt that this was not intuitive (Figure \ref{ui7}) and that there should be some more information explicitly informing a user what deselecting a source does. This has since been put in.
 
@@ -2420,7 +2422,9 @@ One of the last tasks the respondents were asked to perform was the deselection 
 
 \subsubsection{Feedback from Undergraduate Fair}
 
-At the Undergraduate Fair twelve peers filled out the feedback form for the product. The overarching theme of the feedback was that the product would be useful, as it would "save a lot of time" and "users won't need to read as much". This is a clear indication that NewSumm goes some way, if not all the way to solving the volume problem set out in the Introduction (Section \ref{intro}).
+\label{uifeedback}
+
+At the Undergraduate Fair twelve peers filled out the feedback form (Appendix \ref{uif}) for the product. The overarching theme of the feedback was that the product would be useful, as it would "save a lot of time" and "users won't need to read as much". This is a clear indication that NewSumm goes some way, if not all the way to solving the volume problem set out in the Introduction (Section \ref{intro}).
 
 Users felt that the User Interface was very polished, but that the overall WebApp was at times frustratingly slow. This point, which also came up at points in the main survey, is addressed in Section \ref{apioptimisation}.
 
@@ -2438,18 +2442,18 @@ In this section I aimed to analyse the summaries that are produced by the back e
 
 \subsubsection{Outlet Matrix}
 
-Figure \ref{fig:matrix} shows a matrix of different sources when pitted against each other. To produce this matrix, I took each of the outlets that are used in the back end. For each outlet, I then found the summaries it has in common with each of the other outlets. For the purposes of this matrix, I only included summaries where there were only these two outlets, thus enabling a direct comparison without external interference.
-
-In each set of summaries I found how the text was split between the two outlets, and recorded the average percentages in the matrix. This matrix will be used in the following sections in order to identify interesting points in the data. 
-
-The matrix is colour coded. The averages in the final column are on a colour scale, with the highest values being dark green, and the lowest being a deep red. On the inner columns of the table, a cell is coloured yellow if between 30 and 40, and 60 and 70. It is coloured red if below 30, green if above 70 and not shaded if between 40 and 60.
-
 \begin{sidewaysfigure}
     \centering
     \includegraphics[width=\textwidth]{matrix.png}
     \caption{A matrix comparing outlets when summarised together}
     \label{fig:matrix}
 \end{sidewaysfigure}
+
+Figure \ref{fig:matrix} shows a matrix of different sources when pitted against each other. To produce this matrix, I took each of the outlets that are used in the back end. For each outlet, I then found the summaries it has in common with each of the other outlets. For the purposes of this matrix, I only included summaries where there were only these two outlets, thus enabling a direct comparison without external interference.
+
+In each set of summaries I found how the text was split between the two outlets, and recorded the average percentages in the matrix. This matrix will be used in the following sections in order to identify interesting points in the data. 
+
+The matrix is colour coded. The averages in the final column are on a colour scale, with the highest values being dark green, and the lowest being a deep red. On the inner columns of the table, a cell is coloured yellow if between 30 and 40, and 60 and 70. It is coloured red if below 30, green if above 70 and not shaded if between 40 and 60.
 
 \subsubsection{Neutral Outlets}
 
@@ -2463,7 +2467,7 @@ Also notable from the charts is the fact that, with the exception of The Daily M
 
 A explanation for this would be that the BBC and Reuters supply the facts for a summary, whilst the partisan organisations produce articles that are a bit more opinionated. These opinions are then prioritised by the LexRank algorithm as they are usually unique, and so are included in droves, thus marginalising slightly the apparent contributions of the neutral sources. 
 
-\begin{figure}[h]
+\begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.15]{bbc-news.png}
    \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from the BBC when compared to other outlets.}
@@ -2788,6 +2792,51 @@ The digest viewer will show users (who have requested them) their daily digest. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
+
+\section{Surveys and Feedback Forms}
+
+\subsection{News Reading Habits}
+
+\label{nrh}
+
+This survey was created using Google Forms. Its answers are documented in Section \ref{survey}.
+
+\emph{https://goo.gl/forms/N5tA4VRnNSEyEeCL2}
+
+\subsection{Machine Learning and Summarisation}
+
+\label{mls}
+
+This survey was created using SurveyMonkey. Its answers are documented in Section \ref{mlsurvey}.
+
+\emph{https://www.surveymonkey.co.uk/r/newsumm-ml}
+
+\subsection{User Interface Survey}
+
+\label{uis}
+
+This survey was created using SurveyMonkey. Its answers are documented in Section \ref{uisurvey}.
+
+\emph{https://www.surveymonkey.co.uk/r/newsumm-ui}
+
+\subsection{Undergraduate Fair Feedback Form}
+
+\label{uif}
+
+\begin{figure}[p]
+  \centering
+    \includegraphics[scale=0.8]{NewSummFeedback.png}
+   \caption[A wireframe of the Topic Settings page]{A Feedback Form for potential users.}
+   \label{feedbackform}
+\end{figure}
+
+This form (Figure \ref{feedbackform}) was presented to all attendants of the demonstratIons at the Undergraduate Fair. Its answers are referenced in Section \ref{uifeedback}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
 
 \section{API}
 
