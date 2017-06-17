@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  17 JUN 2017 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.21)  17 JUN 2017 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2407,64 +2407,69 @@ File: images/ui7.png Graphic file (type png)
 Package pdftex.def Info: images/ui7.png used on input line 2416.
 (pdftex.def)             Requested size: 309.89613pt x 201.77939pt.
  [104 <./images/ui3.png>] [105 <./images/ui4.png> <./images/ui5.png>] [106 <./i
-mages/ui6.png> <./images/ui7.png>] <images/matrix.png, id=484, 808.9422pt x 544
-.9158pt>
+mages/ui6.png> <./images/ui7.png>] <images/matrix.png, id=484, 969.6225pt x 719
+.0865pt>
 File: images/matrix.png Graphic file (type png)
 
 <use images/matrix.png>
 Package pdftex.def Info: images/matrix.png used on input line 2449.
-(pdftex.def)             Requested size: 589.82567pt x 397.31128pt.
+(pdftex.def)             Requested size: 589.82567pt x 437.44614pt.
  [107] [108 <./images/matrix.png>]
-<images/bbc-news.png, id=493, 1062.8508pt x 520.8258pt>
+<images/bbc-news.png, id=493, 2017.2966pt x 1300.3782pt>
 File: images/bbc-news.png Graphic file (type png)
 
 <use images/bbc-news.png>
 Package pdftex.def Info: images/bbc-news.png used on input line 2468.
-(pdftex.def)             Requested size: 318.8577pt x 156.24893pt.
+(pdftex.def)             Requested size: 302.58144pt x 195.04831pt.
 
-<images/reuters.png, id=494, 1047.4332pt x 525.162pt>
+<images/reuters.png, id=494, 2245.6698pt x 1327.359pt>
 File: images/reuters.png Graphic file (type png)
- <use images/reuters.png>
-Package pdftex.def Info: images/reuters.png used on input line 2475.
-(pdftex.def)             Requested size: 314.23238pt x 157.5498pt.
 
-[109 <./images/bbc-news.png>]
+<use images/reuters.png>
+Package pdftex.def Info: images/reuters.png used on input line 2475.
+(pdftex.def)             Requested size: 336.83594pt x 199.09526pt.
+ [109 <./images/bbc-news.png>]
 <images/yougovpoll.png, id=499, 1027.84pt x 761.84625pt>
 File: images/yougovpoll.png Graphic file (type png)
 
 <use images/yougovpoll.png>
 Package pdftex.def Info: images/yougovpoll.png used on input line 2486.
-(pdftex.def)             Requested size: 308.35437pt x 228.55563pt.
+(pdftex.def)             Requested size: 411.12872pt x 304.7331pt.
  [110 <./images/reuters.png>]
 <images/pewresearch.png, id=504, 559.08875pt x 503.8825pt>
 File: images/pewresearch.png Graphic file (type png)
 
 <use images/pewresearch.png>
 Package pdftex.def Info: images/pewresearch.png used on input line 2513.
-(pdftex.def)             Requested size: 279.54369pt x 251.94063pt.
-
-<images/sentencestats.png, id=505, 591.6504pt x 436.9926pt>
+(pdftex.def)             Requested size: 335.45583pt x 302.33183pt.
+ [111 <./images/yougovpoll.png (PNG copy)>]
+<images/sentencestats.png, id=508, 1007.4438pt x 663.4386pt>
 File: images/sentencestats.png Graphic file (type png)
 
 <use images/sentencestats.png>
 Package pdftex.def Info: images/sentencestats.png used on input line 2526.
-(pdftex.def)             Requested size: 295.82448pt x 218.49576pt.
- [111 <./images/yougovpoll.png (PNG copy)>]
-[112 <./images/pewresearch.png> <./images/sentencestats.png>]
-<images/articlelength.png, id=514, 491.436pt x 291.9708pt>
+(pdftex.def)             Requested size: 402.97038pt x 265.37074pt.
+ [112 <./images/pewresearch.png>]
+<images/articlelength.png, id=513, 717.4002pt x 403.2666pt>
 File: images/articlelength.png Graphic file (type png)
 
 <use images/articlelength.png>
 Package pdftex.def Info: images/articlelength.png used on input line 2545.
-(pdftex.def)             Requested size: 245.71739pt x 145.98503pt.
- [113 <./images/articlelength.png>]
-<images/quotes.png, id=519, 451.9284pt x 271.2534pt>
+(pdftex.def)             Requested size: 430.44344pt x 241.96182pt.
+
+Overfull \hbox (3.0119pt too wide) in paragraph at lines 2545--2546
+ [][] 
+ []
+
+[113 <./images/sentencestats.png>]
+<images/quotes.png, id=518, 637.9032pt x 422.0568pt>
 File: images/quotes.png Graphic file (type png)
  <use images/quotes.png>
 Package pdftex.def Info: images/quotes.png used on input line 2560.
-(pdftex.def)             Requested size: 271.15912pt x 162.75328pt.
+(pdftex.def)             Requested size: 382.74487pt x 253.23602pt.
 
-[114 <./images/quotes.png>] [115] [116] [117] [118] [119] [120]
+[114 <./images/articlelength.png>] [115 <./images/quotes.png>] [116] [117]
+[118] [119] [120] [121]
 Underfull \hbox (badness 10000) in paragraph at lines 2696--2697
 
  []
@@ -2484,14 +2489,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 2714--2715
 
  []
 
-[121] <images/SearchPage.png, id=547, 1153.30875pt x 791.95876pt>
+[122] <images/SearchPage.png, id=550, 1153.30875pt x 791.95876pt>
 File: images/SearchPage.png Graphic file (type png)
 
 <use images/SearchPage.png>
 Package pdftex.def Info: images/SearchPage.png used on input line 2741.
 (pdftex.def)             Requested size: 345.9953pt x 237.58946pt.
 
-<images/TopicViewer.png, id=548, 1165.35374pt x 789.95125pt>
+<images/TopicViewer.png, id=551, 1165.35374pt x 789.95125pt>
 File: images/TopicViewer.png Graphic file (type png)
 
 <use images/TopicViewer.png>
@@ -2502,86 +2507,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 2763--2764
 
  []
 
-[122]
+[123]
 
-LaTeX Warning: Text page 123 contains only floats.
+LaTeX Warning: Text page 124 contains only floats.
 
-[123 <./images/SearchPage.png> <./images/TopicViewer.png>]
+[124 <./images/SearchPage.png> <./images/TopicViewer.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2772--2773
 
  []
 
-<images/TopicSettings.png, id=557, 1167.36125pt x 797.98125pt>
+<images/TopicSettings.png, id=560, 1167.36125pt x 797.98125pt>
 File: images/TopicSettings.png Graphic file (type png)
 
 <use images/TopicSettings.png>
 Package pdftex.def Info: images/TopicSettings.png used on input line 2779.
 (pdftex.def)             Requested size: 350.21107pt x 239.39621pt.
- [124 <./images/TopicSettings.png>] [125]
-[126] [127] [128] <images/desktophome.PNG, id=575, 1445.4pt x 805.0075pt>
+ [125 <./images/TopicSettings.png>] [126]
+[127] [128] [129] <images/desktophome.PNG, id=578, 1445.4pt x 805.0075pt>
 File: images/desktophome.PNG Graphic file (type png)
 
 <use images/desktophome.PNG>
 Package pdftex.def Info: images/desktophome.PNG used on input line 2918.
 (pdftex.def)             Requested size: 427.43153pt x 238.05247pt.
 
-<images/desktopsearch.PNG, id=576, 1445.4pt x 805.0075pt>
+<images/desktopsearch.PNG, id=579, 1445.4pt x 805.0075pt>
 File: images/desktopsearch.PNG Graphic file (type png)
 
 <use images/desktopsearch.PNG>
 Package pdftex.def Info: images/desktopsearch.PNG used on input line 2930.
 (pdftex.def)             Requested size: 256.46152pt x 142.83148pt.
 
-<images/phonesearch.PNG, id=577, 752.8125pt x 1339.0025pt>
+<images/phonesearch.PNG, id=580, 752.8125pt x 1339.0025pt>
 File: images/phonesearch.PNG Graphic file (type png)
 
 <use images/phonesearch.PNG>
 Package pdftex.def Info: images/phonesearch.PNG used on input line 2935.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
- [129 <./images/desktophome.PNG>]
-<images/desktoptopic.PNG, id=582, 1445.4pt x 804.00375pt>
+ [130 <./images/desktophome.PNG>]
+<images/desktoptopic.PNG, id=585, 1445.4pt x 804.00375pt>
 File: images/desktoptopic.PNG Graphic file (type png)
 
 <use images/desktoptopic.PNG>
 Package pdftex.def Info: images/desktoptopic.PNG used on input line 2953.
 (pdftex.def)             Requested size: 256.46152pt x 142.65338pt.
 
-<images/phonetopic.PNG, id=583, 752.8125pt x 1339.0025pt>
+<images/phonetopic.PNG, id=586, 752.8125pt x 1339.0025pt>
 File: images/phonetopic.PNG Graphic file (type png)
 
 <use images/phonetopic.PNG>
 Package pdftex.def Info: images/phonetopic.PNG used on input line 2958.
 (pdftex.def)             Requested size: 128.23076pt x 228.0769pt.
- [130 <./images/desktopsearch.PNG> <./images/phonesearch.PNG>] [131 <./images/d
+ [131 <./images/desktopsearch.PNG> <./images/phonesearch.PNG>] [132 <./images/d
 esktoptopic.PNG> <./images/phonetopic.PNG>]
-<images/padarticle.PNG, id=594, 2055.68pt x 1541.76pt>
+<images/padarticle.PNG, id=598, 2055.68pt x 1541.76pt>
 File: images/padarticle.PNG Graphic file (type png)
 
 <use images/padarticle.PNG>
 Package pdftex.def Info: images/padarticle.PNG used on input line 2982.
 (pdftex.def)             Requested size: 256.46152pt x 192.34312pt.
 
-<images/desktoparticle.PNG, id=595, 1445.4pt x 804.00375pt>
+<images/desktoparticle.PNG, id=599, 1445.4pt x 804.00375pt>
 File: images/desktoparticle.PNG Graphic file (type png)
 
 <use images/desktoparticle.PNG>
 Package pdftex.def Info: images/desktoparticle.PNG used on input line 2987.
 (pdftex.def)             Requested size: 256.46152pt x 142.65338pt.
- [132 <./images/padarticle.PNG> <./images/desktoparticle.PNG>] <images/desktopd
-ashboard.PNG, id=601, 1445.4pt x 804.00375pt>
+ [133 <./images/padarticle.PNG> <./images/desktoparticle.PNG>] <images/desktopd
+ashboard.PNG, id=604, 1445.4pt x 804.00375pt>
 File: images/desktopdashboard.PNG Graphic file (type png)
 
 <use images/desktopdashboard.PNG>
 Package pdftex.def Info: images/desktopdashboard.PNG used on input line 3004.
 (pdftex.def)             Requested size: 427.43153pt x 237.75565pt.
- [133 <./images/desktopdashboard.PNG>]
-<images/desktopsettings.PNG, id=606, 1445.4pt x 805.0075pt>
+ [134 <./images/desktopdashboard.PNG>]
+<images/desktopsettings.PNG, id=609, 1445.4pt x 805.0075pt>
 File: images/desktopsettings.PNG Graphic file (type png)
 
 <use images/desktopsettings.PNG>
 Package pdftex.def Info: images/desktopsettings.PNG used on input line 3029.
 (pdftex.def)             Requested size: 427.43153pt x 238.05247pt.
- [134 <./images/desktopsettings.PNG>]
+ [135 <./images/desktopsettings.PNG>]
 (./FinalReport.aux)
 
 LaTeX Warning: There were undefined references.
@@ -2630,10 +2635,10 @@ onts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/cm-super/sfxc1440.pfb>
-Output written on FinalReport.pdf (135 pages, 34613471 bytes).
+Output written on FinalReport.pdf (136 pages, 35540648 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
+ 703 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -170,74 +170,74 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4}Evaluation Conclusion}{115}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Optimisation}{116}
+\contentsline {section}{\numberline {7}Optimisation}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{116}
+\contentsline {subsection}{\numberline {7.1}Speed Optimisations}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{116}
+\contentsline {subsubsection}{\numberline {7.1.1}Topic Modelling}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Clustering}{116}
+\contentsline {subsubsection}{\numberline {7.1.2}Clustering}{117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.3}API Optimisation}{117}
+\contentsline {subsubsection}{\numberline {7.1.3}API Optimisation}{118}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{117}
+\contentsline {subsection}{\numberline {7.2}Memory Optimisations}{118}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusion}{118}
+\contentsline {section}{\numberline {8}Conclusion}{119}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Future Work}{119}
+\contentsline {section}{\numberline {9}Future Work}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Back End Improvements}{119}
+\contentsline {subsection}{\numberline {9.1}Back End Improvements}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Foreign Languages}{119}
+\contentsline {subsection}{\numberline {9.2}Foreign Languages}{120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Copyright License}{120}
+\contentsline {subsection}{\numberline {9.3}Copyright License}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Other Apps}{120}
+\contentsline {subsection}{\numberline {9.4}Other Apps}{121}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{121}
+\contentsline {section}{Appendices}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{121}
+\contentsline {section}{\numberline {A}Source Code and Documentation Repositories}{122}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{122}
+\contentsline {section}{\numberline {B}Secondary Screen Wireframes}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Search Results Page}{122}
+\contentsline {subsection}{\numberline {B.1}Search Results Page}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Topic Viewer}{122}
+\contentsline {subsection}{\numberline {B.2}Topic Viewer}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3}Topic Settings}{124}
+\contentsline {subsection}{\numberline {B.3}Topic Settings}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4}Digest Viewer}{125}
+\contentsline {subsection}{\numberline {B.4}Digest Viewer}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}API}{126}
+\contentsline {section}{\numberline {C}API}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1}Searching for Topics}{126}
+\contentsline {subsection}{\numberline {C.1}Searching for Topics}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2}Getting a topic}{126}
+\contentsline {subsection}{\numberline {C.2}Getting a topic}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3}Settings}{126}
+\contentsline {subsection}{\numberline {C.3}Settings}{127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.4}Subscriptions}{127}
+\contentsline {subsection}{\numberline {C.4}Subscriptions}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{127}
+\contentsline {subsubsection}{\numberline {C.4.1}Subscribing and Unsubscribing}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{127}
+\contentsline {subsubsection}{\numberline {C.4.2}Getting a user's subscriptions}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.5}Digests}{127}
+\contentsline {subsection}{\numberline {C.5}Digests}{128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.6}Getting an Article}{128}
+\contentsline {subsection}{\numberline {C.6}Getting an Article}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.7}Home Page}{128}
+\contentsline {subsection}{\numberline {C.7}Home Page}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}User Guide}{129}
+\contentsline {section}{\numberline {D}User Guide}{130}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.1}Home Page}{129}
+\contentsline {subsection}{\numberline {D.1}Home Page}{130}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2}Searching}{130}
+\contentsline {subsection}{\numberline {D.2}Searching}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.3}Viewing a topic}{130}
+\contentsline {subsection}{\numberline {D.3}Viewing a topic}{131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.4}Viewing an article}{131}
+\contentsline {subsection}{\numberline {D.4}Viewing an article}{132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.5}Viewing My Topics}{133}
+\contentsline {subsection}{\numberline {D.5}Viewing My Topics}{134}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.6}Changing User Settings}{134}
+\contentsline {subsection}{\numberline {D.6}Changing User Settings}{135}
