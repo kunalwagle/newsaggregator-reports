@@ -1,135 +1,135 @@
-\indexentry{Reuters Institute for the Study of Journalism}{8}
-\indexentry{University of Oxford}{8}
-\indexentry{Digital News Report}{8}
-\indexentry{United Kingdom}{8}
-\indexentry{Social Media}{8}
-\indexentry{News Aggregator!Reasons for use}{8}
-\indexentry{News ! Personalised}{9}
-\indexentry{United Kingdom}{9}
-\indexentry{News ! Personalised}{9}
-\indexentry{Reuters Institute for the Study of Journalism}{9}
-\indexentry{Reuters Institute for the Study of Journalism}{10}
-\indexentry{Reuters Institute for the Study of Journalism}{10}
-\indexentry{BBC}{10}
-\indexentry{Google}{10}
-\indexentry{Google!Search Engine}{10}
-\indexentry{University of Canberra}{10}
-\indexentry{Ofcom}{10}
-\indexentry{United Kingdom}{10}
-\indexentry{YouGov}{10}
-\indexentry{United Kingdom}{10}
-\indexentry{Reuters Institute for the Study of Journalism}{10}
-\indexentry{New York Times}{10}
-\indexentry{Digital News Report}{10}
-\indexentry{User!Survey}{10}
-\indexentry{Summarisation}{10}
-\indexentry{Statistic Brain Research Institute}{10}
-\indexentry{Not Quite the Average: An Empirical Study of Web Use}{10}
-\indexentry{Digital News Report}{11}
-\indexentry{Google!Forms}{11}
-\indexentry{News Aggregator}{14}
-\indexentry{Summarised}{14}
-\indexentry{Evaluation}{14}
-\indexentry{News Aggregator}{15}
-\indexentry{News Aggregator}{15}
-\indexentry{News Digests}{16}
-\indexentry{Google!News}{19}
-\indexentry{Clustering}{20}
-\indexentry{Flipboard}{20}
-\indexentry{Google!News}{20}
-\indexentry{Yahoo News Digest}{21}
-\indexentry{Apple!News}{21}
-\indexentry{Apple}{23}
-\indexentry{Apple!Design award}{23}
-\indexentry{Topic Modelling}{24}
-\indexentry{Machine Learning}{24}
-\indexentry{Latent Semantic Indexing}{24}
-\indexentry{Topic Modelling!Latent Semantic Indexing}{24}
-\indexentry{Latent Semantic Analysis}{24}
-\indexentry{LSI}{24}
-\indexentry{Latent Dirichlet Allocation}{24}
-\indexentry{Latent Dirichlet Allocation}{24}
-\indexentry{LDA}{24}
-\indexentry{Topic Modelling!Latent Dirichlet Allocation}{24}
-\indexentry{Gibbs Sampling}{24}
-\indexentry{Topic Labelling}{25}
-\indexentry{Automatic Labelling of Topic Models}{25}
-\indexentry{Wikipedia}{25}
-\indexentry{Wikipedia}{25}
-\indexentry{Google}{25}
-\indexentry{Related Article Conceptual Overlap}{25}
-\indexentry{Related Article Conceptual Overlap}{25}
-\indexentry{Related Article Conceptual Overlap}{26}
-\indexentry{Related Article Conceptual Overlap}{26}
-\indexentry{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}{26}
-\indexentry{Wikipedia}{26}
-\indexentry{Dice's coefficient}{26}
-\indexentry{Clustering}{26}
-\indexentry{Centroid Clustering}{27}
-\indexentry{Clustering!Centroid}{27}
-\indexentry{Clustering!k-means}{27}
-\indexentry{Density Clustering}{27}
-\indexentry{Clustering!Density}{27}
-\indexentry{Hierarchical Clustering}{27}
-\indexentry{Clustering!Hierarchical}{27}
-\indexentry{Clustering}{27}
-\indexentry{Connectivity}{27}
-\indexentry{Hierarchical Clustering!Agglomerative}{27}
-\indexentry{Hierarchical Clustering!Divisive}{27}
-\indexentry{Term Frequency-Inverse Document Frequency}{27}
-\indexentry{TF-IDF}{27}
-\indexentry{Term Frequency-Inverse Document Frequency}{28}
-\indexentry{Term Frequency-Inverse Document Frequency!Term Frequency}{28}
-\indexentry{Term Frequency-Inverse Document Frequency!Inverse Document Frequency}{28}
-\indexentry{Term Frequency-Inverse Document Frequency}{28}
-\indexentry{Summarisation}{29}
+\indexentry{Reuters Institute for the Study of Journalism}{13}
+\indexentry{University of Oxford}{13}
+\indexentry{Digital News Report}{13}
+\indexentry{United Kingdom}{13}
+\indexentry{Social Media}{13}
+\indexentry{News Aggregator!Reasons for use}{13}
+\indexentry{News ! Personalised}{14}
+\indexentry{United Kingdom}{14}
+\indexentry{News ! Personalised}{14}
+\indexentry{Reuters Institute for the Study of Journalism}{14}
+\indexentry{Reuters Institute for the Study of Journalism}{15}
+\indexentry{Reuters Institute for the Study of Journalism}{15}
+\indexentry{BBC}{15}
+\indexentry{Google}{15}
+\indexentry{Google!Search Engine}{15}
+\indexentry{University of Canberra}{15}
+\indexentry{Ofcom}{15}
+\indexentry{United Kingdom}{15}
+\indexentry{YouGov}{15}
+\indexentry{United Kingdom}{15}
+\indexentry{Reuters Institute for the Study of Journalism}{15}
+\indexentry{New York Times}{15}
+\indexentry{Digital News Report}{15}
+\indexentry{User!Survey}{15}
+\indexentry{Summarisation}{15}
+\indexentry{Statistic Brain Research Institute}{15}
+\indexentry{Not Quite the Average: An Empirical Study of Web Use}{15}
+\indexentry{Digital News Report}{16}
+\indexentry{Google!Forms}{16}
+\indexentry{News Aggregator}{19}
+\indexentry{Summarised}{19}
+\indexentry{Evaluation}{19}
+\indexentry{News Aggregator}{20}
+\indexentry{News Aggregator}{20}
+\indexentry{News Digests}{21}
+\indexentry{Google!News}{24}
+\indexentry{Clustering}{25}
+\indexentry{Flipboard}{25}
+\indexentry{Google!News}{25}
+\indexentry{Yahoo News Digest}{26}
+\indexentry{Apple!News}{26}
+\indexentry{Apple}{28}
+\indexentry{Apple!Design award}{28}
 \indexentry{Topic Modelling}{29}
-\indexentry{Topic Labelling}{29}
-\indexentry{Clustering}{29}
-\indexentry{Summarisation!Extractive}{29}
-\indexentry{Summarisation!Abstractive}{29}
-\indexentry{LexRank}{29}
-\indexentry{TextRank}{29}
-\indexentry{TF-IDF}{29}
-\indexentry{PageRank}{29}
-\indexentry{Summarisation!Abstractive}{30}
-\indexentry{Summarisation!Tree based}{30}
-\indexentry{Dependency Tree}{30}
-\indexentry{Summarisation!Rule based}{31}
-\indexentry{Summarisation!Ontology based}{32}
-\indexentry{Domain Ontology}{32}
-\indexentry{Summarisation!Multimodal Semantic}{32}
-\indexentry{Summarisation!Abstractive}{32}
-\indexentry{Concept!Multimodal Summarisation}{32}
-\indexentry{Summarisation!Information Item}{32}
-\indexentry{Summarisation!Extractive}{33}
-\indexentry{Summarisation!Semantic Graph}{33}
-\indexentry{Rich Semantic Graph}{33}
-\indexentry{Front End}{37}
-\indexentry{Architecture}{37}
-\indexentry{Wireframe}{38}
-\indexentry{Back End}{40}
-\indexentry{Topic Modelling}{40}
-\indexentry{Topic Labelling}{40}
-\indexentry{Clustering}{40}
-\indexentry{Summarisation}{41}
-\indexentry{Survey}{47}
-\indexentry{Redux}{47}
-\indexentry{React}{47}
-\indexentry{News!Outlets}{53}
-\indexentry{United Kingdom}{53}
-\indexentry{Digital News Report}{53}
-\indexentry{Reuters Institute for the Study of Journalism}{53}
-\indexentry{BBC}{54}
-\indexentry{Mail Online}{54}
-\indexentry{Huffington Post}{54}
-\indexentry{Sky News}{54}
-\indexentry{Telegraph, The}{54}
-\indexentry{Independent, The}{54}
-\indexentry{Guardian, The}{54}
-\indexentry{New York Times}{55}
-\indexentry{Webhose}{55}
-\indexentry{News API}{55}
-\indexentry{Wikimedia}{56}
-\indexentry{Wikipedia}{56}
-\indexentry{wikipedia}{118}
+\indexentry{Machine Learning}{29}
+\indexentry{Latent Semantic Indexing}{29}
+\indexentry{Topic Modelling!Latent Semantic Indexing}{29}
+\indexentry{Latent Semantic Analysis}{29}
+\indexentry{LSI}{29}
+\indexentry{Latent Dirichlet Allocation}{29}
+\indexentry{Latent Dirichlet Allocation}{29}
+\indexentry{LDA}{29}
+\indexentry{Topic Modelling!Latent Dirichlet Allocation}{29}
+\indexentry{Gibbs Sampling}{29}
+\indexentry{Topic Labelling}{30}
+\indexentry{Automatic Labelling of Topic Models}{30}
+\indexentry{Wikipedia}{30}
+\indexentry{Wikipedia}{30}
+\indexentry{Google}{30}
+\indexentry{Related Article Conceptual Overlap}{30}
+\indexentry{Related Article Conceptual Overlap}{30}
+\indexentry{Related Article Conceptual Overlap}{31}
+\indexentry{Related Article Conceptual Overlap}{31}
+\indexentry{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}{31}
+\indexentry{Wikipedia}{31}
+\indexentry{Dice's coefficient}{31}
+\indexentry{Clustering}{31}
+\indexentry{Centroid Clustering}{32}
+\indexentry{Clustering!Centroid}{32}
+\indexentry{Clustering!k-means}{32}
+\indexentry{Density Clustering}{32}
+\indexentry{Clustering!Density}{32}
+\indexentry{Hierarchical Clustering}{32}
+\indexentry{Clustering!Hierarchical}{32}
+\indexentry{Clustering}{32}
+\indexentry{Connectivity}{32}
+\indexentry{Hierarchical Clustering!Agglomerative}{32}
+\indexentry{Hierarchical Clustering!Divisive}{32}
+\indexentry{Term Frequency-Inverse Document Frequency}{32}
+\indexentry{TF-IDF}{32}
+\indexentry{Term Frequency-Inverse Document Frequency}{33}
+\indexentry{Term Frequency-Inverse Document Frequency!Term Frequency}{33}
+\indexentry{Term Frequency-Inverse Document Frequency!Inverse Document Frequency}{33}
+\indexentry{Term Frequency-Inverse Document Frequency}{33}
+\indexentry{Summarisation}{34}
+\indexentry{Topic Modelling}{34}
+\indexentry{Topic Labelling}{34}
+\indexentry{Clustering}{34}
+\indexentry{Summarisation!Extractive}{34}
+\indexentry{Summarisation!Abstractive}{34}
+\indexentry{LexRank}{34}
+\indexentry{TextRank}{34}
+\indexentry{TF-IDF}{34}
+\indexentry{PageRank}{34}
+\indexentry{Summarisation!Abstractive}{35}
+\indexentry{Summarisation!Tree based}{35}
+\indexentry{Dependency Tree}{35}
+\indexentry{Summarisation!Rule based}{36}
+\indexentry{Summarisation!Ontology based}{37}
+\indexentry{Domain Ontology}{37}
+\indexentry{Summarisation!Multimodal Semantic}{37}
+\indexentry{Summarisation!Abstractive}{37}
+\indexentry{Concept!Multimodal Summarisation}{37}
+\indexentry{Summarisation!Information Item}{37}
+\indexentry{Summarisation!Extractive}{38}
+\indexentry{Summarisation!Semantic Graph}{38}
+\indexentry{Rich Semantic Graph}{38}
+\indexentry{Front End}{42}
+\indexentry{Architecture}{42}
+\indexentry{Wireframe}{43}
+\indexentry{Back End}{45}
+\indexentry{Topic Modelling}{45}
+\indexentry{Topic Labelling}{45}
+\indexentry{Clustering}{45}
+\indexentry{Summarisation}{46}
+\indexentry{Survey}{52}
+\indexentry{Redux}{52}
+\indexentry{React}{52}
+\indexentry{News!Outlets}{58}
+\indexentry{United Kingdom}{58}
+\indexentry{Digital News Report}{58}
+\indexentry{Reuters Institute for the Study of Journalism}{58}
+\indexentry{BBC}{59}
+\indexentry{Mail Online}{59}
+\indexentry{Huffington Post}{59}
+\indexentry{Sky News}{59}
+\indexentry{Telegraph, The}{59}
+\indexentry{Independent, The}{59}
+\indexentry{Guardian, The}{59}
+\indexentry{New York Times}{60}
+\indexentry{Webhose}{60}
+\indexentry{News API}{60}
+\indexentry{Wikimedia}{61}
+\indexentry{Wikipedia}{61}
+\indexentry{wikipedia}{122}
