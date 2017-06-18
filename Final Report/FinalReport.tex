@@ -22,6 +22,7 @@ urldate=long
 \usepackage{vmargin}
 \usepackage{float}
 \usepackage{chngcntr}
+\usepackage[strings]{underscore}
 \usepackage [autostyle, english = british]{csquotes}
 \MakeOuterQuote{"}
 \usepackage[format=plain,
@@ -113,9 +114,15 @@ urldate=long
 
 \addbibresource{sample.bib}
 
+
+
 \DefineBibliographyStrings{english}{%
 urlseen = {Retrieved},
 }
+
+\DeclareBibliographyAlias{url}{misc}  
+
+\appto{\bibsetup}{\raggedright}
 
 \makeatletter
 \let\thetitle\@title
@@ -2028,7 +2035,7 @@ As Figure \ref{label3} shows, this labelling received an average score of 6.54 o
 
 The overarching criticism that people wrote about in the feedback section of the survey was that the labelling algorithm suffers from an issue of "false positives" - that is to say, it frequently identifies labels that in all likelihood shouldn't be present.
 
-Key differences between the three articles is that the first one was labelled using an algorithm that used the Apache OpenNLP library's name finder to find key words. In the second, the labelling algorithm was designed to return more results by default, which explains its low score (primarily because there were too many false positives, as well as the fact that it missed key names, such as "Chelsea Flower Show"). The third article used no name finder, and had a smaller number of labels to return.
+Key differences between the three articles is that the first one was labelled using an algorithm that used the Apache OpenNLP \cite{opennlp} library's name finder to find key words. In the second, the labelling algorithm was designed to return more results by default, which explains its low score (primarily because there were too many false positives, as well as the fact that it missed key names, such as "Chelsea Flower Show"). The third article used no name finder, and had a smaller number of labels to return.
 
 In the final product, I chose to use the first labelling algorithm, but with a modified name finder, that would only return names for organisations, people and locations, as opposed to including dates, percentages and money. I did this because I determined from the difference in score between the first and third articles that use of the name finder justified the increase in time required to label an article. However, because of the false positives due to dates, percentages and money in the first article, I removed searching for these from the name finder. 
 
@@ -2042,9 +2049,9 @@ For Clustering, I provided respondents with four different sets of articles that
 
 \emph{Cluster:}
 
-Joe Biden just made a stunning admission about Hillary Clinton's 2016 election bid
+Joe Biden just made a stunning admission about Hillary Clinton's 2016 election bid \cite{bidenarticle}
 
-Congressman for Salem brilliantly trolls Donald Trump over 'witch hunt' claims \\
+Congressman for Salem brilliantly trolls Donald Trump over "witch hunt" claims \cite{trumpsalem} \\
 
 \end{mdframed}
 
@@ -2065,19 +2072,19 @@ As Figure \ref{cluster1} shows, this cluster received an average score of 5.23 o
 
 \emph{Cluster:}
 
-Manchester United Player's Player of the Year revealed
+Manchester United Player's Player of the Year revealed \cite{united1}
 
-Manchester United Player of the Year awards are underway
+Manchester United Player of the Year awards are underway \cite{united2}
 
-Live Manchester United Player of the Year Awards
+Live Manchester United Player of the Year Awards \cite{united3}
 
-Our 7 favourite photos from Manchester United's Player of the Year Awards night
+Our 7 favourite photos from Manchester United's Player of the Year Awards night \cite{united4}
 
-Man United fans say the same thing as Ander Herrera is named Player of the Year
+Man United fans say the same thing as Ander Herrera is named Player of the Year \cite{united5}
 
-Manchester United stars and WAGS turn on the style at Player of the Year awards
+Manchester United stars and WAGS turn on the style at Player of the Year awards \cite{united6}
 
-Anthony Martial among five first-team absentees from Man Utd awards ceremony \\
+Anthony Martial among five first-team absentees from Man Utd awards ceremony \cite{united7} \\
 
 \end{mdframed}
 
@@ -2098,15 +2105,15 @@ As Figure \ref{cluster2} shows, this cluster received an average score of 9.38 o
 
 \emph{Cluster:}
 
-Uber to appeal arbitration ruling in self driving car lawsuit
+Uber to appeal arbitration ruling in self driving car lawsuit \cite{uber1}
 
-Uber threatens to fire self-driving car engineer in trade secrets case
+Uber threatens to fire self-driving car engineer in trade secrets case \cite{uber2}
 
-Uber threatened to fire engineer accused by rival Alphabet of stealing self-driving trade secrets
+Uber threatened to fire engineer accused by rival Alphabet of stealing self-driving trade secrets \cite{uber3}
 
-Uber is threatening to fire the engineer at the heart of its legal battle with Google
+Uber is threatening to fire the engineer at the heart of its legal battle with Google \cite{uber4}
 
-Uber threatens to fire former Google engineer over self-driving car spat with Waymo \\
+Uber threatens to fire former Google engineer over self-driving car spat with Waymo \cite{uber5} \\
 
 \end{mdframed}
 
@@ -2127,15 +2134,15 @@ As Figure \ref{cluster3} shows, this cluster received an average score of 6.54 o
 
 \emph{Cluster:}
 
-'Two explosions' heard at Ariana Grande concert in Manchester
+"Two explosions" heard at Ariana Grande concert in Manchester \cite{ag1}
 
-Concert goers 'run out screaming' after loud bangs at Manchester Arena
+Concert goers "run out screaming" after loud bangs at Manchester Arena \cite{ag2}
 
-Celebs pray for victims of Manchester Arena explosions
+Celebs pray for victims of Manchester Arena explosions \cite{ag3}
 
-'A major incident targeted at our city' MPs respond to Manchester explosion
+"A major incident targeted at our city" MPs respond to Manchester explosion \cite{ag4}
 
-Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
+Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \cite{ag5} \\
 
 \end{mdframed}
 
@@ -2168,15 +2175,15 @@ I presented respondents with summaries for three different clusters. The cluster
 
 \emph{Cluster:}
 
-'Two explosions' heard at Ariana Grande concert in Manchester
+"Two explosions" heard at Ariana Grande concert in Manchester \cite{ag1}
 
-Concert goers 'run out screaming' after loud bangs at Manchester Arena
+Concert goers "run out screaming" after loud bangs at Manchester Arena \cite{ag2}
 
-Celebs pray for victims of Manchester Arena explosions
+Celebs pray for victims of Manchester Arena explosions \cite{ag3}
 
-'A major incident targeted at our city' MPs respond to Manchester explosion
+"A major incident targeted at our city" MPs respond to Manchester explosion \cite{ag4}
 
-Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \\
+Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience \cite{ag5} \\
 
 \emph{Summary:}
 
@@ -2186,27 +2193,21 @@ Several people were killed after explosions were heard inside the venue, with vi
 
 In response to the tragic events various celebs tweeted condolences and prayers.
 
-Demi Lovato tweeted: 'Tearing up imaging innocent concert goers losing their lives.. praying for everyone and all \#arianators.'
+Demi Lovato tweeted: "Tearing up imaging innocent concert goers losing their lives.. praying for everyone and all \#arianators."
 
-Katy Perry responded on the micro blogging site: 'Praying for everyone at @arianagrande's show'.
+Katy Perry responded on the micro blogging site: "Praying for everyone at @arianagrande's show".
 
-While Ellie Goulding responded with a message to all affected by the tragic events: 'Sending love to those affected in Manchester.' Olly Murs wrote in two tweets.
+While Ellie Goulding responded with a message to all affected by the tragic events: "Sending love to those affected in Manchester." Olly Murs wrote in two tweets.
 
-'Shocked! Can't believe it!! Sending my love to everyone that was @ManchesterArena tonight!' and added, 'No one should go to a concert and never come home'.
+"Shocked! Can't believe it!! Sending my love to everyone that was @ManchesterArena tonight!" and added, "No one should go to a concert and never come home".
 
-Gary Lineker wrote: 'Truly awful news from the great city of Manchester.
+Gary Lineker wrote: "Truly awful news from the great city of Manchester. Thoughts are with all those affected."
 
-Thoughts are with all those affected.'
+Jeremy Corbyn made sure to thank Emergency responders: "Terrible incident in Manchester. My thoughts are with all those affected and our brilliant emergency services."
 
-Jeremy Corbyn made sure to thank Emergency responders: 'Terrible incident in Manchester.
+Rio Ferdinand tweeted: "Just heard the news what's happening in Manchester.. hope everyone safe and sound!" Bloodied concertgoers were pictured being helped by emergency services outside the gig and armed police were seen patrolling the arena.
 
-My thoughts are with all those affected and our brilliant emergency services.'
-
-Rio Ferdinand tweeted: 'Just heard the news what's happening in Manchester.. hope everyone safe and sound!' Bloodied concertgoers were pictured being helped by emergency services outside the gig and armed police were seen patrolling the arena.
-
-Evie Brewster, who attended the concert, told MailOnline: 'Ariana Grange had just finished her last song and left the stage when a huge explosion sounded.
-
-'Suddenly everybody started screaming and running for the exit. \\
+Evie Brewster, who attended the concert, told MailOnline: "Ariana Grande had just finished her last song and left the stage when a huge explosion sounded. Suddenly everybody started screaming and running for the exit." \\
 
 \end{mdframed}
 
@@ -2227,11 +2228,11 @@ As Figure \ref{summ1} shows, this summary received an average score of 7.54 out 
 
 \emph{Cluster:}
 
-Donald Trump says special counsel 'hurts our country' as Russia probe 'becoming criminal investigation'
+Donald Trump says special counsel "hurts our country" as Russia probe "becoming criminal investigation" \cite{trump1}
 
-Trump says, speaking for himself, there was no collusion with Russia
+Trump says, speaking for himself, there was no collusion with Russia \cite{trump2}
 
-Donald Trump says 'even my enemies say there is no Russia collusion' \\
+Donald Trump says "even my enemies say there is no Russia collusion" \cite{trump3} \\
 
 \emph{Summary:}
 
@@ -2245,7 +2246,7 @@ Mr Trump has told US media outlets that the appointment of a special counsel "hu
 
 He said the counsel was a "pure excuse for the Democrats having lost an election".
 
-Michael Flynn discussed establishing a back channel for communication between Donald Trump and Vladimir Putin that could be used to bypass national security bureaucracy,  it has been reported.
+Michael Flynn discussed establishing a back channel for communication between Donald Trump and Vladimir Putin that could be used to bypass national security bureaucracy, it has been reported.
 
 Mr Flynn and other advisers to the president's election campaign were in contact with Russian officials and others with Kremlin ties in at least 18 calls and emails during the last seven months of the 2016 presidential race, current and former US officials familiar with the exchanges told Reuters.
 
@@ -2253,9 +2254,9 @@ Mr Trump reacted angrily to the latest allegations on Thursday, tweeting: "With 
 
 Mr Trump added: "This is the single greatest witch hunt of a politician in American history!"
 
-Describing the investigation into any possible links with Moscow, the President said he was the victim of a ?witch hunt?.
+Describing the investigation into any possible links with Moscow, the President said he was the victim of a "witch hunt".
 
-Six of the previously undisclosed contacts described to Reuters were phone calls between Sergei Kislyak, Russia's ambassador to the United States, and Trump advisers, including Mr Flynn, Mr Trump?s first national security adviser, three current and former officials said.
+Six of the previously undisclosed contacts described to Reuters were phone calls between Sergei Kislyak, Russia's ambassador to the United States, and Trump advisers, including Mr Flynn, Mr Trump's first national security adviser, three current and former officials said.
 
 Conversations between Mr Flynn and Mr Kislyak accelerated after the November 8 vote as the two discussed establishing a back channel for communication between Trump and Russian President Vladimir Putin that could bypass the US national security bureaucracy, which both sides considered hostile to improved relations, four current US officials said.
 
@@ -2280,11 +2281,11 @@ As Figure \ref{summ2} shows, this summary received an average score of 8.31 out 
 
 \emph{Cluster:}
 
-When is Pippa Middleton marrying James Matthews? Everything you need to know
+When is Pippa Middleton marrying James Matthews? Everything you need to know \cite{pippa1}
 
-Pippa Middleton's dream wedding set to be soggy as Met Office predicts rain
+Pippa Middleton's dream wedding set to be soggy as Met Office predicts rain \cite{pippa2}
 
-What time is Pippa Middleton's wedding and where is St Mark's Church? \\
+What time is Pippa Middleton's wedding and where is St Mark's Church? \cite{pippa3} \\
 
 \emph{Summary:}
 
@@ -2347,7 +2348,7 @@ The following is a subset of the answers given to the survey (to which the link 
 
 At this stage of the survey, a user has been asked to search for the topic "Russia" on the home page, and have now reached the search results screen.
 
-The panels on the search results screen provide the first 250 characters of the Wikipedia article pertaining to the topic. However, users were split on whether this was clear or not (Figure \ref{ui1}), and in fact were generally in agreement that there needed to be more clarity on this (Figure \ref{ui2}). 
+The panels on the search results screen provide the first 250 characters of the Wikipedia \cite{wikipedia} article pertaining to the topic. However, users were split on whether this was clear or not (Figure \ref{ui1}), and in fact were generally in agreement that there needed to be more clarity on this (Figure \ref{ui2}). 
 
 In order to tackle this issue, I added "Wikipedia:" in front of each 250 character extract. \\
 
@@ -2424,21 +2425,21 @@ One of the last tasks the respondents were asked to perform was the deselection 
 
 \label{uifeedback}
 
-At the Undergraduate Fair twelve peers filled out the feedback form (Appendix \ref{uif}) for the product. The overarching theme of the feedback was that the product would be useful, as it would "save a lot of time" and "users won't need to read as much". This is a clear indication that NewSumm goes some way, if not all the way to solving the volume problem set out in the Introduction (Section \ref{intro}).
+At the Undergraduate Fair twelve peers filled out the feedback form (Appendix \ref{uif}) for the product. The overarching theme of the feedback was that the product would be more than useful, as it would "save a lot of time" and "users won't need to read as much". This is a clear indication that NewSumm goes some way, if not all the way to solving the volume problem set out in the Introduction (Section \ref{intro}).
 
 Users felt that the User Interface was very polished, but that the overall WebApp was at times frustratingly slow. This point, which also came up at points in the main survey, is addressed in Section \ref{apioptimisation}.
 
 \subsubsection{iOS Applications}
 
-Due to limitations imposed by Apple on the distribution of applications, evaluation of the iOS app could not be performed in the formal manner that the Back End and WebApp had been evaluated. 
+Due to limitations imposed by Apple \cite{apple} on the distribution of applications, evaluation of the iOS app could not be performed in the formal manner that the Back End and WebApp had been evaluated. 
 
-As a result, I assembled a group of "testers" who would sign up as a beta tester of the application on iTunes Connect, allowing them to download a build of the app without it being formally placed on the App Store.
+As a result, I assembled a group of "testers" who would sign up as a beta tester of the application on iTunes Connect \cite{itunesconnect}, allowing them to download a build of the app without it being formally placed on the App Store.
 
 The last build of the iPhone application was installed 11 times, and the last build of the iPad application was installed 8 times. A total of four different builds were looked at by testers, with each new build being released in response to feedback from the previous.   
 
 \subsection{Summary Analysis}
 
-In this section I aimed to analyse the summaries that are produced by the back end. To do this, I used a Jupyter notebook and python to analyse different aspects of each summary in the database. I then transferred the data into Microsoft Excel, and made use of its extensive graphing capabilities to visualise the data.
+In this section I aimed to analyse the summaries that are produced by the back end. To do this, I used a Jupyter \cite{jupyter} notebook and python to analyse different aspects of each summary in the database. I then transferred the data into Microsoft Excel \cite{excel}, and made use of its extensive graphing capabilities to visualise the data.
 
 \subsubsection{Outlet Matrix}
 
@@ -2457,33 +2458,33 @@ The matrix is colour coded. The averages in the final column are on a colour sca
 
 \subsubsection{Neutral Outlets}
 
-Ignoring sources such as ESPN, Cricinfo and Four-Four-Two, which are purely sporting websites, the two key "neutral" sources in the application are the BBC and Reuters.
+Ignoring sources such as ESPN \cite{espn}, Cricinfo \cite{cricinfo} and Four-Four-Two \cite{fourfourtwo}, which are purely sporting websites, the two key "neutral" sources in the application are the BBC \cite{bbc} and Reuters \cite{reuters}.
 
 Figures \ref{bbc-news} and \ref{reuters} paint a stark picture on summary distribution when these two sources are included. In fact, the matrix (Figure \ref{fig:matrix}) says that the BBC and Reuters have the two lowest contributions to summaries out of all the outlets in the system. 
 
 For the BBC, the percentage contribution is below 50\% for the vast majority of other outlets, whilst the same can be said of Reuters.
 
-Also notable from the charts is the fact that, with the exception of The Daily Mail in the BBC's case and The Telegraph in Reuters', the neutral sources fare poorly against the partisan UK newspapers that are in the system (namely The Daily Mail, The Guardian, The Telegraph, The Mirror and The Independent). 
+Also notable from the charts is the fact that, with the exception of The Daily Mail \cite{dailymail} in the BBC's case and The Telegraph in Reuters', the neutral sources fare poorly against the partisan UK newspapers that are in the system (namely The Daily Mail, The Guardian \cite{guardian}, The Telegraph \cite{telegraph}, The Mirror \cite{mirror} and The Independent \cite{independent}). 
 
-A explanation for this would be that the BBC and Reuters supply the facts for a summary, whilst the partisan organisations produce articles that are a bit more opinionated. These opinions are then prioritised by the LexRank algorithm as they are usually unique, and so are included in droves, thus marginalising slightly the apparent contributions of the neutral sources. 
+A explanation for this would be that the BBC and Reuters supply the facts for a summary, whilst the partisan organisations produce articles that are a bit more opinionated. These opinions are then prioritised by the LexRank algorithm \cite{lexRank} as they are usually unique, and so are included in droves, thus marginalising slightly the apparent contributions of the neutral sources. 
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.15]{bbc-news.png}
-   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from the BBC when compared to other outlets.}
+   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from the BBC \cite{bbc} when compared to other outlets.}
    \label{bbc-news}
 \end{figure} 
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[scale=0.15]{reuters.png}
-   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from Reuters when compared to other outlets.}
+   \caption[A graph depicting responses to the User Interface Survey]{The percentage of summaries that originates from Reuters  \cite{reuters} when compared to other outlets.}
    \label{reuters}
 \end{figure} 
 
 \subsubsection{The Political Spectrum}
 
-In February 2017 polling organisation YouGov ran a poll to find out the public's perception of the political leanings of mainstream newspapers in the United Kingdom. Their results found that The Daily Mail is viewed to be Britain's most right-wing paper, whilst The Guardian edges The Mirror as the most left-wing. The Independent is considered broadly centrist, whilst The Telegraph is also placed on the right (Figure \ref{yougov}). 
+In February 2017 polling organisation YouGov \cite{yougov} ran a poll to find out the public's perception of the political leanings of mainstream newspapers in the United Kingdom \cite{yougovarticle}. Their results found that The Daily Mail \cite{dailymail} is viewed to be Britain's most right-wing paper, whilst The Guardian \cite{guardian} edges The Mirror \cite{mirror} as the most left-wing. The Independent \cite{independent} is considered broadly centrist, whilst The Telegraph \cite{telegraph} is also placed on the right (Figure \ref{yougov}). 
 
 \begin{figure}[ht!]
   \centering
@@ -2510,7 +2511,7 @@ NewSumm has five outlets that are on the list of newspapers considered by YouGov
 
 From this table a clear trend can already be seen. The further to the left or right a newspaper is, the higher the overall percentage contribution they make in the summary. A potential explanation for this would be that an opinion expressed by an organisation farther from the centre is less likely to be reproduced as an opinion of an organisation closer to the centre. 
 
-This trend amongst the UK newspapers is backed up by the US equivalents. Pew Research Center conducted a survey in early 2014 to establish the "Ideological Placement of Each Source's Audience" (Figure \ref{pewresearch}). Out of the outlets represented in NewSumm, the survey findings found that The Guardian is furthest left, followed by The Washington Post, CNN and then CNBC News (which is close to the centre). This also constitutes the trend of the matrix, with the Guardian on a high percentage, and CNBC on a low percentage.
+This trend amongst the UK newspapers is backed up by the US equivalents. Pew Research Center \cite{pewresearch} conducted a survey in early 2014 to establish the "Ideological Placement of Each Source's Audience" \cite{pewarticle} (Figure \ref{pewresearch}). Out of the outlets represented in NewSumm, the survey findings found that The Guardian is furthest left, followed by The Washington Post \cite{washingtonpost}, CNN \cite{cnn} and then CNBC News \cite{cnbc} (which is close to the centre). This also constitutes the trend of the matrix, with the Guardian on a high percentage, and CNBC on a low percentage.
 
 \begin{figure}[ht!]
   \centering
@@ -2534,7 +2535,7 @@ To do this I went through each outlet, finding every summary that it is included
 
 From Figure \ref{sentencestats} it would initially seem clear from the orange and blue lines that sentence length definitely affects what goes in a summary and what doesn't, as the line indicating the sentences in a summary are almost always shorter than those that don't enter the survey. 
 
-However, this is highly likely to be little more than a coincidence. Using the knowledge that the summariser strips each article sentence, removing every word in Mallet's stopwords (Section \ref{tm}), I then did the same myself and reproduced the graph. As can be seen from the yellow and grey lines the lines are now nearly on top of each throughout, which in turn would strongly suggest that sentence length plays no major part in influencing what the summariser selects.
+However, this is highly likely to be little more than a coincidence. Using the knowledge that the summariser strips each article sentence, removing every word in Mallet's stopwords \cite{mallet} (Section \ref{tm}), I then did the same myself and reproduced the graph. As can be seen from the yellow and grey lines the lines are now nearly on top of each throughout, which in turn would strongly suggest that sentence length plays no major part in influencing what the summariser selects.
 
 \subsubsection{Article Length Analysis}
 
@@ -2620,9 +2621,9 @@ An example would be that in the past when a user requests a topic, the server wo
 
 \subsection{Memory Optimisations}
 
-One major issue is that of space. Some of the libraries used, such as the Apache OpenNLP library, are very space-intensive, and this was creating Out Of Memory exceptions, which would crash the server. 
+One major issue is that of space. Some of the libraries used, such as the Apache OpenNLP \cite{opennlp} library, are very space-intensive, and this was creating Out Of Memory exceptions, which would crash the server. 
 
-As a solution I implemented singleton patterns for each library that was space-intensive. However, I had to manage this carefully, as the Apache OpenNLP library is not thread-safe, meaning that I needed a singleton instance for each thread. Doing this, combined with increasing the available heap space to 3GB (and upgrading the server itself on Digital Ocean) meant that memory was no longer an issue in the application.
+As a solution I implemented singleton patterns for each library that was space-intensive. However, I had to manage this carefully, as the Apache OpenNLP library is not thread-safe, meaning that I needed a singleton instance for each thread. Doing this, combined with increasing the available heap space to 3GB (and upgrading the server itself on Digital Ocean \cite{digitalOcean}) meant that memory was no longer an issue in the application.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2632,7 +2633,7 @@ As a solution I implemented singleton patterns for each library that was space-i
 
 The primary aims of NewSumm were to reduce the volume of articles that a user has to read, and to find a way to prevent users from missing information by collating multiple sources together. These aims have been largely satisfied by the final product, as proven by the feedback both at the Undergraduate Fair and in the UI survey. Feedback from the Undergraduate Fair also indicated that potential users have been impressed by the "clean and slick" design.
 
-However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC and Reuters could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. In fact, it could even suggest that "fake news" could enter the application, and dominate a summary as it would be distinctive enough. The counter to this argument though would be that if all sources are trusted sources, then this would negate any potential issues as the outlets themselves are trusted enough to not produce "fake news" (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
+However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC \cite{bbc} and Reuters \cite{reuters} could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. In fact, it could even suggest that "fake news" could enter the application, and dominate a summary as it would be distinctive enough. The counter to this argument though would be that if all sources are trusted sources, then this would negate any potential issues as the outlets themselves are trusted enough to not produce "fake news" (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
 
 Continuing on the back end, whilst labelling has been shown to throw more than its fair share of false positive labels, the clustering and summarisation algorithms have been well received by respondents of the survey. This would indicate that if the small flaws in topic labelling can be addressed going forward, then the system itself would start consistently producing very strong clusters and summaries for all topics.
 
@@ -2654,7 +2655,7 @@ Another improvement for summarisation would be to implement aspects of the abstr
 
 One interesting direction that NewSumm could go in would be to expand to languages other than English. 
 
-A lot of the important infrastructure would already be in place for such an endeavour, as Apache's OpenNLP library provides models for languages such as Spanish, French, German and Dutch, whilst NewsAPI's API counts several foreign language outlets amongst his collection. Mallet also provides stopwords files for foreign languages for use in Topic Modelling (and in my summarisation algorithm).
+A lot of the important infrastructure would already be in place for such an endeavour, as Apache's OpenNLP \cite{opennlp} library provides models for languages such as Spanish, French, German and Dutch, whilst NewsAPI's API \cite{newsApi} counts several foreign language outlets amongst his collection. Mallet \cite{mallet} also provides stopwords files for foreign languages for use in Topic Modelling (and in my summarisation algorithm).
 
 Working on a foreign language (that I can speak) that has models ready for use in OpenNLP and a plethora of sources on NewsAPI could mean that this feature would be ready within a matter of a fortnight, as very little of the remaining infrastructure would need to change.
 
@@ -2662,7 +2663,7 @@ Working on a foreign language (that I can speak) that has models ready for use i
 
 A key issue that could form an obstacle to NewSumm being released on the market is the copyright implications of the summariser. 
 
-In February 2007 Google were successfully taken to court by Copiepresse, which is an association of Belgian newspaper publishers. Copiepresse argued that the fact that Google News was presenting titles and small snippets to users constituted a breach in copyright. Considering NewSumm uses more of an article than just a small snippet, it can be reasonably concluded that NewSumm would breach copyright if published on the market.
+In February 2007 Google \cite{google} were successfully taken to court by Copiepresse \cite{copiepresse}, which is an association of Belgian newspaper publishers. Copiepresse argued that the fact that Google News \cite{googleNews} was presenting titles and small snippets to users constituted a breach in copyright \cite{copiepressearticle}. Considering NewSumm uses more of an article than just a small snippet, it can be reasonably concluded that NewSumm would breach copyright if published on the market.
 
 There are two potential options to take this forward. The first would be to develop further the abstractive summarisation algorithm, so that the final summary doesn't contain the original copyrighted material.
 
@@ -2680,7 +2681,7 @@ The fact that the API to the server has already been fully developed only serves
 
 \newpage
 
-%\printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2692,7 +2693,7 @@ The fact that the API to the server has already been fully developed only serves
 
 \section{Source Code and Documentation Repositories}
 
-The various aspects of the project are implemented on four different GitHub repositories:
+The various aspects of the project are implemented on four different GitHub \cite{github} repositories:
 
 The source code for the \textbf{back end and WebApp} can be found at:
 
@@ -2799,7 +2800,7 @@ The digest viewer will show users (who have requested them) their daily digest. 
 
 \label{nrh}
 
-This survey was created using Google Forms. Its answers are documented in Section \ref{survey}.
+This survey was created using Google Forms \cite{googleForms}. Its answers are documented in Section \ref{survey}.
 
 \emph{https://goo.gl/forms/N5tA4VRnNSEyEeCL2}
 
@@ -2807,7 +2808,7 @@ This survey was created using Google Forms. Its answers are documented in Sectio
 
 \label{mls}
 
-This survey was created using SurveyMonkey. Its answers are documented in Section \ref{mlsurvey}.
+This survey was created using SurveyMonkey \cite{surveymonkey}. Its answers are documented in Section \ref{mlsurvey}.
 
 \emph{https://www.surveymonkey.co.uk/r/newsumm-ml}
 
@@ -2855,7 +2856,7 @@ Request Parameters:
 	\item \textbf{searchTerm}: The keyword(s) to search the Wikipedia API for.
 \end{itemize}
 
-Search Wikipedia for a list of topics pertaining to the user's search request. Combine with the contents of the topic database to return the Wikipedia titles, first paragraphs, links to images and an article count for each topic in the database.
+Search Wikipedia \cite{wikipedia} for a list of topics pertaining to the user's search request. Combine with the contents of the topic database to return the Wikipedia titles, first paragraphs, links to images and an article count for each topic in the database.
 
 \subsection{Getting a topic}
 
@@ -2988,7 +2989,7 @@ To search for a topic, use the search bar in the navigation bar, or the search b
    \label{crosssearching}
 \end{figure}
 
-Search results are then displayed in a grid (Figure \ref{crosssearching}). Each search result is accompanied by the first 250 characters of it's Wikipedia article (for the user to distinguish between two similar topics), and an "article count" - an indication on how many summaries there are for that topic.
+Search results are then displayed in a grid (Figure \ref{crosssearching}). Each search result is accompanied by the first 250 characters of it's Wikipedia \cite{wikipedia} article (for the user to distinguish between two similar topics), and an "article count" - an indication on how many summaries there are for that topic.
 
 \subsection{Viewing a topic}
 

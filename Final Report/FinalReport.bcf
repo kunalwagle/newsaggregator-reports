@@ -2219,6 +2219,116 @@
     <bcf:citekey order="118">tmarticle</bcf:citekey>
     <bcf:citekey order="119">cfsarticle</bcf:citekey>
     <bcf:citekey order="120">trumparticle</bcf:citekey>
-    <bcf:citekey order="121">wikipedia</bcf:citekey>
+    <bcf:citekey order="121">opennlp</bcf:citekey>
+    <bcf:citekey order="122">bidenarticle</bcf:citekey>
+    <bcf:citekey order="123">trumpsalem</bcf:citekey>
+    <bcf:citekey order="124">united1</bcf:citekey>
+    <bcf:citekey order="125">united2</bcf:citekey>
+    <bcf:citekey order="126">united3</bcf:citekey>
+    <bcf:citekey order="127">united4</bcf:citekey>
+    <bcf:citekey order="128">united5</bcf:citekey>
+    <bcf:citekey order="129">united6</bcf:citekey>
+    <bcf:citekey order="130">united7</bcf:citekey>
+    <bcf:citekey order="131">uber1</bcf:citekey>
+    <bcf:citekey order="132">uber2</bcf:citekey>
+    <bcf:citekey order="133">uber3</bcf:citekey>
+    <bcf:citekey order="134">uber4</bcf:citekey>
+    <bcf:citekey order="135">uber5</bcf:citekey>
+    <bcf:citekey order="136">ag1</bcf:citekey>
+    <bcf:citekey order="137">ag2</bcf:citekey>
+    <bcf:citekey order="138">ag3</bcf:citekey>
+    <bcf:citekey order="139">ag4</bcf:citekey>
+    <bcf:citekey order="140">ag5</bcf:citekey>
+    <bcf:citekey order="141">ag1</bcf:citekey>
+    <bcf:citekey order="142">ag2</bcf:citekey>
+    <bcf:citekey order="143">ag3</bcf:citekey>
+    <bcf:citekey order="144">ag4</bcf:citekey>
+    <bcf:citekey order="145">ag5</bcf:citekey>
+    <bcf:citekey order="146">trump1</bcf:citekey>
+    <bcf:citekey order="147">trump2</bcf:citekey>
+    <bcf:citekey order="148">trump3</bcf:citekey>
+    <bcf:citekey order="149">pippa1</bcf:citekey>
+    <bcf:citekey order="150">pippa2</bcf:citekey>
+    <bcf:citekey order="151">pippa3</bcf:citekey>
+    <bcf:citekey order="152">wikipedia</bcf:citekey>
+    <bcf:citekey order="153">apple</bcf:citekey>
+    <bcf:citekey order="154">itunesconnect</bcf:citekey>
+    <bcf:citekey order="155">jupyter</bcf:citekey>
+    <bcf:citekey order="156">excel</bcf:citekey>
+    <bcf:citekey order="157">espn</bcf:citekey>
+    <bcf:citekey order="158">cricinfo</bcf:citekey>
+    <bcf:citekey order="159">fourfourtwo</bcf:citekey>
+    <bcf:citekey order="160">bbc</bcf:citekey>
+    <bcf:citekey order="161">reuters</bcf:citekey>
+    <bcf:citekey order="162">dailymail</bcf:citekey>
+    <bcf:citekey order="163">guardian</bcf:citekey>
+    <bcf:citekey order="164">telegraph</bcf:citekey>
+    <bcf:citekey order="165">mirror</bcf:citekey>
+    <bcf:citekey order="166">independent</bcf:citekey>
+    <bcf:citekey order="167">lexRank</bcf:citekey>
+    <bcf:citekey order="168">bbc</bcf:citekey>
+    <bcf:citekey order="169">bbc</bcf:citekey>
+    <bcf:citekey order="170">reuters</bcf:citekey>
+    <bcf:citekey order="171">reuters</bcf:citekey>
+    <bcf:citekey order="172">yougov</bcf:citekey>
+    <bcf:citekey order="173">yougovarticle</bcf:citekey>
+    <bcf:citekey order="174">dailymail</bcf:citekey>
+    <bcf:citekey order="175">guardian</bcf:citekey>
+    <bcf:citekey order="176">mirror</bcf:citekey>
+    <bcf:citekey order="177">independent</bcf:citekey>
+    <bcf:citekey order="178">telegraph</bcf:citekey>
+    <bcf:citekey order="179">pewresearch</bcf:citekey>
+    <bcf:citekey order="180">pewarticle</bcf:citekey>
+    <bcf:citekey order="181">washingtonpost</bcf:citekey>
+    <bcf:citekey order="182">cnn</bcf:citekey>
+    <bcf:citekey order="183">cnbc</bcf:citekey>
+    <bcf:citekey order="184">mallet</bcf:citekey>
+    <bcf:citekey order="185">opennlp</bcf:citekey>
+    <bcf:citekey order="186">digitalOcean</bcf:citekey>
+    <bcf:citekey order="187">bbc</bcf:citekey>
+    <bcf:citekey order="188">reuters</bcf:citekey>
+    <bcf:citekey order="189">opennlp</bcf:citekey>
+    <bcf:citekey order="190">newsApi</bcf:citekey>
+    <bcf:citekey order="191">mallet</bcf:citekey>
+    <bcf:citekey order="192">google</bcf:citekey>
+    <bcf:citekey order="193">copiepresse</bcf:citekey>
+    <bcf:citekey order="194">googleNews</bcf:citekey>
+    <bcf:citekey order="195">copiepressearticle</bcf:citekey>
+    <bcf:citekey order="196">github</bcf:citekey>
+    <bcf:citekey order="197">wikipedia</bcf:citekey>
+    <bcf:citekey order="198">googleForms</bcf:citekey>
+    <bcf:citekey order="199">surveymonkey</bcf:citekey>
+    <bcf:citekey order="200">wikipedia</bcf:citekey>
+    <bcf:citekey order="201">wikipedia</bcf:citekey>
   </bcf:section>
+  <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
+  <bcf:sorting>
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
+      <bcf:sortitem order="2">0000</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sorting>
+  </bcf:sortlist>
 </bcf:controlfile>
