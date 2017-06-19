@@ -1,1304 +1,577 @@
-% $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.7 $
-% Do not modify the above lines!
-%
-% This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated by
-% biber as required.
-%
-\begingroup
-\makeatletter
-\@ifundefined{ver@biblatex.sty}
-  {\@latex@error
-     {Missing 'biblatex' package}
-     {The bibliography requires the 'biblatex' package.}
-      \aftergroup\endinput}
-  {}
-\endgroup
+\begin{thebibliography}{111}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[ag1()]{ag1}
+{"Two explosions" heard at Ariana Grande concert in Manchester}.
+\newblock URL
+  \url{http://www.independent.co.uk/news/uk/home-news/manchester-explosions-latest-news-updates-arena-ariana-grande-bangs-police-a7750381.html}.
+\newblock 2017-06-12.
 
-\refsection{0}
-  \sortlist[entry]{nty/global/}
-    \entry{ag4}{url}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{title}{"A major incident targeted at our city" MPs respond to Manchester explosion}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/news/politics/this-major-incident-targeted-city-10479137
-      \endverb
-    \endentry
-    \entry{amazon}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{title}{Amazon}
-      \verb{url}
-      \verb http://amazon.com
-      \endverb
-    \endentry
-    \entry{aws}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{title}{Amazon Web Services}
-      \verb{url}
-      \verb https://aws.amazon.com/
-      \endverb
-    \endentry
-    \entry{dynamodb}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://aws.amazon.com/dynamodb/?nc2=h_m1}
-      \field{title}{Amazon Web Services DyanmoDB}
-    \endentry
-    \entry{ec2}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://aws.amazon.com/ec2}
-      \field{title}{Amazon Web Services EC2}
-    \endentry
-    \entry{s3}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://aws.amazon.com/s3}
-      \field{title}{Amazon Web Services S3}
-    \endentry
-    \entry{united7}{url}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{title}{Anthony Martial among five first-team absentees from Man Utd awards ceremony}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://metro.co.uk/2017/05/18/zlatan-ibrahimovic-and-anthony-martial-among-absentees-from-manchester-united-awards-ceremony-6647006/
-      \endverb
-    \endentry
-    \entry{apache}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://apache.org}
-      \field{title}{Apache}
-    \endentry
-    \entry{opennlp}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://opennlp.apache.org}
-      \field{title}{Apache OpenNLP}
-    \endentry
-    \entry{apple}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://apple.com}
-      \field{title}{Apple}
-    \endentry
-    \entry{appleNews}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://apple.com/uk/news/}
-      \field{title}{Apple News}
-    \endentry
-    \entry{attentionSpan}{webpage}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 23/12/2016 Statistics from the Statistic Brain Research Institute based on a study they conducted in July 2016. The study aims to give an insight into statistics surrounding attention spans in 2016.}
-      \field{title}{Attention Span Statistics}
-      \verb{url}
-      \verb http://www.statisticbrain.com/attention-span-statistics/
-      \endverb
-    \endentry
-    \entry{bbc}{misc}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://bbc.co.uk}
-      \field{title}{BBC}
-    \endentry
-    \entry{bootstrap}{misc}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://getbootstrap.com/}
-      \field{title}{Bootstrap}
-    \endentry
-    \entry{ag3}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{Celebs pray for victims of Manchester Arena explosions}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.dailymail.co.uk/tvshowbiz/article-4532198/Celebs-pray-victims-Manchester-Arena-explosions.html
-      \endverb
-    \endentry
-    \entry{cfsarticle}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{Chelsea flower show: abandoned Maltese quarry wins top prize}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.theguardian.com/lifeandstyle/2017/may/23/chelsea-flower-show-james-basson-abandoned-maltese-quarry-wins-top-prize
-      \endverb
-    \endentry
-    \entry{clusteringWikipedia}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 29/12/2016 The various types of clustering, according to Wikipedia.}
-      \field{title}{Cluster Analysis}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Cluster_analysis
-      \endverb
-    \endentry
-    \entry{cnbc}{misc}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.cnbc.com}
-      \field{title}{CNBC}
-    \endentry
-    \entry{cnn}{misc}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://edition.cnn.com/}
-      \field{title}{CNN}
-    \endentry
-    \entry{ag2}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{Concert goers "run out screaming" after loud bangs at Manchester Arena}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://metro.co.uk/2017/05/22/concert-goers-run-out-screaming-after-loud-bangs-at-manchester-arena-6654276/
-      \endverb
-    \endentry
-    \entry{trumpsalem}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{Congressman for Salem brilliantly trolls Donald Trump over "witch hunt" claims}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/news/politics/congressman-salem-brilliantly-trolls-donald-10452706
-      \endverb
-    \endentry
-    \entry{tmarticle}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.bbc.co.uk/news/election-2017-40005257}
-      \field{title}{Conservative social care funding cap: Theresa May defends changes}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-    \endentry
-    \entry{copiepresse}{misc}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.copiepresse.be/}
-      \field{title}{Copiepresse}
-    \endentry
-    \entry{copiepressearticle}{url}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{Copiepresse v Google - the Belgian judgment dissected}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.twobirds.com/en/news/articles/2007/copiepresse-v-google
-      \endverb
-    \endentry
-    \entry{digitalOcean}{misc}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://digitalocean.com}
-      \field{title}{Digital Ocean}
-    \endentry
-    \entry{trump3}{url}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
-      \field{labeltitlesource}{title}
-      \field{title}{Donald Trump says 'even my enemies say there is no Russia collusion'}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.independent.co.uk/news/world/americas/us-politics/trump-russia-investigation-collusion-enemies-denial-press-conference-latest-news-a7743861.html
-      \endverb
-    \endentry
-    \entry{trump1}{url}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
-      \field{labeltitlesource}{title}
-      \field{title}{Donald Trump says special counsel 'hurts our country' as Russia probe 'becoming criminal investigation'}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.telegraph.co.uk/news/2017/05/18/donald-trumps-campaign-had-least-18-undisclosed-contacts-russians2/
-      \endverb
-    \endentry
-    \entry{ag5}{url}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
-      \field{labeltitlesource}{title}
-      \field{title}{Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/3am/celebrity-news/emmerdale-star-isabel-hodgins-horrifying-10479121
-      \endverb
-    \endentry
-    \entry{lexRank}{article}{}
-      \name{author}{2}{}{%
-        {{hash=e62dddc73a1dafded4441154b7383729}{%
-           family={Erkan},
-           family_i={E\bibinitperiod},
-           given={Gunes},
-           given_i={G\bibinitperiod}}}%
-        {{hash=2855b0e9531885261d2b884cf767f1b7}{%
-           family={Radev},
-           family_i={R\bibinitperiod},
-           given={Dragomir\bibnamedelima R},
-           given_i={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{218b9727958b766c7b2edadfc7a3cb40}
-      \strng{fullhash}{218b9727958b766c7b2edadfc7a3cb40}
-      \field{sortinit}{E}
-      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 03/01/2017 A paper that shows how to perform LexRank, which is a method of Extractive Summarisation, designed for use on multiple documents.}
-      \field{journaltitle}{Journal of Artificial Intelligence Research}
-      \field{month}{12}
-      \field{number}{1}
-      \field{title}{LexRank: Graph-based Lexical Centrality as Salience in Text Summarization}
-      \field{volume}{22}
-      \field{year}{2004}
-      \field{pages}{457\bibrangedash 479}
-      \range{pages}{23}
-    \endentry
-    \entry{espn}{misc}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.espn.co.uk/}
-      \field{title}{ESPN}
-    \endentry
-    \entry{cricinfo}{misc}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://espncricinfo.com}
-      \field{title}{ESPN Cricinfo}
-    \endentry
-    \entry{facebook}{misc}{}
-      \field{sortinit}{F}
-      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://facebook.com}
-      \field{title}{Facebook}
-    \endentry
-    \entry{flipboard}{misc}{}
-      \field{sortinit}{F}
-      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://flipboard.com}
-      \field{title}{Flipboard}
-    \endentry
-    \entry{fourfourtwo}{misc}{}
-      \field{sortinit}{F}
-      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.fourfourtwo.com/}
-      \field{title}{FourFourTwo}
-    \endentry
-    \entry{informationBasedSummarisation}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=dc6cb91d705e6d09a41dde51a4f6dd6b}{%
-           family={Genest},
-           family_i={G\bibinitperiod},
-           given={Pierre-Etienne},
-           given_i={P\bibinithyphendelim E\bibinitperiod}}}%
-        {{hash=2c32da83b97570a90db8231cf70f38ce}{%
-           family={Lapalme},
-           family_i={L\bibinitperiod},
-           given={Guy},
-           given_i={G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Portland, Oregon}%
-      }
-      \strng{namehash}{3b562256168e65e7467ca626a2d717e9}
-      \strng{fullhash}{3b562256168e65e7467ca626a2d717e9}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 09/01/2017 This paper provides a method for performing information item based summarisation, which is a type of abstractive summarisation that creates a summary from the abstractive representation of a document, rather than the sentences in the document itself.}
-      \field{booktitle}{Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics}
-      \field{month}{06}
-      \field{title}{Framework for Abstractive Summarization using Text-to-Text Generation}
-      \field{year}{2011}
-      \field{pages}{64\bibrangedash 73}
-      \range{pages}{10}
-    \endentry
-    \entry{ruleBasedSummarisation}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=dc6cb91d705e6d09a41dde51a4f6dd6b}{%
-           family={Genest},
-           family_i={G\bibinitperiod},
-           given={Pierre-Etienne},
-           given_i={P\bibinithyphendelim E\bibinitperiod}}}%
-        {{hash=2c32da83b97570a90db8231cf70f38ce}{%
-           family={Lapalme},
-           family_i={L\bibinitperiod},
-           given={Guy},
-           given_i={G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Jeju, Republic of Korea}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computational Linguistics}%
-      }
-      \strng{namehash}{3b562256168e65e7467ca626a2d717e9}
-      \strng{fullhash}{3b562256168e65e7467ca626a2d717e9}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 11/01/2017 An approach to a rule-based summarisation. This method provides a guided alternative to abstractive summarisation, and focuses around multi-document summarisation.}
-      \field{booktitle}{Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics}
-      \field{month}{07}
-      \field{title}{Fully Abstractive Approach to Guided Summarization}
-      \field{year}{2012}
-      \field{pages}{354\bibrangedash 358}
-      \range{pages}{5}
-    \endentry
-    \entry{github}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://github.com}
-      \field{title}{GitHub}
-    \endentry
-    \entry{trumparticle}{url}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labeltitlesource}{title}
-      \field{title}{Global markets are fighting back against Trump uncertainty}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://uk.businessinsider.com/stock-market-update-2017-5
-      \endverb
-    \endentry
-    \entry{google}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://google.com}
-      \field{title}{Google}
-    \endentry
-    \entry{googleForms}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://forms.google.com}
-      \field{title}{Google Forms}
-    \endentry
-    \entry{googleNews}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://news.google.com}
-      \field{title}{Google News}
-    \endentry
-    \entry{racoCalculation}{article}{}
-      \name{author}{4}{}{%
-        {{hash=43db5383aa77f0e16ba5de80313899bd}{%
-           family={Grieser},
-           family_i={G\bibinitperiod},
-           given={Karl},
-           given_i={K\bibinitperiod}}}%
-        {{hash=73eda808e90683df3ed357e4549e09f3}{%
-           family={Baldwin},
-           family_i={B\bibinitperiod},
-           given={Timothy},
-           given_i={T\bibinitperiod}}}%
-        {{hash=96cd4afe5b7778d7b0ba09b28634f8e4}{%
-           family={Bohnert},
-           family_i={B\bibinitperiod},
-           given={Fabian},
-           given_i={F\bibinitperiod}}}%
-        {{hash=8debdf080e5922de36253d0b2e8bf47d}{%
-           family={Sonenberg},
-           family_i={S\bibinitperiod},
-           given={Liz},
-           given_i={L\bibinitperiod}}}%
-      }
-      \strng{namehash}{89417c11f9030d772dbbd786c48b1cfb}
-      \strng{fullhash}{6797727e08dd351e096e46a495c438fa}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 27/12/2016 This paper tries to evaluate how closely related two terms are by using their respective Wikipedia articles and calculations involving the categories they fall in to, and the number of links to other articles they share.}
-      \field{journaltitle}{ACM Journal ACM Journal of Computing and Cultural Heritage}
-      \field{month}{03}
-      \field{number}{3}
-      \field{title}{Using Ontological and Document Similarity to Estimate Museum Exhibit Relatedness}
-      \field{volume}{3}
-      \field{year}{2011}
-      \field{pages}{1\bibrangedash 20}
-      \range{pages}{20}
-    \endentry
-    \entry{extractiveTechniques}{article}{}
-      \name{author}{2}{}{%
-        {{hash=91e105fa60887e252869bd6fd2cdd66c}{%
-           family={Gupta},
-           family_i={G\bibinitperiod},
-           given={Vishal},
-           given_i={V\bibinitperiod}}}%
-        {{hash=b3434e3dc1285a5be2b68f84c3233c7c}{%
-           family={Lehla},
-           family_i={L\bibinitperiod},
-           given={Gurpreet},
-           given_i={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{55710358343a75619a257a6db60316c8}
-      \strng{fullhash}{55710358343a75619a257a6db60316c8}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 30/12/2016 A paper that summarises various methods of performing Extractive Summarisation.}
-      \field{journaltitle}{Journal of Emerging Technologies in Web Intelligence}
-      \field{month}{08}
-      \field{number}{3}
-      \field{title}{A Survey of Text Summarization Extractive Techniques}
-      \field{volume}{2}
-      \field{year}{2010}
-      \field{pages}{258\bibrangedash 268}
-      \range{pages}{11}
-    \endentry
-    \entry{hierarchicalClustering}{url}{}
-      \field{sortinit}{H}
-      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 29/12/2016 A Wikipedia article describing the various types and metrics used for hierarchical clustering.}
-      \field{title}{Hierarchical Clustering}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Hierarchical_clustering
-      \endverb
-    \endentry
-    \entry{googleClustering}{url}{}
-      \field{sortinit}{H}
-      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 08/01/2017 An explanation from a former Google News employee on the Quora forum website on the broad strokes of Google's method for clustering articles}
-      \field{title}{How does Google News cluster stories?}
-      \field{urlday}{08}
-      \field{urlmonth}{01}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.quora.com/How-does-Google-News-cluster-stories/answer/Bharath-Kumar-M?srid=Qord
-      \endverb
-    \endentry
-    \entry{yougovarticle}{url}{}
-      \field{sortinit}{H}
-      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
-      \field{labeltitlesource}{title}
-      \field{title}{How left or right-wing are the UK's newspapers?}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://yougov.co.uk/news/2017/03/07/how-left-or-right-wing-are-uks-newspapers/
-      \endverb
-    \endentry
-    \entry{itunesconnect}{misc}{}
-      \field{sortinit}{i}
-      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://itunesconnect.apple.com}
-      \field{title}{iTunes Connect}
-    \endentry
-    \entry{bidenarticle}{url}{}
-      \field{sortinit}{J}
-      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
-      \field{labeltitlesource}{title}
-      \field{title}{Joe Biden just made a stunning admission about Hillary Clinton's 2016 election bid}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://uk.businessinsider.com/joe-biden-stunning-admission-hillary-clinton-obama-2017-5
-      \endverb
-    \endentry
-    \entry{jupyter}{misc}{}
-      \field{sortinit}{J}
-      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://jupyter.org/}
-      \field{title}{Jupyter}
-    \endentry
-    \entry{abstractiveTechniques}{article}{}
-      \name{author}{5}{}{%
-        {{hash=7891c58078bdfe71da25dbd9625a5b0e}{%
-           family={Kasture},
-           family_i={K\bibinitperiod},
-           given={N.\bibnamedelimi R.},
-           given_i={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=7f99da43ef83696432f61a7a7e492636}{%
-           family={Yargal},
-           family_i={Y\bibinitperiod},
-           given={Neha},
-           given_i={N\bibinitperiod}}}%
-        {{hash=28aa06829b8c7a5409a2fa7957a0b0c0}{%
-           family={Singh},
-           family_i={S\bibinitperiod},
-           given={Neha\bibnamedelima Nityanand},
-           given_i={N\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c501ab5152ff8f7e91e5f69034658944}{%
-           family={Kulkarni},
-           family_i={K\bibinitperiod},
-           given={Neha},
-           given_i={N\bibinitperiod}}}%
-        {{hash=a9b01fb4a23ff4ff2bf3ba8708ce62ea}{%
-           family={Mathur},
-           family_i={M\bibinitperiod},
-           given={Vijay},
-           given_i={V\bibinitperiod}}}%
-      }
-      \strng{namehash}{13080993d455d145c5dbd6709e2dd02a}
-      \strng{fullhash}{e0759123a7330984159a1680efa896d4}
-      \field{sortinit}{K}
-      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 07/01/2017 A paper written by members of the Department of Computer Engineering at a University in Pune, India. The paper discusses the merits and drawbacks of various potential techniques for abstractive summarisation.}
-      \field{journaltitle}{International Journal for Research in Emerging Science and Technology}
-      \field{month}{11}
-      \field{number}{6}
-      \field{title}{A Survey on Methods of Abstractive Text Summarization}
-      \field{volume}{1}
-      \field{year}{2014}
-      \field{pages}{53\bibrangedash 57}
-      \range{pages}{5}
-    \endentry
-    \entry{abstractiveTechniquesOriginal}{article}{}
-      \name{author}{2}{}{%
-        {{hash=562a74729805dfe84a54f4414568b450}{%
-           family={Khan},
-           family_i={K\bibinitperiod},
-           given={Atif},
-           given_i={A\bibinitperiod}}}%
-        {{hash=aafaa632c5d827567c9eb12e787d4fef}{%
-           family={Salim},
-           family_i={S\bibinitperiod},
-           given={Naomie},
-           given_i={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{1672fd1d51195eb4faa47d5d17406b12}
-      \strng{fullhash}{1672fd1d51195eb4faa47d5d17406b12}
-      \field{sortinit}{K}
-      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed 08/01/2017 A paper that summarises the various methods attempted in the field of abstractive summarisation.}
-      \field{journaltitle}{Journal of Theoretical and Applied Information Technology}
-      \field{month}{01}
-      \field{number}{1}
-      \field{title}{A review on abstractive summarization methods}
-      \field{volume}{59}
-      \field{year}{2014}
-      \field{pages}{64\bibrangedash 72}
-      \range{pages}{9}
-    \endentry
-    \entry{latimes}{misc}{}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labeltitlesource}{title}
-      \field{title}{LA Times}
-    \endentry
-    \entry{lsa}{url}{}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 22/12/2016 An article on Wikipedia about Latent Semantic Analysis.}
-      \field{title}{Latent Semantic Analysis}
-      \field{urlday}{22}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing
-      \endverb
-    \endentry
-    \entry{topicLabelling}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{hash=6701ef8991b12404bf5a8881304fbb06}{%
-           family={Lau},
-           family_i={L\bibinitperiod},
-           given={Jey\bibnamedelima Han},
-           given_i={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=43db5383aa77f0e16ba5de80313899bd}{%
-           family={Grieser},
-           family_i={G\bibinitperiod},
-           given={Karl},
-           given_i={K\bibinitperiod}}}%
-        {{hash=c6e083f47bda3beece2d206379d5135b}{%
-           family={Newman},
-           family_i={N\bibinitperiod},
-           given={David},
-           given_i={D\bibinitperiod}}}%
-        {{hash=73eda808e90683df3ed357e4549e09f3}{%
-           family={Baldwin},
-           family_i={B\bibinitperiod},
-           given={Timothy},
-           given_i={T\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Portland, Oregon}%
-      }
-      \strng{namehash}{e89b9b01b9ea18f0a23d19b715782e70}
-      \strng{fullhash}{0f1f623aa48a5c10c6ce7c0acfa834a2}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 27/12/2016 A paper on a potential method for performing topic labelling, using Wikipedia article titles as candidates for naming the topics. The paper deems Wikipedia to be a good source for topic labels.}
-      \field{booktitle}{Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics}
-      \field{month}{06}
-      \field{title}{Automatic Labelling of Topic Models}
-      \field{year}{2011}
-      \field{pages}{1536\bibrangedash 1545}
-      \range{pages}{10}
-    \endentry
-    \entry{united3}{url}{}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labeltitlesource}{title}
-      \field{title}{Live Manchester United Player of the Year Awards}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.manchestereveningnews.co.uk/sport/football/football-news/manchester-united-news-awards-live-13056565
-      \endverb
-    \endentry
-    \entry{mallet}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://mallet.cs.umass.edu/}
-      \field{title}{Mallet}
-    \endentry
-    \entry{united5}{url}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{title}{Man United fans say the same thing as Ander Herrera is named Player of the Year}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/sport/football/news/red-devils-supporters-say-same-10452099
-      \endverb
-    \endentry
-    \entry{united2}{url}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{title}{Manchester United Player of the Year awards are underway}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.dailymail.co.uk/sport/football/article-4520104/Manchester-United-Player-Year-awards-2017.html
-      \endverb
-    \endentry
-    \entry{united1}{url}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{title}{Manchester United Player's Player of the Year revealed}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/sport/football/news/manchester-uniteds-antonio-valencia-named-10451658
-      \endverb
-    \endentry
-    \entry{united6}{url}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{title}{Manchester United stars and WAGS turn on the style at Player of the Year awards}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/sport/football/news/manchester-united-stars-wags-turn-10451821
-      \endverb
-    \endentry
-    \entry{mediawiki}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.mediawiki.org/wiki/MediaWiki}
-      \field{title}{MediaWiki}
-    \endentry
-    \entry{excel}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://office.live.com/start/Excel.aspx}
-      \field{title}{Microsoft Excel}
-    \endentry
-    \entry{mirror}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.mirror.co.uk/}
-      \field{title}{Mirror}
-    \endentry
-    \entry{mongodb}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://mongodb.com}
-      \field{title}{MongoDB}
-    \endentry
-    \entry{nlpwiki}{url}{}
-      \field{sortinit}{N}
-      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
-      \field{labeltitlesource}{title}
-      \field{title}{Natural Language Processing}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Natural_language_processing
-      \endverb
-    \endentry
-    \entry{nlpkitchen}{url}{}
-      \field{sortinit}{N}
-      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
-      \field{labeltitlesource}{title}
-      \field{title}{Natural Language Processing in the kitchen}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-    \endentry
-    \entry{digitalNewsReport}{book}{}
-      \name{author}{4}{}{%
-        {{hash=f6832af7f3f4accde57753595f365cf9}{%
-           family={Newman},
-           family_i={N\bibinitperiod},
-           given={Nic},
-           given_i={N\bibinitperiod}}}%
-        {{hash=5eca8a5df49309ac5d0a01722cc5dc88}{%
-           family={Fletcher},
-           family_i={F\bibinitperiod},
-           given={Richard},
-           given_i={R\bibinitperiod}}}%
-        {{hash=5396fe6a08a911c448c4c4a6e4d19652}{%
-           family={Levy},
-           family_i={L\bibinitperiod},
-           given={David\bibnamedelimb A.\bibnamedelimi L.},
-           given_i={D\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=47a7c339396491a3204f8e083345420e}{%
-           family={Nielsen},
-           family_i={N\bibinitperiod},
-           given={Rasmus\bibnamedelima Kleis},
-           given_i={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Reuters Institute for the Study of Journalism}%
-      }
-      \strng{namehash}{896561e06c74766614f2af280a80f66b}
-      \strng{fullhash}{51d144d756d021e3e96230292ff7e5ed}
-      \field{sortinit}{N}
-      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 24/12/2016 The Digital News Report is an annual study conducted by the Reuters Institute for the Study of Journalism that aims to evaluate how people are obtaining the news year on year in various countries around the globe.}
-      \field{title}{Reuters Institute Digital News Report 2016}
-      \field{year}{2016}
-    \endentry
-    \entry{newsApi}{webpage}{}
-      \field{sortinit}{N}
-      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
-      \field{labeltitlesource}{title}
-      \field{title}{News API}
-      \field{urlday}{27}
-      \field{urlmonth}{01}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://newsapi.org
-      \endverb
-    \endentry
-    \entry{ofcom}{misc}{}
-      \field{sortinit}{O}
-      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://ofcom.org.uk}
-      \field{title}{Ofcom}
-    \endentry
-    \entry{united4}{url}{}
-      \field{sortinit}{O}
-      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
-      \field{labeltitlesource}{title}
-      \field{title}{Our 7 favourite photos from Manchester United's Player of the Year Awards night}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.mirror.co.uk/sport/row-zed/manchester-united-awards-night-photos-10452055
-      \endverb
-    \endentry
-    \entry{pewresearch}{misc}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.pewresearch.org/}
-      \field{title}{Pew Research Center}
-    \endentry
-    \entry{pippa2}{url}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labeltitlesource}{title}
-      \field{title}{Pippa Middleton's dream wedding set to be soggy as Met Office predicts rain}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.telegraph.co.uk/news/2017/05/19/pippa-middletons-wedding-pictures-hit-rain-met-office-predicts/
-      \endverb
-    \endentry
-    \entry{princeton}{misc}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://princeton.edu/}
-      \field{title}{Princeton}
-    \endentry
-    \entry{pewarticle}{url}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{title}{Ranking the media from liberal to conservative, based on their audiences}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.washingtonpost.com/news/the-fix/wp/2014/10/21/lets-rank-the-media-from-liberal-to-conservative-based-on-their-audiences/?utm_term=.7e9d8a364dd4
-      \endverb
-    \endentry
-    \entry{react}{misc}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://facebook.github.io/react/}
-      \field{title}{React}
-    \endentry
-    \entry{redux}{misc}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://redux.js.org/docs/introduction/}
-      \field{title}{Redux}
-    \endentry
-    \entry{restlet}{misc}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://restlet.com/}
-      \field{title}{Restlet}
-    \endentry
-    \entry{reuters}{misc}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://reuters.com}
-      \field{title}{Reuters}
-    \endentry
-    \entry{reutersInstitute}{misc}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://reutersinstitute.politics.ox.ac.uk}
-      \field{title}{Reuters Institute for the Study of Journalism}
-    \endentry
-    \entry{corenlp}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://stanfordnlp.github.io/CoreNLP/}
-      \field{title}{Stanford CoreNLP}
-    \endentry
-    \entry{stanford}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://stanfordnlp.github.io/CoreNLP/}
-      \field{title}{Stanford NLP}
-    \endentry
-    \entry{statisticBrain}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://statisticbrain.com}
-      \field{title}{Statistic Brain Research Institute}
-    \endentry
-    \entry{summly}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://summly.com}
-      \field{title}{Summly}
-    \endentry
-    \entry{surveymonkey}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://surveymonkey.com}
-      \field{title}{Survey Monkey}
-    \endentry
-    \entry{tfidf}{url}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 29/12/2016 A Wikipedia article about the justifications and calculations of TF-IDF.}
-      \field{title}{Term Frequency - Inverse Document Frequency}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Example_of_tf.E2.80.93idf
-      \endverb
-    \endentry
-    \entry{dailymail}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.dailymail.co.uk/}
-      \field{title}{The Daily Mail}
-    \endentry
-    \entry{guardian}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://theguardian.com}
-      \field{title}{The Guardian}
-    \endentry
-    \entry{independent}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://independent.co.uk}
-      \field{title}{The Independent}
-    \endentry
-    \entry{newYorkTimes}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://nytimes.com}
-      \field{title}{The New York Times}
-    \endentry
-    \entry{telegraph}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://telegraph.co.uk}
-      \field{title}{The Telegraph}
-    \endentry
-    \entry{washingtonpost}{misc}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.washingtonpost.com/}
-      \field{title}{The Washington Post}
-    \endentry
-    \entry{trump2}{url}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{title}{Trump says, speaking for himself, there was no collusion with Russia}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.reuters.com/article/us-usa-trump-collusion-idUSKCN18E30U
-      \endverb
-    \endentry
-    \entry{ag1}{url}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labeltitlesource}{title}
-      \field{title}{"Two explosions" heard at Ariana Grande concert in Manchester}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.independent.co.uk/news/uk/home-news/manchester-explosions-latest-news-updates-arena-ariana-grande-bangs-police-a7750381.html
-      \endverb
-    \endentry
-    \entry{uber4}{url}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{title}{Uber is threatening to fire the engineer at the heart of its legal battle with Google}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://uk.businessinsider.com/uber-anthony-levandowski-waymo-legal-case-documents-2017-5
-      \endverb
-    \endentry
-    \entry{uber3}{url}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{title}{Uber threatened to fire engineer accused by rival Alphabet of stealing self-driving trade secrets}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.newsweek.com/uber-threatened-fire-engineer-over-self-driving-trade-secrets-case-612103
-      \endverb
-    \endentry
-    \entry{uber5}{url}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{title}{Uber threatens to fire former Google engineer over self-driving car spat with Waymo}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.theguardian.com/technology/2017/may/19/uber-threatens-to-fire-former-google-engineer-over-self-driving-car-spat-with-waymo
-      \endverb
-    \endentry
-    \entry{uber2}{url}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{title}{Uber threatens to fire self-driving car engineer in trade secrets case}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.reuters.com/article/us-uber-alphabet-engineer-idUSKCN18F0CD
-      \endverb
-    \endentry
-    \entry{uber1}{url}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{title}{Uber to appeal arbitration ruling in self driving car lawsuit}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.reuters.com/article/us-uber-tech-alphabet-lawsuit-idUSKCN18E399
-      \endverb
-    \endentry
-    \entry{canberra}{misc}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://canberra.edu.au}
-      \field{title}{University of Canberra}
-    \endentry
-    \entry{oxford}{misc}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.oxford.ac.uk}
-      \field{title}{University of Oxford}
-    \endentry
-    \entry{webhose}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{title}{Webhose}
-      \field{urlday}{27}
-      \field{urlmonth}{01}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://webhose.io
-      \endverb
-    \endentry
-    \entry{empiricalStudyofWebUse}{misc}{}
-      \name{author}{4}{}{%
-        {{hash=12d94a7081bca52bd6ef9ec5401394f0}{%
-           family={Weinreich},
-           family_i={W\bibinitperiod},
-           given={Harald},
-           given_i={H\bibinitperiod}}}%
-        {{hash=7c85ac8668832c3232696d9a91ae7f44}{%
-           family={Obendorf},
-           family_i={O\bibinitperiod},
-           given={Hartmut},
-           given_i={H\bibinitperiod}}}%
-        {{hash=6a948048971d7a481daca148472d80b9}{%
-           family={Herder},
-           family_i={H\bibinitperiod},
-           given={Eelco},
-           given_i={E\bibinitperiod}}}%
-        {{hash=80406dd8fe15a66c7dc8e9b26f26cd10}{%
-           family={Mayer},
-           family_i={M\bibinitperiod},
-           given={Matthias},
-           given_i={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{65c17a1f4e008c4db83052fb8b14c190}
-      \strng{fullhash}{8131a760e58ec41f80ce79b757668e8c}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 22/12/2016 A paper written in 2008 that aims to evaluate how people use the web, and their internet browsing habits}
-      \field{journaltitle}{ACM Transactions on the Web}
-      \field{month}{02}
-      \field{number}{1}
-      \field{title}{Not Quite the Average: An Empirical Study of Web Use}
-      \field{volume}{2}
-      \field{year}{2008}
-      \field{pages}{5:1\bibrangedash 5:31}
-      \range{pages}{-1}
-    \endentry
-    \entry{ldaExplanation}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last accessed: 08/01/2017 An explanation from Edwin Chen, professor at the University of Buenos Aires, written in 2011, about how Latent Dirichlet Allocation can be used to perform Topic Modelling}
-      \field{title}{What is a good explanation of Latent Dirichlet Allocation?}
-      \field{urlday}{08}
-      \field{urlmonth}{01}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb https://www.quora.com/What-is-a-good-explanation-of-Latent-Dirichlet-Allocation/answer/Edwin-Chen-1?srid=Qord
-      \endverb
-    \endentry
-    \entry{pippa3}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{title}{What time is Pippa Middleton's wedding and where is St Mark's Church?}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.telegraph.co.uk/news/0/time-pippa-middletons-wedding-st-marks-church/
-      \endverb
-    \endentry
-    \entry{differenceBetweenLSIAndLDA}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Last Accessed: 22/12/2016 An explanation from a Ph.D consultant on the difference between Latent Semantic Indexing and Latent Dirichlet Allocation.}
-      \field{title}{What's the difference between Latent Semantic Indexing and Latent Dirichlet Allocation}
-      \field{urlday}{22}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb https://www.quora.com/Whats-the-difference-between-Latent-Semantic-Indexing-LSI-and-Latent-Dirichlet-Allocation-LDA/answer/Joseph-Turian?srid=Qord
-      \endverb
-    \endentry
-    \entry{pippa1}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{title}{When is Pippa Middleton marrying James Matthews? Everything you need to know}
-      \field{urlday}{12}
-      \field{urlmonth}{06}
-      \field{urlyear}{2017}
-      \verb{url}
-      \verb http://www.telegraph.co.uk/news/0/pippa-middletons-wedding-guest-list/
-      \endverb
-    \endentry
-    \entry{wikipedia}{misc}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.wikipedia.org}
-      \field{title}{Wikipedia}
-    \endentry
-    \entry{wordnet}{misc}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://wordnet.princeton.edu/}
-      \field{title}{WordNet}
-    \endentry
-    \entry{appleDesignAward}{url}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Yahoo News Digest was one of the winners of the 2014 Apple Design Award.}
-      \field{title}{WWDC Apple Design Award Winners for 2014}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb http://www.macworld.com/article/2358481/wwdc-apple-design-awards-winners-for-2014.html
-      \endverb
-    \endentry
-    \entry{yahooNewsDigest}{misc}{}
-      \field{sortinit}{Y}
-      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.uk.mobile.yahoo.com/newsdigest/}
-      \field{title}{Yahoo News Digest}
-    \endentry
-    \entry{yougov}{misc}{}
-      \field{sortinit}{Y}
-      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.yougov.com}
-      \field{title}{YouGov}
-    \endentry
-  \endsortlist
-\endrefsection
-\endinput
+\bibitem[ag2()]{ag2}
+{Concert goers "run out screaming" after loud bangs at Manchester Arena}.
+\newblock URL
+  \url{http://metro.co.uk/2017/05/22/concert-goers-run-out-screaming-after-loud-bangs-at-manchester-arena-6654276/}.
+\newblock 2017-06-12.
 
+\bibitem[ag3()]{ag3}
+{Celebs pray for victims of Manchester Arena explosions}.
+\newblock URL
+  \url{http://www.dailymail.co.uk/tvshowbiz/article-4532198/Celebs-pray-victims-Manchester-Arena-explosions.html}.
+\newblock 2017-06-12.
+
+\bibitem[ag4()]{ag4}
+{"A major incident targeted at our city" MPs respond to Manchester explosion}.
+\newblock URL
+  \url{http://www.mirror.co.uk/news/politics/this-major-incident-targeted-city-10479137}.
+\newblock 2017-06-12.
+
+\bibitem[ag5()]{ag5}
+{Emmerdale star Isabel Hodgins' horrifying Manchester Arena experience}.
+\newblock URL
+  \url{http://www.mirror.co.uk/3am/celebrity-news/emmerdale-star-isabel-hodgins-horrifying-10479121}.
+\newblock 2017-06-12.
+
+\bibitem[ama()]{amazon}
+Amazon.
+\newblock URL \url{http://amazon.com}.
+
+\bibitem[apa()]{apache}
+Apache.
+\newblock http://apache.org.
+
+\bibitem[app({\natexlab{a}})]{apple}
+Apple.
+\newblock http://apple.com, {\natexlab{a}}.
+
+\bibitem[app({\natexlab{b}})]{appleDesignAward}
+{WWDC Apple Design Award Winners for 2014}, {\natexlab{b}}.
+\newblock URL
+  \url{http://www.macworld.com/article/2358481/wwdc-apple-design-awards-winners-for-2014.html}.
+\newblock 2016-12-29.
+
+\bibitem[app({\natexlab{c}})]{appleNews}
+{Apple News}.
+\newblock http://apple.com/uk/news/, {\natexlab{c}}.
+
+\bibitem[att()]{attentionSpan}
+{Attention Span Statistics}.
+\newblock URL \url{http://www.statisticbrain.com/attention-span-statistics/}.
+
+\bibitem[aws()]{aws}
+{Amazon Web Services}.
+\newblock URL \url{https://aws.amazon.com/}.
+
+\bibitem[bbc()]{bbc}
+{BBC}.
+\newblock http://bbc.co.uk.
+
+\bibitem[bid()]{bidenarticle}
+{Joe Biden just made a stunning admission about Hillary Clinton's 2016 election
+  bid}.
+\newblock URL
+  \url{http://uk.businessinsider.com/joe-biden-stunning-admission-hillary-clinton-obama-2017-5}.
+\newblock 2017-06-12.
+
+\bibitem[boo()]{bootstrap}
+Bootstrap.
+\newblock http://getbootstrap.com/.
+
+\bibitem[can()]{canberra}
+{University of Canberra}.
+\newblock http://canberra.edu.au.
+
+\bibitem[cfs()]{cfsarticle}
+{Chelsea flower show: abandoned Maltese quarry wins top prize}.
+\newblock URL
+  \url{https://www.theguardian.com/lifeandstyle/2017/may/23/chelsea-flower-show-james-basson-abandoned-maltese-quarry-wins-top-prize}.
+\newblock 2017-06-12.
+
+\bibitem[clu()]{clusteringWikipedia}
+{Cluster Analysis}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Cluster_analysis}.
+\newblock 2016-12-29.
+
+\bibitem[cnb()]{cnbc}
+{CNBC}.
+\newblock http://www.cnbc.com.
+
+\bibitem[cnn()]{cnn}
+{CNN}.
+\newblock http://edition.cnn.com/.
+
+\bibitem[cop({\natexlab{a}})]{copiepresse}
+Copiepresse.
+\newblock https://www.copiepresse.be/, {\natexlab{a}}.
+
+\bibitem[cop({\natexlab{b}})]{copiepressearticle}
+{Copiepresse v Google - the Belgian judgment dissected}, {\natexlab{b}}.
+\newblock URL
+  \url{https://www.twobirds.com/en/news/articles/2007/copiepresse-v-google}.
+\newblock 2017-06-12.
+
+\bibitem[cor()]{corenlp}
+{Stanford CoreNLP}.
+\newblock {https://stanfordnlp.github.io/CoreNLP/}.
+
+\bibitem[cri()]{cricinfo}
+{ESPN Cricinfo}.
+\newblock http://espncricinfo.com.
+
+\bibitem[dai()]{dailymail}
+{The Daily Mail}.
+\newblock http://www.dailymail.co.uk/.
+
+\bibitem[dif()]{differenceBetweenLSIAndLDA}
+{What's the difference between Latent Semantic Indexing and Latent Dirichlet
+  Allocation}.
+\newblock URL
+  \url{https://www.quora.com/Whats-the-difference-between-Latent-Semantic-Indexing-LSI-and-Latent-Dirichlet-Allocation-LDA/answer/Joseph-Turian?srid=Qord}.
+\newblock 2016-12-22.
+
+\bibitem[dig()]{digitalOcean}
+{Digital Ocean}.
+\newblock http://digitalocean.com.
+
+\bibitem[dyn()]{dynamodb}
+{Amazon Web Services DyanmoDB}.
+\newblock https://aws.amazon.com/dynamodb/?nc2=h_m1.
+
+\bibitem[ec2()]{ec2}
+{Amazon Web Services EC2}.
+\newblock https://aws.amazon.com/ec2.
+
+\bibitem[esp()]{espn}
+{ESPN}.
+\newblock http://www.espn.co.uk/.
+
+\bibitem[exc()]{excel}
+{Microsoft Excel}.
+\newblock https://office.live.com/start/Excel.aspx.
+
+\bibitem[fac()]{facebook}
+Facebook.
+\newblock http://facebook.com.
+
+\bibitem[fli()]{flipboard}
+Flipboard.
+\newblock http://flipboard.com.
+
+\bibitem[fou()]{fourfourtwo}
+{FourFourTwo}.
+\newblock https://www.fourfourtwo.com/.
+
+\bibitem[git()]{github}
+{GitHub}.
+\newblock http://github.com.
+
+\bibitem[goo({\natexlab{a}})]{google}
+Google.
+\newblock http://google.com, {\natexlab{a}}.
+
+\bibitem[goo({\natexlab{b}})]{googleClustering}
+{How does Google News cluster stories?}, {\natexlab{b}}.
+\newblock URL
+  \url{https://www.quora.com/How-does-Google-News-cluster-stories/answer/Bharath-Kumar-M?srid=Qord}.
+\newblock 2017-01-08.
+
+\bibitem[goo({\natexlab{c}})]{googleForms}
+{Google Forms}.
+\newblock http://forms.google.com, {\natexlab{c}}.
+
+\bibitem[goo({\natexlab{d}})]{googleNews}
+{Google News}.
+\newblock http://news.google.com, {\natexlab{d}}.
+
+\bibitem[gua()]{guardian}
+{The Guardian}.
+\newblock http://theguardian.com.
+
+\bibitem[hie()]{hierarchicalClustering}
+{Hierarchical Clustering}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Hierarchical_clustering}.
+\newblock 2016-12-29.
+
+\bibitem[ind()]{independent}
+{The Independent}.
+\newblock http://independent.co.uk.
+
+\bibitem[itu()]{itunesconnect}
+{iTunes Connect}.
+\newblock http://itunesconnect.apple.com.
+
+\bibitem[jup()]{jupyter}
+{Jupyter}.
+\newblock http://jupyter.org/.
+
+\bibitem[lat()]{latimes}
+La times.
+
+\bibitem[lda()]{ldaExplanation}
+{What is a good explanation of Latent Dirichlet Allocation?}
+\newblock URL
+  \url{https://www.quora.com/What-is-a-good-explanation-of-Latent-Dirichlet-Allocation/answer/Edwin-Chen-1?srid=Qord}.
+\newblock 2017-01-08.
+
+\bibitem[lsa()]{lsa}
+{Latent Semantic Analysis}.
+\newblock URL
+  \url{https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing}.
+\newblock 2016-12-22.
+
+\bibitem[mal()]{mallet}
+Mallet.
+\newblock http://mallet.cs.umass.edu/.
+
+\bibitem[med()]{mediawiki}
+{MediaWiki}.
+\newblock https://www.mediawiki.org/wiki/MediaWiki.
+
+\bibitem[mir()]{mirror}
+Mirror.
+\newblock http://www.mirror.co.uk/.
+
+\bibitem[mon()]{mongodb}
+{MongoDB}.
+\newblock http://mongodb.com.
+
+\bibitem[new({\natexlab{a}})]{newYorkTimes}
+{The New York Times}.
+\newblock http://nytimes.com, {\natexlab{a}}.
+
+\bibitem[new({\natexlab{b}})]{newsApi}
+{News API}, {\natexlab{b}}.
+\newblock URL \url{http://newsapi.org}.
+\newblock 2017-01-27.
+
+\bibitem[nlp({\natexlab{a}})]{nlpkitchen}
+{Natural Language Processing in the kitchen}, {\natexlab{a}}.
+\newblock 2017-06-12.
+
+\bibitem[nlp({\natexlab{b}})]{nlpwiki}
+{Natural Language Processing}, {\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Natural_language_processing}.
+\newblock 2017-06-12.
+
+\bibitem[ofc()]{ofcom}
+Ofcom.
+\newblock http://ofcom.org.uk.
+
+\bibitem[ope()]{opennlp}
+{Apache OpenNLP}.
+\newblock http://opennlp.apache.org.
+
+\bibitem[oxf()]{oxford}
+{University of Oxford}.
+\newblock http://www.oxford.ac.uk.
+
+\bibitem[pew({\natexlab{a}})]{pewarticle}
+Ranking the media from liberal to conservative, based on their audiences,
+  {\natexlab{a}}.
+\newblock URL
+  \url{https://www.washingtonpost.com/news/the-fix/wp/2014/10/21/lets-rank-the-media-from-liberal-to-conservative-based-on-their-audiences/?utm_term=.7e9d8a364dd4}.
+\newblock 2017-06-12.
+
+\bibitem[pew({\natexlab{b}})]{pewresearch}
+{Pew Research Center}.
+\newblock http://www.pewresearch.org/, {\natexlab{b}}.
+
+\bibitem[pip({\natexlab{a}})]{pippa1}
+{When is Pippa Middleton marrying James Matthews? Everything you need to know},
+  {\natexlab{a}}.
+\newblock URL
+  \url{http://www.telegraph.co.uk/news/0/pippa-middletons-wedding-guest-list/}.
+\newblock 2017-06-12.
+
+\bibitem[pip({\natexlab{b}})]{pippa2}
+{Pippa Middleton's dream wedding set to be soggy as Met Office predicts rain},
+  {\natexlab{b}}.
+\newblock URL
+  \url{http://www.telegraph.co.uk/news/2017/05/19/pippa-middletons-wedding-pictures-hit-rain-met-office-predicts/}.
+\newblock 2017-06-12.
+
+\bibitem[pip({\natexlab{c}})]{pippa3}
+{What time is Pippa Middleton's wedding and where is St Mark's Church?},
+  {\natexlab{c}}.
+\newblock URL
+  \url{http://www.telegraph.co.uk/news/0/time-pippa-middletons-wedding-st-marks-church/}.
+\newblock 2017-06-12.
+
+\bibitem[pri()]{princeton}
+{Princeton}.
+\newblock http://princeton.edu/.
+
+\bibitem[rea()]{react}
+React.
+\newblock https://facebook.github.io/react/.
+
+\bibitem[red()]{redux}
+Redux.
+\newblock http://redux.js.org/docs/introduction/.
+
+\bibitem[res()]{restlet}
+Restlet.
+\newblock https://restlet.com/.
+
+\bibitem[reu({\natexlab{a}})]{reuters}
+{Reuters}.
+\newblock http://reuters.com, {\natexlab{a}}.
+
+\bibitem[reu({\natexlab{b}})]{reutersInstitute}
+{Reuters Institute for the Study of Journalism}.
+\newblock http://reutersinstitute.politics.ox.ac.uk, {\natexlab{b}}.
+
+\bibitem[s3()]{s3}
+{Amazon Web Services S3}.
+\newblock https://aws.amazon.com/s3.
+
+\bibitem[sta({\natexlab{a}})]{stanford}
+{Stanford NLP}.
+\newblock {https://stanfordnlp.github.io/CoreNLP/}, {\natexlab{a}}.
+
+\bibitem[sta({\natexlab{b}})]{statisticBrain}
+{Statistic Brain Research Institute}.
+\newblock http://statisticbrain.com, {\natexlab{b}}.
+
+\bibitem[sum()]{summly}
+Summly.
+\newblock http://summly.com.
+
+\bibitem[sur()]{surveymonkey}
+{Survey Monkey}.
+\newblock http://surveymonkey.com.
+
+\bibitem[tel()]{telegraph}
+{The Telegraph}.
+\newblock http://telegraph.co.uk.
+
+\bibitem[tfi()]{tfidf}
+{Term Frequency - Inverse Document Frequency}.
+\newblock URL
+  \url{https://en.wikipedia.org/wiki/Tf–idf#Example_of_tf.E2.80.93idf}.
+\newblock 2016-12-29.
+
+\bibitem[tma()]{tmarticle}
+{Conservative social care funding cap: Theresa May defends changes}.
+\newblock http://www.bbc.co.uk/news/election-2017-40005257.
+\newblock 2017-06-12.
+
+\bibitem[tru({\natexlab{a}})]{trump1}
+{Donald Trump says special counsel "hurts our country" as Russia probe
+  "becoming criminal investigation"}, {\natexlab{a}}.
+\newblock URL
+  \url{http://www.telegraph.co.uk/news/2017/05/18/donald-trumps-campaign-had-least-18-undisclosed-contacts-russians2/}.
+\newblock 2017-06-12.
+
+\bibitem[tru({\natexlab{b}})]{trump2}
+{Trump says, speaking for himself, there was no collusion with Russia},
+  {\natexlab{b}}.
+\newblock URL
+  \url{http://www.reuters.com/article/us-usa-trump-collusion-idUSKCN18E30U}.
+\newblock 2017-06-12.
+
+\bibitem[tru({\natexlab{c}})]{trump3}
+{Donald Trump says "even my enemies say there is no Russia collusion"},
+  {\natexlab{c}}.
+\newblock URL
+  \url{http://www.independent.co.uk/news/world/americas/us-politics/trump-russia-investigation-collusion-enemies-denial-press-conference-latest-news-a7743861.html}.
+\newblock 2017-06-12.
+
+\bibitem[tru({\natexlab{d}})]{trumparticle}
+{Global markets are fighting back against Trump uncertainty}, {\natexlab{d}}.
+\newblock URL \url{http://uk.businessinsider.com/stock-market-update-2017-5}.
+\newblock 2017-06-12.
+
+\bibitem[tru({\natexlab{e}})]{trumpsalem}
+{Congressman for Salem brilliantly trolls Donald Trump over "witch hunt"
+  claims}, {\natexlab{e}}.
+\newblock URL
+  \url{http://www.mirror.co.uk/news/politics/congressman-salem-brilliantly-trolls-donald-10452706}.
+\newblock 2017-06-12.
+
+\bibitem[ube({\natexlab{a}})]{uber1}
+{Uber to appeal arbitration ruling in self driving car lawsuit},
+  {\natexlab{a}}.
+\newblock URL
+  \url{http://www.reuters.com/article/us-uber-tech-alphabet-lawsuit-idUSKCN18E399}.
+\newblock 2017-06-12.
+
+\bibitem[ube({\natexlab{b}})]{uber2}
+{Uber threatens to fire self-driving car engineer in trade secrets case},
+  {\natexlab{b}}.
+\newblock URL
+  \url{http://www.reuters.com/article/us-uber-alphabet-engineer-idUSKCN18F0CD}.
+\newblock 2017-06-12.
+
+\bibitem[ube({\natexlab{c}})]{uber3}
+{Uber threatened to fire engineer accused by rival Alphabet of stealing
+  self-driving trade secrets}, {\natexlab{c}}.
+\newblock URL
+  \url{http://www.newsweek.com/uber-threatened-fire-engineer-over-self-driving-trade-secrets-case-612103}.
+\newblock 2017-06-12.
+
+\bibitem[ube({\natexlab{d}})]{uber4}
+{Uber is threatening to fire the engineer at the heart of its legal battle with
+  Google}, {\natexlab{d}}.
+\newblock URL
+  \url{http://uk.businessinsider.com/uber-anthony-levandowski-waymo-legal-case-documents-2017-5}.
+\newblock 2017-06-12.
+
+\bibitem[ube({\natexlab{e}})]{uber5}
+{Uber threatens to fire former Google engineer over self-driving car spat with
+  Waymo}, {\natexlab{e}}.
+\newblock URL
+  \url{https://www.theguardian.com/technology/2017/may/19/uber-threatens-to-fire-former-google-engineer-over-self-driving-car-spat-with-waymo}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{a}})]{united1}
+{Manchester United Player's Player of the Year revealed}, {\natexlab{a}}.
+\newblock URL
+  \url{http://www.mirror.co.uk/sport/football/news/manchester-uniteds-antonio-valencia-named-10451658}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{b}})]{united2}
+{Manchester United Player of the Year awards are underway}, {\natexlab{b}}.
+\newblock URL
+  \url{http://www.dailymail.co.uk/sport/football/article-4520104/Manchester-United-Player-Year-awards-2017.html}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{c}})]{united3}
+{Live Manchester United Player of the Year Awards}, {\natexlab{c}}.
+\newblock URL
+  \url{http://www.manchestereveningnews.co.uk/sport/football/football-news/manchester-united-news-awards-live-13056565}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{d}})]{united4}
+{Our 7 favourite photos from Manchester United's Player of the Year Awards
+  night}, {\natexlab{d}}.
+\newblock URL
+  \url{http://www.mirror.co.uk/sport/row-zed/manchester-united-awards-night-photos-10452055}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{e}})]{united5}
+{Man United fans say the same thing as Ander Herrera is named Player of the
+  Year}, {\natexlab{e}}.
+\newblock URL
+  \url{http://www.mirror.co.uk/sport/football/news/red-devils-supporters-say-same-10452099}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{f}})]{united6}
+{Manchester United stars and WAGS turn on the style at Player of the Year
+  awards}, {\natexlab{f}}.
+\newblock URL
+  \url{http://www.mirror.co.uk/sport/football/news/manchester-united-stars-wags-turn-10451821}.
+\newblock 2017-06-12.
+
+\bibitem[uni({\natexlab{g}})]{united7}
+{Anthony Martial among five first-team absentees from Man Utd awards ceremony},
+  {\natexlab{g}}.
+\newblock URL
+  \url{http://metro.co.uk/2017/05/18/zlatan-ibrahimovic-and-anthony-martial-among-absentees-from-manchester-united-awards-ceremony-6647006/}.
+\newblock 2017-06-12.
+
+\bibitem[was()]{washingtonpost}
+{The Washington Post}.
+\newblock https://www.washingtonpost.com/.
+
+\bibitem[web()]{webhose}
+{Webhose}.
+\newblock URL \url{https://webhose.io}.
+\newblock 2017-01-27.
+
+\bibitem[wik()]{wikipedia}
+Wikipedia.
+\newblock http://www.wikipedia.org.
+
+\bibitem[wor()]{wordnet}
+{WordNet}.
+\newblock http://wordnet.princeton.edu/.
+
+\bibitem[yah()]{yahooNewsDigest}
+{Yahoo News Digest}.
+\newblock http://www.uk.mobile.yahoo.com/newsdigest/.
+
+\bibitem[you({\natexlab{a}})]{yougov}
+{YouGov}.
+\newblock http://www.yougov.com, {\natexlab{a}}.
+
+\bibitem[you({\natexlab{b}})]{yougovarticle}
+{How left or right-wing are the UK's newspapers?}, {\natexlab{b}}.
+\newblock URL
+  \url{https://yougov.co.uk/news/2017/03/07/how-left-or-right-wing-are-uks-newspapers/}.
+\newblock 2017-06-12.
+
+\bibitem[{Atif Khan} and {Naomie Salim}(2014)]{abstractiveTechniquesOriginal}
+{Atif Khan} and {Naomie Salim}.
+\newblock A review on abstractive summarization methods.
+\newblock \emph{{Journal of Theoretical and Applied Information Technology}},
+  59\penalty0 (1):\penalty0 64--72, January 2014.
+
+\bibitem[{Gunes Erkan} and {Dragomir R Radev}(2004)]{lexRank}
+{Gunes Erkan} and {Dragomir R Radev}.
+\newblock {LexRank: Graph-based Lexical Centrality as Salience in Text
+  Summarization}.
+\newblock \emph{{Journal of Artificial Intelligence Research}}, 22\penalty0
+  (1):\penalty0 457--479, December 2004.
+
+\bibitem[{Jey Han Lau} et~al.(2011){Jey Han Lau}, {Karl Grieser}, {David
+  Newman}, and {Timothy Baldwin}]{topicLabelling}
+{Jey Han Lau}, {Karl Grieser}, {David Newman}, and {Timothy Baldwin}.
+\newblock {Automatic Labelling of Topic Models}.
+\newblock In \emph{{Proceedings of the 49th Annual Meeting of the Association
+  for Computational Linguistics}}, pages 1536--1545, {Portland, Oregon}, June
+  2011.
+
+\bibitem[{Karl Grieser} et~al.(){Karl Grieser}, {Timothy Baldwin}, {Fabian
+  Bohnert}, and {Liz Sonenberg}]{racoCalculation}
+{Karl Grieser}, {Timothy Baldwin}, {Fabian Bohnert}, and {Liz Sonenberg}.
+
+\bibitem[{N. R. Kasture} et~al.(2014){N. R. Kasture}, {Neha Yargal}, {Neha
+  Nityanand Singh}, {Neha Kulkarni}, and {Vijay Mathur}]{abstractiveTechniques}
+{N. R. Kasture}, {Neha Yargal}, {Neha Nityanand Singh}, {Neha Kulkarni}, and
+  {Vijay Mathur}.
+\newblock {A Survey on Methods of Abstractive Text Summarization}.
+\newblock \emph{{International Journal for Research in Emerging Science and
+  Technology}}, 1\penalty0 (6):\penalty0 53--57, November 2014.
+
+\bibitem[{Nic Newman} et~al.(2016){Nic Newman}, {Richard Fletcher}, {David A.
+  L. Levy}, and {Rasmus Kleis Nielsen}]{digitalNewsReport}
+{Nic Newman}, {Richard Fletcher}, {David A. L. Levy}, and {Rasmus Kleis
+  Nielsen}.
+\newblock \emph{{Reuters Institute Digital News Report 2016}}.
+\newblock {Reuters Institute for the Study of Journalism}, 2016.
+
+\bibitem[{Pierre-Etienne Genest} and {Guy
+  Lapalme}(2011)]{informationBasedSummarisation}
+{Pierre-Etienne Genest} and {Guy Lapalme}.
+\newblock {Framework for Abstractive Summarization using Text-to-Text
+  Generation}.
+\newblock In \emph{{Proceedings of the 49th Annual Meeting of the Association
+  for Computational Linguistics}}, pages 64--73, {Portland, Oregon}, June 2011.
+
+\bibitem[{Pierre-Etienne Genest} and {Guy
+  Lapalme}(2012)]{ruleBasedSummarisation}
+{Pierre-Etienne Genest} and {Guy Lapalme}.
+\newblock {Fully Abstractive Approach to Guided Summarization}.
+\newblock In \emph{{Proceedings of the 50th Annual Meeting of the Association
+  for Computational Linguistics}}, pages 354--358, {Jeju, Republic of Korea},
+  July 2012. {Association for Computational Linguistics}.
+
+\bibitem[{Vishal Gupta} and {Gurpreet Lehla}(2010)]{extractiveTechniques}
+{Vishal Gupta} and {Gurpreet Lehla}.
+\newblock {A Survey of Text Summarization Extractive Techniques}.
+\newblock \emph{{Journal of Emerging Technologies in Web Intelligence}},
+  2\penalty0 (3):\penalty0 258--268, August 2010.
+
+\bibitem[{Weinreich, Harald and Obendorf, Hartmut and Herder, Eelco and Mayer,
+  Matthias}(2008)]{empiricalStudyofWebUse}
+{Weinreich, Harald and Obendorf, Hartmut and Herder, Eelco and Mayer,
+  Matthias}.
+\newblock {Not Quite the Average: An Empirical Study of Web Use}.
+\newblock \emph{{ACM Transactions on the Web}}, 2\penalty0 (1):\penalty0 5:1 --
+  5:31, February 2008.
+
+\end{thebibliography}

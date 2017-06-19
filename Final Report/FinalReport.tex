@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage[utf8]{inputenc}
 \usepackage{rotating}
 \usepackage{listings}
-\usepackage[
-backend=biber,
-style=numeric,
-urldate=long
-]{biblatex}
+%\usepackage[
+%backend=biber,
+%style=numeric,
+%urldate=long
+%]{biblatex}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{plainnat}
 \usepackage{mdframed}
 \usepackage{booktabs}
 \newcommand{\tabitem}{\makebox[1em][r]{\textbullet~}}
@@ -33,6 +35,12 @@ urldate=long
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\renewcommand*{\bibfont}{\raggedright}
+
+ \setcitestyle{notesep={ }}
+
+\usepackage[nottoc]{tocbibind}
 
 \usepackage{xcolor}
 
@@ -112,15 +120,15 @@ urldate=long
 \title{NewSumm}								% Title
 \author{Kunal M L Wagle}								% Author										
 
-\addbibresource{sample.bib}
+%\addbibresource{sample.bib}
 
 
 
-\DefineBibliographyStrings{english}{%
-urlseen = {Retrieved},
-}
+%\DefineBibliographyStrings{english}{%
+%urlseen = {Retrieved},
+%}
 
-\DeclareBibliographyAlias{url}{misc}  
+%\DeclareBibliographyAlias{url}{misc}  
 
 \appto{\bibsetup}{\raggedright}
 
@@ -129,9 +137,9 @@ urlseen = {Retrieved},
 \let\theauthor\@author
 \makeatother
 
-\usepackage{imakeidx}
-\indexsetup{othercode=\small}
-\makeindex[program=makeindex,columns=2,intoc=true,options={-s mystyle.ist}]
+%\usepackage{imakeidx}
+%\indexsetup{othercode=\small}
+%\makeindex[program=makeindex,columns=2,intoc=true,options={-s mystyle.ist}]
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -180,7 +188,7 @@ urlseen = {Retrieved},
 
 There is simply too large a volume of news available to read online, and each piece of news itself could have multiple different viewpoints depending on where you read it from. NewSumm is a news aggregator that summarises clusters of articles for users, thus allowing a reader to save time by covering multiple viewpoints on a piece of news within the scope of one short article. NewSumm aimed to allow customisability of summary sources for users, so that they can pick and choose which sources they read and tailor their experience.
 
-Whilst an ambitious initial plan to implement an algorithm for abstractive summarisation went awry, NewSumm produces more than competent summaries using a specially modified version of LexRank. User feedback for NewSumm was largely positive so far, but not without potential areas for improvement. Two surveys were put to users, and they found that the summaries produced were strong. Users thought that the user interface was slick, but that it could be faster in places. A thorough analysis of the summaries produced found that neutral sources can potentially be marginalised by sources that are on the political spectrum, which is an area that can be tightened up in any future work on the project. 
+Whilst an ambitious initial plan to implement an algorithm for abstractive summarisation went awry, NewSumm produces more than competent summaries using a specially modified version of LexRank. User feedback for NewSumm was mostly positive, but not without potential areas for improvement. Two surveys were put to users, and they found that the summaries produced were strong. Users thought that the user interface was slick, but that it could be faster in places. A thorough analysis of the summaries produced found that neutral sources can potentially be marginalised by sources that are on the political spectrum, which is an area that can be tightened up in any future work on the project. 
 
 \pagebreak
 
@@ -1614,7 +1622,7 @@ The principle behind this step of the algorithm is to compare two clusters and g
 
 \emph{Factoring in the timestamp}
 
-Once the similarity from listing \ref{lst:clusteringsimilarity} has been calculated, the timestamp is then factored in.
+Once the similarity from Listing \ref{lst:clusteringsimilarity} has been calculated, the timestamp is then factored in.
 
 The theory behind this is simple. 
 
@@ -2633,7 +2641,7 @@ As a solution I implemented singleton patterns for each library that was space-i
 
 The primary aims of NewSumm were to reduce the volume of articles that a user has to read, and to find a way to prevent users from missing information by collating multiple sources together. These aims have been largely satisfied by the final product, as proven by the feedback both at the Undergraduate Fair and in the UI survey. Feedback from the Undergraduate Fair also indicated that potential users have been impressed by the "clean and slick" design.
 
-However, it certainly can't be said that NewSumm is an unmitigated success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC \cite{bbc} and Reuters \cite{reuters} could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. In fact, it could even suggest that "fake news" could enter the application, and dominate a summary as it would be distinctive enough. The counter to this argument though would be that if all sources are trusted sources, then this would negate any potential issues as the outlets themselves are trusted enough to not produce "fake news" (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
+However, it certainly can't be said that NewSumm is a complete success. The evaluation has brought out a potential vulnerability in the summariser, in which neutral sources such as the BBC \cite{bbc} and Reuters \cite{reuters} could be marginalised in place of the partisan media, which in turn could threaten the secondary aim of the project of producing summaries that a user can feel near certain is trustworthy. In fact, it could even suggest that "fake news" could enter the application, and dominate a summary as it would be distinctive enough. The counter to this argument though would be that if all sources are trusted sources, then this would negate any potential issues as the outlets themselves are trusted enough to not produce "fake news" (though it of course won't solve the problem that some summaries could be inherently biased in the absence of sources from both ends of the political spectrum).
 
 Continuing on the back end, whilst labelling has been shown to throw more than its fair share of false positive labels, the clustering and summarisation algorithms have been well received by respondents of the survey. This would indicate that if the small flaws in topic labelling can be addressed going forward, then the system itself would start consistently producing very strong clusters and summaries for all topics.
 
@@ -2681,7 +2689,9 @@ The fact that the API to the server has already been fully developed only serves
 
 \newpage
 
-\printbibliography[heading=bibintoc]
+\Urlmuskip=0mu plus 1mu
+%\printbibliography[heading=bibintoc]
+\bibliography{sample}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

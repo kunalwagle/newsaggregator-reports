@@ -1,15 +1,341 @@
-[0] Config.pm:343> INFO - This is Biber 2.5
-[0] Config.pm:346> INFO - Logfile is 'FinalReport.blg'
-[45] biber-darwin:290> INFO - === Sun Jun 18, 2017, 03:52:29
-[66] Biber.pm:351> INFO - Reading 'FinalReport.bcf'
-[161] Biber.pm:776> INFO - Found 111 citekeys in bib section 0
-[174] Biber.pm:3493> INFO - Processing section 0
-[190] Biber.pm:3657> INFO - Looking for bibtex format file 'sample.bib' for section 0
-[195] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[197] bibtex.pm:1048> INFO - Found BibTeX data source 'sample.bib'
-[340] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[340] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[340] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[340] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[494] bbl.pm:526> INFO - Writing 'FinalReport.bbl' with encoding 'UTF-8'
-[502] bbl.pm:619> INFO - Output to FinalReport.bbl
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FinalReport.aux
+The style file: plainnat.bst
+Database file #1: sample.bib
+Warning--entry type for "copiepressearticle" isn't style-file defined
+--line 11 of file sample.bib
+Warning--entry type for "yougovarticle" isn't style-file defined
+--line 43 of file sample.bib
+Warning--entry type for "pewarticle" isn't style-file defined
+--line 51 of file sample.bib
+Warning--entry type for "pippa3" isn't style-file defined
+--line 113 of file sample.bib
+Warning--entry type for "pippa2" isn't style-file defined
+--line 121 of file sample.bib
+Warning--entry type for "pippa1" isn't style-file defined
+--line 129 of file sample.bib
+Warning--entry type for "trump3" isn't style-file defined
+--line 137 of file sample.bib
+Warning--entry type for "trump2" isn't style-file defined
+--line 145 of file sample.bib
+Warning--entry type for "trump1" isn't style-file defined
+--line 153 of file sample.bib
+Warning--entry type for "ag5" isn't style-file defined
+--line 161 of file sample.bib
+Warning--entry type for "ag4" isn't style-file defined
+--line 169 of file sample.bib
+Warning--entry type for "ag3" isn't style-file defined
+--line 177 of file sample.bib
+Warning--entry type for "ag2" isn't style-file defined
+--line 185 of file sample.bib
+Warning--entry type for "ag1" isn't style-file defined
+--line 193 of file sample.bib
+Warning--entry type for "uber5" isn't style-file defined
+--line 201 of file sample.bib
+Warning--entry type for "uber4" isn't style-file defined
+--line 209 of file sample.bib
+Warning--entry type for "uber3" isn't style-file defined
+--line 217 of file sample.bib
+Warning--entry type for "uber2" isn't style-file defined
+--line 225 of file sample.bib
+Warning--entry type for "uber1" isn't style-file defined
+--line 233 of file sample.bib
+Warning--entry type for "united7" isn't style-file defined
+--line 241 of file sample.bib
+Warning--entry type for "united6" isn't style-file defined
+--line 249 of file sample.bib
+Warning--entry type for "united5" isn't style-file defined
+--line 257 of file sample.bib
+Warning--entry type for "united4" isn't style-file defined
+--line 265 of file sample.bib
+Warning--entry type for "united3" isn't style-file defined
+--line 273 of file sample.bib
+Warning--entry type for "united2" isn't style-file defined
+--line 281 of file sample.bib
+Warning--entry type for "united1" isn't style-file defined
+--line 289 of file sample.bib
+Warning--entry type for "trumpsalem" isn't style-file defined
+--line 297 of file sample.bib
+Warning--entry type for "bidenarticle" isn't style-file defined
+--line 305 of file sample.bib
+Warning--entry type for "trumparticle" isn't style-file defined
+--line 313 of file sample.bib
+Warning--entry type for "cfsarticle" isn't style-file defined
+--line 321 of file sample.bib
+Warning--entry type for "tmarticle" isn't style-file defined
+--line 329 of file sample.bib
+Warning--entry type for "nlpwiki" isn't style-file defined
+--line 488 of file sample.bib
+Warning--entry type for "nlpkitchen" isn't style-file defined
+--line 496 of file sample.bib
+Warning--entry type for "newsApi" isn't style-file defined
+--line 507 of file sample.bib
+Warning--entry type for "webhose" isn't style-file defined
+--line 515 of file sample.bib
+Warning--entry type for "clusteringWikipedia" isn't style-file defined
+--line 523 of file sample.bib
+Warning--entry type for "hierarchicalClustering" isn't style-file defined
+--line 534 of file sample.bib
+Warning--entry type for "tfidf" isn't style-file defined
+--line 545 of file sample.bib
+Warning--entry type for "lsa" isn't style-file defined
+--line 556 of file sample.bib
+Warning--entry type for "differenceBetweenLSIAndLDA" isn't style-file defined
+--line 567 of file sample.bib
+Warning--entry type for "appleDesignAward" isn't style-file defined
+--line 655 of file sample.bib
+Warning--entry type for "googleClustering" isn't style-file defined
+--line 781 of file sample.bib
+Warning--entry type for "ldaExplanation" isn't style-file defined
+--line 821 of file sample.bib
+Warning--entry type for "attentionSpan" isn't style-file defined
+--line 848 of file sample.bib
+Warning--to sort, need author or key in googleNews
+Warning--to sort, need author or key in flipboard
+Warning--to sort, need author or key in appleNews
+Warning--to sort, need author or key in statisticBrain
+Warning--to sort, need author or key in attentionSpan
+Warning--to sort, need author or key in reutersInstitute
+Warning--to sort, need author or key in oxford
+Warning--to sort, need author or key in bbc
+Warning--to sort, need author or key in canberra
+Warning--to sort, need author or key in ofcom
+Warning--to sort, need author or key in yougov
+Warning--to sort, need author or key in newYorkTimes
+Warning--to sort, need author or key in googleForms
+Warning--to sort, need author or key in google
+Warning--to sort, need author or key in googleClustering
+Warning--to sort, need author or key in yahooNewsDigest
+Warning--to sort, need author or key in summly
+Warning--to sort, need author or key in wikipedia
+Warning--to sort, need author or key in apple
+Warning--to sort, need author or key in appleDesignAward
+Warning--to sort, need author or key in lsa
+Warning--to sort, need author or key in differenceBetweenLSIAndLDA
+Warning--to sort, need author or key in ldaExplanation
+Warning--to sort, need author or key in clusteringWikipedia
+Warning--to sort, need author or key in hierarchicalClustering
+Warning--to sort, need author or key in tfidf
+Warning--to sort, need author or key in latimes
+Warning--to sort, need author or key in nlpkitchen
+Warning--to sort, need author or key in nlpwiki
+Warning--to sort, need author or key in aws
+Warning--to sort, need author or key in amazon
+Warning--to sort, need author or key in ec2
+Warning--to sort, need author or key in s3
+Warning--to sort, need author or key in digitalOcean
+Warning--to sort, need author or key in github
+Warning--to sort, need author or key in mongodb
+Warning--to sort, need author or key in dynamodb
+Warning--to sort, need author or key in bootstrap
+Warning--to sort, need author or key in react
+Warning--to sort, need author or key in redux
+Warning--to sort, need author or key in facebook
+Warning--to sort, need author or key in guardian
+Warning--to sort, need author or key in webhose
+Warning--to sort, need author or key in newsApi
+Warning--to sort, need author or key in mediawiki
+Warning--to sort, need author or key in mallet
+Warning--to sort, need author or key in opennlp
+Warning--to sort, need author or key in apache
+Warning--to sort, need author or key in corenlp
+Warning--to sort, need author or key in stanford
+Warning--to sort, need author or key in wordnet
+Warning--to sort, need author or key in princeton
+Warning--to sort, need author or key in reuters
+Warning--to sort, need author or key in independent
+Warning--to sort, need author or key in telegraph
+Warning--to sort, need author or key in restlet
+Warning--to sort, need author or key in surveymonkey
+Warning--to sort, need author or key in tmarticle
+Warning--to sort, need author or key in cfsarticle
+Warning--to sort, need author or key in trumparticle
+Warning--to sort, need author or key in bidenarticle
+Warning--to sort, need author or key in trumpsalem
+Warning--to sort, need author or key in united1
+Warning--to sort, need author or key in united2
+Warning--to sort, need author or key in united3
+Warning--to sort, need author or key in united4
+Warning--to sort, need author or key in united5
+Warning--to sort, need author or key in united6
+Warning--to sort, need author or key in united7
+Warning--to sort, need author or key in uber1
+Warning--to sort, need author or key in uber2
+Warning--to sort, need author or key in uber3
+Warning--to sort, need author or key in uber4
+Warning--to sort, need author or key in uber5
+Warning--to sort, need author or key in ag1
+Warning--to sort, need author or key in ag2
+Warning--to sort, need author or key in ag3
+Warning--to sort, need author or key in ag4
+Warning--to sort, need author or key in ag5
+Warning--to sort, need author or key in trump1
+Warning--to sort, need author or key in trump2
+Warning--to sort, need author or key in trump3
+Warning--to sort, need author or key in pippa1
+Warning--to sort, need author or key in pippa2
+Warning--to sort, need author or key in pippa3
+Warning--to sort, need author or key in itunesconnect
+Warning--to sort, need author or key in jupyter
+Warning--to sort, need author or key in excel
+Warning--to sort, need author or key in espn
+Warning--to sort, need author or key in cricinfo
+Warning--to sort, need author or key in fourfourtwo
+Warning--to sort, need author or key in dailymail
+Warning--to sort, need author or key in mirror
+Warning--to sort, need author or key in yougovarticle
+Warning--to sort, need author or key in pewresearch
+Warning--to sort, need author or key in pewarticle
+Warning--to sort, need author or key in washingtonpost
+Warning--to sort, need author or key in cnn
+Warning--to sort, need author or key in cnbc
+Warning--to sort, need author or key in copiepresse
+Warning--to sort, need author or key in copiepressearticle
+Warning--empty year in ag1
+Warning--empty year in ag2
+Warning--empty year in ag3
+Warning--empty year in ag4
+Warning--empty year in ag5
+Warning--empty year in amazon
+Warning--empty year in apache
+Warning--empty year in apple
+Warning--empty year in appleDesignAward
+Warning--empty year in appleNews
+Warning--empty year in attentionSpan
+Warning--empty year in aws
+Warning--empty year in bbc
+Warning--empty year in bidenarticle
+Warning--empty year in bootstrap
+Warning--empty year in canberra
+Warning--empty year in cfsarticle
+Warning--empty year in clusteringWikipedia
+Warning--empty year in cnbc
+Warning--empty year in cnn
+Warning--empty year in copiepresse
+Warning--empty year in copiepressearticle
+Warning--empty year in corenlp
+Warning--empty year in cricinfo
+Warning--empty year in dailymail
+Warning--empty year in differenceBetweenLSIAndLDA
+Warning--empty year in digitalOcean
+Warning--empty year in dynamodb
+Warning--empty year in ec2
+Warning--empty year in espn
+Warning--empty year in excel
+Warning--empty year in facebook
+Warning--empty year in flipboard
+Warning--empty year in fourfourtwo
+Warning--empty year in github
+Warning--empty year in google
+Warning--empty year in googleClustering
+Warning--empty year in googleForms
+Warning--empty year in googleNews
+Warning--empty year in guardian
+Warning--empty year in hierarchicalClustering
+Warning--empty year in independent
+Warning--empty year in itunesconnect
+Warning--empty year in jupyter
+Warning--empty year in latimes
+Warning--empty year in ldaExplanation
+Warning--empty year in lsa
+Warning--empty year in mallet
+Warning--empty year in mediawiki
+Warning--empty year in mirror
+Warning--empty year in mongodb
+Warning--empty year in newYorkTimes
+Warning--empty year in newsApi
+Warning--empty year in nlpkitchen
+Warning--empty year in nlpwiki
+Warning--empty year in ofcom
+Warning--empty year in opennlp
+Warning--empty year in oxford
+Warning--empty year in pewarticle
+Warning--empty year in pewresearch
+Warning--empty year in pippa1
+Warning--empty year in pippa2
+Warning--empty year in pippa3
+Warning--empty year in princeton
+Warning--empty year in react
+Warning--empty year in redux
+Warning--empty year in restlet
+Warning--empty year in reuters
+Warning--empty year in reutersInstitute
+Warning--empty year in s3
+Warning--empty year in stanford
+Warning--empty year in statisticBrain
+Warning--empty year in summly
+Warning--empty year in surveymonkey
+Warning--empty year in telegraph
+Warning--empty year in tfidf
+Warning--empty year in tmarticle
+Warning--empty year in trump1
+Warning--empty year in trump2
+Warning--empty year in trump3
+Warning--empty year in trumparticle
+Warning--empty year in trumpsalem
+Warning--empty year in uber1
+Warning--empty year in uber2
+Warning--empty year in uber3
+Warning--empty year in uber4
+Warning--empty year in uber5
+Warning--empty year in united1
+Warning--empty year in united2
+Warning--empty year in united3
+Warning--empty year in united4
+Warning--empty year in united5
+Warning--empty year in united6
+Warning--empty year in united7
+Warning--empty year in washingtonpost
+Warning--empty year in webhose
+Warning--empty year in wikipedia
+Warning--empty year in wordnet
+Warning--empty year in yahooNewsDigest
+Warning--empty year in yougov
+Warning--empty year in yougovarticle
+Warning--empty title in racoCalculation
+Warning--empty journal in racoCalculation
+Warning--empty year in racoCalculation
+Warning--empty year in racoCalculation
+You've used 111 entries,
+            2773 wiz_defined-function locations,
+            979 strings with 16612 characters,
+and the built_in function-call counts, 29753 in all, are:
+= -- 2891
+> -- 280
+< -- 9
++ -- 223
+- -- 84
+* -- 2047
+:= -- 2778
+add.period$ -- 272
+call.type$ -- 111
+change.case$ -- 359
+chr.to.int$ -- 83
+cite$ -- 529
+duplicate$ -- 1754
+empty$ -- 3954
+format.name$ -- 104
+if$ -- 7173
+int.to.chr$ -- 29
+int.to.str$ -- 1
+missing$ -- 11
+newline$ -- 501
+num.names$ -- 40
+pop$ -- 1684
+preamble$ -- 1
+purify$ -- 250
+quote$ -- 0
+skip$ -- 1258
+stack$ -- 0
+substring$ -- 509
+swap$ -- 186
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1216
+warning$ -- 206
+while$ -- 41
+width$ -- 0
+write$ -- 1166
+(There were 250 warnings)
